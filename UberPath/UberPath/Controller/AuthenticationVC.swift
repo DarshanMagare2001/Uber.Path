@@ -8,16 +8,12 @@
 import UIKit
 
 class AuthenticationVC: UIViewController {
-    
-    
     @IBOutlet weak var hiThereLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        updateFont()
     }
     
     @IBAction func backArrowBtnPressed(_ sender: UIButton) {
@@ -25,6 +21,10 @@ class AuthenticationVC: UIViewController {
         
     }
     
+    func updateFont(){
+        hiThereLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        welcomeLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
+    }
     
     
 }
