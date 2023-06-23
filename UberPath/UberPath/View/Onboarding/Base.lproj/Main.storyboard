@@ -252,34 +252,68 @@ and most trusted</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AP6-rF-PMg">
                                 <rect key="frame" x="20" y="127.5" width="280" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAS-cx-f8q">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5n-xV-AuJ" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAS-cx-f8q">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fxj-mT-cNt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="fxj-mT-cNt"/>
+                                            <constraint firstAttribute="trailing" secondItem="aAS-cx-f8q" secondAttribute="trailing" id="TeJ-2L-q9w"/>
+                                            <constraint firstAttribute="bottom" secondItem="aAS-cx-f8q" secondAttribute="bottom" id="g0H-pW-MGv"/>
+                                            <constraint firstItem="aAS-cx-f8q" firstAttribute="leading" secondItem="E5n-xV-AuJ" secondAttribute="leading" id="gML-HH-s36"/>
+                                            <constraint firstItem="aAS-cx-f8q" firstAttribute="top" secondItem="E5n-xV-AuJ" secondAttribute="top" id="hLx-yd-ZRm"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLN-dL-eqO">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Iv-6K-zaN" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="280" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLN-dL-eqO">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="JJL-Id-OcV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrM-4j-C3B">
+                                                <rect key="frame" x="224" y="0.0" width="56" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system" title=" "/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="JJL-Id-OcV"/>
+                                            <constraint firstItem="DrM-4j-C3B" firstAttribute="top" secondItem="0Iv-6K-zaN" secondAttribute="top" id="3GG-Ux-Ct1"/>
+                                            <constraint firstAttribute="trailing" secondItem="DrM-4j-C3B" secondAttribute="trailing" id="EdS-GQ-Q6I"/>
+                                            <constraint firstItem="NLN-dL-eqO" firstAttribute="top" secondItem="0Iv-6K-zaN" secondAttribute="top" id="GT4-ly-uMr"/>
+                                            <constraint firstItem="NLN-dL-eqO" firstAttribute="leading" secondItem="0Iv-6K-zaN" secondAttribute="leading" id="JUp-D8-Hmu"/>
+                                            <constraint firstAttribute="trailing" secondItem="NLN-dL-eqO" secondAttribute="trailing" id="Lb5-c4-taE"/>
+                                            <constraint firstAttribute="bottom" secondItem="DrM-4j-C3B" secondAttribute="bottom" id="RyN-H8-cHm"/>
+                                            <constraint firstAttribute="bottom" secondItem="NLN-dL-eqO" secondAttribute="bottom" id="gRf-fs-OZ0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-q5-WTb">
@@ -430,6 +464,7 @@ and most trusted</string>
         <image name="GoogleIcon" width="25" height="24"/>
         <image name="Onbdsc2" width="307" height="458"/>
         <image name="Sc1" width="332" height="459"/>
+        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="frame1bar" width="42" height="6"/>
         <image name="frame2bar" width="42" height="6"/>
         <namedColor name="GlobalButtonColor">
