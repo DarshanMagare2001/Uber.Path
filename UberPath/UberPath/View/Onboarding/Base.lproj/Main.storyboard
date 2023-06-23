@@ -288,7 +288,7 @@ and most trusted</string>
                                                     <constraint firstAttribute="height" constant="50" id="JJL-Id-OcV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
                                                         <real key="value" value="10"/>
@@ -451,6 +451,7 @@ and most trusted</string>
                     <connections>
                         <outlet property="emailTxtFld" destination="aAS-cx-f8q" id="mNW-rk-sxN"/>
                         <outlet property="hiThereLbl" destination="hLN-Cv-Zru" id="Lk9-U9-8tT"/>
+                        <outlet property="passwordShowHiddenBtn" destination="DrM-4j-C3B" id="Ba6-jr-fmC"/>
                         <outlet property="passwordTxtFld" destination="NLN-dL-eqO" id="byU-vE-F7f"/>
                         <outlet property="welcomeLbl" destination="wjy-By-Vem" id="biP-1g-yHD"/>
                     </connections>

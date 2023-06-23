@@ -12,7 +12,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var passwordTxtFld: UITextField!
-    
+    @IBOutlet weak var passwordShowHiddenBtn: UIButton!
+    var isPasswordShow = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,15 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func passwordHideShowBtnPressed(_ sender: UIButton) {
-        
-        
+        isPasswordShow.toggle()
+        if isPasswordShow {
+            let image = UIImage(systemName: "eye")
+            passwordShowHiddenBtn.setImage(image, for: .normal)
+        }else{
+            let image = UIImage(systemName: "eye.slash")
+            passwordShowHiddenBtn.setImage(image, for: .normal)
+        }
+        passwordTxtFld.isSecureTextEntry.toggle()
     }
     
     
