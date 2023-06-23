@@ -301,6 +301,9 @@ and most trusted</string>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="passwordHideShowBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="VZk-vB-pHe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,6 +329,9 @@ and most trusted</string>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="rIM-kN-2M6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWG-cP-Qoy" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                 <rect key="frame" x="20" y="297.5" width="280" height="50"/>
@@ -338,6 +344,9 @@ and most trusted</string>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign In">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="17C-Sf-kff"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JST-IE-IOE">
                                 <rect key="frame" x="21" y="387.5" width="278" height="1"/>
@@ -364,11 +373,17 @@ and most trusted</string>
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="GoogleIcon" title=" "/>
+                                        <connections>
+                                            <action selector="signInWithGoogleBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="6GB-WQ-9oc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bun-LK-bYG" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="130" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="AppleIcon" title=" "/>
+                                        <connections>
+                                            <action selector="signInWithAppleBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="AwW-ie-Lmp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -394,6 +409,9 @@ and most trusted</string>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="GtH-uU-meK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -431,7 +449,9 @@ and most trusted</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTxtFld" destination="aAS-cx-f8q" id="mNW-rk-sxN"/>
                         <outlet property="hiThereLbl" destination="hLN-Cv-Zru" id="Lk9-U9-8tT"/>
+                        <outlet property="passwordTxtFld" destination="NLN-dL-eqO" id="byU-vE-F7f"/>
                         <outlet property="welcomeLbl" destination="wjy-By-Vem" id="biP-1g-yHD"/>
                     </connections>
                 </viewController>
