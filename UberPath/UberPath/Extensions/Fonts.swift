@@ -100,28 +100,27 @@ class FontManager {
             adjustedSize *= 1
             
         case "iPhone 6", "iPhone 6S", "iPhone 7", "iPhone 8" , "iPhone SE (2nd generation)":
-            adjustedSize *= 1.4
+            adjustedSize *= 1.8
             
         case "iPhone 6 Plus", "iPhone 6S Plus", "iPhone 7 Plus", "iPhone 8 Plus":
-            adjustedSize *= 1.8
+            adjustedSize *= 2.1
             
         case  "iPhone X", "iPhone XS","iPhone 11 Pro":
             adjustedSize *= 1.8
         case "iPhone XR" , "iPhone 11":
-            adjustedSize *= 2
+            adjustedSize *= 2.1
             
         case "iPhone XS Max", "iPhone 11 Pro Max" :
-            adjustedSize *= 2
+            adjustedSize *= 2.1
             
         case "iPhone 12 mini" , "iPhone 13 mini":
-            adjustedSize *= 2
-            
+            adjustedSize *= 1.8
         case "iPhone 12","iPhone 13":
-            adjustedSize *= 2
+            adjustedSize *= 1.9
         case "iPhone 12 Pro Max","iPhone 13 Pro Max":
-            adjustedSize *= 2
+            adjustedSize *= 2.2
         case "iPhone 12 Pro","iPhone 13 Pro":
-            adjustedSize *= 2.1
+            adjustedSize *= 1.9
         default:
             break // No adjustment needed
         }
