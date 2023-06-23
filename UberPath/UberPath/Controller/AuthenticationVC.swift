@@ -10,6 +10,10 @@ import UIKit
 class AuthenticationVC: UIViewController {
     
     
+    @IBOutlet weak var hiThereLbl: UILabel!
+    @IBOutlet weak var welcomeLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
