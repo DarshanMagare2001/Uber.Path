@@ -76,7 +76,7 @@
 		13A12ABC2A445F5400532BC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				13A12AAD2A445F1A00532BC6 /* Main.storyboard */,
+				13A12AC02A4465E700532BC6 /* Onboarding */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +105,14 @@
 				13A12AB02A445F1D00532BC6 /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		13A12AC02A4465E700532BC6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				13A12AAD2A445F1A00532BC6 /* Main.storyboard */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
