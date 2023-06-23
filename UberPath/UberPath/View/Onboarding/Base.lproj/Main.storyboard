@@ -38,19 +38,25 @@
                                         <rect key="frame" x="0.0" y="297.5" width="280" height="212.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW3-87-gW6">
-                                                <rect key="frame" x="10" y="30" width="260" height="31.5"/>
+                                                <rect key="frame" x="10" y="30" width="260" height="53"/>
                                                 <string key="text">The fastest transaction
  process only here</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame2bar" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-Ae-n7b">
-                                                <rect key="frame" x="119" y="128.5" width="42" height="6"/>
+                                                <rect key="frame" x="119" y="127.5" width="42" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="BbP-uJ-LKE"/>
+                                                </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYX-um-HzR">
-                                                <rect key="frame" x="10" y="164.5" width="260" height="38"/>
+                                                <rect key="frame" x="10" y="162.5" width="260" height="40"/>
                                                 <color key="backgroundColor" name="GlobalButtonColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="0cH-Mv-xnf"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Get Started">
@@ -60,9 +66,9 @@
                                                     <action selector="onboardingTwoViewGetstartedBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpq-xv-jFn"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get easy to pay all your bills with just a few steps. Paying your bills become fast and efficient." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW7-YA-G66">
-                                                <rect key="frame" x="10" y="81.5" width="260" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Get easy to pay all your bills with just a few steps. Paying your bills become fast and efficient." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW7-YA-G66">
+                                                <rect key="frame" x="10" y="93" width="260" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -70,11 +76,11 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="sYX-um-HzR" firstAttribute="leading" secondItem="CzH-pR-hWa" secondAttribute="leading" constant="10" id="0Iu-wm-b1U"/>
-                                            <constraint firstItem="poJ-Ae-n7b" firstAttribute="top" secondItem="hW7-YA-G66" secondAttribute="bottom" constant="30" id="6Sy-oI-wVl"/>
+                                            <constraint firstItem="poJ-Ae-n7b" firstAttribute="top" secondItem="hW7-YA-G66" secondAttribute="bottom" constant="20" id="6Sy-oI-wVl"/>
                                             <constraint firstAttribute="bottom" secondItem="sYX-um-HzR" secondAttribute="bottom" constant="10" id="6xX-F0-DcH"/>
                                             <constraint firstItem="sYX-um-HzR" firstAttribute="top" secondItem="poJ-Ae-n7b" secondAttribute="bottom" constant="30" id="8Fo-wN-iN3"/>
                                             <constraint firstItem="poJ-Ae-n7b" firstAttribute="centerX" secondItem="CzH-pR-hWa" secondAttribute="centerX" id="BSB-M5-ubv"/>
-                                            <constraint firstItem="hW7-YA-G66" firstAttribute="top" secondItem="yW3-87-gW6" secondAttribute="bottom" constant="20" id="YAC-P3-Uvc"/>
+                                            <constraint firstItem="hW7-YA-G66" firstAttribute="top" secondItem="yW3-87-gW6" secondAttribute="bottom" constant="10" id="YAC-P3-Uvc"/>
                                             <constraint firstItem="yW3-87-gW6" firstAttribute="top" secondItem="CzH-pR-hWa" secondAttribute="top" constant="30" id="Yid-h7-p4k"/>
                                             <constraint firstAttribute="trailing" secondItem="sYX-um-HzR" secondAttribute="trailing" constant="10" id="hUS-ag-lgl"/>
                                             <constraint firstAttribute="trailing" secondItem="yW3-87-gW6" secondAttribute="trailing" constant="10" id="hdO-d8-xbb"/>
@@ -105,20 +111,26 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-Lr-t7x">
                                         <rect key="frame" x="0.0" y="297.5" width="280" height="212.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVZ-nF-Ak8">
-                                                <rect key="frame" x="10" y="30" width="260" height="31.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVZ-nF-Ak8">
+                                                <rect key="frame" x="10" y="30" width="260" height="53"/>
                                                 <string key="text">Finance app the safest 
 and most trusted</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame1bar" translatesAutoresizingMaskIntoConstraints="NO" id="neg-6C-YyF">
-                                                <rect key="frame" x="119" y="128.5" width="42" height="6"/>
+                                                <rect key="frame" x="119" y="127.5" width="42" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="Ktf-hD-9YX"/>
+                                                </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQO-jb-owm">
-                                                <rect key="frame" x="10" y="164.5" width="260" height="38"/>
+                                                <rect key="frame" x="10" y="162.5" width="260" height="40"/>
                                                 <color key="backgroundColor" name="GlobalButtonColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="DR3-cy-lFq"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Next">
@@ -128,9 +140,9 @@ and most trusted</string>
                                                     <action selector="onboardingOneViewNxtBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSi-Hr-chV"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your finance work starts here. Our here to help you track and deal with speeding up your transactions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-B7-6Sd">
-                                                <rect key="frame" x="10" y="81.5" width="260" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Your finance work starts here. Our here to help you track and deal with speeding up your transactions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-B7-6Sd">
+                                                <rect key="frame" x="10" y="93" width="260" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -141,12 +153,12 @@ and most trusted</string>
                                             <constraint firstAttribute="trailing" secondItem="hVZ-nF-Ak8" secondAttribute="trailing" constant="10" id="Dxp-mV-8Tw"/>
                                             <constraint firstItem="hQO-jb-owm" firstAttribute="leading" secondItem="bn5-Lr-t7x" secondAttribute="leading" constant="10" id="Eu2-mw-cGU"/>
                                             <constraint firstItem="hVZ-nF-Ak8" firstAttribute="leading" secondItem="bn5-Lr-t7x" secondAttribute="leading" constant="10" id="FLt-KV-Sou"/>
-                                            <constraint firstItem="neg-6C-YyF" firstAttribute="top" secondItem="l4e-B7-6Sd" secondAttribute="bottom" constant="30" id="OLN-Fw-pOk"/>
+                                            <constraint firstItem="neg-6C-YyF" firstAttribute="top" secondItem="l4e-B7-6Sd" secondAttribute="bottom" constant="20" id="OLN-Fw-pOk"/>
                                             <constraint firstItem="hQO-jb-owm" firstAttribute="top" secondItem="neg-6C-YyF" secondAttribute="bottom" constant="30" id="QcJ-ev-IGD"/>
                                             <constraint firstAttribute="bottom" secondItem="hQO-jb-owm" secondAttribute="bottom" constant="10" id="UeN-2o-fCv"/>
                                             <constraint firstAttribute="trailing" secondItem="l4e-B7-6Sd" secondAttribute="trailing" constant="10" id="YDC-Pe-EOM"/>
                                             <constraint firstItem="neg-6C-YyF" firstAttribute="centerX" secondItem="bn5-Lr-t7x" secondAttribute="centerX" id="gf5-hg-JBR"/>
-                                            <constraint firstItem="l4e-B7-6Sd" firstAttribute="top" secondItem="hVZ-nF-Ak8" secondAttribute="bottom" constant="20" id="jtn-5I-cge"/>
+                                            <constraint firstItem="l4e-B7-6Sd" firstAttribute="top" secondItem="hVZ-nF-Ak8" secondAttribute="bottom" constant="10" id="jtn-5I-cge"/>
                                             <constraint firstAttribute="trailing" secondItem="hQO-jb-owm" secondAttribute="trailing" constant="10" id="qzi-dK-uLY"/>
                                             <constraint firstItem="l4e-B7-6Sd" firstAttribute="leading" secondItem="bn5-Lr-t7x" secondAttribute="leading" constant="10" id="uyI-nF-cDg"/>
                                         </constraints>
@@ -182,6 +194,8 @@ and most trusted</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="onboardOneViewLbl1" destination="hVZ-nF-Ak8" id="abk-aS-UTn"/>
+                        <outlet property="onboardOneViewLbl2" destination="l4e-B7-6Sd" id="Xki-el-ETs"/>
                         <outlet property="onboardingOneView" destination="Oad-yJ-OIj" id="or1-fk-gai"/>
                         <outlet property="onboardingTwoView" destination="hOi-Ax-ddy" id="Yox-5A-6LZ"/>
                     </connections>

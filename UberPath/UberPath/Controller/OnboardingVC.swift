@@ -10,14 +10,24 @@ import UIKit
 class OnboardingVC: UIViewController {
     
     @IBOutlet weak var onboardingOneView: UIView!
-    
     @IBOutlet weak var onboardingTwoView: UIView!
+    @IBOutlet weak var onboardOneViewLbl1: UILabel!
+    @IBOutlet weak var onboardOneViewLbl2: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         onboardingOneView.isHidden = false
         onboardingTwoView.isHidden = true
 
+        let baseFontSize: CGFloat = 17.0
+        let adjustedFontSize = FontManager.adjustedFontSize(forBaseSize: baseFontSize)
+        onboardOneViewLbl1.font = UIFont.systemFont(ofSize: adjustedFontSize)
+        
+        
+        
+        
     }
     
     
