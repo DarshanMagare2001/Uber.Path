@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
-		13A12AAC2A445F1A00532BC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* ViewController.swift */; };
+		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
 		13A12AAF2A445F1A00532BC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AAD2A445F1A00532BC6 /* Main.storyboard */; };
 		13A12AB12A445F1D00532BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB02A445F1D00532BC6 /* Assets.xcassets */; };
 		13A12AB42A445F1D00532BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB22A445F1D00532BC6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13A12AAB2A445F1A00532BC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		13A12AAE2A445F1A00532BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13A12AB02A445F1D00532BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A12AB32A445F1D00532BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1326A74A2A4565CD00BB4E39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1326A74B2A4565DF00BB4E39 /* Fonts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		13A12A9B2A445F1A00532BC6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		13A12AA62A445F1A00532BC6 /* UberPath */ = {
 			isa = PBXGroup;
 			children = (
+				1326A74A2A4565CD00BB4E39 /* Extensions */,
 				13A12ABE2A445F7400532BC6 /* App */,
 				13A12ABB2A445F4C00532BC6 /* Model */,
 				13A12ABC2A445F5400532BC6 /* View */,
@@ -84,7 +95,7 @@
 		13A12ABD2A445F5A00532BC6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				13A12AAB2A445F1A00532BC6 /* ViewController.swift */,
+				13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,7 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A12AAC2A445F1A00532BC6 /* ViewController.swift in Sources */,
+				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
+				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,
 			);

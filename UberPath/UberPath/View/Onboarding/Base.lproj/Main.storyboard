@@ -3,15 +3,16 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--OnboardingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OnboardingVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,14 +29,56 @@
                                 </buttonConfiguration>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oad-yJ-OIj">
-                                <rect key="frame" x="20" y="78" width="280" height="353"/>
+                                <rect key="frame" x="20" y="68" width="280" height="500"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sc1" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-Ka-orZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="353"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="500"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-Lr-t7x">
-                                        <rect key="frame" x="0.0" y="211" width="280" height="142"/>
+                                        <rect key="frame" x="0.0" y="292" width="280" height="208"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVZ-nF-Ak8">
+                                                <rect key="frame" x="10" y="30" width="260" height="31.5"/>
+                                                <string key="text">Finance app the safest 
+and most trusted</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame1bar" translatesAutoresizingMaskIntoConstraints="NO" id="neg-6C-YyF">
+                                                <rect key="frame" x="119" y="131" width="42" height="6"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQO-jb-owm">
+                                                <rect key="frame" x="10" y="167" width="260" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your finance work starts here. Our here to help you track and deal with speeding up your transactions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-B7-6Sd">
+                                                <rect key="frame" x="10" y="81.5" width="260" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="hVZ-nF-Ak8" firstAttribute="top" secondItem="bn5-Lr-t7x" secondAttribute="top" constant="30" id="4Dp-Lf-IYR"/>
+                                            <constraint firstAttribute="trailing" secondItem="hVZ-nF-Ak8" secondAttribute="trailing" constant="10" id="Dxp-mV-8Tw"/>
+                                            <constraint firstItem="hQO-jb-owm" firstAttribute="leading" secondItem="bn5-Lr-t7x" secondAttribute="leading" constant="10" id="Eu2-mw-cGU"/>
+                                            <constraint firstItem="hVZ-nF-Ak8" firstAttribute="leading" secondItem="bn5-Lr-t7x" secondAttribute="leading" constant="10" id="FLt-KV-Sou"/>
+                                            <constraint firstItem="neg-6C-YyF" firstAttribute="top" secondItem="l4e-B7-6Sd" secondAttribute="bottom" constant="30" id="OLN-Fw-pOk"/>
+                                            <constraint firstItem="hQO-jb-owm" firstAttribute="top" secondItem="neg-6C-YyF" secondAttribute="bottom" constant="30" id="QcJ-ev-IGD"/>
+                                            <constraint firstAttribute="bottom" secondItem="hQO-jb-owm" secondAttribute="bottom" constant="10" id="UeN-2o-fCv"/>
+                                            <constraint firstAttribute="trailing" secondItem="l4e-B7-6Sd" secondAttribute="trailing" constant="10" id="YDC-Pe-EOM"/>
+                                            <constraint firstItem="neg-6C-YyF" firstAttribute="centerX" secondItem="bn5-Lr-t7x" secondAttribute="centerX" id="gf5-hg-JBR"/>
+                                            <constraint firstItem="l4e-B7-6Sd" firstAttribute="top" secondItem="hVZ-nF-Ak8" secondAttribute="bottom" constant="20" id="jtn-5I-cge"/>
+                                            <constraint firstAttribute="trailing" secondItem="hQO-jb-owm" secondAttribute="trailing" constant="10" id="qzi-dK-uLY"/>
+                                            <constraint firstItem="l4e-B7-6Sd" firstAttribute="leading" secondItem="bn5-Lr-t7x" secondAttribute="leading" constant="10" id="uyI-nF-cDg"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,42 +88,22 @@
                                     <constraint firstAttribute="bottom" secondItem="ZZ0-Ka-orZ" secondAttribute="bottom" id="P6J-zJ-sqp"/>
                                     <constraint firstAttribute="trailing" secondItem="ZZ0-Ka-orZ" secondAttribute="trailing" id="WB8-62-Uxx"/>
                                     <constraint firstItem="ZZ0-Ka-orZ" firstAttribute="leading" secondItem="Oad-yJ-OIj" secondAttribute="leading" id="aUk-Tj-wun"/>
-                                    <constraint firstItem="bn5-Lr-t7x" firstAttribute="height" secondItem="ZZ0-Ka-orZ" secondAttribute="height" multiplier="0.402266" id="fBo-fB-8YV"/>
                                     <constraint firstAttribute="trailing" secondItem="bn5-Lr-t7x" secondAttribute="trailing" id="fMt-a5-Xqi"/>
+                                    <constraint firstItem="bn5-Lr-t7x" firstAttribute="height" secondItem="ZZ0-Ka-orZ" secondAttribute="height" multiplier="0.416327" id="uaw-Yg-0rC"/>
                                     <constraint firstItem="ZZ0-Ka-orZ" firstAttribute="top" secondItem="Oad-yJ-OIj" secondAttribute="top" id="ycr-up-zCR"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqE-Xa-LDG">
-                                <rect key="frame" x="20" y="517" width="280" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="7uA-wL-bTr"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ff6-HP-Xov">
-                                <rect key="frame" x="20" y="471" width="280" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="9gf-kh-yPH"/>
-                                </constraints>
-                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ff6-HP-Xov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Ke-De-x0h"/>
-                            <constraint firstItem="pqE-Xa-LDG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4RS-ut-aJO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pqE-Xa-LDG" secondAttribute="bottom" constant="20" id="Cgy-Vc-0hb"/>
                             <constraint firstItem="VbI-yN-VAG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="LCY-ib-83z"/>
-                            <constraint firstItem="pqE-Xa-LDG" firstAttribute="top" secondItem="Ff6-HP-Xov" secondAttribute="bottom" constant="20" id="ZGd-yn-L4D"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ff6-HP-Xov" secondAttribute="trailing" constant="20" id="adQ-Rv-47p"/>
                             <constraint firstItem="Oad-yJ-OIj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bNl-HN-PLQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VbI-yN-VAG" secondAttribute="trailing" constant="20" id="c5J-MS-CRX"/>
-                            <constraint firstItem="Oad-yJ-OIj" firstAttribute="top" secondItem="VbI-yN-VAG" secondAttribute="bottom" constant="30" id="caU-CT-scS"/>
+                            <constraint firstItem="Oad-yJ-OIj" firstAttribute="top" secondItem="VbI-yN-VAG" secondAttribute="bottom" constant="20" id="caU-CT-scS"/>
                             <constraint firstItem="VbI-yN-VAG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="d6I-at-lWM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pqE-Xa-LDG" secondAttribute="trailing" constant="20" id="f9J-ZW-awh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oad-yJ-OIj" secondAttribute="trailing" constant="20" id="gr4-qb-ty6"/>
-                            <constraint firstItem="Ff6-HP-Xov" firstAttribute="top" secondItem="Oad-yJ-OIj" secondAttribute="bottom" constant="40" id="l94-SO-xcq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oad-yJ-OIj" secondAttribute="bottom" id="jaE-hF-FCI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -91,6 +114,10 @@
     </scenes>
     <resources>
         <image name="Sc1" width="332" height="459"/>
+        <image name="frame1bar" width="42" height="6"/>
+        <namedColor name="GlobalButtonColor">
+            <color red="0.11372549019607843" green="0.22745098039215686" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
