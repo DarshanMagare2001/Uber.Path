@@ -62,6 +62,14 @@ extension UIDevice {
             "iPhone14,2": "iPhone 13 Pro",
             "iPhone14,3": "iPhone 13 Pro Max",
             "iPhone14,8": "iPhone 13 Pro Max",
+            "iPhone14,4": "iPhone 13 mini",
+            "iPhone14,5": "iPhone 13",
+            "iPhone14,2": "iPhone 13 Pro",
+            "iPhone14,3": "iPhone 13 Pro Max",
+            "iPhone14,1": "iPhone 13 mini",
+            "iPhone14,7": "iPhone 13",
+            "iPhone14,4": "iPhone 13 Pro",
+            "iPhone14,5": "iPhone 13 Pro Max",
             
             // Add more mappings for other iPhone models if needed
         ]
@@ -94,12 +102,26 @@ class FontManager {
         case "iPhone 6", "iPhone 6S", "iPhone 7", "iPhone 8" , "iPhone SE (2nd generation)":
             adjustedSize *= 1.4
             
-        case "iPhone 6 Plus", "iPhone 6S Plus", "iPhone 7 Plus", "iPhone 8 Plus", "iPhone X", "iPhone XR":
+        case "iPhone 6 Plus", "iPhone 6S Plus", "iPhone 7 Plus", "iPhone 8 Plus":
             adjustedSize *= 1.8
-        case "iPhone XS", "iPhone 11":
+            
+        case  "iPhone X", "iPhone XS","iPhone 11 Pro":
+            adjustedSize *= 1.8
+        case "iPhone XR" , "iPhone 11":
             adjustedSize *= 2
-        case "iPhone XS Max", "iPhone 11 Pro", "iPhone 11 Pro Max", "iPhone 12 mini", "iPhone 12", "iPhone 12 Pro", "iPhone 12 Pro Max", "iPhone 13 Pro", "iPhone 13 Pro Max", "iPhone 13 mini", "iPhone 13", "iPhone 13 Pro Max":
-            adjustedSize *= 2.2
+            
+        case "iPhone XS Max", "iPhone 11 Pro Max" :
+            adjustedSize *= 2
+            
+        case "iPhone 12 mini" , "iPhone 13 mini":
+            adjustedSize *= 2
+            
+        case "iPhone 12","iPhone 13":
+            adjustedSize *= 2
+        case "iPhone 12 Pro Max","iPhone 13 Pro Max":
+            adjustedSize *= 2
+        case "iPhone 12 Pro","iPhone 13 Pro":
+            adjustedSize *= 2.1
         default:
             break // No adjustment needed
         }
@@ -107,6 +129,4 @@ class FontManager {
         return adjustedSize
     }
 }
-
-
 
