@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
-		1326A74F2A45982D00BB4E39 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1326A74E2A45982D00BB4E39 /* SwifterSwift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
@@ -36,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1326A74F2A45982D00BB4E39 /* SwifterSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +146,6 @@
 			);
 			name = UberPath;
 			packageProductDependencies = (
-				1326A74E2A45982D00BB4E39 /* SwifterSwift */,
 			);
 			productName = UberPath;
 			productReference = 13A12AA42A445F1A00532BC6 /* UberPath.app */;
@@ -179,7 +176,6 @@
 			);
 			mainGroup = 13A12A9B2A445F1A00532BC6;
 			packageReferences = (
-				1326A74D2A45982D00BB4E39 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 			);
 			productRefGroup = 13A12AA52A445F1A00532BC6 /* Products */;
 			projectDirPath = "";
@@ -432,25 +428,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1326A74D2A45982D00BB4E39 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1326A74E2A45982D00BB4E39 /* SwifterSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1326A74D2A45982D00BB4E39 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
-			productName = SwifterSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13A12A9C2A445F1A00532BC6 /* Project object */;
 }
