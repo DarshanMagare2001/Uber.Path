@@ -20,6 +20,7 @@ class OnboardingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
         onboardingOneView.isHidden = false
         onboardingTwoView.isHidden = true
         updateFont()
@@ -32,8 +33,21 @@ class OnboardingVC: UIViewController {
     }
     
     @IBAction func onboardingTwoViewGetstartedBtnPressed(_ sender: UIButton) {
-        // Handle get started button press
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "AuthenticationVC") as! AuthenticationVC
+        navigationController?.pushViewController(destinationVC, animated: true);
     }
+    
+    
+    @IBAction func skipBtnPressed(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "AuthenticationVC") as! AuthenticationVC
+        navigationController?.pushViewController(destinationVC, animated: true);
+        
+    }
+    
+    
     
     func updateFont(){
         onboardOneViewLbl1.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 17.0))

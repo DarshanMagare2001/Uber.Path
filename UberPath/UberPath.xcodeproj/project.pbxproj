@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A74F2A45982D00BB4E39 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1326A74E2A45982D00BB4E39 /* SwifterSwift */; };
+		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */,
+				1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,
+				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
