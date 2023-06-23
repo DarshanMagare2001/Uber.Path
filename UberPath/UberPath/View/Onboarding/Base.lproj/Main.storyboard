@@ -230,9 +230,9 @@ and most trusted</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-xq-yrW">
-                                <rect key="frame" x="0.0" y="0.0" width="64" height="54"/>
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="54"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="BackArrow"/>
+                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
                                 <connections>
                                     <action selector="backArrowBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="fGg-6c-HP1"/>
                                 </connections>
@@ -326,17 +326,15 @@ and most trusted</string>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-Wd-4d5">
                                 <rect key="frame" x="20" y="453.5" width="280" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsU-fV-hY7" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBY-Qt-2Cl" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="GoogleIcon"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="GoogleIcon" title=" "/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayx-9M-iLP" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bun-LK-bYG" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="130" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="AppleIcon"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="AppleIcon" title=" "/>
                                     </button>
                                 </subviews>
                                 <constraints>
