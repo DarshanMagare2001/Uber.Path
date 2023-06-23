@@ -9,25 +9,32 @@ import UIKit
 
 class OnboardingVC: UIViewController {
     
+    @IBOutlet weak var onboardingOneView: UIView!
     
-
+    @IBOutlet weak var onboardingTwoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let baseFontSize: CGFloat = 17.0 // Define your base font size here
-
-        let adjustedFontSize = FontManager.adjustedFontSize(forBaseSize: baseFontSize)
-
-        // Use the `adjustedFontSize` to create a font with the adjusted size
-        let adjustedFont = UIFont.systemFont(ofSize: adjustedFontSize)
-
-        // Use the `adjustedFont` for your labels, buttons, or any other text elements
-
-
-        // Use the `scaledFont` for your labels, buttons, or any other text elements
+        onboardingOneView.isHidden = false
+        onboardingTwoView.isHidden = true
 
     }
-
+    
+    
+    @IBAction func onboardingOneViewNxtBtnPressed(_ sender: UIButton) {
+        onboardingTwoView.isHidden = false
+        onboardingOneView.isHidden = true
+        
+    }
+    
+    
+    
+    @IBAction func onboardingTwoViewGetstartedBtnPressed(_ sender: UIButton) {
+        
+        
+        
+    }
+    
 
 }
 
