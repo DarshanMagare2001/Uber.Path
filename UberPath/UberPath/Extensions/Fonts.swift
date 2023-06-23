@@ -62,10 +62,10 @@ extension UIDevice {
             "iPhone14,2": "iPhone 13 Pro",
             "iPhone14,3": "iPhone 13 Pro Max",
             "iPhone14,8": "iPhone 13 Pro Max",
-
+            
             // Add more mappings for other iPhone models if needed
         ]
-
+        
         if let modelName = modelMapping[identifier] {
             print(identifier)
             return modelName
@@ -103,7 +103,6 @@ class FontManager {
         default:
             break // No adjustment needed
         }
-        
         print("Adjusted font size for \(modelName): \(adjustedSize)")
         return adjustedSize
     }
