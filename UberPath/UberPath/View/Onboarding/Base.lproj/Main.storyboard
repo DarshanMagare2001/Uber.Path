@@ -711,7 +711,7 @@ and most trusted</string>
                         <outlet property="copaymentLbl" destination="kQA-38-ztl" id="4Bv-w1-35G"/>
                         <outlet property="createLbl" destination="DPB-7F-Vw6" id="nwo-Sr-mQa"/>
                         <outlet property="hiThereLbl" destination="hLN-Cv-Zru" id="Lk9-U9-8tT"/>
-                        <outlet property="passwordShowHiddenBtn" destination="DrM-4j-C3B" id="Ba6-jr-fmC"/>
+                        <outlet property="passwordShowHiddenBtn" destination="ucQ-XK-1mQ" id="jwy-FR-MiH"/>
                         <outlet property="signInEmailTxtFld" destination="aAS-cx-f8q" id="mNW-rk-sxN"/>
                         <outlet property="signInPasswordTxtFld" destination="NLN-dL-eqO" id="byU-vE-F7f"/>
                         <outlet property="signInView" destination="e85-do-a79" id="IBd-4a-eKr"/>

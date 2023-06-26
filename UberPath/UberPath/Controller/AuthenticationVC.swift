@@ -8,8 +8,11 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import AuthenticationServices
 
-class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate {
+class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    
+    
     @IBOutlet weak var hiThereLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var signInEmailTxtFld: UITextField!
@@ -50,11 +53,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate {
     func updateFont(){
         hiThereLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
         welcomeLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
-        
         createLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
-        
         copaymentLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
-        
         accontLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
     }
     
@@ -146,13 +146,49 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate {
                 }
             }
         }
-            
+        
     }
     
     
     @IBAction func signInWithAppleBtnPressed(_ sender: UIButton) {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
         
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
+    // MARK: - ASAuthorizationControllerDelegate
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            // Get the user's unique identifier
+            let userIdentifier = appleIDCredential.user
+            
+            // You can also get the user's full name and email if requested
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            
+            // Use the user's information for further authentication or app-specific actions
+            
+            // TODO: Implement the necessary logic for signing in with Apple
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        // Handle any errors that occur during Sign in with Apple
         
+        print("Sign in with Apple error: \(error.localizedDescription)")
+    }
+    
+    // MARK: - ASAuthorizationControllerPresentationContextProviding
+    
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        // Return the window to present the authorization controller
+        return self.view.window!
     }
     
     
@@ -187,5 +223,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate {
         signUpPasswordTxtFld.placeholder = "Password"
         
     }
+    
+    
+    
     
 }
