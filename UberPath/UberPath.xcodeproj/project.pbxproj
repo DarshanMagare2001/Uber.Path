@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01435BF6AD0AEE3CA6F79FA2 /* Pods_UberPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */; };
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
@@ -37,6 +38,9 @@
 		13A12AB02A445F1D00532BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A12AB32A445F1D00532BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A12AB52A445F1D00532BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
+		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 				1360B6002A494D54001FD948 /* FirebaseAuth in Frameworks */,
 				1360B6022A494D54001FD948 /* FirebaseFirestore in Frameworks */,
 				1360B6042A494D54001FD948 /* FirebaseFirestoreSwift in Frameworks */,
+				01435BF6AD0AEE3CA6F79FA2 /* Pods_UberPath.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +80,8 @@
 			children = (
 				13A12AA62A445F1A00532BC6 /* UberPath */,
 				13A12AA52A445F1A00532BC6 /* Products */,
+				553863077E72931B8F98B746 /* Pods */,
+				4834731299117B92F6450414 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +159,24 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		4834731299117B92F6450414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		553863077E72931B8F98B746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */,
+				F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13A12AB82A445F1D00532BC6 /* Build configuration list for PBXNativeTarget "UberPath" */;
 			buildPhases = (
+				9C8A86464004CFD5F4E23E0A /* [CP] Check Pods Manifest.lock */,
 				13A12AA02A445F1A00532BC6 /* Sources */,
 				13A12AA12A445F1A00532BC6 /* Frameworks */,
 				13A12AA22A445F1A00532BC6 /* Resources */,
+				3817C80A4D4723621C7C7D19 /* [CP] Embed Pods Frameworks */,
+				6FD6E7C75E06D9BC26F99CE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +254,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3817C80A4D4723621C7C7D19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FD6E7C75E06D9BC26F99CE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8A86464004CFD5F4E23E0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UberPath-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13A12AA02A445F1A00532BC6 /* Sources */ = {
@@ -382,6 +469,7 @@
 		};
 		13A12AB92A445F1D00532BC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -411,6 +499,7 @@
 		};
 		13A12ABA2A445F1D00532BC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
