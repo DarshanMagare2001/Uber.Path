@@ -10,9 +10,12 @@ import UIKit
 class AuthenticationVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var hiThereLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
-    @IBOutlet weak var emailTxtFld: UITextField!
-    @IBOutlet weak var passwordTxtFld: UITextField!
+    @IBOutlet weak var signInEmailTxtFld: UITextField!
+    @IBOutlet weak var signInPasswordTxtFld: UITextField!
     @IBOutlet weak var passwordShowHiddenBtn: UIButton!
+    @IBOutlet weak var signUpNameTxtFld: UITextField!
+    @IBOutlet weak var signUpEmailTxtFld: UITextField!
+    @IBOutlet weak var signUpPasswordTxtFld: UITextField!
     @IBOutlet weak var signInView: UIView!
     @IBOutlet weak var signUpView: UIView!
     @IBOutlet weak var createLbl: UILabel!
@@ -25,9 +28,14 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         signInView.isHidden = false
         signUpView.isHidden = true
+        signInEmailTxtFld.delegate = self
+        signInPasswordTxtFld.delegate = self
+        signUpNameTxtFld.delegate = self
+        signUpEmailTxtFld.delegate = self
+        signUpPasswordTxtFld.delegate = self
         updateFont()
-        emailTxtFld.delegate = self
-        passwordTxtFld.delegate = self
+        updatePlaceHolders()
+        
     }
     
     @IBAction func backArrowBtnPressed(_ sender: UIButton) {
@@ -55,7 +63,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
             let image = UIImage(systemName: "eye.slash")
             passwordShowHiddenBtn.setImage(image, for: .normal)
         }
-        passwordTxtFld.isSecureTextEntry.toggle()
+        signInPasswordTxtFld.isSecureTextEntry.toggle()
+        signUpPasswordTxtFld.isSecureTextEntry.toggle()
     }
     
     
@@ -107,5 +116,13 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
         return true
     }
     
+    func updatePlaceHolders(){
+        signInEmailTxtFld.placeholder = "Email"
+        signInPasswordTxtFld.placeholder = "Password"
+        signUpNameTxtFld.placeholder = "Full name"
+        signUpEmailTxtFld.placeholder = "Email"
+        signUpPasswordTxtFld.placeholder = "Password"
+        
+    }
     
 }

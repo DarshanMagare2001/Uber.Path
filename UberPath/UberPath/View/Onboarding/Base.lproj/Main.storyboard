@@ -537,7 +537,7 @@ and most trusted</string>
                                                             <constraint firstAttribute="height" constant="50" id="EKL-fB-U4H"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucQ-XK-1mQ">
                                                         <rect key="frame" x="224" y="0.0" width="56" height="50"/>
@@ -549,6 +549,9 @@ and most trusted</string>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system" title=" "/>
+                                                        <connections>
+                                                            <action selector="passwordHideShowBtnPressed:" destination="Ni3-GM-pLD" eventType="touchUpInside" id="tOV-HJ-mjW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -707,11 +710,14 @@ and most trusted</string>
                         <outlet property="accontLbl" destination="JRL-2S-C4n" id="r8d-Jt-9P4"/>
                         <outlet property="copaymentLbl" destination="kQA-38-ztl" id="4Bv-w1-35G"/>
                         <outlet property="createLbl" destination="DPB-7F-Vw6" id="nwo-Sr-mQa"/>
-                        <outlet property="emailTxtFld" destination="aAS-cx-f8q" id="mNW-rk-sxN"/>
                         <outlet property="hiThereLbl" destination="hLN-Cv-Zru" id="Lk9-U9-8tT"/>
                         <outlet property="passwordShowHiddenBtn" destination="DrM-4j-C3B" id="Ba6-jr-fmC"/>
-                        <outlet property="passwordTxtFld" destination="NLN-dL-eqO" id="byU-vE-F7f"/>
+                        <outlet property="signInEmailTxtFld" destination="aAS-cx-f8q" id="mNW-rk-sxN"/>
+                        <outlet property="signInPasswordTxtFld" destination="NLN-dL-eqO" id="byU-vE-F7f"/>
                         <outlet property="signInView" destination="e85-do-a79" id="IBd-4a-eKr"/>
+                        <outlet property="signUpEmailTxtFld" destination="GVM-av-SKC" id="DIM-TD-AFE"/>
+                        <outlet property="signUpNameTxtFld" destination="4y3-zA-AqS" id="taN-o7-pOa"/>
+                        <outlet property="signUpPasswordTxtFld" destination="acj-vV-PEa" id="haW-dp-haO"/>
                         <outlet property="signUpView" destination="ZeB-bH-v5e" id="Qz1-yD-HPL"/>
                         <outlet property="welcomeLbl" destination="wjy-By-Vem" id="biP-1g-yHD"/>
                     </connections>
