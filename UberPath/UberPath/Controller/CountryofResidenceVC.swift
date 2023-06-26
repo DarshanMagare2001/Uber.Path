@@ -6,24 +6,18 @@ struct MyCustomCountry {
     let isoCode: String
 }
 
-protocol CountrySelectionDelegate: AnyObject {
-    func didSelectCountry(_ country: MyCustomCountry)
-}
-
-class CountryofResidenceVC: UIViewController, CountrySelectionDelegate, ADCountryPickerDelegate {
-    func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
-        
-    }
-    
-    weak var delegate: CountrySelectionDelegate?
+class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
     
     @IBOutlet weak var countryImgView: UIImageView!
     @IBOutlet weak var countryLbl: UILabel!
-
+    @IBOutlet weak var countryOfReseidenceLbl: UILabel!
+    @IBOutlet weak var PleaseSelectLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateFont()
     }
-
+    
     @IBAction func countryShowBtnPressed(_ sender: UIButton) {
         let picker = ADCountryPicker(style: .grouped)
         picker.delegate = self
@@ -40,7 +34,7 @@ class CountryofResidenceVC: UIViewController, CountrySelectionDelegate, ADCountr
         picker.didSelectCountryClosure = { [weak self] name, code in
             guard let self = self else { return }
             let selectedCountry = MyCustomCountry(name: name, isoCode: code)
-            self.delegate?.didSelectCountry(selectedCountry)
+            
             self.dismiss(animated: true, completion: nil)
         }
         
@@ -55,22 +49,26 @@ class CountryofResidenceVC: UIViewController, CountrySelectionDelegate, ADCountr
         
         present(picker, animated: true, completion: nil)
     }
-
+    
     // MARK: - Country Selection Delegate
-
-    func didSelectCountry(_ country: MyCustomCountry) {
-        countryLbl.text = country.name
-        // Use ISO code as a placeholder for the flag image
-        if let flagImage = UIImage(named: country.isoCode.lowercased()) {
-            countryImgView.image = flagImage
-        } else {
-            countryImgView.image = nil
-        }
+    
+    func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
+        countryLbl.text = name
+        let flagImage = picker.getFlag(countryCode: code)
+        countryImgView.image = flagImage
     }
-
+    
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func updateFont(){
+        countryOfReseidenceLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        PleaseSelectLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 16.0))
+    }
+    
+    
 }
 
 // MARK: - UIViewControllerTransitioningDelegate
