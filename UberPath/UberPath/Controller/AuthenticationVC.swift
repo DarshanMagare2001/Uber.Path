@@ -13,10 +13,16 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var passwordTxtFld: UITextField!
     @IBOutlet weak var passwordShowHiddenBtn: UIButton!
+    @IBOutlet weak var signInView: UIView!
+    @IBOutlet weak var signUpView: UIView!
+    
+    
     var isPasswordShow = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInView.isHidden = false
+        signUpView.isHidden = true
         updateFont()
         emailTxtFld.delegate = self
         passwordTxtFld.delegate = self
@@ -69,10 +75,27 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     }
     
     
-    @IBAction func signUpBtnPressed(_ sender: UIButton) {
-        
+    @IBAction func goTosignUpBtnPressed(_ sender: UIButton) {
+        signInView.isHidden = true
+        signUpView.isHidden = false
         
     }
+    
+    
+    @IBAction func goTosignInBtnPressed(_ sender: UIButton) {
+        signInView.isHidden = false
+        signUpView.isHidden = true
+        
+    }
+    
+    
+    @IBAction func signUpBtnPressed(_ sender: UIButton) {
+        
+    }
+    
+    
+    
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Dismiss the keyboard when the return button is tapped
