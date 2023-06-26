@@ -14,6 +14,7 @@
 		1360B6002A494D54001FD948 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B5FF2A494D54001FD948 /* FirebaseAuth */; };
 		1360B6022A494D54001FD948 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B6012A494D54001FD948 /* FirebaseFirestore */; };
 		1360B6042A494D54001FD948 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B6032A494D54001FD948 /* FirebaseFirestoreSwift */; };
+		1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360B6062A496A7F001FD948 /* AuthenticationModel.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -27,6 +28,7 @@
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
 		1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1360B6062A496A7F001FD948 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 				1326A7522A45A76200BB4E39 /* RoundRadius.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1360B6052A496A62001FD948 /* AuthenticationModel */ = {
+			isa = PBXGroup;
+			children = (
+				1360B6062A496A7F001FD948 /* AuthenticationModel.swift */,
+			);
+			path = AuthenticationModel;
 			sourceTree = "<group>";
 		};
 		13A12A9B2A445F1A00532BC6 = {
@@ -94,6 +104,7 @@
 		13A12ABB2A445F4C00532BC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1360B6052A496A62001FD948 /* AuthenticationModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,
+				1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

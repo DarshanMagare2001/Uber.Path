@@ -23,6 +23,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var accontLbl: UILabel!
     
     var isPasswordShow = false
+    var viewModel = AuthenticationModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,8 +76,12 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
+        viewModel.signIn(email: signInEmailTxtFld.text ?? "", password: signInPasswordTxtFld.text ?? "")
         
-        
+    }
+    
+    @IBAction func signUpBtnPressed(_ sender: UIButton) {
+        viewModel.signUp(name: signUpNameTxtFld.text ?? "", email: signUpEmailTxtFld.text ?? "", password: signUpPasswordTxtFld.text ?? "")
     }
     
     
@@ -107,9 +112,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     }
     
     
-    @IBAction func signUpBtnPressed(_ sender: UIButton) {
-        
-    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Dismiss the keyboard when the return button is tapped
