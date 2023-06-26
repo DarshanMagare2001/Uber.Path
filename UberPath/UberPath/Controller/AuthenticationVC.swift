@@ -84,15 +84,10 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         
     }
     
-    
-    
-    
-    
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
         
         
     }
-    
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         guard let email = signInEmailTxtFld.text, let password = signInPasswordTxtFld.text, !email.isEmpty, !password.isEmpty else {

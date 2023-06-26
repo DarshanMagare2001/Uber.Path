@@ -786,6 +786,9 @@ and most trusted</string>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="DownArrow" title=" " subtitle=" "/>
+                                        <connections>
+                                            <action selector="countryShowBtnPressed:" destination="Qlb-LT-HHq" eventType="touchUpInside" id="fgO-mt-eFi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -819,6 +822,10 @@ and most trusted</string>
                             <constraint firstItem="lhc-KP-Ul9" firstAttribute="trailing" secondItem="htd-65-SrV" secondAttribute="trailing" constant="20" id="zoE-FV-Ddf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryImgView" destination="9pS-Ya-FLW" id="g8f-bQ-Sap"/>
+                        <outlet property="countryLbl" destination="q6v-ox-TlF" id="dRE-vj-Hy5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcM-76-UzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

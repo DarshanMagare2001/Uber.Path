@@ -7,5 +7,6 @@ target 'UberPath' do
 
   # Pods for UberPath
 pod 'GoogleSignIn', '~> 5.0'
+pod 'ADCountryPicker', '~> 2.1.0'
 
 end
