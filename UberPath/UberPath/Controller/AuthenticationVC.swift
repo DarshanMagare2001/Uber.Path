@@ -93,18 +93,18 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func goTosignUpBtnPressed(_ sender: UIButton) {
-          UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews], animations: {
-              self.signInView.isHidden = true
-              self.signUpView.isHidden = false
-          }, completion: nil)
-      }
-      
-      @IBAction func goTosignInBtnPressed(_ sender: UIButton) {
-          UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], animations: {
-              self.signInView.isHidden = false
-              self.signUpView.isHidden = true
-          }, completion: nil)
-      }
+        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews], animations: {
+            self.signInView.isHidden = true
+            self.signUpView.isHidden = false
+        }, completion: nil)
+    }
+    
+    @IBAction func goTosignInBtnPressed(_ sender: UIButton) {
+        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], animations: {
+            self.signInView.isHidden = false
+            self.signUpView.isHidden = true
+        }, completion: nil)
+    }
     
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
