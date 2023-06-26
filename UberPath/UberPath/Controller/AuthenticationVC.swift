@@ -85,7 +85,9 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     }
     
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
         
     }
     
