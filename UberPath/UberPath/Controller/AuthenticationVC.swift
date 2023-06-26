@@ -85,11 +85,17 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     }
     
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
+        guard let email = signInEmailTxtFld.text, !email.isEmpty else {
+            showToast(message: "Please enter your email.")
+            return
+        }
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
+        destinationVC.email = email
         self.navigationController?.pushViewController(destinationVC, animated: true)
-        
     }
+
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         guard let email = signInEmailTxtFld.text, let password = signInPasswordTxtFld.text, !email.isEmpty, !password.isEmpty else {
