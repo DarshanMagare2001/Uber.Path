@@ -11,6 +11,7 @@
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
+		133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */; };
 		1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */; };
 		1360B6002A494D54001FD948 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B5FF2A494D54001FD948 /* FirebaseAuth */; };
 		1360B6022A494D54001FD948 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B6012A494D54001FD948 /* FirebaseFirestore */; };
@@ -29,6 +30,7 @@
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
 		133DE3692A498BAA003C2C60 /* UberPath.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UberPath.entitlements; sourceTree = "<group>"; };
+		133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryofResidenceVC.swift; sourceTree = "<group>"; };
 		1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1360B6062A496A7F001FD948 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			children = (
 				13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */,
 				1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */,
+				133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
+				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,

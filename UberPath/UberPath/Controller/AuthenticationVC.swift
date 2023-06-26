@@ -15,7 +15,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var signInEmailTxtFld: UITextField!
     @IBOutlet weak var signInPasswordTxtFld: UITextField!
-    @IBOutlet weak var passwordShowHiddenBtn: UIButton!
+    @IBOutlet weak var passwordShowHiddenBtnSignIn: UIButton!
+    @IBOutlet weak var passwordShowHiddenBtnSignUp: UIButton!
     @IBOutlet weak var signUpNameTxtFld: UITextField!
     @IBOutlet weak var signUpEmailTxtFld: UITextField!
     @IBOutlet weak var signUpPasswordTxtFld: UITextField!
@@ -24,8 +25,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     @IBOutlet weak var createLbl: UILabel!
     @IBOutlet weak var copaymentLbl: UILabel!
     @IBOutlet weak var accontLbl: UILabel!
-    
-    var isPasswordShow = false
+    var isPasswordShowForSignIn = false
+    var isPasswordShowForSignUp = false
     var viewModel = AuthenticationModel()
     
     override func viewDidLoad() {
@@ -56,18 +57,35 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         accontLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
     }
     
-    @IBAction func passwordHideShowBtnPressed(_ sender: UIButton) {
-        isPasswordShow.toggle()
-        if isPasswordShow {
+    @IBAction func passwordHideShowBtnPressedForSignIn(_ sender: UIButton) {
+        isPasswordShowForSignIn.toggle()
+        if isPasswordShowForSignIn {
             let image = UIImage(systemName: "eye")
-            passwordShowHiddenBtn.setImage(image, for: .normal)
+            passwordShowHiddenBtnSignIn.setImage(image, for: .normal)
         }else{
             let image = UIImage(systemName: "eye.slash")
-            passwordShowHiddenBtn.setImage(image, for: .normal)
+            passwordShowHiddenBtnSignIn.setImage(image, for: .normal)
         }
         signInPasswordTxtFld.isSecureTextEntry.toggle()
-        signUpPasswordTxtFld.isSecureTextEntry.toggle()
     }
+    
+    
+    @IBAction func passwordHideShowBtnPressedForSignUp(_ sender: UIButton) {
+        isPasswordShowForSignUp.toggle()
+        if isPasswordShowForSignUp {
+            let image = UIImage(systemName: "eye")
+            passwordShowHiddenBtnSignUp.setImage(image, for: .normal)
+        }else{
+            let image = UIImage(systemName: "eye.slash")
+            passwordShowHiddenBtnSignUp.setImage(image, for: .normal)
+        }
+        signUpPasswordTxtFld.isSecureTextEntry.toggle()
+        
+        
+    }
+    
+    
+    
     
     
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
@@ -140,6 +158,9 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
                     return
                 }else{
                     print("Login Successfuly")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
                     
                 }
             }
