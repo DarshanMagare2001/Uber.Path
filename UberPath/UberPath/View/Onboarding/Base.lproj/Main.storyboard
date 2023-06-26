@@ -453,18 +453,29 @@ and most trusted</string>
                                 <rect key="frame" x="0.0" y="55" width="320" height="513"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0zA-7z-IzU">
-                                        <rect key="frame" x="20" y="5" width="169.5" height="43"/>
+                                        <rect key="frame" x="20" y="5" width="170" height="43"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPB-7F-Vw6">
-                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="21.5"/>
-                                                <string key="text">Create a Co.payment
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ekI-0V-QKd">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="21.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPB-7F-Vw6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="21.5"/>
+                                                        <string key="text">Create a   
 </string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Co.payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQA-38-ztl">
+                                                        <rect key="frame" x="72.5" y="0.0" width="97.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" name="LaunchscreenColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-2S-C4n">
-                                                <rect key="frame" x="0.0" y="21.5" width="169.5" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="21.5" width="170" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -693,6 +704,9 @@ and most trusted</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accontLbl" destination="JRL-2S-C4n" id="r8d-Jt-9P4"/>
+                        <outlet property="copaymentLbl" destination="kQA-38-ztl" id="4Bv-w1-35G"/>
+                        <outlet property="createLbl" destination="DPB-7F-Vw6" id="nwo-Sr-mQa"/>
                         <outlet property="emailTxtFld" destination="aAS-cx-f8q" id="mNW-rk-sxN"/>
                         <outlet property="hiThereLbl" destination="hLN-Cv-Zru" id="Lk9-U9-8tT"/>
                         <outlet property="passwordShowHiddenBtn" destination="DrM-4j-C3B" id="Ba6-jr-fmC"/>

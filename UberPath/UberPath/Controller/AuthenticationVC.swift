@@ -15,7 +15,9 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var passwordShowHiddenBtn: UIButton!
     @IBOutlet weak var signInView: UIView!
     @IBOutlet weak var signUpView: UIView!
-    
+    @IBOutlet weak var createLbl: UILabel!
+    @IBOutlet weak var copaymentLbl: UILabel!
+    @IBOutlet weak var accontLbl: UILabel!
     
     var isPasswordShow = false
     
@@ -36,6 +38,12 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     func updateFont(){
         hiThereLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
         welcomeLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
+        
+        createLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        
+        copaymentLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        
+        accontLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
     }
     
     @IBAction func passwordHideShowBtnPressed(_ sender: UIButton) {
@@ -92,10 +100,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         
     }
-    
-    
-    
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Dismiss the keyboard when the return button is tapped
