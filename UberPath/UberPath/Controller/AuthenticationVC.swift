@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Firebase
 import GoogleSignIn
 
-class AuthenticationVC: UIViewController,UITextFieldDelegate {
+class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate {
     @IBOutlet weak var hiThereLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var signInEmailTxtFld: UITextField!
@@ -28,6 +29,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance()?.delegate = self
         signInView.isHidden = false
         signUpView.isHidden = true
         signInEmailTxtFld.delegate = self
@@ -123,8 +125,28 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func signInWithGoogleBtnPressed(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
         
-        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error{
+            
+        }else{
+            guard let auth = user.authentication else {return}
+            let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+            Auth.auth().signIn(with: credentials) { (results , error) in
+                if let error = error{
+                    print("Error\(error.localizedDescription)")
+                    return
+                }else{
+                    print("Login Successfuly")
+                    
+                }
+            }
+        }
+            
     }
     
     

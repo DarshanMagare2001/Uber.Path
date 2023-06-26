@@ -173,7 +173,6 @@
 				A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */,
 				F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
