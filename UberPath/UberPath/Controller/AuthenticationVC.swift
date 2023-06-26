@@ -11,8 +11,6 @@ import GoogleSignIn
 import AuthenticationServices
 
 class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
-    
-    
     @IBOutlet weak var hiThereLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var signInEmailTxtFld: UITextField!
@@ -161,6 +159,35 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         authorizationController.performRequests()
     }
     
+    @IBAction func goTosignUpBtnPressed(_ sender: UIButton) {
+        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews], animations: {
+            self.signInView.isHidden = true
+            self.signUpView.isHidden = false
+        }, completion: nil)
+    }
+    
+    @IBAction func goTosignInBtnPressed(_ sender: UIButton) {
+        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], animations: {
+            self.signInView.isHidden = false
+            self.signUpView.isHidden = true
+        }, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Dismiss the keyboard when the return button is tapped
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func updatePlaceHolders(){
+        signInEmailTxtFld.placeholder = "Email"
+        signInPasswordTxtFld.placeholder = "Password"
+        signUpNameTxtFld.placeholder = "Full name"
+        signUpEmailTxtFld.placeholder = "Email"
+        signUpPasswordTxtFld.placeholder = "Password"
+        
+    }
+    
     // MARK: - ASAuthorizationControllerDelegate
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
@@ -190,41 +217,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         // Return the window to present the authorization controller
         return self.view.window!
     }
-    
-    
-    @IBAction func goTosignUpBtnPressed(_ sender: UIButton) {
-        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews], animations: {
-            self.signInView.isHidden = true
-            self.signUpView.isHidden = false
-        }, completion: nil)
-    }
-    
-    @IBAction func goTosignInBtnPressed(_ sender: UIButton) {
-        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], animations: {
-            self.signInView.isHidden = false
-            self.signUpView.isHidden = true
-        }, completion: nil)
-    }
-    
-    
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Dismiss the keyboard when the return button is tapped
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func updatePlaceHolders(){
-        signInEmailTxtFld.placeholder = "Email"
-        signInPasswordTxtFld.placeholder = "Password"
-        signUpNameTxtFld.placeholder = "Full name"
-        signUpEmailTxtFld.placeholder = "Email"
-        signUpPasswordTxtFld.placeholder = "Password"
-        
-    }
-    
-    
     
     
 }
