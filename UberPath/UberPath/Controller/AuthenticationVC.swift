@@ -90,6 +90,17 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             return
         }
         
+        viewModel.sendPasswordResetOTP(to: email) { error in
+            if let error = error {
+                // Handle error
+                print("OTP sending error: \(error.localizedDescription)")
+                return
+            }
+            
+            // OTP sent successfully
+            print("OTP sent to email: \(email)")
+            // Perform any additional operations after sending the OTP
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
         destinationVC.email = email

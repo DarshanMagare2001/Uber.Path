@@ -40,5 +40,21 @@ class AuthenticationModel {
             // Perform any additional operations after successful sign-in
         }
     }
+    
+    func sendPasswordResetOTP(to email: String, completion: @escaping (Error?) -> Void) {
+           Auth.auth().sendPasswordReset(withEmail: email) { error in
+               if let error = error {
+                   // Handle error
+                   completion(error)
+                   return
+               }
+               
+               // Password reset email sent successfully
+               completion(nil)
+           }
+       }
+    
+    
+    
 }
 
