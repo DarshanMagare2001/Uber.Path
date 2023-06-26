@@ -76,12 +76,48 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
-        viewModel.signIn(email: signInEmailTxtFld.text ?? "", password: signInPasswordTxtFld.text ?? "")
+        guard let email = signInEmailTxtFld.text, let password = signInPasswordTxtFld.text, !email.isEmpty, !password.isEmpty else {
+            showToast(message: "Please fill all information.")
+            return
+        }
         
+        viewModel.signIn(email: email, password: password)
     }
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
-        viewModel.signUp(name: signUpNameTxtFld.text ?? "", email: signUpEmailTxtFld.text ?? "", password: signUpPasswordTxtFld.text ?? "")
+        guard let name = signUpNameTxtFld.text, let email = signUpEmailTxtFld.text, let password = signUpPasswordTxtFld.text,
+              !name.isEmpty, !email.isEmpty, !password.isEmpty else {
+                  showToast(message: "Please fill all information.")
+                  return
+              }
+        
+        viewModel.signUp(name: name, email: email, password: password)
+    }
+    
+    func showToast(message: String) {
+        let toastLabel = UILabel()
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = UIFont.systemFont(ofSize: 15.0)
+        toastLabel.textAlignment = .center
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds = true
+        
+        let toastWidth: CGFloat = 200.0
+        let toastHeight: CGFloat = 40.0
+        let toastX = self.view.frame.size.width / 2 - toastWidth / 2
+        let toastY = self.view.frame.size.height - 100.0
+        
+        toastLabel.frame = CGRect(x: toastX, y: toastY, width: toastWidth, height: toastHeight)
+        self.view.addSubview(toastLabel)
+        
+        UIView.animate(withDuration: 2.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: { _ in
+            toastLabel.removeFromSuperview()
+        })
     }
     
     
