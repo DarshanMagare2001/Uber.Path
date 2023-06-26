@@ -11,6 +11,9 @@
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
 		1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */; };
+		1360B6002A494D54001FD948 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B5FF2A494D54001FD948 /* FirebaseAuth */; };
+		1360B6022A494D54001FD948 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B6012A494D54001FD948 /* FirebaseFirestore */; };
+		1360B6042A494D54001FD948 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1360B6032A494D54001FD948 /* FirebaseFirestoreSwift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -39,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1360B6002A494D54001FD948 /* FirebaseAuth in Frameworks */,
+				1360B6022A494D54001FD948 /* FirebaseFirestore in Frameworks */,
+				1360B6042A494D54001FD948 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +158,9 @@
 			);
 			name = UberPath;
 			packageProductDependencies = (
+				1360B5FF2A494D54001FD948 /* FirebaseAuth */,
+				1360B6012A494D54001FD948 /* FirebaseFirestore */,
+				1360B6032A494D54001FD948 /* FirebaseFirestoreSwift */,
 			);
 			productName = UberPath;
 			productReference = 13A12AA42A445F1A00532BC6 /* UberPath.app */;
@@ -182,6 +191,7 @@
 			);
 			mainGroup = 13A12A9B2A445F1A00532BC6;
 			packageReferences = (
+				1360B5FE2A494D54001FD948 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 13A12AA52A445F1A00532BC6 /* Products */;
 			projectDirPath = "";
@@ -438,6 +448,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1360B5FE2A494D54001FD948 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1360B5FF2A494D54001FD948 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1360B5FE2A494D54001FD948 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1360B6012A494D54001FD948 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1360B5FE2A494D54001FD948 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1360B6032A494D54001FD948 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1360B5FE2A494D54001FD948 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13A12A9C2A445F1A00532BC6 /* Project object */;
 }
