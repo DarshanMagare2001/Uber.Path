@@ -126,7 +126,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         countryPickerLbl.addGestureRecognizer(tapGesture)
     }
     
-    func allTxtFldConfiguration(){
+    func allTxtFldConfiguration() {
         // Set input type to number pad for OTP text fields
         otpTxtFld1.keyboardType = .numberPad
         otpTxtFld2.keyboardType = .numberPad
@@ -152,7 +152,27 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         otpTxtFld5.delegate = self
         otpTxtFld6.delegate = self
         phoneNumberTxtFld.delegate = self
+        
+        // Add a done button to each OTP text field's keyboard toolbar
+        addDoneButtonToTextField(otpTxtFld1)
+        addDoneButtonToTextField(otpTxtFld2)
+        addDoneButtonToTextField(otpTxtFld3)
+        addDoneButtonToTextField(otpTxtFld4)
+        addDoneButtonToTextField(otpTxtFld5)
+        addDoneButtonToTextField(otpTxtFld6)
     }
+
+    func addDoneButtonToTextField(_ textField: UITextField) {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        
+        toolbar.items = [flexSpace, doneButton]
+        textField.inputAccessoryView = toolbar
+    }
+
     
     @objc func otpTextFieldDidChange(_ textField: UITextField) {
         let textCount = textField.text?.count ?? 0
