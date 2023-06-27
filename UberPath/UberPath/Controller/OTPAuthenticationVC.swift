@@ -27,7 +27,7 @@ class OTPAuthenticationVC: UIViewController,ADCountryPickerDelegate {
     @IBOutlet weak var otpTxtFld6: UITextField!
     @IBOutlet weak var countryPickerLbl: UILabel!
     var verificationID: String?
-    var countryCode : String = ""
+    var countryCode : String = "+91"
     
     override func viewDidLoad() {
         super.viewDidLoad()
