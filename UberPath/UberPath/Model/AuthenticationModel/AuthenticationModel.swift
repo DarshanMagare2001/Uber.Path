@@ -8,6 +8,8 @@
 import Foundation
 import FirebaseAuth
 
+
+
 class AuthenticationModel {
     func signUp(name: String, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
@@ -41,18 +43,7 @@ class AuthenticationModel {
         }
     }
     
-    func sendPasswordResetOTP(to email: String, completion: @escaping (Error?) -> Void) {
-           Auth.auth().sendPasswordReset(withEmail: email) { error in
-               if let error = error {
-                   // Handle error
-                   completion(error)
-                   return
-               }
-               
-               // Password reset email sent successfully
-               completion(nil)
-           }
-       }
+    
     
     
     

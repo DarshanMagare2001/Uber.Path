@@ -10,6 +10,7 @@ import Firebase
 import GoogleSignIn
 import AuthenticationServices
 
+
 class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     @IBOutlet weak var hiThereLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
@@ -85,28 +86,14 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     }
     
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
-        guard let email = signInEmailTxtFld.text, !email.isEmpty else {
-            showToast(message: "Please enter your email.")
-            return
-        }
-        
-        viewModel.sendPasswordResetOTP(to: email) { error in
-            if let error = error {
-                // Handle error
-                print("OTP sending error: \(error.localizedDescription)")
-                return
-            }
-            
-            // OTP sent successfully
-            print("OTP sent to email: \(email)")
-            // Perform any additional operations after sending the OTP
-        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
-        destinationVC.email = email
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
-
+    
+    
+    
+    
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         guard let email = signInEmailTxtFld.text, let password = signInPasswordTxtFld.text, !email.isEmpty, !password.isEmpty else {
