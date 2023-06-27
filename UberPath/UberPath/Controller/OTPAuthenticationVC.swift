@@ -18,10 +18,10 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateFont()
         tapGesture()
         allTxtFldConfiguration()
         addDoneButtonToNumberPad()
-        
         
     }
     
@@ -80,6 +80,11 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         sendCodeBtnPressed(sender)
     }
     
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     @objc func countryPickerLabelTapped() {
         let picker = ADCountryPicker(style: .grouped)
         picker.delegate = self
@@ -111,9 +116,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         present(picker, animated: true, completion: nil)
     }
     
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
+    
     
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
         countryPickerLbl.text = dialCode
@@ -161,7 +164,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         addDoneButtonToTextField(otpTxtFld5)
         addDoneButtonToTextField(otpTxtFld6)
     }
-
+    
     func addDoneButtonToTextField(_ textField: UITextField) {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -172,7 +175,13 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         toolbar.items = [flexSpace, doneButton]
         textField.inputAccessoryView = toolbar
     }
-
+    
+    
+    func updateFont(){
+        verifyLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        enterPhoneNumberLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 16.0))
+    }
+    
     
     @objc func otpTextFieldDidChange(_ textField: UITextField) {
         let textCount = textField.text?.count ?? 0

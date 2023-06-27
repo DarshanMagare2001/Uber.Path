@@ -250,13 +250,13 @@ and most trusted</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-NF-lgb">
-                                <rect key="frame" x="20" y="101.5" width="280" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <rect key="frame" x="20" y="91.5" width="280" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlj-Y8-aT4" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="20" y="212" width="280" height="50"/>
+                                <rect key="frame" x="20" y="181" width="280" height="50"/>
                                 <color key="backgroundColor" name="GlobalButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BCT-uC-1Ka"/>
@@ -271,7 +271,7 @@ and most trusted</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-yQ-M9T">
-                                <rect key="frame" x="20" y="282" width="280" height="50"/>
+                                <rect key="frame" x="20" y="241" width="280" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-lx-68a">
                                         <rect key="frame" x="0.0" y="0.0" width="42.5" height="50"/>
@@ -315,7 +315,7 @@ and most trusted</string>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-Se-r1u">
-                                <rect key="frame" x="20" y="352" width="280" height="30"/>
+                                <rect key="frame" x="20" y="311" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DfI-Ux-D1x"/>
                                 </constraints>
@@ -344,7 +344,7 @@ and most trusted</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-kK-hFH">
-                                <rect key="frame" x="20" y="142" width="280" height="50"/>
+                                <rect key="frame" x="20" y="121" width="280" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-Ad-B9h" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
@@ -399,13 +399,13 @@ and most trusted</string>
                         <viewLayoutGuide key="safeArea" id="82V-0h-gWG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jgb-NF-lgb" firstAttribute="top" secondItem="t8p-Ry-5Dr" secondAttribute="bottom" constant="20" id="1Nm-xW-cYz"/>
-                            <constraint firstItem="tJ6-yQ-M9T" firstAttribute="top" secondItem="Jlj-Y8-aT4" secondAttribute="bottom" constant="20" id="6e5-cO-gpS"/>
+                            <constraint firstItem="Jgb-NF-lgb" firstAttribute="top" secondItem="t8p-Ry-5Dr" secondAttribute="bottom" constant="10" id="1Nm-xW-cYz"/>
+                            <constraint firstItem="tJ6-yQ-M9T" firstAttribute="top" secondItem="Jlj-Y8-aT4" secondAttribute="bottom" constant="10" id="6e5-cO-gpS"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="bottom" secondItem="bIq-2i-PUE" secondAttribute="bottom" constant="20" id="72e-5u-lph"/>
                             <constraint firstItem="t8p-Ry-5Dr" firstAttribute="top" secondItem="0UP-8R-Pzv" secondAttribute="bottom" constant="10" id="89A-5f-O3D"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="bIq-2i-PUE" secondAttribute="trailing" constant="20" id="8Yq-2d-hvs"/>
                             <constraint firstItem="bIq-2i-PUE" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="8dB-cH-tm3"/>
-                            <constraint firstItem="Jlj-Y8-aT4" firstAttribute="top" secondItem="rsR-kK-hFH" secondAttribute="bottom" constant="20" id="CM7-Fs-XvD"/>
+                            <constraint firstItem="Jlj-Y8-aT4" firstAttribute="top" secondItem="rsR-kK-hFH" secondAttribute="bottom" constant="10" id="CM7-Fs-XvD"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="Jgb-NF-lgb" secondAttribute="trailing" constant="20" id="D51-Bd-qvK"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="bTw-Se-r1u" secondAttribute="trailing" constant="20" id="DKz-3F-NOC"/>
                             <constraint firstItem="bTw-Se-r1u" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="FHv-Gg-Zjp"/>
@@ -413,7 +413,7 @@ and most trusted</string>
                             <constraint firstItem="tJ6-yQ-M9T" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="Rpz-ks-FMQ"/>
                             <constraint firstItem="t8p-Ry-5Dr" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="Sa6-4q-0xc"/>
                             <constraint firstItem="Jlj-Y8-aT4" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="UJB-U2-5dC"/>
-                            <constraint firstItem="rsR-kK-hFH" firstAttribute="top" secondItem="Jgb-NF-lgb" secondAttribute="bottom" constant="20" id="YXX-kT-dBA"/>
+                            <constraint firstItem="rsR-kK-hFH" firstAttribute="top" secondItem="Jgb-NF-lgb" secondAttribute="bottom" constant="10" id="YXX-kT-dBA"/>
                             <constraint firstItem="0UP-8R-Pzv" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="5" id="ZGB-sS-WPK"/>
                             <constraint firstItem="Jlj-Y8-aT4" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="b5h-Zx-02R"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="Jlj-Y8-aT4" secondAttribute="trailing" constant="20" id="bWf-8g-G3a"/>
