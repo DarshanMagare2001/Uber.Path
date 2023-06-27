@@ -12,26 +12,50 @@ class VerifyYourIdentityVC: UIViewController {
     @IBOutlet weak var currentUserEmailLbl: UILabel!
     @IBOutlet weak var verifyLbl: UILabel!
     @IBOutlet weak var whereLbl: UILabel!
+    @IBOutlet weak var selectBtn: UIButton!
     var viewModel = AuthenticationModel()
+    var isSelected = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        print(viewModel.getCurrentUserEmail())
+        currentUserEmailLbl.text = (viewModel.getCurrentUserEmail())!
         
     }
     
     @IBAction func selectBtnPressed(_ sender: UIButton) {
-        
-        
+        isSelected.toggle()
+        if isSelected {
+            let image = UIImage(systemName: "circle.fill")
+            selectBtn.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(systemName: "circle")
+            selectBtn.setImage(image, for: .normal)
+        }
     }
+    
     
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ResetYourPasswordVC") as! ResetYourPasswordVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
         
+        
+//        if isSelected {
+//            // Continue button action
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ResetYourPasswordVC") as! ResetYourPasswordVC
+//            navigationController?.pushViewController(destinationVC, animated: true)
+//
+//        } else {
+//            // Disable the continue button
+//            showToast(message: "Please select Email Id.") { [weak self] in}
+//        }
     }
+    
     
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -55,7 +79,16 @@ class VerifyYourIdentityVC: UIViewController {
         whereLbl.attributedText = attributedString
     }
     
-    
+    private func showToast(message: String, completion: (() -> Void)? = nil) {
+        let toast = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        present(toast, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            toast.dismiss(animated: true) {
+                completion?() // Call the completion block after dismissing the toast
+            }
+        }
+    }
     
     
     
