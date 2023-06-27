@@ -23,6 +23,8 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         allTxtFldConfiguration()
         addDoneButtonToNumberPad()
         
+        
+        
     }
     
     @IBAction func sendCodeBtnPressed(_ sender: UIButton) {
