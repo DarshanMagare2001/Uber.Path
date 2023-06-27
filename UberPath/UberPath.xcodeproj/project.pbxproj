@@ -18,6 +18,7 @@
 		137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE66F2A4AA3B200B40F2D /* FirebaseAuth */; };
 		137CE6722A4AA3B200B40F2D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE6712A4AA3B200B40F2D /* FirebaseFirestore */; };
 		137CE6742A4AA3B200B40F2D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE6732A4AA3B200B40F2D /* FirebaseFirestoreSwift */; };
+		137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -35,6 +36,7 @@
 		133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthenticationVC.swift; sourceTree = "<group>"; };
 		1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1360B6062A496A7F001FD948 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,18 @@
 				1360B6062A496A7F001FD948 /* AuthenticationModel.swift */,
 			);
 			path = AuthenticationModel;
+			sourceTree = "<group>";
+		};
+		137CE6772A4ADEC500B40F2D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */,
+				1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */,
+				133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */,
+				133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */,
+				137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		13A12A9B2A445F1A00532BC6 = {
@@ -133,10 +147,7 @@
 		13A12ABD2A445F5A00532BC6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */,
-				1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */,
-				133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */,
-				133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */,
+				137CE6772A4ADEC500B40F2D /* Onboarding */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
 				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,

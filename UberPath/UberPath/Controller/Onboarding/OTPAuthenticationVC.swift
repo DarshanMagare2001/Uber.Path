@@ -23,8 +23,6 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         allTxtFldConfiguration()
         addDoneButtonToNumberPad()
         
-        
-        
     }
     
     @IBAction func sendCodeBtnPressed(_ sender: UIButton) {
@@ -65,14 +63,29 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
             
             // Sign-in successful
             print("Sign-in successful with phone number: \(authResult?.user.phoneNumber ?? "")")
-            self?.showToast(message: "Phone number verified successfully.")
-            
-            // Perform any additional operations after successful sign-in
-            
-            // Reset the OTP text fields
-            self?.resetOTPTxtFlds()
+            self?.showToast(message: "Phone number verified successfully.") { [weak self] in
+                // Reset the OTP text fields
+                self?.resetOTPTxtFlds()
+                
+                // Perform any additional operations after successful sign-in
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationVC = storyBoard.instantiateViewController(withIdentifier: "VerifyYourIdentityVC") as! VerifyYourIdentityVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
         }
     }
+
+    private func showToast(message: String, completion: (() -> Void)? = nil) {
+        let toast = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        present(toast, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            toast.dismiss(animated: true) {
+                completion?() // Call the completion block after dismissing the toast
+            }
+        }
+    }
+
     
     @IBAction func resendCodeBtnPressed(_ sender: UIButton) {
         // Reset the OTP text fields
