@@ -12,6 +12,7 @@ import ADCountryPicker
 class OTPAuthenticationVC: UIViewController,ADCountryPickerDelegate {
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
         countryPickerLbl.text = dialCode
+        countryCode = dialCode
         
     }
     
@@ -25,9 +26,8 @@ class OTPAuthenticationVC: UIViewController,ADCountryPickerDelegate {
     @IBOutlet weak var otpTxtFld5: UITextField!
     @IBOutlet weak var otpTxtFld6: UITextField!
     @IBOutlet weak var countryPickerLbl: UILabel!
-    
-    
     var verificationID: String?
+    var countryCode : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class OTPAuthenticationVC: UIViewController,ADCountryPickerDelegate {
             return
         }
         
-        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self] verificationID, error in
+        PhoneAuthProvider.provider().verifyPhoneNumber("\(countryCode)\(phoneNumber)", uiDelegate: nil) { [weak self] verificationID, error in
             if let error = error {
                 // Handle verification error
                 print("Verification error: \(error.localizedDescription)")
@@ -125,11 +125,7 @@ class OTPAuthenticationVC: UIViewController,ADCountryPickerDelegate {
         
         present(picker, animated: true, completion: nil)
     }
-
-    
-    
-    
-    
+ 
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
