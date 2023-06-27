@@ -49,6 +49,22 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
         present(picker, animated: true, completion: nil)
     }
     
+   
+    @IBAction func continueBtnPressed(_ sender: UIButton) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ReasonsVC") as! ReasonsVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+        
+    }
+    
+    
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     // MARK: - Country Selection Delegate
     
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
@@ -57,10 +73,6 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
         countryImgView.image = flagImage
     }
     
-    
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
     
     func updateFont(){
         countryOfReseidenceLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
