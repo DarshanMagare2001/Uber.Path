@@ -15,36 +15,16 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
     @IBOutlet weak var countryPickerLbl: UILabel!
     var verificationID: String?
     var countryCode: String = "+91"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGesture()
+        allTxtFldConfiguration()
+        addDoneButtonToNumberPad()
         
-        // Set input type to number pad for OTP text fields
-        otpTxtFld1.keyboardType = .numberPad
-        otpTxtFld2.keyboardType = .numberPad
-        otpTxtFld3.keyboardType = .numberPad
-        otpTxtFld4.keyboardType = .numberPad
-        otpTxtFld5.keyboardType = .numberPad
-        otpTxtFld6.keyboardType = .numberPad
         
-        // Add target to each OTP text field to handle automatic movement to the next field
-        otpTxtFld1.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
-        otpTxtFld2.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
-        otpTxtFld3.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
-        otpTxtFld4.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
-        otpTxtFld5.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
-        otpTxtFld6.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
-        
-        // Set the delegate for all OTP text fields
-        otpTxtFld1.delegate = self
-        otpTxtFld2.delegate = self
-        otpTxtFld3.delegate = self
-        otpTxtFld4.delegate = self
-        otpTxtFld5.delegate = self
-        otpTxtFld6.delegate = self
     }
-
+    
     @IBAction func sendCodeBtnPressed(_ sender: UIButton) {
         guard let phoneNumber = phoneNumberTxtFld.text else {
             showToast(message: "Please enter a phone number.")
@@ -63,7 +43,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
             self?.showToast(message: "Verification code sent to your phone number.")
         }
     }
-
+    
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
         guard let verificationID = verificationID else {
             showToast(message: "Please request a verification code first.")
@@ -91,7 +71,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
             self?.resetOTPTxtFlds()
         }
     }
-
+    
     @IBAction func resendCodeBtnPressed(_ sender: UIButton) {
         // Reset the OTP text fields
         resetOTPTxtFlds()
@@ -99,7 +79,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         // Resend verification code
         sendCodeBtnPressed(sender)
     }
-
+    
     @objc func countryPickerLabelTapped() {
         let picker = ADCountryPicker(style: .grouped)
         picker.delegate = self
@@ -130,26 +110,54 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         
         present(picker, animated: true, completion: nil)
     }
-
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-
+    
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
         countryPickerLbl.text = dialCode
         countryCode = dialCode
     }
-
+    
     func tapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(countryPickerLabelTapped))
         countryPickerLbl.isUserInteractionEnabled = true
         countryPickerLbl.addGestureRecognizer(tapGesture)
     }
-
+    
+    func allTxtFldConfiguration(){
+        // Set input type to number pad for OTP text fields
+        otpTxtFld1.keyboardType = .numberPad
+        otpTxtFld2.keyboardType = .numberPad
+        otpTxtFld3.keyboardType = .numberPad
+        otpTxtFld4.keyboardType = .numberPad
+        otpTxtFld5.keyboardType = .numberPad
+        otpTxtFld6.keyboardType = .numberPad
+        phoneNumberTxtFld.keyboardType = .numberPad
+        
+        // Add target to each OTP text field to handle automatic movement to the next field
+        otpTxtFld1.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        otpTxtFld2.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        otpTxtFld3.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        otpTxtFld4.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        otpTxtFld5.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        otpTxtFld6.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        
+        // Set the delegate for all OTP text fields
+        otpTxtFld1.delegate = self
+        otpTxtFld2.delegate = self
+        otpTxtFld3.delegate = self
+        otpTxtFld4.delegate = self
+        otpTxtFld5.delegate = self
+        otpTxtFld6.delegate = self
+        phoneNumberTxtFld.delegate = self
+    }
+    
     @objc func otpTextFieldDidChange(_ textField: UITextField) {
         let textCount = textField.text?.count ?? 0
         let maxLength = 1
-
+        
         if textCount >= maxLength {
             moveToNextTextField(textField)
         }
@@ -178,7 +186,7 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
         
         return true
     }
-
+    
     private func moveToNextTextField(_ textField: UITextField) {
         switch textField {
         case otpTxtFld1:
@@ -215,5 +223,22 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFiel
             toast.dismiss(animated: true)
         }
     }
+    
+    private func addDoneButtonToNumberPad() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        
+        toolbar.items = [flexSpace, doneButton]
+        phoneNumberTxtFld.inputAccessoryView = toolbar
+    }
+    
+    @objc private func doneButtonTapped() {
+        view.endEditing(true)
+    }
+    
+    
 }
 
