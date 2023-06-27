@@ -2,7 +2,7 @@ import UIKit
 import FirebaseAuth
 import ADCountryPicker
 
-class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate {
+class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var verifyLbl: UILabel!
     @IBOutlet weak var enterPhoneNumberLbl: UILabel!
     @IBOutlet weak var phoneNumberTxtFld: UITextField!
@@ -35,6 +35,14 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate {
         otpTxtFld4.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
         otpTxtFld5.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
         otpTxtFld6.addTarget(self, action: #selector(otpTextFieldDidChange(_:)), for: .editingChanged)
+        
+        // Set the delegate for all OTP text fields
+        otpTxtFld1.delegate = self
+        otpTxtFld2.delegate = self
+        otpTxtFld3.delegate = self
+        otpTxtFld4.delegate = self
+        otpTxtFld5.delegate = self
+        otpTxtFld6.delegate = self
     }
 
     @IBAction func sendCodeBtnPressed(_ sender: UIButton) {
@@ -146,10 +154,32 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate {
             moveToNextTextField(textField)
         }
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let currentText = textField.text else { return true }
+        
+        // Detect backspace button press
+        if string.isEmpty && currentText.isEmpty {
+            switch textField {
+            case otpTxtFld2:
+                otpTxtFld1.becomeFirstResponder()
+            case otpTxtFld3:
+                otpTxtFld2.becomeFirstResponder()
+            case otpTxtFld4:
+                otpTxtFld3.becomeFirstResponder()
+            case otpTxtFld5:
+                otpTxtFld4.becomeFirstResponder()
+            case otpTxtFld6:
+                otpTxtFld5.becomeFirstResponder()
+            default:
+                break
+            }
+        }
+        
+        return true
+    }
 
     private func moveToNextTextField(_ textField: UITextField) {
-        guard let text = textField.text, !text.isEmpty else { return }
-
         switch textField {
         case otpTxtFld1:
             otpTxtFld2.becomeFirstResponder()
@@ -162,10 +192,10 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate {
         case otpTxtFld5:
             otpTxtFld6.becomeFirstResponder()
         default:
-            otpTxtFld1.becomeFirstResponder()
+            otpTxtFld6.resignFirstResponder()
         }
     }
-
+    
     private func resetOTPTxtFlds() {
         otpTxtFld1.text = ""
         otpTxtFld2.text = ""
@@ -173,38 +203,17 @@ class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate {
         otpTxtFld4.text = ""
         otpTxtFld5.text = ""
         otpTxtFld6.text = ""
+        
+        otpTxtFld1.becomeFirstResponder()
     }
-
-    func showToast(message: String) {
-        let toastLabel = UILabel()
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.white
-        toastLabel.font = UIFont.systemFont(ofSize: 15.0)
-        toastLabel.textAlignment = .center
-        toastLabel.text = message
-        toastLabel.alpha = 1.0
-        toastLabel.layer.cornerRadius = 10
-        toastLabel.clipsToBounds = true
-
-        let toastWidth: CGFloat = 200.0
-        let toastHeight: CGFloat = 40.0
-        let toastX = self.view.frame.size.width / 2 - toastWidth / 2
-        let toastY = self.view.frame.size.height - 100.0
-
-        toastLabel.frame = CGRect(x: toastX, y: toastY, width: toastWidth, height: toastHeight)
-        self.view.addSubview(toastLabel)
-
-        UIView.animate(withDuration: 3.0, delay: 0.1, options: .curveEaseOut, animations: {
-            toastLabel.alpha = 0.0
-        }, completion: { _ in
-            toastLabel.removeFromSuperview()
-        })
-    }
-}
-
-extension OTPAuthenticationVC: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return CustomBottomSheetPresentationController(presentedViewController: presented, presenting: presenting)
+    
+    private func showToast(message: String) {
+        let toast = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        present(toast, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            toast.dismiss(animated: true)
+        }
     }
 }
 
