@@ -43,7 +43,13 @@ class AuthenticationModel {
         }
     }
     
-    
+    func getCurrentUserEmail() -> String? {
+        if let currentUser = Auth.auth().currentUser {
+            return currentUser.email
+        } else {
+            return nil
+        }
+    }
     
     
     

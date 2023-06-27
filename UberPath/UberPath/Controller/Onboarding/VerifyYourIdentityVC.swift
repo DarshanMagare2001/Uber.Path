@@ -12,9 +12,13 @@ class VerifyYourIdentityVC: UIViewController {
     @IBOutlet weak var currentUserEmailLbl: UILabel!
     @IBOutlet weak var verifyLbl: UILabel!
     @IBOutlet weak var whereLbl: UILabel!
+    var viewModel = AuthenticationModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
+        print(viewModel.getCurrentUserEmail())
         
     }
     
