@@ -4,6 +4,7 @@ import ADCountryPicker
 struct MyCustomCountry {
     let name: String
     let isoCode: String
+    let dialCode: String
 }
 
 class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
@@ -33,8 +34,6 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
         picker.searchBarBackgroundColor = UIColor.lightGray
         picker.didSelectCountryClosure = { [weak self] name, code in
             guard let self = self else { return }
-            let selectedCountry = MyCustomCountry(name: name, isoCode: code)
-            
             self.dismiss(animated: true, completion: nil)
         }
         

@@ -249,27 +249,6 @@ and most trusted</string>
                                 <color key="textColor" name="GlobalButtonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-P8-uFE" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="20" y="142" width="280" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2CJ-3l-OLV">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6fK-OC-dGs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="2CJ-3l-OLV" firstAttribute="leading" secondItem="B2m-P8-uFE" secondAttribute="leading" id="1ME-7n-nRE"/>
-                                    <constraint firstAttribute="trailing" secondItem="2CJ-3l-OLV" secondAttribute="trailing" id="VeB-XP-WXw"/>
-                                    <constraint firstItem="2CJ-3l-OLV" firstAttribute="top" secondItem="B2m-P8-uFE" secondAttribute="top" id="YNI-oP-i4C"/>
-                                    <constraint firstAttribute="bottom" secondItem="2CJ-3l-OLV" secondAttribute="bottom" id="ebc-cr-rbN"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-NF-lgb">
                                 <rect key="frame" x="20" y="101.5" width="280" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -288,7 +267,7 @@ and most trusted</string>
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="sendcodeBtnPressed:" destination="CJM-6J-PrN" eventType="touchUpInside" id="xJY-mL-CwA"/>
+                                    <action selector="sendCodeBtnPressed:" destination="CJM-6J-PrN" eventType="touchUpInside" id="9U6-CV-jLc"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tJ6-yQ-M9T">
@@ -364,6 +343,58 @@ and most trusted</string>
                                     <action selector="confirmBtnPressed:" destination="CJM-6J-PrN" eventType="touchUpInside" id="gDc-5A-eCB"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-kK-hFH">
+                                <rect key="frame" x="20" y="142" width="280" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-Ad-B9h" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q8-Kx-8ih">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="CQ9-5u-vgr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="1Q8-Kx-8ih" firstAttribute="top" secondItem="PXF-Ad-B9h" secondAttribute="top" id="CES-PK-56s"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Q8-Kx-8ih" secondAttribute="trailing" id="t1i-5p-Fb9"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Q8-Kx-8ih" secondAttribute="bottom" id="t6F-GD-mec"/>
+                                            <constraint firstItem="1Q8-Kx-8ih" firstAttribute="leading" secondItem="PXF-Ad-B9h" secondAttribute="leading" id="yfu-HW-Isy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Wq-xuW" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="82" y="0.0" width="198" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2CJ-3l-OLV">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2CJ-3l-OLV" secondAttribute="trailing" id="QiS-z4-nLP"/>
+                                            <constraint firstAttribute="bottom" secondItem="2CJ-3l-OLV" secondAttribute="bottom" id="pvb-qe-DAi"/>
+                                            <constraint firstItem="2CJ-3l-OLV" firstAttribute="leading" secondItem="u4g-Wq-xuW" secondAttribute="leading" id="rn2-Kl-LLM"/>
+                                            <constraint firstItem="2CJ-3l-OLV" firstAttribute="top" secondItem="u4g-Wq-xuW" secondAttribute="top" id="sWQ-OL-5Nb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="u4g-Wq-xuW" firstAttribute="leading" secondItem="PXF-Ad-B9h" secondAttribute="trailing" constant="2" id="Cpc-7J-DGk"/>
+                                    <constraint firstAttribute="height" constant="50" id="LXf-dI-aYt"/>
+                                    <constraint firstItem="PXF-Ad-B9h" firstAttribute="leading" secondItem="rsR-kK-hFH" secondAttribute="leading" id="Nvg-tZ-idV"/>
+                                    <constraint firstAttribute="bottom" secondItem="PXF-Ad-B9h" secondAttribute="bottom" id="nh5-Lv-YoU"/>
+                                    <constraint firstItem="PXF-Ad-B9h" firstAttribute="top" secondItem="rsR-kK-hFH" secondAttribute="top" id="yyV-2d-Bu2"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="82V-0h-gWG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -372,32 +403,32 @@ and most trusted</string>
                             <constraint firstItem="tJ6-yQ-M9T" firstAttribute="top" secondItem="Jlj-Y8-aT4" secondAttribute="bottom" constant="20" id="6e5-cO-gpS"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="bottom" secondItem="bIq-2i-PUE" secondAttribute="bottom" constant="20" id="72e-5u-lph"/>
                             <constraint firstItem="t8p-Ry-5Dr" firstAttribute="top" secondItem="0UP-8R-Pzv" secondAttribute="bottom" constant="10" id="89A-5f-O3D"/>
-                            <constraint firstItem="B2m-P8-uFE" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="8U8-N2-emn"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="bIq-2i-PUE" secondAttribute="trailing" constant="20" id="8Yq-2d-hvs"/>
                             <constraint firstItem="bIq-2i-PUE" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="8dB-cH-tm3"/>
+                            <constraint firstItem="Jlj-Y8-aT4" firstAttribute="top" secondItem="rsR-kK-hFH" secondAttribute="bottom" constant="20" id="CM7-Fs-XvD"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="Jgb-NF-lgb" secondAttribute="trailing" constant="20" id="D51-Bd-qvK"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="bTw-Se-r1u" secondAttribute="trailing" constant="20" id="DKz-3F-NOC"/>
                             <constraint firstItem="bTw-Se-r1u" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="FHv-Gg-Zjp"/>
-                            <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="B2m-P8-uFE" secondAttribute="trailing" constant="20" id="NPO-T6-S5u"/>
                             <constraint firstItem="bTw-Se-r1u" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="NjN-ew-i6T"/>
-                            <constraint firstItem="B2m-P8-uFE" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="Qbn-LK-iBK"/>
                             <constraint firstItem="tJ6-yQ-M9T" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="Rpz-ks-FMQ"/>
                             <constraint firstItem="t8p-Ry-5Dr" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="Sa6-4q-0xc"/>
-                            <constraint firstItem="B2m-P8-uFE" firstAttribute="top" secondItem="Jgb-NF-lgb" secondAttribute="bottom" constant="20" id="SqD-4h-lfK"/>
                             <constraint firstItem="Jlj-Y8-aT4" firstAttribute="centerX" secondItem="4aq-dD-knq" secondAttribute="centerX" id="UJB-U2-5dC"/>
+                            <constraint firstItem="rsR-kK-hFH" firstAttribute="top" secondItem="Jgb-NF-lgb" secondAttribute="bottom" constant="20" id="YXX-kT-dBA"/>
                             <constraint firstItem="0UP-8R-Pzv" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="5" id="ZGB-sS-WPK"/>
                             <constraint firstItem="Jlj-Y8-aT4" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="b5h-Zx-02R"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="Jlj-Y8-aT4" secondAttribute="trailing" constant="20" id="bWf-8g-G3a"/>
                             <constraint firstItem="bIq-2i-PUE" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="dIE-Af-UlH"/>
                             <constraint firstItem="0UP-8R-Pzv" firstAttribute="top" secondItem="82V-0h-gWG" secondAttribute="top" id="ejC-1L-yFJ"/>
+                            <constraint firstItem="rsR-kK-hFH" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="foi-Ve-3lW"/>
                             <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="tJ6-yQ-M9T" secondAttribute="trailing" constant="20" id="k8v-tM-4ut"/>
                             <constraint firstItem="Jgb-NF-lgb" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="pKT-7I-jaF"/>
+                            <constraint firstItem="82V-0h-gWG" firstAttribute="trailing" secondItem="rsR-kK-hFH" secondAttribute="trailing" constant="20" id="rmD-ZQ-UQm"/>
                             <constraint firstItem="bTw-Se-r1u" firstAttribute="top" secondItem="tJ6-yQ-M9T" secondAttribute="bottom" constant="20" id="rpD-dI-wmV"/>
                             <constraint firstItem="tJ6-yQ-M9T" firstAttribute="leading" secondItem="82V-0h-gWG" secondAttribute="leading" constant="20" id="xni-1V-Rck"/>
-                            <constraint firstItem="Jlj-Y8-aT4" firstAttribute="top" secondItem="B2m-P8-uFE" secondAttribute="bottom" constant="20" id="yd8-C3-35g"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryPickerLbl" destination="1Q8-Kx-8ih" id="nmQ-Bo-jjC"/>
                         <outlet property="enterPhoneNumberLbl" destination="Jgb-NF-lgb" id="nVi-DB-0uM"/>
                         <outlet property="otpTxtFld1" destination="IIA-lx-68a" id="zZk-AD-Baj"/>
                         <outlet property="otpTxtFld2" destination="dNO-sO-pkk" id="saN-lY-Kz7"/>
