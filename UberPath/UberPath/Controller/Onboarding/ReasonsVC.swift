@@ -23,6 +23,15 @@ class ReasonsVC: UIViewController {
     @IBOutlet weak var onlinePaymentView: UIView!
     @IBOutlet weak var spendWhileView: UIView!
     @IBOutlet weak var yourView: UIView!
+    
+    @IBOutlet weak var spendImageView: UIImageView!
+    @IBOutlet weak var fastImageView: UIImageView!
+    @IBOutlet weak var paymentsImageView: UIImageView!
+    @IBOutlet weak var onlinePaymentImageView: UIImageView!
+    @IBOutlet weak var spendWhileImageView: UIImageView!
+    @IBOutlet weak var yourImageView: UIImageView!
+    
+    
     var isViewSelected: [UIView: Bool] = [:]
     
     
@@ -84,16 +93,22 @@ class ReasonsVC: UIViewController {
             switch view {
             case spendView:
                 spendLbl.textColor = .black
+                spendImageView.tintColor = .black
             case fastView:
                 fastLbl.textColor = .black
+                fastImageView.tintColor = .black
             case paymentsView:
                 paymentsLbl.textColor = .black
+                paymentsImageView.tintColor = .black
             case onlinePaymentView:
                 onlinePaymentLbl.textColor = .black
+                onlinePaymentImageView.tintColor = .black
             case spendWhileView:
                 spendWhileLbl.textColor = .black
+                spendWhileImageView.tintColor = .black
             case yourView:
                 yourLbl.textColor = .black
+                yourImageView.tintColor = .black
             default:
                 break
             }
@@ -104,16 +119,22 @@ class ReasonsVC: UIViewController {
             switch view {
             case spendView:
                 spendLbl.textColor = .white
+                spendImageView.tintColor = .white
             case fastView:
                 fastLbl.textColor = .white
+                fastImageView.tintColor = .white
             case paymentsView:
                 paymentsLbl.textColor = .white
+                paymentsImageView.tintColor = .white
             case onlinePaymentView:
                 onlinePaymentLbl.textColor = .white
+                onlinePaymentImageView.tintColor = .white
             case spendWhileView:
                 spendWhileLbl.textColor = .white
+                spendWhileImageView.tintColor = .white
             case yourView:
                 yourLbl.textColor = .white
+                yourImageView.tintColor = .white
             default:
                 break
             }

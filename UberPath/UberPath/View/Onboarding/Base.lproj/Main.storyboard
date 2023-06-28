@@ -1660,18 +1660,24 @@ and most trusted</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fastImageView" destination="Vdw-8W-Snr" id="B2u-cL-1K3"/>
                         <outlet property="fastLbl" destination="ysV-SS-kR2" id="X02-nE-88z"/>
                         <outlet property="fastView" destination="CaC-zj-Pjx" id="cmr-uq-oYn"/>
                         <outlet property="mainReasonLbl" destination="4AP-wC-0xI" id="5C2-7d-ORE"/>
+                        <outlet property="onlinePaymentImageView" destination="K3i-RI-NqU" id="Rjs-mL-Mcc"/>
                         <outlet property="onlinePaymentLbl" destination="S5Y-qL-QQ4" id="LTK-9C-fr2"/>
                         <outlet property="onlinePaymentView" destination="1Jh-DV-k6y" id="R3S-3f-ZFK"/>
+                        <outlet property="paymentsImageView" destination="SVk-sG-pbd" id="quU-zA-OYF"/>
                         <outlet property="paymentsLbl" destination="AsQ-ec-eSv" id="xf6-0p-m12"/>
                         <outlet property="paymentsView" destination="rlR-Iv-wMb" id="rvo-jh-l1U"/>
+                        <outlet property="spendImageView" destination="MWz-7y-Z83" id="L4e-jm-27O"/>
                         <outlet property="spendLbl" destination="c3p-08-ehi" id="54L-J7-myg"/>
                         <outlet property="spendView" destination="Jn3-2g-iEj" id="3Vg-L8-eVT"/>
+                        <outlet property="spendWhileImageView" destination="3bX-GF-tIp" id="S9z-9J-ZMb"/>
                         <outlet property="spendWhileLbl" destination="buR-eU-7LT" id="rxc-yc-B2R"/>
                         <outlet property="spendWhileView" destination="sy8-TS-41s" id="xSF-6A-gt0"/>
                         <outlet property="weNeedlbl" destination="aNf-wI-98A" id="fd8-Yu-Cx0"/>
+                        <outlet property="yourImageView" destination="eV6-qL-XcP" id="30g-SG-2Ik"/>
                         <outlet property="yourLbl" destination="9Oq-1L-hws" id="ifO-tA-he8"/>
                         <outlet property="yourView" destination="zv6-hU-d1T" id="H4f-fY-3Jq"/>
                     </connections>
