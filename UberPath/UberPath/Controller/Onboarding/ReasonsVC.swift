@@ -46,17 +46,14 @@ class ReasonsVC: UIViewController {
     
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CreatePinVC") as! CreatePinVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
         
     }
     
-    
-    
     @IBAction func backBtnPressed(_ sender: UIButton) {
-        
         navigationController?.popViewController(animated: true)
-        
-        
     }
     
     func updateFont(){
