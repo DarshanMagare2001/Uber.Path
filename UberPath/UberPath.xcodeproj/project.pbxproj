@@ -29,6 +29,7 @@
 		13A12AB42A445F1D00532BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB22A445F1D00532BC6 /* LaunchScreen.storyboard */; };
 		13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00AD2A4C264900524C82 /* CreatePinVC.swift */; };
 		13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */; };
+		13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00B12A4C4B6000524C82 /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		13A12AB52A445F1D00532BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13BB00AD2A4C264900524C82 /* CreatePinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinVC.swift; sourceTree = "<group>"; };
 		13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIdentityVC.swift; sourceTree = "<group>"; };
+		13BB00B12A4C4B6000524C82 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */,
 				13BB00AD2A4C264900524C82 /* CreatePinVC.swift */,
 				13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */,
+				13BB00B12A4C4B6000524C82 /* CameraVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
+				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,

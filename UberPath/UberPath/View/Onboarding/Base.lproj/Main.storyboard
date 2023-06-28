@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jML-i7-OQh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wts-ZU-b67">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -2078,7 +2078,56 @@ and most trusted</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXV-ZM-uca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3812" y="771"/>
+            <point key="canvasLocation" x="3752" y="769"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="k2F-S9-aCb">
+            <objects>
+                <viewController storyboardIdentifier="CameraVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wts-ZU-b67" customClass="CameraVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSe-c9-9nu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-Qv-KzI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                <color key="backgroundColor" name="LaunchscreenColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ModelPerson" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-2L-ULx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" name="LaunchscreenColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-KO-3fw">
+                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0aI-09-R7k"/>
+                                    <constraint firstAttribute="width" constant="50" id="3kU-IY-KSY"/>
+                                    <constraint firstAttribute="width" constant="50" id="CXi-1M-7N1"/>
+                                    <constraint firstAttribute="width" constant="50" id="Kha-CG-6QQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="bZB-kR-YO7"/>
+                                    <constraint firstAttribute="height" constant="50" id="rjt-t8-cZs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Cancel" title=" "/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uwX-X5-2di"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ids-2L-ULx" secondAttribute="bottom" id="9OM-W2-62d"/>
+                            <constraint firstItem="uwX-X5-2di" firstAttribute="trailing" secondItem="Iaj-Qv-KzI" secondAttribute="trailing" id="Ioy-lg-7qg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ids-2L-ULx" secondAttribute="trailing" id="aGw-Oy-i9g"/>
+                            <constraint firstItem="Iaj-Qv-KzI" firstAttribute="top" secondItem="hSe-c9-9nu" secondAttribute="top" id="d9F-1K-syE"/>
+                            <constraint firstItem="Ids-2L-ULx" firstAttribute="leading" secondItem="hSe-c9-9nu" secondAttribute="leading" id="fyS-Lf-Q2I"/>
+                            <constraint firstItem="Ids-2L-ULx" firstAttribute="top" secondItem="Iaj-Qv-KzI" secondAttribute="bottom" id="jJK-9J-gcA"/>
+                            <constraint firstItem="NnR-KO-3fw" firstAttribute="top" secondItem="uwX-X5-2di" secondAttribute="top" id="qCE-Ob-IXZ"/>
+                            <constraint firstItem="Iaj-Qv-KzI" firstAttribute="leading" secondItem="uwX-X5-2di" secondAttribute="leading" id="smb-iX-Q19"/>
+                            <constraint firstItem="NnR-KO-3fw" firstAttribute="leading" secondItem="uwX-X5-2di" secondAttribute="leading" constant="5" id="w4X-8J-7hR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5X-SZ-t3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4387.5" y="767.95774647887322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcA-vn-ywb">
@@ -2102,9 +2151,11 @@ and most trusted</string>
     <resources>
         <image name="AppleIcon" width="20" height="24"/>
         <image name="BackArrow" width="40" height="40"/>
+        <image name="Cancel" width="40" height="40"/>
         <image name="DownArrow" width="20" height="20"/>
         <image name="FaceID" width="239" height="283"/>
         <image name="GoogleIcon" width="25" height="24"/>
+        <image name="ModelPerson" width="375" height="688"/>
         <image name="Onbdsc2" width="307" height="458"/>
         <image name="ProfileIcon" width="121" height="71"/>
         <image name="Sc1" width="332" height="459"/>
