@@ -23,7 +23,7 @@ class ReasonsVC: UIViewController {
     @IBOutlet weak var onlinePaymentView: UIView!
     @IBOutlet weak var spendWhileView: UIView!
     @IBOutlet weak var yourView: UIView!
-    
+    var isViewSelected: [UIView: Bool] = [:]
     
     
     
@@ -32,7 +32,7 @@ class ReasonsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        
+        setupTapGestureRecognizers()
     }
     
     
@@ -60,6 +60,68 @@ class ReasonsVC: UIViewController {
         spendWhileLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 12.0))
         yourLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 12.0))
     }
+    
+    private func setupTapGestureRecognizers() {
+        let views: [UIView] = [spendView, fastView, paymentsView, onlinePaymentView, spendWhileView, yourView]
+        
+        for view in views {
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+            view.isUserInteractionEnabled = true
+            view.addGestureRecognizer(tapGestureRecognizer)
+            isViewSelected[view] = false
+        }
+    }
+    
+    @objc private func viewTapped(_ gestureRecognizer: UITapGestureRecognizer) {
+        guard let view = gestureRecognizer.view else { return }
+        
+        let isSelected = isViewSelected[view] ?? false
+        isViewSelected[view] = !isSelected
+        
+        if isSelected {
+            view.backgroundColor = .white
+            
+            switch view {
+            case spendView:
+                spendLbl.textColor = .black
+            case fastView:
+                fastLbl.textColor = .black
+            case paymentsView:
+                paymentsLbl.textColor = .black
+            case onlinePaymentView:
+                onlinePaymentLbl.textColor = .black
+            case spendWhileView:
+                spendWhileLbl.textColor = .black
+            case yourView:
+                yourLbl.textColor = .black
+            default:
+                break
+            }
+        } else {
+            let greenColor = UIColor(named: "LaunchscreenColor")
+            view.backgroundColor = greenColor
+            
+            switch view {
+            case spendView:
+                spendLbl.textColor = .white
+            case fastView:
+                fastLbl.textColor = .white
+            case paymentsView:
+                paymentsLbl.textColor = .white
+            case onlinePaymentView:
+                onlinePaymentLbl.textColor = .white
+            case spendWhileView:
+                spendWhileLbl.textColor = .white
+            case yourView:
+                yourLbl.textColor = .white
+            default:
+                break
+            }
+        }
+    }
+    
+    
+    
     
     
 }
