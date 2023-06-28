@@ -110,7 +110,7 @@ class FontManager {
         case "iPhone 12 mini" , "iPhone 13 mini":
             adjustedSize *= 1.8
         case "iPhone 12","iPhone 13":
-            adjustedSize *= 1.9
+            adjustedSize *= 1.8
         case "iPhone 12 Pro Max","iPhone 13 Pro Max":
             adjustedSize *= 2.2
         case "iPhone 12 Pro","iPhone 13 Pro":
