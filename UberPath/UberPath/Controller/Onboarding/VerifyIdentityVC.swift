@@ -1,4 +1,5 @@
 import UIKit
+import Photos
 
 class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var letsVerifyLbl: UILabel!
@@ -27,15 +28,31 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { _ in
-            imagePickerController.sourceType = .photoLibrary
-            self.present(imagePickerController, animated: true, completion: nil)
+            self.checkPhotoLibraryPermission { granted in
+                if granted {
+                    DispatchQueue.main.async {
+                        imagePickerController.sourceType = .photoLibrary
+                        self.present(imagePickerController, animated: true, completion: nil)
+                    }
+                } else {
+                    self.showPhotoLibraryPermissionDeniedAlert()
+                }
+            }
         }
         alertController.addAction(chooseFromLibraryAction)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default) { _ in
-                imagePickerController.sourceType = .camera
-                self.present(imagePickerController, animated: true, completion: nil)
+                self.checkCameraPermission { granted in
+                    if granted {
+                        DispatchQueue.main.async {
+                            imagePickerController.sourceType = .camera
+                            self.present(imagePickerController, animated: true, completion: nil)
+                        }
+                    } else {
+                        self.showCameraPermissionDeniedAlert()
+                    }
+                }
             }
             alertController.addAction(takePhotoAction)
         }
@@ -46,9 +63,65 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         present(alertController, animated: true, completion: nil)
     }
     
+    func checkPhotoLibraryPermission(completion: @escaping (Bool) -> Void) {
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            completion(true)
+        case .denied, .restricted:
+            completion(false)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { status in
+                completion(status == .authorized)
+            }
+        @unknown default:
+            completion(false)
+        }
+    }
+    
+    func showPhotoLibraryPermissionDeniedAlert() {
+        let alertController = UIAlertController(title: "Permission Denied", message: "Please grant permission to access the photo library in the Settings app.", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func checkCameraPermission(completion: @escaping (Bool) -> Void) {
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        switch status {
+        case .authorized:
+            completion(true)
+        case .denied, .restricted:
+            completion(false)
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                completion(granted)
+            }
+        @unknown default:
+            completion(false)
+        }
+    }
+    
+    func showCameraPermissionDeniedAlert() {
+        let alertController = UIAlertController(title: "Permission Denied", message: "Please grant permission to access the camera in the Settings app.", preferredStyle: .alert)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            faceIDImageView.image = pickedImage
+            DispatchQueue.main.async {
+                self.faceIDImageView.image = pickedImage
+            }
         }
         picker.dismiss(animated: true, completion: nil)
     }
