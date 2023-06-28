@@ -16,6 +16,17 @@ class CreatePinVC: UIViewController, UITextFieldDelegate {
         setupTextFields()
     }
 
+    
+    @IBAction func continueBtnPressed(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "VerifyIdentityVC") as! VerifyIdentityVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
+    
+    
+    
+    
     func updateFont() {
         setPinLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
         weUseLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))

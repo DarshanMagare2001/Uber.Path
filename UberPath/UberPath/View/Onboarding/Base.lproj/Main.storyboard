@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIl-wN-Dgp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jML-i7-OQh">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1890,6 +1890,9 @@ and most trusted</string>
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtnPressed:" destination="CIl-wN-Dgp" eventType="touchUpInside" id="W8A-ZP-riy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mht-S9-Q6X"/>
@@ -1926,6 +1929,103 @@ and most trusted</string>
             </objects>
             <point key="canvasLocation" x="3112.5" y="769.0140845070423"/>
         </scene>
+        <!--Verify IdentityVC-->
+        <scene sceneID="jia-u0-zXz">
+            <objects>
+                <viewController storyboardIdentifier="VerifyIdentityVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jML-i7-OQh" customClass="VerifyIdentityVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CMb-H5-bgX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-yF-acY">
+                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4jl-Yt-4Ht"/>
+                                    <constraint firstAttribute="width" constant="50" id="5Tr-lO-sEl"/>
+                                    <constraint firstAttribute="width" constant="50" id="LCW-tn-McB"/>
+                                    <constraint firstAttribute="width" constant="50" id="THZ-eg-0EM"/>
+                                    <constraint firstAttribute="height" constant="50" id="rwP-2S-XbF"/>
+                                    <constraint firstAttribute="height" constant="50" id="w2e-Lk-UOI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="jML-i7-OQh" eventType="touchUpInside" id="I13-V5-2Sl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Let’s verify your identity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb4-ph-B01">
+                                <rect key="frame" x="20" y="70" width="280" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="GlobalButtonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="We’re required by law to verify your identity before we can use your money" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-w6-Rqq">
+                                <rect key="frame" x="20" y="111.5" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FaceID" translatesAutoresizingMaskIntoConstraints="NO" id="fzc-db-roQ">
+                                <rect key="frame" x="30" y="177.5" width="260" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="g27-EW-hiP"/>
+                                    <constraint firstAttribute="width" constant="260" id="tVt-Fi-SUf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-ZP-Nky" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                <rect key="frame" x="20" y="498" width="280" height="50"/>
+                                <color key="backgroundColor" name="GlobalButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C5V-BZ-OEU"/>
+                                    <constraint firstAttribute="height" constant="50" id="TCt-zc-KXV"/>
+                                    <constraint firstAttribute="height" constant="50" id="me5-Ea-kAV"/>
+                                    <constraint firstAttribute="height" constant="50" id="mvZ-OR-NNI"/>
+                                    <constraint firstAttribute="height" constant="50" id="zWy-ys-wrT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtnPressed:" destination="jML-i7-OQh" eventType="touchUpInside" id="Afk-hH-thy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aOl-eJ-dOX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aOl-eJ-dOX" firstAttribute="bottom" secondItem="Fo6-ZP-Nky" secondAttribute="bottom" constant="20" id="FOY-NU-vmx"/>
+                            <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="1aW-w6-Rqq" secondAttribute="trailing" constant="20" id="Jzk-YJ-lm7"/>
+                            <constraint firstItem="1aW-w6-Rqq" firstAttribute="top" secondItem="Vb4-ph-B01" secondAttribute="bottom" constant="20" id="KmM-sK-dRe"/>
+                            <constraint firstItem="fzc-db-roQ" firstAttribute="centerX" secondItem="CMb-H5-bgX" secondAttribute="centerX" id="NxS-fz-qdL"/>
+                            <constraint firstItem="Vb4-ph-B01" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="PdS-pO-bzh"/>
+                            <constraint firstItem="Fo6-ZP-Nky" firstAttribute="centerX" secondItem="CMb-H5-bgX" secondAttribute="centerX" id="ZZu-Uz-Sdy"/>
+                            <constraint firstItem="vLN-yF-acY" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="5" id="bHZ-Ts-wBw"/>
+                            <constraint firstItem="fzc-db-roQ" firstAttribute="top" secondItem="1aW-w6-Rqq" secondAttribute="bottom" constant="30" id="gFK-Ue-Dz9"/>
+                            <constraint firstItem="vLN-yF-acY" firstAttribute="top" secondItem="aOl-eJ-dOX" secondAttribute="top" id="iHf-fj-9hl"/>
+                            <constraint firstItem="Vb4-ph-B01" firstAttribute="top" secondItem="vLN-yF-acY" secondAttribute="bottom" constant="20" id="io5-wS-325"/>
+                            <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="Vb4-ph-B01" secondAttribute="trailing" constant="20" id="kvi-c2-Vdf"/>
+                            <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="Fo6-ZP-Nky" secondAttribute="trailing" constant="20" id="rbX-k7-PTu"/>
+                            <constraint firstItem="Fo6-ZP-Nky" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="wTZ-7F-adn"/>
+                            <constraint firstItem="1aW-w6-Rqq" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="zDJ-LC-ptz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceIDImageView" destination="fzc-db-roQ" id="JvP-T1-WIb"/>
+                        <outlet property="letsVerifyLbl" destination="Vb4-ph-B01" id="Q6k-t0-eug"/>
+                        <outlet property="weareRequiredLbl" destination="1aW-w6-Rqq" id="m7S-2a-Ffv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXV-ZM-uca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3832.5" y="771.12676056338034"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcA-vn-ywb">
             <objects>
@@ -1949,6 +2049,7 @@ and most trusted</string>
         <image name="AppleIcon" width="20" height="24"/>
         <image name="BackArrow" width="40" height="40"/>
         <image name="DownArrow" width="20" height="20"/>
+        <image name="FaceID" width="239" height="283"/>
         <image name="GoogleIcon" width="25" height="24"/>
         <image name="Onbdsc2" width="307" height="458"/>
         <image name="ProfileIcon" width="121" height="71"/>
