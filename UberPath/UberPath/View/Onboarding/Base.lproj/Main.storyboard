@@ -2166,25 +2166,25 @@ and most trusted</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof of residency" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyF-DS-4aV">
-                                <rect key="frame" x="20" y="60" width="280" height="42"/>
+                                <rect key="frame" x="20" y="60" width="280" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="GlobalButtonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Prove you live in United States" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEA-Sh-PIl">
-                                <rect key="frame" x="20" y="112" width="280" height="18"/>
+                                <rect key="frame" x="20" y="91.5" width="280" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Nationality" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8O-kD-GgL">
-                                <rect key="frame" x="20" y="140" width="280" height="18"/>
+                                <rect key="frame" x="20" y="119.5" width="280" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQN-dO-IlB" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="20" y="168" width="280" height="50"/>
+                                <rect key="frame" x="20" y="147.5" width="280" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vOA-Xn-ny7">
                                         <rect key="frame" x="10" y="10" width="50" height="30"/>
@@ -2226,13 +2226,13 @@ and most trusted</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Method of verification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hw-r3-15H">
-                                <rect key="frame" x="20" y="228" width="280" height="18"/>
+                                <rect key="frame" x="20" y="207.5" width="280" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvv-fs-Zjw" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="20" y="256" width="280" height="232"/>
+                                <rect key="frame" x="20" y="235.5" width="280" height="232"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZx-HP-Ybx">
                                         <rect key="frame" x="10" y="10" width="260" height="212"/>
@@ -2430,10 +2430,15 @@ and most trusted</string>
                             <constraint firstItem="EqO-QG-Qai" firstAttribute="trailing" secondItem="oyF-DS-4aV" secondAttribute="trailing" constant="20" id="uew-ed-cuX"/>
                             <constraint firstItem="a8O-kD-GgL" firstAttribute="top" secondItem="QEA-Sh-PIl" secondAttribute="bottom" constant="10" id="xjD-jO-XoG"/>
                             <constraint firstItem="gvv-fs-Zjw" firstAttribute="top" secondItem="7hw-r3-15H" secondAttribute="bottom" constant="10" id="y7h-iX-2eM"/>
-                            <constraint firstItem="C1d-gv-pOA" firstAttribute="top" secondItem="gvv-fs-Zjw" secondAttribute="bottom" constant="10" id="yPs-Lr-sIu"/>
                             <constraint firstItem="EqO-QG-Qai" firstAttribute="trailing" secondItem="QEA-Sh-PIl" secondAttribute="trailing" constant="20" id="yUj-3V-yEc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="methodsLbl" destination="7hw-r3-15H" id="Nz5-ax-9VK"/>
+                        <outlet property="nationalityLbl" destination="a8O-kD-GgL" id="zZv-by-gFp"/>
+                        <outlet property="proofLbl" destination="oyF-DS-4aV" id="shx-Y5-gUM"/>
+                        <outlet property="proveLbl" destination="QEA-Sh-PIl" id="1UR-wf-LQA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhG-zs-i9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
