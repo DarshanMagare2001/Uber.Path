@@ -1983,7 +1983,7 @@ and most trusted</string>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                        <buttonConfiguration key="configuration" style="plain" title="Choose from Library">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -2004,7 +2004,7 @@ and most trusted</string>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                        <buttonConfiguration key="configuration" style="plain" title="Take Photo">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -2072,7 +2072,7 @@ and most trusted</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXV-ZM-uca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3832.5" y="771.12676056338034"/>
+            <point key="canvasLocation" x="3812" y="771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcA-vn-ywb">

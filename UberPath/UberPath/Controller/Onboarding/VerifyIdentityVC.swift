@@ -8,6 +8,7 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateFont()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(faceIDImageViewTapped))
         faceIDImageView.addGestureRecognizer(tapGesture)
         faceIDImageView.isUserInteractionEnabled = true
@@ -131,5 +132,12 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    func updateFont(){
+        letsVerifyLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        weareRequiredLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
+    }
+    
+    
 }
 
