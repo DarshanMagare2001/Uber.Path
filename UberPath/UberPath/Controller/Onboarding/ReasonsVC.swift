@@ -88,58 +88,73 @@ class ReasonsVC: UIViewController {
         isViewSelected[view] = !isSelected
         
         if isSelected {
-            view.backgroundColor = .white
-            
-            switch view {
-            case spendView:
-                spendLbl.textColor = .black
-                spendImageView.tintColor = .black
-            case fastView:
-                fastLbl.textColor = .black
-                fastImageView.tintColor = .black
-            case paymentsView:
-                paymentsLbl.textColor = .black
-                paymentsImageView.tintColor = .black
-            case onlinePaymentView:
-                onlinePaymentLbl.textColor = .black
-                onlinePaymentImageView.tintColor = .black
-            case spendWhileView:
-                spendWhileLbl.textColor = .black
-                spendWhileImageView.tintColor = .black
-            case yourView:
-                yourLbl.textColor = .black
-                yourImageView.tintColor = .black
-            default:
-                break
-            }
+            UIView.animate(withDuration: 0.2, animations: {
+                view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                view.layer.shadowOpacity = 0.0
+            }, completion: { _ in
+                view.backgroundColor = .white
+                view.layer.shadowColor = UIColor.clear.cgColor
+                
+                switch view {
+                case self.spendView:
+                    self.spendLbl.textColor = .black
+                    self.spendImageView.tintColor = .black
+                case self.fastView:
+                    self.fastLbl.textColor = .black
+                    self.fastImageView.tintColor = .black
+                case self.paymentsView:
+                    self.paymentsLbl.textColor = .black
+                    self.paymentsImageView.tintColor = .black
+                case self.onlinePaymentView:
+                    self.onlinePaymentLbl.textColor = .black
+                    self.onlinePaymentImageView.tintColor = .black
+                case self.spendWhileView:
+                    self.spendWhileLbl.textColor = .black
+                    self.spendWhileImageView.tintColor = .black
+                case self.yourView:
+                    self.yourLbl.textColor = .black
+                    self.yourImageView.tintColor = .black
+                default:
+                    break
+                }
+            })
         } else {
-            let greenColor = UIColor(named: "LaunchscreenColor")
-            view.backgroundColor = greenColor
+            view.backgroundColor = UIColor(named: "LaunchscreenColor")
+            view.layer.cornerRadius = 8.0
+            view.layer.shadowColor = UIColor.black.cgColor
+            view.layer.shadowOpacity = 0.3
+            view.layer.shadowOffset = CGSize(width: 0, height: 2)
+            view.layer.shadowRadius = 4.0
             
-            switch view {
-            case spendView:
-                spendLbl.textColor = .white
-                spendImageView.tintColor = .white
-            case fastView:
-                fastLbl.textColor = .white
-                fastImageView.tintColor = .white
-            case paymentsView:
-                paymentsLbl.textColor = .white
-                paymentsImageView.tintColor = .white
-            case onlinePaymentView:
-                onlinePaymentLbl.textColor = .white
-                onlinePaymentImageView.tintColor = .white
-            case spendWhileView:
-                spendWhileLbl.textColor = .white
-                spendWhileImageView.tintColor = .white
-            case yourView:
-                yourLbl.textColor = .white
-                yourImageView.tintColor = .white
-            default:
-                break
-            }
+            UIView.animate(withDuration: 0.2, animations: {
+                view.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }, completion: { _ in
+                switch view {
+                case self.spendView:
+                    self.spendLbl.textColor = .white
+                    self.spendImageView.tintColor = .white
+                case self.fastView:
+                    self.fastLbl.textColor = .white
+                    self.fastImageView.tintColor = .white
+                case self.paymentsView:
+                    self.paymentsLbl.textColor = .white
+                    self.paymentsImageView.tintColor = .white
+                case self.onlinePaymentView:
+                    self.onlinePaymentLbl.textColor = .white
+                    self.onlinePaymentImageView.tintColor = .white
+                case self.spendWhileView:
+                    self.spendWhileLbl.textColor = .white
+                    self.spendWhileImageView.tintColor = .white
+                case self.yourView:
+                    self.yourLbl.textColor = .white
+                    self.yourImageView.tintColor = .white
+                default:
+                    break
+                }
+            })
         }
     }
+    
     
     
     
