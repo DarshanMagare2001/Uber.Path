@@ -1,5 +1,5 @@
 //
-//  CameraVC.swift
+//  ProofOfResidencyVC.swift
 //  UberPath
 //
 //  Created by IPS-161 on 28/06/23.
@@ -7,16 +7,22 @@
 
 import UIKit
 
-class CameraVC: UIViewController {
+class ProofOfResidencyVC: UIViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
     
     
-    @IBAction func cancelBtnPressed(_ sender: UIButton) {
+    
+    
+    @IBAction func backBtnPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
     
 }

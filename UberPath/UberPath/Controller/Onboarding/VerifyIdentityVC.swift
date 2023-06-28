@@ -27,11 +27,17 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     @IBAction func takePhotoBtnPressed(_ sender: UIButton) {
-       
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CameraVC") as! CameraVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         // Handle continue button action
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ProofOfResidencyVC") as! ProofOfResidencyVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+        
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -65,7 +71,7 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         present(alertController, animated: true, completion: nil)
     }
     
-   
+    
     
     func showCameraPermissionDeniedAlert() {
         let alertController = UIAlertController(title: "Permission Denied", message: "Please grant permission to access the camera in the Settings app.", preferredStyle: .alert)
