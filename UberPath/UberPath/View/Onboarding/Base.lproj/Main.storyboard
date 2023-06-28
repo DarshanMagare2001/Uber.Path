@@ -1960,18 +1960,61 @@ and most trusted</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="We’re required by law to verify your identity before we can use your money" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-w6-Rqq">
-                                <rect key="frame" x="20" y="111.5" width="280" height="36"/>
+                                <rect key="frame" x="20" y="101.5" width="280" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FaceID" translatesAutoresizingMaskIntoConstraints="NO" id="fzc-db-roQ">
-                                <rect key="frame" x="30" y="177.5" width="260" height="280"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="g27-EW-hiP"/>
-                                    <constraint firstAttribute="width" constant="260" id="tVt-Fi-SUf"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="157.5" width="280" height="150.5"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wPA-v2-agt">
+                                <rect key="frame" x="20" y="348" width="280" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7d-rI-fYu" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                        <color key="backgroundColor" name="GlobalButtonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GjE-qK-1vd"/>
+                                            <constraint firstAttribute="height" constant="50" id="NOU-3M-SKM"/>
+                                            <constraint firstAttribute="height" constant="50" id="RM8-2f-Dyb"/>
+                                            <constraint firstAttribute="height" constant="50" id="flk-p1-kTo"/>
+                                            <constraint firstAttribute="height" constant="50" id="xWS-tl-Fgf"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo1-qY-yEm" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="280" height="50"/>
+                                        <color key="backgroundColor" name="GlobalButtonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1r4-GH-1e9"/>
+                                            <constraint firstAttribute="height" constant="50" id="DbF-pG-EVs"/>
+                                            <constraint firstAttribute="height" constant="50" id="ELI-FU-AuI"/>
+                                            <constraint firstAttribute="height" constant="50" id="bnL-K2-IWh"/>
+                                            <constraint firstAttribute="height" constant="50" id="pWM-uE-ra2"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-ZP-Nky" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                 <rect key="frame" x="20" y="498" width="280" height="50"/>
                                 <color key="backgroundColor" name="GlobalButtonColor"/>
@@ -2000,19 +2043,24 @@ and most trusted</string>
                         <viewLayoutGuide key="safeArea" id="aOl-eJ-dOX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wPA-v2-agt" firstAttribute="top" secondItem="fzc-db-roQ" secondAttribute="bottom" constant="40" id="3GR-10-oOW"/>
+                            <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="wPA-v2-agt" secondAttribute="trailing" constant="20" id="4Dw-yq-h7B"/>
                             <constraint firstItem="aOl-eJ-dOX" firstAttribute="bottom" secondItem="Fo6-ZP-Nky" secondAttribute="bottom" constant="20" id="FOY-NU-vmx"/>
+                            <constraint firstItem="Fo6-ZP-Nky" firstAttribute="top" secondItem="wPA-v2-agt" secondAttribute="bottom" constant="40" id="FPo-zT-SMh"/>
                             <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="1aW-w6-Rqq" secondAttribute="trailing" constant="20" id="Jzk-YJ-lm7"/>
-                            <constraint firstItem="1aW-w6-Rqq" firstAttribute="top" secondItem="Vb4-ph-B01" secondAttribute="bottom" constant="20" id="KmM-sK-dRe"/>
-                            <constraint firstItem="fzc-db-roQ" firstAttribute="centerX" secondItem="CMb-H5-bgX" secondAttribute="centerX" id="NxS-fz-qdL"/>
+                            <constraint firstItem="1aW-w6-Rqq" firstAttribute="top" secondItem="Vb4-ph-B01" secondAttribute="bottom" constant="10" id="KmM-sK-dRe"/>
                             <constraint firstItem="Vb4-ph-B01" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="PdS-pO-bzh"/>
+                            <constraint firstItem="wPA-v2-agt" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="Twz-hM-8Jk"/>
                             <constraint firstItem="Fo6-ZP-Nky" firstAttribute="centerX" secondItem="CMb-H5-bgX" secondAttribute="centerX" id="ZZu-Uz-Sdy"/>
                             <constraint firstItem="vLN-yF-acY" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="5" id="bHZ-Ts-wBw"/>
-                            <constraint firstItem="fzc-db-roQ" firstAttribute="top" secondItem="1aW-w6-Rqq" secondAttribute="bottom" constant="30" id="gFK-Ue-Dz9"/>
+                            <constraint firstItem="fzc-db-roQ" firstAttribute="top" secondItem="1aW-w6-Rqq" secondAttribute="bottom" constant="20" id="gJg-fb-CbC"/>
                             <constraint firstItem="vLN-yF-acY" firstAttribute="top" secondItem="aOl-eJ-dOX" secondAttribute="top" id="iHf-fj-9hl"/>
                             <constraint firstItem="Vb4-ph-B01" firstAttribute="top" secondItem="vLN-yF-acY" secondAttribute="bottom" constant="20" id="io5-wS-325"/>
+                            <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="fzc-db-roQ" secondAttribute="trailing" constant="20" id="k2P-cB-J5m"/>
                             <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="Vb4-ph-B01" secondAttribute="trailing" constant="20" id="kvi-c2-Vdf"/>
                             <constraint firstItem="aOl-eJ-dOX" firstAttribute="trailing" secondItem="Fo6-ZP-Nky" secondAttribute="trailing" constant="20" id="rbX-k7-PTu"/>
                             <constraint firstItem="Fo6-ZP-Nky" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="wTZ-7F-adn"/>
+                            <constraint firstItem="fzc-db-roQ" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="xg6-eq-acW"/>
                             <constraint firstItem="1aW-w6-Rqq" firstAttribute="leading" secondItem="aOl-eJ-dOX" secondAttribute="leading" constant="20" id="zDJ-LC-ptz"/>
                         </constraints>
                     </view>

@@ -22,16 +22,15 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     @objc func faceIDImageViewTapped() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { _ in
             self.checkPhotoLibraryPermission { granted in
                 if granted {
                     DispatchQueue.main.async {
+                        let imagePickerController = UIImagePickerController()
                         imagePickerController.sourceType = .photoLibrary
+                        imagePickerController.delegate = self
                         self.present(imagePickerController, animated: true, completion: nil)
                     }
                 } else {
@@ -46,7 +45,9 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
                 self.checkCameraPermission { granted in
                     if granted {
                         DispatchQueue.main.async {
+                            let imagePickerController = UIImagePickerController()
                             imagePickerController.sourceType = .camera
+                            imagePickerController.delegate = self
                             self.present(imagePickerController, animated: true, completion: nil)
                         }
                     } else {
@@ -62,6 +63,7 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         
         present(alertController, animated: true, completion: nil)
     }
+    
     
     func checkPhotoLibraryPermission(completion: @escaping (Bool) -> Void) {
         let status = PHPhotoLibrary.authorizationStatus()
