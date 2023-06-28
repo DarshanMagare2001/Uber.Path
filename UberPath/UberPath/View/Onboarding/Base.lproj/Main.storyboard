@@ -1991,6 +1991,9 @@ and most trusted</string>
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="chooseFromLibraryBtnPressed:" destination="jML-i7-OQh" eventType="touchUpInside" id="wnD-ku-Znv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo1-qY-yEm" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="280" height="50"/>
@@ -2012,6 +2015,9 @@ and most trusted</string>
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takePhotoBtnPressed:" destination="jML-i7-OQh" eventType="touchUpInside" id="hoH-QW-G6F"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -9,9 +9,25 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(faceIDImageViewTapped))
-        faceIDImageView.addGestureRecognizer(tapGesture)
-        faceIDImageView.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func chooseFromLibraryBtnPressed(_ sender: UIButton) {
+        checkPhotoLibraryPermission { granted in
+            if granted {
+                DispatchQueue.main.async {
+                    let imagePickerController = UIImagePickerController()
+                    imagePickerController.sourceType = .photoLibrary
+                    imagePickerController.delegate = self
+                    self.present(imagePickerController, animated: true, completion: nil)
+                }
+            } else {
+                self.showPhotoLibraryPermissionDeniedAlert()
+            }
+        }
+    }
+    
+    @IBAction func takePhotoBtnPressed(_ sender: UIButton) {
+       
     }
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
@@ -21,50 +37,6 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
-    @objc func faceIDImageViewTapped() {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { _ in
-            self.checkPhotoLibraryPermission { granted in
-                if granted {
-                    DispatchQueue.main.async {
-                        let imagePickerController = UIImagePickerController()
-                        imagePickerController.sourceType = .photoLibrary
-                        imagePickerController.delegate = self
-                        self.present(imagePickerController, animated: true, completion: nil)
-                    }
-                } else {
-                    self.showPhotoLibraryPermissionDeniedAlert()
-                }
-            }
-        }
-        alertController.addAction(chooseFromLibraryAction)
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default) { _ in
-                self.checkCameraPermission { granted in
-                    if granted {
-                        DispatchQueue.main.async {
-                            let imagePickerController = UIImagePickerController()
-                            imagePickerController.sourceType = .camera
-                            imagePickerController.delegate = self
-                            self.present(imagePickerController, animated: true, completion: nil)
-                        }
-                    } else {
-                        self.showCameraPermissionDeniedAlert()
-                    }
-                }
-            }
-            alertController.addAction(takePhotoAction)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
-    
     
     func checkPhotoLibraryPermission(completion: @escaping (Bool) -> Void) {
         let status = PHPhotoLibrary.authorizationStatus()
@@ -93,21 +65,7 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         present(alertController, animated: true, completion: nil)
     }
     
-    func checkCameraPermission(completion: @escaping (Bool) -> Void) {
-        let status = AVCaptureDevice.authorizationStatus(for: .video)
-        switch status {
-        case .authorized:
-            completion(true)
-        case .denied, .restricted:
-            completion(false)
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { granted in
-                completion(granted)
-            }
-        @unknown default:
-            completion(false)
-        }
-    }
+   
     
     func showCameraPermissionDeniedAlert() {
         let alertController = UIAlertController(title: "Permission Denied", message: "Please grant permission to access the camera in the Settings app.", preferredStyle: .alert)
@@ -133,11 +91,9 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func updateFont(){
+    func updateFont() {
         letsVerifyLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
         weareRequiredLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
     }
-    
-    
 }
 
