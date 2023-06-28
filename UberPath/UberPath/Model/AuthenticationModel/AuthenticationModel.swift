@@ -1,16 +1,13 @@
-//
-//  AuthenticationModel.swift
-//  UberPath
-//
-//  Created by IPS-161 on 26/06/23.
-//
-
 import Foundation
 import FirebaseAuth
 
-
-
 class AuthenticationModel {
+    var isLoggedIn: Bool {
+        return Auth.auth().currentUser != nil
+    }
+    
+    // MARK: - Sign Up
+    
     func signUp(name: String, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
@@ -26,6 +23,8 @@ class AuthenticationModel {
             // Perform any additional operations after successful sign-up
         }
     }
+    
+    // MARK: - Sign In
     
     func signIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
@@ -43,6 +42,8 @@ class AuthenticationModel {
         }
     }
     
+    // MARK: - Get Current User Email
+    
     func getCurrentUserEmail() -> String? {
         if let currentUser = Auth.auth().currentUser {
             return currentUser.email
@@ -50,8 +51,5 @@ class AuthenticationModel {
             return nil
         }
     }
-    
-    
-    
 }
 

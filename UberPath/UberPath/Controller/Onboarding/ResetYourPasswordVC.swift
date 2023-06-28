@@ -26,8 +26,9 @@ class ResetYourPasswordVC: UIViewController , UITextFieldDelegate {
     }
     
     @IBAction func createNewPasswordBtnPressed(_ sender: UIButton) {
-        
-        
+        if let navigationController = self.navigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
     }
     
     @IBAction func newPasswordTxtFldBtnPressed(_ sender: UIButton) {
@@ -60,8 +61,6 @@ class ResetYourPasswordVC: UIViewController , UITextFieldDelegate {
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
-        
-        
     }
     
     

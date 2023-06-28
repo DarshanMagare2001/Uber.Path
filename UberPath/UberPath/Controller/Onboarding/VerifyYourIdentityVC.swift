@@ -20,7 +20,6 @@ class VerifyYourIdentityVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        currentUserEmailLbl.text = (viewModel.getCurrentUserEmail())!
         
     }
     
@@ -38,31 +37,15 @@ class VerifyYourIdentityVC: UIViewController {
     
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ResetYourPasswordVC") as! ResetYourPasswordVC
         self.navigationController?.pushViewController(destinationVC, animated: true)
-        
-        
-//        if isSelected {
-//            // Continue button action
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ResetYourPasswordVC") as! ResetYourPasswordVC
-//            navigationController?.pushViewController(destinationVC, animated: true)
-//
-//        } else {
-//            // Disable the continue button
-//            showToast(message: "Please select Email Id.") { [weak self] in}
-//        }
     }
     
     
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
-        
         navigationController?.popViewController(animated: true)
-        
-        
     }
     
     func updateFont() {
