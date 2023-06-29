@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewCardVC: UIViewController {
+class NewCardVC: UIViewController , UITextFieldDelegate {
     var selectedImageName : String?
     @IBOutlet weak var cardDetailLbl: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
@@ -20,9 +20,13 @@ class NewCardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        cardImageView.image = UIImage(named: selectedImageName ?? "")
+        //        cardImageView.image = UIImage(named: selectedImageName ?? "")
         updateFont()
         updatePlaceHolders()
+        cardNumberTxtFld.delegate = self
+        expiryDateTxtFld.delegate = self
+        vccTxtFld.delegate = self
+        cardHolderTxtFld.delegate = self
         
     }
     
@@ -55,6 +59,12 @@ class NewCardVC: UIViewController {
         expiryDateTxtFld.placeholder = "Expiry date"
         vccTxtFld.placeholder = "VCC"
         cardHolderTxtFld.placeholder = "Card holder"
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Dismiss the keyboard when the return button is tapped
+        textField.resignFirstResponder()
+        return true
     }
     
 }
