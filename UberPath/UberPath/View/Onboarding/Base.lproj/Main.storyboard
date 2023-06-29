@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15x-Rp-57L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QyL-N0-wln">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -2668,26 +2668,29 @@ and most trusted</string>
                                 <color key="textColor" name="GlobalButtonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkT-a5-fk0">
-                                <rect key="frame" x="20" y="60" width="280" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-bX-6rS">
+                                <rect key="frame" x="0.0" y="50" width="320" height="134"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleOne" translatesAutoresizingMaskIntoConstraints="NO" id="i8q-Du-Y9w">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="LAr-Pa-pGU"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="CardStyleOne" translatesAutoresizingMaskIntoConstraints="NO" id="i8q-Du-Y9w">
+                                        <rect key="frame" x="20" y="20" width="280" height="94"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstItem="i8q-Du-Y9w" firstAttribute="top" secondItem="EkT-a5-fk0" secondAttribute="top" id="EV3-yc-fQh"/>
-                                    <constraint firstAttribute="bottom" secondItem="i8q-Du-Y9w" secondAttribute="bottom" id="G5j-PO-w79"/>
-                                    <constraint firstItem="i8q-Du-Y9w" firstAttribute="leading" secondItem="EkT-a5-fk0" secondAttribute="leading" id="K5G-7o-72g"/>
-                                    <constraint firstAttribute="trailing" secondItem="i8q-Du-Y9w" secondAttribute="trailing" id="tpB-5A-8WX"/>
+                                    <constraint firstItem="i8q-Du-Y9w" firstAttribute="top" secondItem="C9L-bX-6rS" secondAttribute="top" constant="20" id="GBK-MB-lr4"/>
+                                    <constraint firstItem="i8q-Du-Y9w" firstAttribute="leading" secondItem="C9L-bX-6rS" secondAttribute="leading" constant="20" id="Xvq-Yw-QEG"/>
+                                    <constraint firstAttribute="trailing" secondItem="i8q-Du-Y9w" secondAttribute="trailing" constant="20" id="eIO-tU-maN"/>
+                                    <constraint firstAttribute="bottom" secondItem="i8q-Du-Y9w" secondAttribute="bottom" constant="20" id="qTi-Po-Mxh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-Lm-Bzn">
+                                <rect key="frame" x="20" y="194" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" name="GlobalButtonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="msk-Yr-286">
-                                <rect key="frame" x="20" y="301.5" width="280" height="230"/>
+                                <rect key="frame" x="20" y="228" width="280" height="230"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-Hc-i29" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -2760,6 +2763,9 @@ and most trusted</string>
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0EQ-wo-BR3"/>
+                                        </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUO-Rl-lnH" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="280" height="50"/>
@@ -2849,33 +2855,28 @@ and most trusted</string>
                                     <action selector="saveBtnPressed:" destination="QyL-N0-wln" eventType="touchUpInside" id="6tJ-sV-7l8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-Lm-Bzn">
-                                <rect key="frame" x="20" y="270" width="280" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
-                                <color key="textColor" name="GlobalButtonColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tux-H8-PFg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FBu-Lm-Bzn" firstAttribute="top" secondItem="C9L-bX-6rS" secondAttribute="bottom" constant="10" id="0Qk-xk-4wf"/>
                             <constraint firstItem="Ewf-7B-MhZ" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="20" id="1z6-9o-8Od"/>
-                            <constraint firstItem="Tux-H8-PFg" firstAttribute="trailing" secondItem="EkT-a5-fk0" secondAttribute="trailing" constant="20" id="5zB-eD-afz"/>
+                            <constraint firstItem="Ewf-7B-MhZ" firstAttribute="top" secondItem="msk-Yr-286" secondAttribute="bottom" constant="40" id="7I1-ak-yRE"/>
                             <constraint firstItem="mQc-HI-eyd" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="5" id="DPT-av-jFd"/>
-                            <constraint firstItem="EkT-a5-fk0" firstAttribute="top" secondItem="mQc-HI-eyd" secondAttribute="bottom" constant="10" id="I7l-Hy-KQo"/>
                             <constraint firstItem="Tux-H8-PFg" firstAttribute="bottom" secondItem="Ewf-7B-MhZ" secondAttribute="bottom" constant="20" id="RR1-d4-vwI"/>
-                            <constraint firstItem="FBu-Lm-Bzn" firstAttribute="top" secondItem="EkT-a5-fk0" secondAttribute="bottom" constant="10" id="Rte-jG-N3W"/>
-                            <constraint firstItem="msk-Yr-286" firstAttribute="top" secondItem="FBu-Lm-Bzn" secondAttribute="bottom" constant="10" id="VoQ-Ti-CUl"/>
-                            <constraint firstItem="FBu-Lm-Bzn" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="20" id="Zp0-TG-VOH"/>
                             <constraint firstItem="pZk-nt-Icw" firstAttribute="top" secondItem="Tux-H8-PFg" secondAttribute="top" constant="10" id="a5t-60-Icn"/>
+                            <constraint firstItem="C9L-bX-6rS" firstAttribute="top" secondItem="mQc-HI-eyd" secondAttribute="bottom" id="aGK-de-4aW"/>
                             <constraint firstItem="mQc-HI-eyd" firstAttribute="top" secondItem="Tux-H8-PFg" secondAttribute="top" id="aXa-rv-Kt0"/>
                             <constraint firstItem="msk-Yr-286" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="20" id="dEy-f8-rXL"/>
                             <constraint firstItem="pZk-nt-Icw" firstAttribute="centerX" secondItem="58V-JZ-RIB" secondAttribute="centerX" id="gdM-fa-w0d"/>
+                            <constraint firstItem="Tux-H8-PFg" firstAttribute="trailing" secondItem="FBu-Lm-Bzn" secondAttribute="trailing" constant="20" id="nVo-76-VJ5"/>
+                            <constraint firstItem="C9L-bX-6rS" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" id="oJZ-XX-9tP"/>
+                            <constraint firstItem="FBu-Lm-Bzn" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="20" id="qsh-dl-ZSc"/>
+                            <constraint firstItem="C9L-bX-6rS" firstAttribute="trailing" secondItem="Tux-H8-PFg" secondAttribute="trailing" id="rA0-Lc-YrA"/>
                             <constraint firstItem="Tux-H8-PFg" firstAttribute="trailing" secondItem="msk-Yr-286" secondAttribute="trailing" constant="20" id="rEE-Fs-ao8"/>
                             <constraint firstItem="Ewf-7B-MhZ" firstAttribute="centerX" secondItem="58V-JZ-RIB" secondAttribute="centerX" id="rPe-Z4-fke"/>
-                            <constraint firstItem="Tux-H8-PFg" firstAttribute="trailing" secondItem="FBu-Lm-Bzn" secondAttribute="trailing" constant="20" id="t3e-jh-A17"/>
                             <constraint firstItem="Tux-H8-PFg" firstAttribute="trailing" secondItem="Ewf-7B-MhZ" secondAttribute="trailing" constant="20" id="wjE-Hy-bh1"/>
-                            <constraint firstItem="EkT-a5-fk0" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="20" id="x0n-Wf-5qE"/>
+                            <constraint firstItem="msk-Yr-286" firstAttribute="top" secondItem="FBu-Lm-Bzn" secondAttribute="bottom" constant="10" id="xa5-xw-l0d"/>
                         </constraints>
                     </view>
                     <connections>

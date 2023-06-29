@@ -47,7 +47,7 @@ class NewCardVC: UIViewController {
     }
     
     func updateFont() {
-        cardDetailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        cardDetailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
     }
     
     func updatePlaceHolders(){
