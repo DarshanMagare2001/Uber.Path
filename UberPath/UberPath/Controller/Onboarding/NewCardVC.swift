@@ -20,7 +20,7 @@ class NewCardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(selectedImageName)
+//        cardImageView.image = UIImage(named: selectedImageName ?? "")
         updateFont()
         updatePlaceHolders()
         
