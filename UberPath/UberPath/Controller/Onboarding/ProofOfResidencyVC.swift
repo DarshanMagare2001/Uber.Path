@@ -2,11 +2,7 @@ import UIKit
 import ADCountryPicker
 
 class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
-    func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
-        let flagImage = picker.getFlag(countryCode: code)
-        countryImage.image = flagImage
-    }
-    
+    let picker = ADCountryPicker(style: .grouped)
     @IBOutlet weak var proofLbl: UILabel!
     @IBOutlet weak var proveLbl: UILabel!
     @IBOutlet weak var nationalityLbl: UILabel!
@@ -22,16 +18,17 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
     
     func loadCountryFromUserDefaults() {
         let selectedCountry = UserDefaults.standard.string(forKey: "SelectedCountry")
-        let selectedCountryImage = picker.getFlag(countryCode:UserDefaults.standard.string(forKey: "SelectedCountryCode"))
+        let selectedCountryCode = UserDefaults.standard.string(forKey: "SelectedCountryCode")
         countryLbl.text = selectedCountry
+        print(selectedCountryCode)
         
-        //         Set country image based on the selected country
-        //         Replace this code with your own logic to load the correct image
-        countryImage.image = UIImage(named: selectedCountryImage)
+        if let countryCode = selectedCountryCode {
+            let flagImage = picker.getFlag(countryCode: countryCode)
+            countryImage.image = flagImage
+        }
     }
     
     @IBAction func changeBtnPressed(_ sender: UIButton) {
-        let picker = ADCountryPicker(style: .grouped)
         picker.delegate = self
         picker.showCallingCodes = true
         picker.showFlags = true
@@ -48,7 +45,7 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
             self.countryLbl.text = name
             // Save selected country to UserDefaults
             UserDefaults.standard.set(name, forKey: "SelectedCountry")
-            
+            UserDefaults.standard.set(code, forKey: "SelectedCountryCode")
             self.dismiss(animated: true, completion: nil)
         }
         
@@ -78,6 +75,12 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
         nationalityLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
         methodsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
     }
+    
+    func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
+        let flagImage = picker.getFlag(countryCode: code)
+        countryImage.image = flagImage
+    }
+    
 }
 
 extension ProofOfResidencyVC: UIViewControllerTransitioningDelegate {

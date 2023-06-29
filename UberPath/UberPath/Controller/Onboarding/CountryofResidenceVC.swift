@@ -13,7 +13,7 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
     @IBOutlet weak var countryLbl: UILabel!
     @IBOutlet weak var countryOfReseidenceLbl: UILabel!
     @IBOutlet weak var PleaseSelectLbl: UILabel!
-    
+    var countryCode : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
@@ -53,10 +53,9 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         // Store the selected country name and code in UserDefaults
         let selectedCountryName = countryLbl.text ?? ""
-        let selectedCountryCode = UserDefaults.standard.string(forKey: "SelectedCountryCode") ?? ""
+        let selectedCountryCode = countryCode
         UserDefaults.standard.set(selectedCountryName, forKey: "SelectedCountry")
         UserDefaults.standard.set(selectedCountryCode, forKey: "SelectedCountryCode")
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ReasonsVC") as! ReasonsVC
         self.navigationController?.pushViewController(destinationVC, animated: true)
@@ -73,6 +72,7 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
         countryLbl.text = name
         let flagImage = picker.getFlag(countryCode: code)
         countryImgView.image = flagImage
+        countryCode = code
     }
     
     func updateFont() {
