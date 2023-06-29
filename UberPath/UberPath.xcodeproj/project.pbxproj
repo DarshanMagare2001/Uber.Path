@@ -21,6 +21,7 @@
 		137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */; };
 		137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */; };
 		137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */; };
+		138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924732A4D5B940018BBEF /* CreateCardVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -45,6 +46,7 @@
 		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetYourPasswordVC.swift; sourceTree = "<group>"; };
 		137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonsVC.swift; sourceTree = "<group>"; };
+		138924732A4D5B940018BBEF /* CreateCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardVC.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */,
 				13BB00B12A4C4B6000524C82 /* CameraVC.swift */,
 				13BB00B32A4C517700524C82 /* ProofOfResidencyVC.swift */,
+				138924732A4D5B940018BBEF /* CreateCardVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,
 				1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */,
+				138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */,
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,

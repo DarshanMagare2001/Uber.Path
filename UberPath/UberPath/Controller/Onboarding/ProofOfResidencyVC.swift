@@ -63,6 +63,9 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
     
     @IBAction func continueBtnPreesed(_ sender: UIButton) {
         // Perform the desired action on Continue button press
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CreateCardVC") as! CreateCardVC
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
