@@ -7,8 +7,7 @@
 
 import UIKit
 
-class CreateCardVC: UIViewController , UITableViewDelegate,UITableViewDataSource {
-    
+class CreateCardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CardCellDelegate {
     
     @IBOutlet weak var createLbl: UILabel!
     @IBOutlet weak var theCustomizeLbl: UILabel!
@@ -16,7 +15,9 @@ class CreateCardVC: UIViewController , UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var cardTableViewOutlet: UITableView!
     @IBOutlet weak var cardViewOne: UIView!
     @IBOutlet weak var cardViewTwo: UIView!
-    var cards :[String] = ["CardStyleOne","CardStyleTwo","CardStyleThree"]
+    
+    var cards: [String] = ["CardStyleOne", "CardStyleTwo", "CardStyleThree"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
@@ -24,7 +25,6 @@ class CreateCardVC: UIViewController , UITableViewDelegate,UITableViewDataSource
         cardTableViewOutlet.dataSource = self
         cardViewOne.isHidden = false
         cardViewTwo.isHidden = true
-        
     }
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
@@ -33,6 +33,7 @@ class CreateCardVC: UIViewController , UITableViewDelegate,UITableViewDataSource
             self.cardViewTwo.isHidden = false
         }, completion: nil)
     }
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -50,8 +51,29 @@ class CreateCardVC: UIViewController , UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cardTableViewOutlet.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
         cell.cardImageView.image = UIImage(named: cards[indexPath.row])
-        
+        cell.delegate = self
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedImageName = cards[indexPath.row]
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "NewCardVC") as! NewCardVC
+        destinationVC.selectedImageName = selectedImageName
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
+    // MARK: - CardCellDelegate
+    
+    func cardImageTapped(in cell: CardCell) {
+        guard let indexPath = cardTableViewOutlet.indexPath(for: cell) else {
+            return
+        }
+        let selectedImageName = cards[indexPath.row]
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "NewCardVC") as! NewCardVC
+        destinationVC.selectedImageName = selectedImageName
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
 }
+

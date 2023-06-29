@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Tr-EZ-R30">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15x-Rp-57L">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1420,22 +1420,22 @@ and most trusted</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to know this for regulatory reasons. And also we’re curious!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-wI-98A">
-                                <rect key="frame" x="20" y="91.5" width="280" height="34.5"/>
+                                <rect key="frame" x="20" y="91.5" width="280" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-xR-dMT">
-                                <rect key="frame" x="20" y="136" width="280" height="342"/>
+                                <rect key="frame" x="20" y="135" width="280" height="343"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q32-97-ahv">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="101"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn3-2g-iEj" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="130" height="100.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="101"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spend or save daily" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3p-08-ehi">
-                                                        <rect key="frame" x="20" y="55" width="90" height="35.5"/>
+                                                        <rect key="frame" x="20" y="55" width="90" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1460,10 +1460,10 @@ and most trusted</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-zj-Pjx" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="130" height="100.5"/>
+                                                <rect key="frame" x="150" y="0.0" width="130" height="101"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast my transactions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-SS-kR2">
-                                                        <rect key="frame" x="20" y="55" width="90" height="35.5"/>
+                                                        <rect key="frame" x="20" y="55" width="90" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1490,7 +1490,7 @@ and most trusted</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CbR-G0-RQo">
-                                        <rect key="frame" x="0.0" y="120.5" width="280" height="101"/>
+                                        <rect key="frame" x="0.0" y="121" width="280" height="101"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlR-Iv-wMb" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="101"/>
@@ -1551,13 +1551,13 @@ and most trusted</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5AW-jI-PsP">
-                                        <rect key="frame" x="0.0" y="241.5" width="280" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="242" width="280" height="101"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sy8-TS-41s" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="130" height="100.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="101"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spend while travelling" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buR-eU-7LT">
-                                                        <rect key="frame" x="20" y="55" width="90" height="35.5"/>
+                                                        <rect key="frame" x="20" y="55" width="90" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1582,10 +1582,10 @@ and most trusted</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zv6-hU-d1T" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="130" height="100.5"/>
+                                                <rect key="frame" x="150" y="0.0" width="130" height="101"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your financial assets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oq-1L-hws">
-                                                        <rect key="frame" x="20" y="55" width="90" height="35.5"/>
+                                                        <rect key="frame" x="20" y="55" width="90" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2637,6 +2637,51 @@ and most trusted</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cX-AJ-mCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5670" y="767.95774647887322"/>
+        </scene>
+        <!--New CardVC-->
+        <scene sceneID="UiB-pw-WcX">
+            <objects>
+                <viewController storyboardIdentifier="NewCardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QyL-N0-wln" customClass="NewCardVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58V-JZ-RIB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQc-HI-eyd">
+                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Z0-iF-M6y"/>
+                                    <constraint firstAttribute="width" constant="50" id="UTM-H6-3Hl"/>
+                                    <constraint firstAttribute="height" constant="50" id="gBp-SV-3va"/>
+                                    <constraint firstAttribute="width" constant="50" id="iJv-cB-IsU"/>
+                                    <constraint firstAttribute="width" constant="50" id="rD4-r7-SGZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="wZx-On-gH3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="QyL-N0-wln" eventType="touchUpInside" id="DC9-TH-b5J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Card" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZk-nt-Icw">
+                                <rect key="frame" x="117" y="15" width="86.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="textColor" name="GlobalButtonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tux-H8-PFg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mQc-HI-eyd" firstAttribute="leading" secondItem="Tux-H8-PFg" secondAttribute="leading" constant="5" id="DPT-av-jFd"/>
+                            <constraint firstItem="pZk-nt-Icw" firstAttribute="top" secondItem="Tux-H8-PFg" secondAttribute="top" constant="15" id="a5t-60-Icn"/>
+                            <constraint firstItem="mQc-HI-eyd" firstAttribute="top" secondItem="Tux-H8-PFg" secondAttribute="top" id="aXa-rv-Kt0"/>
+                            <constraint firstItem="pZk-nt-Icw" firstAttribute="centerX" secondItem="58V-JZ-RIB" secondAttribute="centerX" id="gdM-fa-w0d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdw-SD-Ts6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6324" y="768"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcA-vn-ywb">

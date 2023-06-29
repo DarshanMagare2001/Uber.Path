@@ -23,6 +23,7 @@
 		137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */; };
 		138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924732A4D5B940018BBEF /* CreateCardVC.swift */; };
 		138924762A4D700E0018BBEF /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924752A4D700E0018BBEF /* CardCell.swift */; };
+		138924782A4D80100018BBEF /* NewCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924772A4D80100018BBEF /* NewCardVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -49,6 +50,7 @@
 		137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonsVC.swift; sourceTree = "<group>"; };
 		138924732A4D5B940018BBEF /* CreateCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardVC.swift; sourceTree = "<group>"; };
 		138924752A4D700E0018BBEF /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		138924772A4D80100018BBEF /* NewCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardVC.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				13BB00B32A4C517700524C82 /* ProofOfResidencyVC.swift */,
 				138924732A4D5B940018BBEF /* CreateCardVC.swift */,
 				138924752A4D700E0018BBEF /* CardCell.swift */,
+				138924772A4D80100018BBEF /* NewCardVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
+				138924782A4D80100018BBEF /* NewCardVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
