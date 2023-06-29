@@ -51,14 +51,17 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
     
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
-        // Store the selected country name in UserDefaults
+        // Store the selected country name and code in UserDefaults
         let selectedCountryName = countryLbl.text ?? ""
+        let selectedCountryCode = UserDefaults.standard.string(forKey: "SelectedCountryCode") ?? ""
         UserDefaults.standard.set(selectedCountryName, forKey: "SelectedCountry")
+        UserDefaults.standard.set(selectedCountryCode, forKey: "SelectedCountryCode")
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ReasonsVC") as! ReasonsVC
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

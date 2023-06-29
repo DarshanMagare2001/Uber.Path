@@ -3,7 +3,8 @@ import ADCountryPicker
 
 class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
-        
+        let flagImage = picker.getFlag(countryCode: code)
+        countryImage.image = flagImage
     }
     
     @IBOutlet weak var proofLbl: UILabel!
@@ -21,11 +22,12 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
     
     func loadCountryFromUserDefaults() {
         let selectedCountry = UserDefaults.standard.string(forKey: "SelectedCountry")
+        let selectedCountryImage = picker.getFlag(countryCode:UserDefaults.standard.string(forKey: "SelectedCountryCode"))
         countryLbl.text = selectedCountry
         
-        // Set country image based on the selected country
-        // Replace this code with your own logic to load the correct image
-        countryImage.image = UIImage(named: "your_default_image")
+        //         Set country image based on the selected country
+        //         Replace this code with your own logic to load the correct image
+        countryImage.image = UIImage(named: selectedCountryImage)
     }
     
     @IBAction func changeBtnPressed(_ sender: UIButton) {
@@ -44,11 +46,6 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
         picker.didSelectCountryClosure = { [weak self] name, code in
             guard let self = self else { return }
             self.countryLbl.text = name
-            
-            // Set country image based on the selected country
-            // Replace this code with your own logic to load the correct image
-            self.countryImage.image = UIImage(named: "your_selected_image")
-            
             // Save selected country to UserDefaults
             UserDefaults.standard.set(name, forKey: "SelectedCountry")
             
