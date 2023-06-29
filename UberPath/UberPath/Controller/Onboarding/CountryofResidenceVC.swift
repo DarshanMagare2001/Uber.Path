@@ -49,21 +49,20 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
         present(picker, animated: true, completion: nil)
     }
     
-   
+    
     @IBAction func continueBtnPressed(_ sender: UIButton) {
+        // Store the selected country name in UserDefaults
+        let selectedCountryName = countryLbl.text ?? ""
+        UserDefaults.standard.set(selectedCountryName, forKey: "SelectedCountry")
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "ReasonsVC") as! ReasonsVC
         self.navigationController?.pushViewController(destinationVC, animated: true)
-        
     }
-    
-    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
     
     // MARK: - Country Selection Delegate
     
@@ -73,12 +72,10 @@ class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
         countryImgView.image = flagImage
     }
     
-    
-    func updateFont(){
+    func updateFont() {
         countryOfReseidenceLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
         PleaseSelectLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 16.0))
     }
-    
     
 }
 

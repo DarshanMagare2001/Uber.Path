@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sVc-b9-oJd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15x-Rp-57L">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -2208,6 +2208,9 @@ and most trusted</string>
                                         <buttonConfiguration key="configuration" style="plain" title="Change">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changeBtnPressed:" destination="sVc-b9-oJd" eventType="touchUpInside" id="XI6-Qn-JZh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -2402,6 +2405,9 @@ and most trusted</string>
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtnPreesed:" destination="sVc-b9-oJd" eventType="touchUpInside" id="Shn-Zo-m3g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EqO-QG-Qai"/>
@@ -2434,6 +2440,8 @@ and most trusted</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryImage" destination="vOA-Xn-ny7" id="UsP-7o-tiL"/>
+                        <outlet property="countryLbl" destination="DwA-rH-4bA" id="oQ3-so-w85"/>
                         <outlet property="methodsLbl" destination="7hw-r3-15H" id="Nz5-ax-9VK"/>
                         <outlet property="nationalityLbl" destination="a8O-kD-GgL" id="zZv-by-gFp"/>
                         <outlet property="proofLbl" destination="oyF-DS-4aV" id="shx-Y5-gUM"/>
