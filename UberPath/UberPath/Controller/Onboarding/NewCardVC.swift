@@ -8,12 +8,12 @@
 import UIKit
 
 class NewCardVC: UIViewController {
-    
     var selectedImageName : String?
-    
+    @IBOutlet weak var cardDetailLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         print(selectedImageName)
+        updateFont()
         
     }
     
@@ -22,5 +22,10 @@ class NewCardVC: UIViewController {
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func updateFont() {
+        cardDetailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+    }
+    
     
 }
