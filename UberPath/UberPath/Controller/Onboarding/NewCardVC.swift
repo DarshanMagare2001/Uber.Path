@@ -11,11 +11,13 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     @IBOutlet weak var countryImageView: UIImageView!
     @IBOutlet weak var countryLbl: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var popUpView: UIView!
     var selectedImageName: String?
     let picker = ADCountryPicker(style: .grouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        popUpView.isHidden = true
         guard let image = UIImage(named: selectedImageName ?? "") else { return }
         cardImageView.image = image
         updateFont()
@@ -80,10 +82,16 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         // Handle save button action
+        popUpView.isHidden = false
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func okBtnPressed(_ sender: UIButton) {
+        
     }
     
     
