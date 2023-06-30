@@ -1,8 +1,7 @@
 import UIKit
+import ADCountryPicker
 
-class NewCardVC: UIViewController, UITextFieldDelegate {
-    var selectedImageName: String?
-    
+class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     @IBOutlet weak var cardDetailLbl: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
     @IBOutlet weak var cardNumberTxtFld: UITextField!
@@ -12,6 +11,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var countryImageView: UIImageView!
     @IBOutlet weak var countryLbl: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    var selectedImageName: String?
+    let picker = ADCountryPicker(style: .grouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
         expiryDateTxtFld.delegate = self
         vccTxtFld.delegate = self
         cardHolderTxtFld.delegate = self
-        
         registerForKeyboardNotifications()
+        loadCountryFromUserDefaults()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,8 +31,49 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
         unregisterFromKeyboardNotifications()
     }
     
-    @IBAction func countryShowBtnPressed(_ sender: UIButton) {
-        // Handle country button action
+    func loadCountryFromUserDefaults() {
+        let selectedCountry = UserDefaults.standard.string(forKey: "SelectedCountry")
+        let selectedCountryCode = UserDefaults.standard.string(forKey: "SelectedCountryCode")
+        countryLbl.text = selectedCountry
+        if let countryCode = selectedCountryCode {
+            let flagImage = picker.getFlag(countryCode: countryCode)
+            countryImageView.image = flagImage
+        }
+    }
+    
+    
+    @IBAction func countryBtnPressed(_ sender: UIButton) {
+        picker.delegate = self
+        picker.showCallingCodes = true
+        picker.showFlags = true
+        picker.pickerTitle = "Select a Country"
+        picker.defaultCountryCode = "US"
+        picker.forceDefaultCountryCode = false
+        picker.closeButtonTintColor = UIColor.black
+        picker.font = UIFont(name: "Helvetica Neue", size: 15)
+        picker.flagHeight = 40
+        picker.hidesNavigationBarWhenPresentingSearch = true
+        picker.searchBarBackgroundColor = UIColor.lightGray
+        picker.didSelectCountryClosure = { [weak self] name, code in
+            guard let self = self else { return }
+            self.countryLbl.text = name
+            // Save selected country to UserDefaults
+            UserDefaults.standard.set(name, forKey: "SelectedCountry")
+            UserDefaults.standard.set(code, forKey: "SelectedCountryCode")
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            picker.modalPresentationStyle = .popover
+            picker.popoverPresentationController?.sourceView = sender
+            picker.popoverPresentationController?.sourceRect = sender.bounds
+        } else {
+            picker.modalPresentationStyle = .custom
+            picker.transitioningDelegate = self
+        }
+        
+        present(picker, animated: true, completion: nil)
+        
     }
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
@@ -41,6 +83,14 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
+        let flagImage = picker.getFlag(countryCode: code)
+        countryImageView.image = flagImage
+    }
+    
+    
     
     func updateFont() {
         cardDetailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
@@ -73,8 +123,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
-            return
-        }
+                  return
+              }
         
         let keyboardHeight = keyboardFrame.height
         let safeAreaBottomInset = view.safeAreaInsets.bottom
@@ -110,3 +160,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
     }
 }
 
+extension NewCardVC: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomBottomSheetPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}

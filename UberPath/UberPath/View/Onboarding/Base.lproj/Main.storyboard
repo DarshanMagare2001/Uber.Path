@@ -2798,7 +2798,7 @@ and most trusted</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Country" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-ea-VN9">
-                                                        <rect key="frame" x="60" y="5" width="170" height="40"/>
+                                                        <rect key="frame" x="65" y="5" width="160" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2811,14 +2811,14 @@ and most trusted</string>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="DownArrow" title=" " subtitle=" "/>
                                                         <connections>
-                                                            <action selector="countryShowBtnPressed:" destination="QyL-N0-wln" eventType="touchUpInside" id="n7x-J9-ia9"/>
+                                                            <action selector="countryBtnPressed:" destination="QyL-N0-wln" eventType="touchUpInside" id="mOv-L8-a3P"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
                                                     <constraint firstItem="9FU-6x-7MG" firstAttribute="top" secondItem="CKZ-p1-HoD" secondAttribute="top" id="0IP-3O-xGu"/>
-                                                    <constraint firstItem="9FU-6x-7MG" firstAttribute="leading" secondItem="zEz-ea-VN9" secondAttribute="trailing" id="4CW-CR-EAu"/>
+                                                    <constraint firstItem="9FU-6x-7MG" firstAttribute="leading" secondItem="zEz-ea-VN9" secondAttribute="trailing" constant="5" id="4CW-CR-EAu"/>
                                                     <constraint firstAttribute="trailing" secondItem="9FU-6x-7MG" secondAttribute="trailing" id="8Eq-Ey-RP5"/>
                                                     <constraint firstAttribute="height" constant="50" id="Qhp-D5-1xz"/>
                                                     <constraint firstItem="Tk6-Y1-QOy" firstAttribute="leading" secondItem="CKZ-p1-HoD" secondAttribute="leading" constant="10" id="VBe-6G-nE0"/>
@@ -2826,7 +2826,7 @@ and most trusted</string>
                                                     <constraint firstAttribute="bottom" secondItem="9FU-6x-7MG" secondAttribute="bottom" id="aY2-OV-5e2"/>
                                                     <constraint firstAttribute="bottom" secondItem="zEz-ea-VN9" secondAttribute="bottom" constant="5" id="e9n-7H-MNs"/>
                                                     <constraint firstItem="Tk6-Y1-QOy" firstAttribute="top" secondItem="CKZ-p1-HoD" secondAttribute="top" constant="5" id="lWJ-sk-ZAv"/>
-                                                    <constraint firstItem="zEz-ea-VN9" firstAttribute="leading" secondItem="Tk6-Y1-QOy" secondAttribute="trailing" id="sAq-N5-wVy"/>
+                                                    <constraint firstItem="zEz-ea-VN9" firstAttribute="leading" secondItem="Tk6-Y1-QOy" secondAttribute="trailing" constant="5" id="sAq-N5-wVy"/>
                                                     <constraint firstAttribute="bottom" secondItem="Tk6-Y1-QOy" secondAttribute="bottom" constant="5" id="xZb-nX-pGp"/>
                                                 </constraints>
                                             </view>

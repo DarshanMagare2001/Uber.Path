@@ -20,8 +20,6 @@ class ProofOfResidencyVC: UIViewController, ADCountryPickerDelegate {
         let selectedCountry = UserDefaults.standard.string(forKey: "SelectedCountry")
         let selectedCountryCode = UserDefaults.standard.string(forKey: "SelectedCountryCode")
         countryLbl.text = selectedCountry
-        print(selectedCountryCode)
-        
         if let countryCode = selectedCountryCode {
             let flagImage = picker.getFlag(countryCode: countryCode)
             countryImage.image = flagImage
