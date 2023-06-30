@@ -16,6 +16,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let image = UIImage(named: selectedImageName ?? "") else { return }
+        cardImageView.image = image
         updateFont()
         updatePlaceHolders()
         cardNumberTxtFld.delegate = self
