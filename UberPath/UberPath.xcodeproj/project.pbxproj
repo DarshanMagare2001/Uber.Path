@@ -30,6 +30,8 @@
 		13A12AAF2A445F1A00532BC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AAD2A445F1A00532BC6 /* Main.storyboard */; };
 		13A12AB12A445F1D00532BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB02A445F1D00532BC6 /* Assets.xcassets */; };
 		13A12AB42A445F1D00532BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB22A445F1D00532BC6 /* LaunchScreen.storyboard */; };
+		13A2A3AA2A4EFDBC00137315 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A2A3A92A4EFDBC00137315 /* Home.storyboard */; };
+		13A2A3AD2A4EFE0200137315 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2A3AC2A4EFE0200137315 /* HomeVC.swift */; };
 		13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00AD2A4C264900524C82 /* CreatePinVC.swift */; };
 		13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */; };
 		13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00B12A4C4B6000524C82 /* CameraVC.swift */; };
@@ -59,6 +61,8 @@
 		13A12AB02A445F1D00532BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A12AB32A445F1D00532BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A12AB52A445F1D00532BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A2A3A92A4EFDBC00137315 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		13A2A3AC2A4EFE0200137315 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		13BB00AD2A4C264900524C82 /* CreatePinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinVC.swift; sourceTree = "<group>"; };
 		13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIdentityVC.swift; sourceTree = "<group>"; };
 		13BB00B12A4C4B6000524C82 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				13A12AC02A4465E700532BC6 /* Onboarding */,
+				13A2A3A82A4EFD9D00137315 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				137CE6772A4ADEC500B40F2D /* Onboarding */,
+				13A2A3AB2A4EFDE700137315 /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +209,22 @@
 				13A12AAD2A445F1A00532BC6 /* Main.storyboard */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		13A2A3A82A4EFD9D00137315 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				13A2A3A92A4EFDBC00137315 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		13A2A3AB2A4EFDE700137315 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				13A2A3AC2A4EFE0200137315 /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		4834731299117B92F6450414 /* Frameworks */ = {
@@ -292,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A12AB42A445F1D00532BC6 /* LaunchScreen.storyboard in Resources */,
+				13A2A3AA2A4EFDBC00137315 /* Home.storyboard in Resources */,
 				1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */,
 				13A12AB12A445F1D00532BC6 /* Assets.xcassets in Resources */,
 				13A12AAF2A445F1A00532BC6 /* Main.storyboard in Resources */,
@@ -365,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */,
+				13A2A3AD2A4EFE0200137315 /* HomeVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */,
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
