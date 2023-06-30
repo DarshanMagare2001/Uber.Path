@@ -2918,6 +2918,7 @@ and most trusted</string>
                         <outlet property="countryImageView" destination="wqs-Zp-5jH" id="fV2-mX-8yV"/>
                         <outlet property="countryLbl" destination="4Ct-b0-Zpu" id="t7w-br-ELy"/>
                         <outlet property="expiryDateTxtFld" destination="QMZ-SI-x5R" id="YAn-qM-4cj"/>
+                        <outlet property="scrollView" destination="mGI-1E-xol" id="d78-xf-mbz"/>
                         <outlet property="vccTxtFld" destination="S16-Nb-KUa" id="bBd-MH-8wb"/>
                     </connections>
                 </viewController>
