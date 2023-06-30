@@ -25,8 +25,6 @@ class NewCardVC: UIViewController, UITextFieldDelegate {
     
     }
     
-   
-    
     @IBAction func countryShowBtnPressed(_ sender: UIButton) {
         // Handle country button action
     }
