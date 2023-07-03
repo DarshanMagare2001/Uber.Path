@@ -13,6 +13,7 @@ class MainTabVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //        viewModel.logout()
+        showHome()
     }
     
     @IBAction func tabBtnPressed(_ sender: UIButton) {
@@ -32,6 +33,11 @@ class MainTabVC: UIViewController {
             mainContentView.addSubview(destinationVC.view)
         }
         
+    }
+    
+    func showHome(){
+        guard let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else { return }
+        mainContentView.addSubview(destinationVC.view)
     }
     
 }
