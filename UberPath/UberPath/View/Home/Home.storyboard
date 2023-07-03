@@ -433,14 +433,39 @@
                                                     <constraint firstItem="Xle-jS-hdj" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="top" constant="10" id="mR7-lY-kWd"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, Mar 20" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-FD-nul">
+                                                <rect key="frame" x="15" y="100" width="97" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All transactions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edh-Me-D3s">
+                                                <rect key="frame" x="168" y="100" width="106" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7n-G4-W2s">
+                                                <rect key="frame" x="279" y="93" width="36" height="31"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="ForwardArrow" title=" ">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="edh-Me-D3s" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="20" id="0L4-ef-txD"/>
                                             <constraint firstItem="m2F-XJ-pEr" firstAttribute="leading" secondItem="I1b-iE-PLL" secondAttribute="leading" constant="10" id="5TM-IT-rwI"/>
+                                            <constraint firstItem="Y7n-G4-W2s" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="13" id="BaB-cp-4dH"/>
                                             <constraint firstItem="m2F-XJ-pEr" firstAttribute="top" secondItem="I1b-iE-PLL" secondAttribute="top" constant="10" id="Gw5-7E-zTF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y7n-G4-W2s" secondAttribute="trailing" constant="5" id="KiG-gb-4ok"/>
                                             <constraint firstAttribute="trailing" secondItem="m2F-XJ-pEr" secondAttribute="trailing" constant="10" id="OXV-6W-xq4"/>
                                             <constraint firstAttribute="height" constant="229" id="TSR-3G-0hI"/>
-                                            <constraint firstAttribute="bottom" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="149" id="fv6-o8-ecN"/>
+                                            <constraint firstItem="wOy-FD-nul" firstAttribute="leading" secondItem="I1b-iE-PLL" secondAttribute="leading" constant="15" id="fVW-gy-bOj"/>
+                                            <constraint firstItem="wOy-FD-nul" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="20" id="mMs-qB-UDx"/>
+                                            <constraint firstItem="Y7n-G4-W2s" firstAttribute="leading" secondItem="edh-Me-D3s" secondAttribute="trailing" constant="5" id="tb8-BP-TiP"/>
                                             <constraint firstItem="m2F-XJ-pEr" firstAttribute="centerX" secondItem="I1b-iE-PLL" secondAttribute="centerX" id="u45-nV-qbg"/>
                                         </constraints>
                                     </view>
@@ -514,6 +539,7 @@
         <image name="Card" width="25" height="25"/>
         <image name="CardStyleTwo" width="654" height="380"/>
         <image name="Deposit" width="25" height="24"/>
+        <image name="ForwardArrow" width="8" height="12"/>
         <image name="Home" width="24" height="25"/>
         <image name="More" width="25" height="24"/>
         <image name="Profile" width="24" height="25"/>
