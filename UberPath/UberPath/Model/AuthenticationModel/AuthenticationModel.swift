@@ -8,11 +8,12 @@ class AuthenticationModel {
     
     // MARK: - Sign Up
     
-    func signUp(name: String, email: String, password: String) {
+    func signUp(name: String, email: String, password: String, completion: @escaping (Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 // Handle sign-up error
                 print("Sign-up error: \(error.localizedDescription)")
+                completion(error)
                 return
             }
             
@@ -21,8 +22,11 @@ class AuthenticationModel {
             
             print("Sign-up successful with email: \(email)")
             // Perform any additional operations after successful sign-up
+            
+            completion(nil)
         }
     }
+
     
     // MARK: - Sign In
     

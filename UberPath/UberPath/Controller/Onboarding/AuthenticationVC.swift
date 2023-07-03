@@ -123,14 +123,14 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             showToast(message: "You are already signed in.")
             return
         }
-        
-        // Check if the email is already registered
-        if let currentUserEmail = viewModel.getCurrentUserEmail(), currentUserEmail == email {
-            showToast(message: "Email already exists. Please sign in instead.")
-            return
+    
+        viewModel.signUp(name: name, email: email, password: password) { error in
+            if let error = error {
+                self.showToast(message: "Email already exists. Please sign in instead.")
+            }else{
+                
+            }
         }
-        
-        viewModel.signUp(name: name, email: email, password: password)
     }
 
     
@@ -145,8 +145,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         toastLabel.layer.cornerRadius = 10
         toastLabel.clipsToBounds = true
         
-        let toastWidth: CGFloat = 200.0
-        let toastHeight: CGFloat = 40.0
+        let toastWidth: CGFloat = 300.0
+        let toastHeight: CGFloat = 60.0
         let toastX = self.view.frame.size.width / 2 - toastWidth / 2
         let toastY = self.view.frame.size.height - 100.0
         
