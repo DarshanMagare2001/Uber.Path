@@ -8,10 +8,11 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+var viewModel = AuthenticationModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.logout()
     }
     
 

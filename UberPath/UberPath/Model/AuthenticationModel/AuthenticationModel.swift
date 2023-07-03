@@ -51,5 +51,19 @@ class AuthenticationModel {
             return nil
         }
     }
+    
+    // MARK: - Logout
+
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            print("Logout successful")
+            // Perform any additional operations after successful logout
+        } catch {
+            // Handle logout error
+            print("Logout error: \(error.localizedDescription)")
+        }
+    }
+
 }
 
