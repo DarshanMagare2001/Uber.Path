@@ -26,6 +26,10 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     @IBOutlet weak var createLbl: UILabel!
     @IBOutlet weak var copaymentLbl: UILabel!
     @IBOutlet weak var accontLbl: UILabel!
+    @IBOutlet weak var activityView: UIView!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
+    
     var isPasswordShowForSignIn = false
     var isPasswordShowForSignUp = false
     var viewModel = AuthenticationModel()
@@ -35,6 +39,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         GIDSignIn.sharedInstance()?.delegate = self
         signInView.isHidden = false
         signUpView.isHidden = true
+        activityView.isHidden = true
+        activity.startAnimating()
         signInEmailTxtFld.delegate = self
         signInPasswordTxtFld.delegate = self
         signUpNameTxtFld.delegate = self
@@ -108,12 +114,14 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             showToast(message: "Please fill all information.")
             return
         }
-        
+        activityView.isHidden = false
         viewModel.signIn(email: email, password: password) { error in
             if let error = error {
                 self.showToast(message: "Invalid email or password.")
+                self.activityView.isHidden = true
             }else{
                 print("SignIn Successfuly")
+                self.activityView.isHidden = true
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
                 self.navigationController?.pushViewController(destinationVC, animated: true)
@@ -127,17 +135,14 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
                   showToast(message: "Please fill all information.")
                   return
               }
-        
-        if viewModel.isLoggedIn {
-            showToast(message: "You are already signed in.")
-            return
-        }
-        
+        activityView.isHidden = false
         viewModel.signUp(name: name, email: email, password: password) { error in
             if let error = error {
                 self.showToast(message: "Email already exists. Please sign in instead.")
+                self.activityView.isHidden = true
             }else{
                 print("SignUp Successfuly")
+                self.activityView.isHidden = true
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
                 self.navigationController?.pushViewController(destinationVC, animated: true)
