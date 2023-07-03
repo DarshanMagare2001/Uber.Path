@@ -30,11 +30,12 @@ class AuthenticationModel {
     
     // MARK: - Sign In
     
-    func signIn(email: String, password: String) {
+    func signIn(email: String, password: String, completion: @escaping (Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 // Handle sign-in error
                 print("Sign-in error: \(error.localizedDescription)")
+                completion(error)
                 return
             }
             
@@ -43,8 +44,11 @@ class AuthenticationModel {
             
             print("Sign-in successful with email: \(email)")
             // Perform any additional operations after successful sign-in
+            
+            completion(nil)
         }
     }
+
     
     // MARK: - Get Current User Email
     

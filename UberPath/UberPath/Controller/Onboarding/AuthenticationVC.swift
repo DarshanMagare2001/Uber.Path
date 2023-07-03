@@ -101,7 +101,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
-
+    
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         guard let email = signInEmailTxtFld.text, let password = signInPasswordTxtFld.text, !email.isEmpty, !password.isEmpty else {
@@ -109,30 +109,42 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             return
         }
         
-        viewModel.signIn(email: email, password: password)
+        viewModel.signIn(email: email, password: password) { error in
+            if let error = error {
+                self.showToast(message: "Invalid email or password.")
+            }else{
+                print("SignIn Successfuly")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                self.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }
     }
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         guard let name = signUpNameTxtFld.text, let email = signUpEmailTxtFld.text, let password = signUpPasswordTxtFld.text,
               !name.isEmpty, !email.isEmpty, !password.isEmpty else {
-            showToast(message: "Please fill all information.")
-            return
-        }
+                  showToast(message: "Please fill all information.")
+                  return
+              }
         
         if viewModel.isLoggedIn {
             showToast(message: "You are already signed in.")
             return
         }
-    
+        
         viewModel.signUp(name: name, email: email, password: password) { error in
             if let error = error {
                 self.showToast(message: "Email already exists. Please sign in instead.")
             }else{
-                
+                print("SignUp Successfuly")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                self.navigationController?.pushViewController(destinationVC, animated: true)
             }
         }
     }
-
+    
     
     func showToast(message: String) {
         let toastLabel = UILabel()
@@ -182,7 +194,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
                     self.navigationController?.pushViewController(destinationVC, animated: true)
-                    
                 }
             }
         }
