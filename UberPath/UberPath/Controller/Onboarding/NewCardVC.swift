@@ -92,7 +92,7 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     
     @IBAction func okBtnPressed(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! MainTabVC
         navigationController?.pushViewController(destinationVC, animated: true)
     }
     

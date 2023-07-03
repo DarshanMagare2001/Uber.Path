@@ -24,6 +24,10 @@
 		138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924732A4D5B940018BBEF /* CreateCardVC.swift */; };
 		138924762A4D700E0018BBEF /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924752A4D700E0018BBEF /* CardCell.swift */; };
 		138924782A4D80100018BBEF /* NewCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138924772A4D80100018BBEF /* NewCardVC.swift */; };
+		139314D22A528D8A00248D92 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D12A528D8A00248D92 /* HomeVC.swift */; };
+		139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D32A528DAC00248D92 /* MyCardVC.swift */; };
+		139314D62A528DC100248D92 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D52A528DC100248D92 /* ActivityVC.swift */; };
+		139314D82A528DD900248D92 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D72A528DD900248D92 /* ProfileVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -31,7 +35,7 @@
 		13A12AB12A445F1D00532BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB02A445F1D00532BC6 /* Assets.xcassets */; };
 		13A12AB42A445F1D00532BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A12AB22A445F1D00532BC6 /* LaunchScreen.storyboard */; };
 		13A2A3AA2A4EFDBC00137315 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A2A3A92A4EFDBC00137315 /* Home.storyboard */; };
-		13A2A3AD2A4EFE0200137315 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2A3AC2A4EFE0200137315 /* HomeVC.swift */; };
+		13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2A3AC2A4EFE0200137315 /* MainTabVC.swift */; };
 		13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00AD2A4C264900524C82 /* CreatePinVC.swift */; };
 		13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */; };
 		13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00B12A4C4B6000524C82 /* CameraVC.swift */; };
@@ -53,6 +57,10 @@
 		138924732A4D5B940018BBEF /* CreateCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardVC.swift; sourceTree = "<group>"; };
 		138924752A4D700E0018BBEF /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		138924772A4D80100018BBEF /* NewCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardVC.swift; sourceTree = "<group>"; };
+		139314D12A528D8A00248D92 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		139314D32A528DAC00248D92 /* MyCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardVC.swift; sourceTree = "<group>"; };
+		139314D52A528DC100248D92 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
+		139314D72A528DD900248D92 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +70,7 @@
 		13A12AB32A445F1D00532BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A12AB52A445F1D00532BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A2A3A92A4EFDBC00137315 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		13A2A3AC2A4EFE0200137315 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		13A2A3AC2A4EFE0200137315 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		13BB00AD2A4C264900524C82 /* CreatePinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinVC.swift; sourceTree = "<group>"; };
 		13BB00AF2A4C372A00524C82 /* VerifyIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIdentityVC.swift; sourceTree = "<group>"; };
 		13BB00B12A4C4B6000524C82 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -222,7 +230,11 @@
 		13A2A3AB2A4EFDE700137315 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				13A2A3AC2A4EFE0200137315 /* HomeVC.swift */,
+				13A2A3AC2A4EFE0200137315 /* MainTabVC.swift */,
+				139314D12A528D8A00248D92 /* HomeVC.swift */,
+				139314D32A528DAC00248D92 /* MyCardVC.swift */,
+				139314D52A528DC100248D92 /* ActivityVC.swift */,
+				139314D72A528DD900248D92 /* ProfileVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -388,7 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */,
-				13A2A3AD2A4EFE0200137315 /* HomeVC.swift in Sources */,
+				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */,
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
@@ -398,10 +410,14 @@
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
+				139314D62A528DC100248D92 /* ActivityVC.swift in Sources */,
+				139314D82A528DD900248D92 /* ProfileVC.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,
 				1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */,
 				138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */,
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,
+				139314D22A528D8A00248D92 /* HomeVC.swift in Sources */,
+				139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
