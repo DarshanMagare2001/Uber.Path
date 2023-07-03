@@ -179,6 +179,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     
     
     @IBAction func signInWithGoogleBtnPressed(_ sender: UIButton) {
+        activityView.isHidden = false
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
         
@@ -186,16 +187,18 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error{
-            
+            activityView.isHidden = true
         }else{
             guard let auth = user.authentication else {return}
             let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
             Auth.auth().signIn(with: credentials) { (results , error) in
                 if let error = error{
                     print("Error\(error.localizedDescription)")
+                    self.activityView.isHidden = true
                     return
                 }else{
                     print("Login Successfuly")
+                    self.activityView.isHidden = true
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
                     self.navigationController?.pushViewController(destinationVC, animated: true)
@@ -207,10 +210,10 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     
     
     @IBAction func signInWithAppleBtnPressed(_ sender: UIButton) {
+        activityView.isHidden = false
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
-        
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
@@ -265,8 +268,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle any errors that occur during Sign in with Apple
-        
         print("Sign in with Apple error: \(error.localizedDescription)")
+        activityView.isHidden = true
     }
     
     // MARK: - ASAuthorizationControllerPresentationContextProviding
