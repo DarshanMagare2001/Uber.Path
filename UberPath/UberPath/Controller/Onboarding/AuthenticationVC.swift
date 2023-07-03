@@ -115,12 +115,24 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         guard let name = signUpNameTxtFld.text, let email = signUpEmailTxtFld.text, let password = signUpPasswordTxtFld.text,
               !name.isEmpty, !email.isEmpty, !password.isEmpty else {
-                  showToast(message: "Please fill all information.")
-                  return
-              }
+            showToast(message: "Please fill all information.")
+            return
+        }
+        
+        if viewModel.isLoggedIn {
+            showToast(message: "You are already signed in.")
+            return
+        }
+        
+        // Check if the email is already registered
+        if let currentUserEmail = viewModel.getCurrentUserEmail(), currentUserEmail == email {
+            showToast(message: "Email already exists. Please sign in instead.")
+            return
+        }
         
         viewModel.signUp(name: name, email: email, password: password)
     }
+
     
     func showToast(message: String) {
         let toastLabel = UILabel()
