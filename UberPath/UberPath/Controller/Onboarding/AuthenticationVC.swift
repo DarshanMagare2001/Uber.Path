@@ -253,16 +253,23 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            // Get the user's unique identifier
             let userIdentifier = appleIDCredential.user
             
-            // You can also get the user's full name and email if requested
-            let fullName = appleIDCredential.fullName
-            let email = appleIDCredential.email
+            var fullName: String?
+            if let givenName = appleIDCredential.fullName?.givenName,
+               let familyName = appleIDCredential.fullName?.familyName {
+                fullName = "\(givenName) \(familyName)"
+            }
+            
+            var email: String?
+            if let authorizedEmail = appleIDCredential.email {
+                email = authorizedEmail
+            }
             
             // Use the user's information for further authentication or app-specific actions
+            // For example, you can pass the user's details to your sign-in method:
             
-            // TODO: Implement the necessary logic for signing in with Apple
+            signInWithApple(userIdentifier: userIdentifier, fullName: fullName, email: email)
         }
     }
     
@@ -270,6 +277,34 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         // Handle any errors that occur during Sign in with Apple
         print("Sign in with Apple error: \(error.localizedDescription)")
         activityView.isHidden = true
+    }
+    
+    
+    func signInWithApple(userIdentifier: String, fullName: String?, email: String?) {
+        // Perform your sign-in logic here using the provided user information
+        
+        // Example code to sign in with Apple using Firebase Authentication:
+        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: userIdentifier, rawNonce: nil)
+        
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                // Handle sign-in error
+                print("Sign-in with Apple error: \(error.localizedDescription)")
+                self.showToast(message: "Failed to sign in with Apple.")
+                self.activityView.isHidden = true
+            } else {
+                // Sign-in successful
+                if let user = authResult?.user {
+                    // You can access the user's unique identifier with user.uid
+                    print("Sign-in with Apple successful. User ID: \(user.uid)")
+                    // Proceed with further operations after successful sign-in
+                    self.activityView.isHidden = true
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
+                }
+            }
+        }
     }
     
     // MARK: - ASAuthorizationControllerPresentationContextProviding
