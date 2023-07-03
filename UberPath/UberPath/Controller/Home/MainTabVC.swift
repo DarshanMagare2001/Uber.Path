@@ -12,7 +12,6 @@ class MainTabVC: UIViewController {
     @IBOutlet weak var mainContentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        viewModel.logout()
         showHome()
     }
     
