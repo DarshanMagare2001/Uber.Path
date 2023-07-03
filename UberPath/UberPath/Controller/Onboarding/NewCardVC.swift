@@ -81,19 +81,32 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     }
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
-        // Handle save button action
         popUpView.isHidden = false
+        // Handle save button action
+        UIView.animate(withDuration: 0.3, animations: {
+            self.popUpView.alpha = 1.0
+        }) { (_) in
+            // Animation completion
+        }
     }
+
+    @IBAction func okBtnPressed(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.popUpView.alpha = 0.0
+        }) { (_) in
+            // Animation completion
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let destinationVC = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! MainTabVC
+            self.navigationController?.pushViewController(destinationVC, animated: true)
+        }
+        popUpView.isHidden = true
+        
+    }
+
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
-    }
-    
-    
-    @IBAction func okBtnPressed(_ sender: UIButton) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! MainTabVC
-        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     
