@@ -7,12 +7,12 @@
 
 import UIKit
 
-class MainTabVC: UITabBarController {
+class MainTabVC: UIViewController {
 var viewModel = AuthenticationModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.logout()
+//        viewModel.logout()
     }
     
 

@@ -97,7 +97,7 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
         }) { (_) in
             // Animation completion
             let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-            let destinationVC = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! MainTabVC
+            let destinationVC = storyBoard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
             self.navigationController?.pushViewController(destinationVC, animated: true)
         }
         popUpView.isHidden = true

@@ -28,8 +28,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     @IBOutlet weak var accontLbl: UILabel!
     @IBOutlet weak var activityView: UIView!
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    
-    
     var isPasswordShowForSignIn = false
     var isPasswordShowForSignUp = false
     var viewModel = AuthenticationModel()
@@ -75,7 +73,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         }
         signInPasswordTxtFld.isSecureTextEntry.toggle()
     }
-    
     
     @IBAction func passwordHideShowBtnPressedForSignUp(_ sender: UIButton) {
         isPasswordShowForSignUp.toggle()
@@ -149,7 +146,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             }
         }
     }
-    
     
     func showToast(message: String) {
         let toastLabel = UILabel()
@@ -278,7 +274,6 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         print("Sign in with Apple error: \(error.localizedDescription)")
         activityView.isHidden = true
     }
-    
     
     func signInWithApple(userIdentifier: String, fullName: String?, email: String?) {
         // Perform your sign-in logic here using the provided user information

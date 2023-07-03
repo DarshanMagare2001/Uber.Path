@@ -14,9 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if  let currentUser = Auth.auth().currentUser {
             print("User logged in")
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC")
-            let navigationController = UINavigationController(rootViewController: homeVC)
-            self.window?.rootViewController = homeVC
+            let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC")
+            let navigationController = UINavigationController(rootViewController: mainTabVC)
+            self.window?.rootViewController = mainTabVC
             self.window?.makeKeyAndVisible()
         }
         else {
