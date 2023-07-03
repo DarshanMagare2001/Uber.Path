@@ -17,52 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-on-8IP">
-                                <rect key="frame" x="20" y="488" width="280" height="60"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9dQ-fu-5IO">
-                                        <rect key="frame" x="10" y="10" width="260" height="40"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hx-b1-4ct">
-                                                <rect key="frame" x="0.0" y="0.0" width="44" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcd-VC-9DH">
-                                                <rect key="frame" x="54" y="0.0" width="44" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnJ-ul-2tN">
-                                                <rect key="frame" x="108" y="0.0" width="44" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbA-fk-WIW">
-                                                <rect key="frame" x="162" y="0.0" width="44" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wph-bo-cv3">
-                                                <rect key="frame" x="216" y="0.0" width="44" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XyN-kM-3Gi" userLabel="MainContentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-on-8IP" userLabel="TabView">
+                                <rect key="frame" x="0.0" y="468" width="320" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstItem="9dQ-fu-5IO" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" constant="10" id="1fr-8K-IYS"/>
-                                    <constraint firstAttribute="bottom" secondItem="9dQ-fu-5IO" secondAttribute="bottom" constant="10" id="Cjr-s0-fdK"/>
-                                    <constraint firstAttribute="trailing" secondItem="9dQ-fu-5IO" secondAttribute="trailing" constant="10" id="HEK-Xb-xM1"/>
-                                    <constraint firstItem="9dQ-fu-5IO" firstAttribute="leading" secondItem="cRw-on-8IP" secondAttribute="leading" constant="10" id="V1Y-Xw-q81"/>
-                                    <constraint firstAttribute="height" constant="60" id="Yjh-IQ-B8j"/>
+                                    <constraint firstAttribute="height" constant="100" id="ZCW-4L-sZf"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rnb-ec-8VM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cRw-on-8IP" firstAttribute="centerX" secondItem="vLY-7T-8vi" secondAttribute="centerX" id="5Ph-GN-xn1"/>
-                            <constraint firstItem="cRw-on-8IP" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" constant="20" id="5u4-ie-BPJ"/>
-                            <constraint firstItem="Rnb-ec-8VM" firstAttribute="trailing" secondItem="cRw-on-8IP" secondAttribute="trailing" constant="20" id="EzJ-vs-g6a"/>
-                            <constraint firstItem="Rnb-ec-8VM" firstAttribute="bottom" secondItem="cRw-on-8IP" secondAttribute="bottom" constant="20" id="nwt-i0-cea"/>
+                            <constraint firstItem="Rnb-ec-8VM" firstAttribute="bottom" secondItem="cRw-on-8IP" secondAttribute="bottom" id="6CE-H4-IyW"/>
+                            <constraint firstItem="cRw-on-8IP" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" id="9RZ-Yj-IBv"/>
+                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="top" secondItem="Rnb-ec-8VM" secondAttribute="top" id="F03-xn-FAK"/>
+                            <constraint firstItem="Rnb-ec-8VM" firstAttribute="trailing" secondItem="cRw-on-8IP" secondAttribute="trailing" id="MvL-pK-El9"/>
+                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" id="TGm-H5-Sid"/>
+                            <constraint firstItem="Rnb-ec-8VM" firstAttribute="trailing" secondItem="XyN-kM-3Gi" secondAttribute="trailing" id="Uls-rq-19V"/>
+                            <constraint firstItem="cRw-on-8IP" firstAttribute="top" secondItem="XyN-kM-3Gi" secondAttribute="bottom" id="beq-VP-KK4"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -146,8 +122,8 @@
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

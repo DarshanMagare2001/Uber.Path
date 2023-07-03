@@ -89,9 +89,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
             // Animation completion
         }
     }
-
+    
     @IBAction func okBtnPressed(_ sender: UIButton) {
-        
         UIView.animate(withDuration: 0.3, animations: {
             self.popUpView.alpha = 0.0
         }) { (_) in
@@ -103,19 +102,15 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
         popUpView.isHidden = true
         
     }
-
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
         let flagImage = picker.getFlag(countryCode: code)
         countryImageView.image = flagImage
     }
-    
-    
     
     func updateFont() {
         cardDetailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
@@ -180,7 +175,6 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
             vccTxtFld,
             cardHolderTxtFld
         ]
-        
         return textFields.first { $0.isFirstResponder }
     }
 }
