@@ -51,10 +51,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eE0-hS-zKp">
                                                         <rect key="frame" x="0.0" y="0.0" width="54" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-Xb-I2X">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-Xb-I2X">
                                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="21.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Home" title=" "/>
+                                                                <connections>
+                                                                    <action selector="tabBtnPressed:" destination="htz-kY-9KR" eventType="touchUpInside" id="r5N-mY-eVL"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAj-qY-oCg">
                                                                 <rect key="frame" x="0.0" y="26.5" width="54" height="13.5"/>
@@ -79,10 +82,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-kd-tdm">
                                                         <rect key="frame" x="0.0" y="0.0" width="53.5" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y89-8l-nnR">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y89-8l-nnR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="21.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Card" title=" "/>
+                                                                <connections>
+                                                                    <action selector="tabBtnPressed:" destination="htz-kY-9KR" eventType="touchUpInside" id="Hyr-tf-VBj"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" My Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBI-jg-vXF">
                                                                 <rect key="frame" x="0.0" y="26.5" width="53.5" height="13.5"/>
@@ -112,10 +118,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KCe-rE-fLx">
                                                         <rect key="frame" x="0.0" y="0.0" width="54" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-J4-MWg">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-J4-MWg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="21.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Activity" title=" "/>
+                                                                <connections>
+                                                                    <action selector="tabBtnPressed:" destination="htz-kY-9KR" eventType="touchUpInside" id="FgF-5r-wA3"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgI-nE-ITM">
                                                                 <rect key="frame" x="0.0" y="26.5" width="54" height="13.5"/>
@@ -140,10 +149,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F0V-Ob-2Sc">
                                                         <rect key="frame" x="0.0" y="0.0" width="53.5" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E8-yo-aEC">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E8-yo-aEC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="21.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Profile" title=" "/>
+                                                                <connections>
+                                                                    <action selector="tabBtnPressed:" destination="htz-kY-9KR" eventType="touchUpInside" id="3dD-C4-h6o"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rG-5h-CJj">
                                                                 <rect key="frame" x="0.0" y="26.5" width="53.5" height="13.5"/>
@@ -195,6 +207,9 @@
                             <constraint firstItem="cRw-on-8IP" firstAttribute="top" secondItem="XyN-kM-3Gi" secondAttribute="bottom" id="beq-VP-KK4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainContentView" destination="XyN-kM-3Gi" id="h52-GQ-LVJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIv-ww-VZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +218,7 @@
         <!--My Card-->
         <scene sceneID="fr0-mr-QJ9">
             <objects>
-                <viewController id="zDJ-5E-Fbg" customClass="MyCardVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyCardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zDJ-5E-Fbg" customClass="MyCardVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SiF-TM-NVe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,12 +229,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAo-a2-3T0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2400" y="-360"/>
+            <point key="canvasLocation" x="2104" y="-362"/>
         </scene>
         <!--Home-->
         <scene sceneID="CB6-AQ-kNC">
             <objects>
-                <viewController id="bPt-sb-lBs" customClass="HomeVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bPt-sb-lBs" customClass="HomeVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u8s-bS-VY1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,12 +245,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-ST-7mR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="-359"/>
+            <point key="canvasLocation" x="1478" y="-362"/>
         </scene>
         <!--Activity-->
         <scene sceneID="4os-qp-aeW">
             <objects>
-                <viewController id="5Kd-4b-Lto" customClass="ActivityVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Kd-4b-Lto" customClass="ActivityVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJw-qy-cJm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,12 +261,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HK-0L-8F6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3128" y="-358"/>
+            <point key="canvasLocation" x="2730" y="-364"/>
         </scene>
         <!--Profile-->
         <scene sceneID="zJr-iC-Nvm">
             <objects>
-                <viewController id="gA0-1V-Zqu" customClass="ProfileVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gA0-1V-Zqu" customClass="ProfileVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNI-xP-yFV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ce-eq-n77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3797" y="-361"/>
+            <point key="canvasLocation" x="3354" y="-365"/>
         </scene>
     </scenes>
     <resources>
