@@ -12,7 +12,7 @@ var viewModel = AuthenticationModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.logout()
+        viewModel.logout()
     }
     
 
