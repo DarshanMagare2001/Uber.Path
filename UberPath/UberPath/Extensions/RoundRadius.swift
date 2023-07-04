@@ -74,8 +74,8 @@ class CircleView: UIView {
         // Add shadow properties
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 2, height: 2)
-        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 1, height: 5)
+        layer.shadowRadius = 5
         
         // Create a shadow path to improve performance
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
