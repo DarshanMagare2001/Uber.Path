@@ -239,10 +239,28 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-OW-AA5" customClass="CircleView" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="438" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flash" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-qp-4yK">
+                                                <rect key="frame" x="20" y="20" width="40" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Hh7-qp-4yK" firstAttribute="centerY" secondItem="PjC-OW-AA5" secondAttribute="centerY" id="2Kr-vx-7MZ"/>
+                                            <constraint firstAttribute="width" constant="80" id="Qf5-Q6-Ukr"/>
+                                            <constraint firstAttribute="height" constant="80" id="Ups-0s-JgJ"/>
+                                            <constraint firstItem="Hh7-qp-4yK" firstAttribute="centerX" secondItem="PjC-OW-AA5" secondAttribute="centerX" id="uWV-Ht-fmn"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PjC-OW-AA5" secondAttribute="bottom" constant="50" id="Gpu-sj-FXD"/>
                                     <constraint firstItem="70w-uv-Zqv" firstAttribute="leading" secondItem="CrC-0R-wUJ" secondAttribute="leading" id="VnU-lO-l6e"/>
+                                    <constraint firstItem="PjC-OW-AA5" firstAttribute="centerX" secondItem="CrC-0R-wUJ" secondAttribute="centerX" id="gxE-sa-LMj"/>
                                     <constraint firstItem="70w-uv-Zqv" firstAttribute="centerY" secondItem="CrC-0R-wUJ" secondAttribute="centerY" id="hD6-Sy-MDv"/>
                                     <constraint firstItem="70w-uv-Zqv" firstAttribute="top" secondItem="CrC-0R-wUJ" secondAttribute="top" id="qxo-lh-ZYJ"/>
                                     <constraint firstAttribute="trailing" secondItem="70w-uv-Zqv" secondAttribute="trailing" id="ziV-Ht-CEs"/>
@@ -260,6 +278,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="gut-0r-Jen" eventType="touchUpInside" id="zxv-lk-cm3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-vJ-AWy">
                                 <rect key="frame" x="265" y="0.0" width="50" height="50"/>
@@ -847,6 +868,7 @@
         <image name="Card" width="25" height="25"/>
         <image name="CardStyleTwo" width="654" height="380"/>
         <image name="Deposit" width="25" height="24"/>
+        <image name="Flash" width="40" height="40"/>
         <image name="ForwardArrow" width="8" height="12"/>
         <image name="More" width="25" height="24"/>
         <image name="Profile" width="24" height="25"/>
@@ -863,6 +885,9 @@
         <namedColor name="LaunchscreenColor">
             <color red="0.11372549019607843" green="0.6705882352941176" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
