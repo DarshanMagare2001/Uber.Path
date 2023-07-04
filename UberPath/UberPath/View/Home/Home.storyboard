@@ -732,13 +732,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, Mar 20" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-FD-nul">
-                                                <rect key="frame" x="15" y="100" width="97" height="17"/>
+                                                <rect key="frame" x="15" y="100" width="97" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All transactions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edh-Me-D3s">
-                                                <rect key="frame" x="164" y="104" width="115" height="18"/>
+                                                <rect key="frame" x="164" y="95" width="115" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                 <nil key="highlightedColor"/>
@@ -964,7 +964,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="wOy-FD-nul" firstAttribute="leading" secondItem="I1b-iE-PLL" secondAttribute="leading" constant="15" id="1DP-U8-0Nb"/>
-                                            <constraint firstItem="Y7n-G4-W2s" firstAttribute="centerY" secondItem="wOy-FD-nul" secondAttribute="centerY" id="3Ad-sx-eEr"/>
+                                            <constraint firstItem="edh-Me-D3s" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="15" id="2Vh-WW-3dr"/>
                                             <constraint firstAttribute="trailing" secondItem="m2F-XJ-pEr" secondAttribute="trailing" constant="10" id="FYc-9f-ZS6"/>
                                             <constraint firstItem="wOy-FD-nul" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="20" id="Njr-eK-6RD"/>
                                             <constraint firstItem="GuO-IT-5lS" firstAttribute="top" secondItem="edh-Me-D3s" secondAttribute="bottom" constant="10" id="RMl-LQ-25B"/>
