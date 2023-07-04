@@ -11,25 +11,26 @@ import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        if  let currentUser = Auth.auth().currentUser {
+        guard let windowScene = scene as? UIWindowScene else { return }
+        
+        window = UIWindow(windowScene: windowScene)
+        
+        
+        if let currentUser = Auth.auth().currentUser {
             print("User logged in")
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC")
+            let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
             let navigationController = UINavigationController(rootViewController: mainTabVC)
-            self.window?.rootViewController = mainTabVC
-            self.window?.makeKeyAndVisible()
-        }
-        else {
-            print("User Not logged in")
+            window?.rootViewController = navigationController
+        } else {
+            print("User not logged in")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC")
             let navigationController = UINavigationController(rootViewController: onboardingVC)
-            if let window = UIApplication.shared.windows.first {
-                window.rootViewController = navigationController
-                window.makeKeyAndVisible()
-            }
+            window?.rootViewController = navigationController
         }
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
