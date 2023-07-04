@@ -233,69 +233,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="30" width="260" height="50"/>
-                                                <color key="backgroundColor" systemColor="separatorColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="GtJ-Zo-VpC"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Scan" title="  Scan QR code ready">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-OW-AA5" customClass="CircleView" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="110" width="70" height="70"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flash" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-qp-4yK">
-                                                        <rect key="frame" x="15" y="15" width="40" height="40"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="separatorColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="5M9-cL-ZrD"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Hh7-qp-4yK" secondAttribute="bottom" constant="15" id="KeO-xu-LZr"/>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="i4s-bS-4c3"/>
-                                                    <constraint firstItem="Hh7-qp-4yK" firstAttribute="top" secondItem="PjC-OW-AA5" secondAttribute="top" constant="15" id="iDv-Cb-u1h"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Hh7-qp-4yK" secondAttribute="trailing" constant="15" id="tFx-2l-G6b"/>
-                                                    <constraint firstItem="Hh7-qp-4yK" firstAttribute="leading" secondItem="PjC-OW-AA5" secondAttribute="leading" constant="15" id="yw7-bA-ONR"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="PjC-OW-AA5" firstAttribute="centerX" secondItem="lvK-fj-t1h" secondAttribute="centerX" id="51A-jj-1B1"/>
-                                            <constraint firstItem="9sc-Tu-so6" firstAttribute="top" secondItem="lvK-fj-t1h" secondAttribute="top" constant="30" id="67F-HZ-3ew"/>
-                                            <constraint firstItem="9sc-Tu-so6" firstAttribute="leading" secondItem="lvK-fj-t1h" secondAttribute="leading" constant="10" id="GJT-NY-brf"/>
-                                            <constraint firstAttribute="height" constant="200" id="gYG-lr-0LW"/>
-                                            <constraint firstAttribute="trailing" secondItem="9sc-Tu-so6" secondAttribute="trailing" constant="10" id="n2G-XV-uk9"/>
-                                            <constraint firstAttribute="bottom" secondItem="PjC-OW-AA5" secondAttribute="bottom" constant="20" id="wKA-m3-JlA"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstItem="lvK-fj-t1h" firstAttribute="height" secondItem="70w-uv-Zqv" secondAttribute="height" multiplier="0.352113" id="900-T3-FU1"/>
-                                    <constraint firstAttribute="trailing" secondItem="lvK-fj-t1h" secondAttribute="trailing" constant="20" id="M3Q-IZ-wgC"/>
-                                    <constraint firstItem="70w-uv-Zqv" firstAttribute="leading" secondItem="CrC-0R-wUJ" secondAttribute="leading" id="VnU-lO-l6e"/>
-                                    <constraint firstItem="lvK-fj-t1h" firstAttribute="leading" secondItem="CrC-0R-wUJ" secondAttribute="leading" constant="20" id="dA8-SS-z2F"/>
-                                    <constraint firstItem="70w-uv-Zqv" firstAttribute="centerY" secondItem="CrC-0R-wUJ" secondAttribute="centerY" id="hD6-Sy-MDv"/>
-                                    <constraint firstAttribute="bottom" secondItem="lvK-fj-t1h" secondAttribute="bottom" constant="20" id="p6P-9c-LUh"/>
-                                    <constraint firstItem="70w-uv-Zqv" firstAttribute="top" secondItem="CrC-0R-wUJ" secondAttribute="top" id="qxo-lh-ZYJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="70w-uv-Zqv" secondAttribute="trailing" id="ziV-Ht-CEs"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -418,6 +355,72 @@
                                     <constraint firstItem="A1O-f5-sAi" firstAttribute="top" secondItem="ECA-bD-9kp" secondAttribute="bottom" constant="40" id="wRR-7s-Yuq"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
+                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="30" width="260" height="50"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="GtJ-Zo-VpC"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Scan" title="  Scan QR code ready">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="scanQrBtnPressed:" destination="gut-0r-Jen" eventType="touchUpInside" id="cgP-RV-2ZC"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjC-OW-AA5" customClass="CircleView" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="110" width="70" height="70"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flash" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-qp-4yK">
+                                                        <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="5M9-cL-ZrD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Hh7-qp-4yK" secondAttribute="bottom" constant="15" id="KeO-xu-LZr"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="i4s-bS-4c3"/>
+                                                    <constraint firstItem="Hh7-qp-4yK" firstAttribute="top" secondItem="PjC-OW-AA5" secondAttribute="top" constant="15" id="iDv-Cb-u1h"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Hh7-qp-4yK" secondAttribute="trailing" constant="15" id="tFx-2l-G6b"/>
+                                                    <constraint firstItem="Hh7-qp-4yK" firstAttribute="leading" secondItem="PjC-OW-AA5" secondAttribute="leading" constant="15" id="yw7-bA-ONR"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="PjC-OW-AA5" firstAttribute="centerX" secondItem="lvK-fj-t1h" secondAttribute="centerX" id="51A-jj-1B1"/>
+                                            <constraint firstItem="9sc-Tu-so6" firstAttribute="top" secondItem="lvK-fj-t1h" secondAttribute="top" constant="30" id="67F-HZ-3ew"/>
+                                            <constraint firstItem="9sc-Tu-so6" firstAttribute="leading" secondItem="lvK-fj-t1h" secondAttribute="leading" constant="10" id="GJT-NY-brf"/>
+                                            <constraint firstAttribute="height" constant="200" id="gYG-lr-0LW"/>
+                                            <constraint firstAttribute="trailing" secondItem="9sc-Tu-so6" secondAttribute="trailing" constant="10" id="n2G-XV-uk9"/>
+                                            <constraint firstAttribute="bottom" secondItem="PjC-OW-AA5" secondAttribute="bottom" constant="20" id="wKA-m3-JlA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="lvK-fj-t1h" firstAttribute="height" secondItem="70w-uv-Zqv" secondAttribute="height" multiplier="0.352113" id="900-T3-FU1"/>
+                                    <constraint firstAttribute="trailing" secondItem="lvK-fj-t1h" secondAttribute="trailing" constant="20" id="M3Q-IZ-wgC"/>
+                                    <constraint firstItem="70w-uv-Zqv" firstAttribute="leading" secondItem="CrC-0R-wUJ" secondAttribute="leading" id="VnU-lO-l6e"/>
+                                    <constraint firstItem="lvK-fj-t1h" firstAttribute="leading" secondItem="CrC-0R-wUJ" secondAttribute="leading" constant="20" id="dA8-SS-z2F"/>
+                                    <constraint firstItem="70w-uv-Zqv" firstAttribute="centerY" secondItem="CrC-0R-wUJ" secondAttribute="centerY" id="hD6-Sy-MDv"/>
+                                    <constraint firstAttribute="bottom" secondItem="lvK-fj-t1h" secondAttribute="bottom" constant="20" id="p6P-9c-LUh"/>
+                                    <constraint firstItem="70w-uv-Zqv" firstAttribute="top" secondItem="CrC-0R-wUJ" secondAttribute="top" id="qxo-lh-ZYJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="70w-uv-Zqv" secondAttribute="trailing" id="ziV-Ht-CEs"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEf-zJ-k9h">
                                 <rect key="frame" x="5" y="0.0" width="50" height="50"/>
                                 <constraints>
@@ -428,6 +431,7 @@
                                     <constraint firstAttribute="width" constant="50" id="kbR-P9-K3Q"/>
                                     <constraint firstAttribute="width" constant="50" id="vhh-Pt-vFQ"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
                                 <connections>
@@ -444,13 +448,13 @@
                                     <constraint firstAttribute="width" constant="50" id="Kec-bR-9wS"/>
                                     <constraint firstAttribute="width" constant="50" id="RIR-IB-ZQO"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="3Dots" title=" "/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-4e-lj3">
-                                <rect key="frame" x="55" y="15" width="210" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show QR Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-4e-lj3">
+                                <rect key="frame" x="55" y="15" width="210" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -476,6 +480,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ReadyCodeView" destination="zaO-Vj-Q75" id="yWa-R2-q9u"/>
+                        <outlet property="ScanQRView" destination="CrC-0R-wUJ" id="5eh-RY-Pn5"/>
+                        <outlet property="backBtn" destination="EEf-zJ-k9h" id="jFK-1F-dur"/>
+                        <outlet property="threeDotsBtn" destination="dFn-vJ-AWy" id="REx-1s-fnJ"/>
                         <outlet property="warninglbl" destination="5Y2-Gl-FiX" id="fpD-xv-DeV"/>
                     </connections>
                 </viewController>

@@ -8,14 +8,26 @@
 import UIKit
 
 class ScanQRCodeVC: UIViewController {
-    
     @IBOutlet weak var warninglbl: UILabel!
+    @IBOutlet weak var ScanQRView: UIView!
+    @IBOutlet weak var ReadyCodeView: UIView!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var threeDotsBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        
+        ReadyCodeView.isHidden = true
     }
     
+    
+    @IBAction func scanQrBtnPressed(_ sender: UIButton) {
+        UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews], animations: {
+            self.ScanQRView.isHidden = true
+            self.ReadyCodeView.isHidden = false
+            self.backBtn.tintColor = UIColor.black
+            self.threeDotsBtn.tintColor = UIColor.black
+        }, completion: nil)
+    }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
