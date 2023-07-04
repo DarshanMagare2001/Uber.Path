@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XyN-kM-3Gi" userLabel="MainContentView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-on-8IP" userLabel="TabView">
-                                <rect key="frame" x="0.0" y="468" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="488" width="320" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-B8-C1Z" customClass="CircleView" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="132.5" y="5" width="55" height="55"/>
+                                        <rect key="frame" x="132.5" y="1" width="55" height="55"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan" translatesAutoresizingMaskIntoConstraints="NO" id="sFA-Xi-gzf">
                                                 <rect key="frame" x="15" y="15" width="25" height="25"/>
@@ -43,7 +43,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-3h-G0p">
-                                        <rect key="frame" x="0.0" y="10" width="117.5" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="57.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xk2-fP-0LY">
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="57.5"/>
@@ -112,7 +112,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="my7-cH-wqJ">
-                                        <rect key="frame" x="202.5" y="10" width="117.5" height="57.5"/>
+                                        <rect key="frame" x="202.5" y="0.0" width="117.5" height="57.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qq7-3T-Tz8">
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="57.5"/>
@@ -184,14 +184,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="iUY-B8-C1Z" firstAttribute="centerX" secondItem="cRw-on-8IP" secondAttribute="centerX" id="0Ny-NR-FVD"/>
-                                    <constraint firstItem="Slv-3h-G0p" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" constant="10" id="4BQ-cZ-CkN"/>
+                                    <constraint firstItem="Slv-3h-G0p" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" id="4BQ-cZ-CkN"/>
                                     <constraint firstItem="my7-cH-wqJ" firstAttribute="leading" secondItem="iUY-B8-C1Z" secondAttribute="trailing" constant="15" id="98F-Yf-xrQ"/>
                                     <constraint firstItem="iUY-B8-C1Z" firstAttribute="leading" secondItem="Slv-3h-G0p" secondAttribute="trailing" constant="15" id="GI8-UO-cT4"/>
                                     <constraint firstAttribute="trailing" secondItem="my7-cH-wqJ" secondAttribute="trailing" id="IIn-pq-nmV"/>
                                     <constraint firstItem="Slv-3h-G0p" firstAttribute="leading" secondItem="cRw-on-8IP" secondAttribute="leading" id="L0k-qv-dhI"/>
-                                    <constraint firstItem="iUY-B8-C1Z" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" constant="5" id="Z1v-DC-tmZ"/>
-                                    <constraint firstAttribute="height" constant="100" id="ZCW-4L-sZf"/>
-                                    <constraint firstItem="my7-cH-wqJ" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" constant="10" id="cIk-an-B99"/>
+                                    <constraint firstItem="iUY-B8-C1Z" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" constant="1" id="Z1v-DC-tmZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="ZCW-4L-sZf"/>
+                                    <constraint firstItem="my7-cH-wqJ" firstAttribute="top" secondItem="cRw-on-8IP" secondAttribute="top" id="cIk-an-B99"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -31,6 +31,7 @@ class MainTabVC: UIViewController {
         super.viewDidLoad()
         showTab(.home)
         showHome()
+
     }
     
     @IBAction func tabBtnPressed(_ sender: UIButton) {
@@ -95,5 +96,6 @@ class MainTabVC: UIViewController {
         homeBtnLbl.textColor = UIColor(named: "LaunchscreenColor")
         homeBtn.tintColor  = UIColor(named: "LaunchscreenColor")
     }
+
 }
 

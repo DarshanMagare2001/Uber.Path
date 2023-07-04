@@ -69,8 +69,18 @@ class CircleView: UIView {
         
         // Set the corner radius to half of the view's width to make it a circle
         layer.cornerRadius = bounds.width / 2
-        layer.masksToBounds = true
+        layer.masksToBounds = false
+        
+        // Add shadow properties
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 2, height: 2)
+        layer.shadowRadius = 4
+        
+        // Create a shadow path to improve performance
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
     }
 }
+
 
 
