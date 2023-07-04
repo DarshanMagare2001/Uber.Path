@@ -29,25 +29,21 @@ class MainTabVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         navigationController?.setNavigationBarHidden(true, animated: true)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scanBtnViewTapped))
         scanBtnView.addGestureRecognizer(tapGesture)
+        updateUI(for: .home)
+        showTab(.home)
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateUI(for: .home)
-        showTab(.home)
-    }
     
     @objc func scanBtnViewTapped() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "ScanQRCodeVC") as! ScanQRCodeVC
         navigationController?.pushViewController(destinationVC, animated: true)
     }
-   
+    
     @IBAction func tabBtnPressed(_ sender: UIButton) {
         let tag = sender.tag
         print(tag)
@@ -105,7 +101,7 @@ class MainTabVC: UIViewController {
             mainContentView.addSubview(destinationVC.view)
         }
     }
-
+    
     
     func showHome() {
         showTab(.home)
