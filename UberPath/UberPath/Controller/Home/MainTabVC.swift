@@ -30,8 +30,6 @@ class MainTabVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showTab(.home)
-//        showHome()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,10 +97,7 @@ class MainTabVC: UIViewController {
     func showHome() {
         showTab(.home)
         updateUI(for: .home)
-
-//        homeBtnLbl.textColor = UIColor(named: "LaunchscreenColor")
-//        homeBtn.tintColor  = UIColor(named: "LaunchscreenColor")
     }
-
+    
 }
 
