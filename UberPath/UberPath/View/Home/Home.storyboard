@@ -528,17 +528,17 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system" title=" "/>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-tU-Yg8">
-                                        <rect key="frame" x="10" y="10" width="240" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-tU-Yg8">
+                                        <rect key="frame" x="10" y="5" width="240" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJF-ed-xYv">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="25"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darshan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8n-ct-9rU">
-                                                <rect key="frame" x="0.0" y="25" width="240" height="25"/>
+                                                <rect key="frame" x="0.0" y="35" width="240" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -548,9 +548,9 @@
                                 </subviews>
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="bRi-tU-Yg8" secondAttribute="bottom" constant="10" id="GlS-Uj-WCE"/>
+                                    <constraint firstAttribute="bottom" secondItem="bRi-tU-Yg8" secondAttribute="bottom" id="GlS-Uj-WCE"/>
                                     <constraint firstAttribute="bottom" secondItem="wUi-md-2gE" secondAttribute="bottom" constant="10" id="KPV-C5-bx9"/>
-                                    <constraint firstItem="bRi-tU-Yg8" firstAttribute="top" secondItem="pCV-8R-vbx" secondAttribute="top" constant="10" id="XPb-xj-RIq"/>
+                                    <constraint firstItem="bRi-tU-Yg8" firstAttribute="top" secondItem="pCV-8R-vbx" secondAttribute="top" constant="5" id="XPb-xj-RIq"/>
                                     <constraint firstItem="bRi-tU-Yg8" firstAttribute="leading" secondItem="pCV-8R-vbx" secondAttribute="leading" constant="10" id="Xi0-ao-8Q0"/>
                                     <constraint firstItem="wUi-md-2gE" firstAttribute="leading" secondItem="bRi-tU-Yg8" secondAttribute="trailing" constant="10" id="Zk8-1o-7NM"/>
                                     <constraint firstItem="wUi-md-2gE" firstAttribute="top" secondItem="pCV-8R-vbx" secondAttribute="top" constant="10" id="iNA-OP-OGh"/>
@@ -989,6 +989,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="NY3-Wc-jZh"/>
+                    <connections>
+                        <outlet property="nameLbl" destination="w8n-ct-9rU" id="sDG-3z-OsJ"/>
+                        <outlet property="welcomeLbl" destination="rJF-ed-xYv" id="wTC-IA-q3e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-ST-7mR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
