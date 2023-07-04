@@ -53,8 +53,9 @@
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-Xb-I2X">
                                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="21.5"/>
+                                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="Home" title=" "/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="house" catalog="system" title=" "/>
                                                                 <connections>
                                                                     <action selector="tabBtnPressed:" destination="htz-kY-9KR" eventType="touchUpInside" id="r5N-mY-eVL"/>
                                                                 </connections>
@@ -208,7 +209,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityBtn" destination="EK2-J4-MWg" id="eAD-Aq-0so"/>
+                        <outlet property="activityBtnLbl" destination="WgI-nE-ITM" id="v6M-FF-bp8"/>
+                        <outlet property="homeBtn" destination="Vdn-Xb-I2X" id="MUW-Pq-KrP"/>
+                        <outlet property="homeBtnLbl" destination="fAj-qY-oCg" id="Zpp-5d-uBk"/>
                         <outlet property="mainContentView" destination="XyN-kM-3Gi" id="h52-GQ-LVJ"/>
+                        <outlet property="myCardBtn" destination="y89-8l-nnR" id="HTn-RJ-Jel"/>
+                        <outlet property="myCardBtnLbl" destination="XBI-jg-vXF" id="amP-k4-Udn"/>
+                        <outlet property="profileBtn" destination="6E8-yo-aEC" id="xkY-MY-Yc2"/>
+                        <outlet property="profileBtnLbl" destination="0rG-5h-CJj" id="xsH-5J-KKc"/>
+                        <outlet property="scanBtnView" destination="iUY-B8-C1Z" id="GTa-tk-Tgo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIv-ww-VZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,7 +246,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bPt-sb-lBs" customClass="HomeVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u8s-bS-VY1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCV-8R-vbx">
@@ -317,7 +327,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4u-dp-iL1">
-                                <rect key="frame" x="0.0" y="320" width="320" height="680"/>
+                                <rect key="frame" x="0.0" y="320" width="320" height="248"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1b-iE-PLL">
                                         <rect key="frame" x="0.0" y="10" width="320" height="500"/>
@@ -706,7 +716,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="NY3-Wc-jZh"/>
-                    <size key="freeformSize" width="320" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-ST-7mR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -752,7 +761,6 @@
         <image name="CardStyleTwo" width="654" height="380"/>
         <image name="Deposit" width="25" height="24"/>
         <image name="ForwardArrow" width="8" height="12"/>
-        <image name="Home" width="24" height="25"/>
         <image name="More" width="25" height="24"/>
         <image name="Profile" width="24" height="25"/>
         <image name="Scan" width="19" height="18"/>
@@ -769,6 +777,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
