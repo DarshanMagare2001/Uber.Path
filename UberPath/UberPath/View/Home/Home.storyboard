@@ -225,6 +225,21 @@
             </objects>
             <point key="canvasLocation" x="1177.5" y="-364.43661971830988"/>
         </scene>
+        <!--TransfersVC-->
+        <scene sceneID="EeJ-8O-EMe">
+            <objects>
+                <viewController storyboardIdentifier="TransfersVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IdG-A5-bbC" customClass="TransfersVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qcr-P2-Ak1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mq0-zi-0iO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgE-Oa-dku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="303"/>
+        </scene>
         <!--ScanQR CodeVC-->
         <scene sceneID="lnN-Tx-Vb4">
             <objects>
@@ -614,6 +629,9 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="62.5" height="38"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="Deposit" title=" "/>
+                                                                                <connections>
+                                                                                    <action selector="depositBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="CDd-8E-xat"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFL-K7-YmV">
                                                                                 <rect key="frame" x="0.0" y="38" width="62.5" height="12"/>
@@ -643,6 +661,9 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="62.5" height="39"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="Transfers" title=" "/>
+                                                                                <connections>
+                                                                                    <action selector="transfersBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="fCt-cs-Oig"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Transfers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HZ-Ic-cL8">
                                                                                 <rect key="frame" x="0.0" y="38" width="62.5" height="12"/>
@@ -672,6 +693,9 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="62.5" height="38"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="Withdraw" title=" "/>
+                                                                                <connections>
+                                                                                    <action selector="withdrawBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="LBm-Lp-Ycb"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Withdraw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osr-jS-liW">
                                                                                 <rect key="frame" x="0.0" y="38" width="62.5" height="12"/>
@@ -701,6 +725,9 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="62.5" height="38"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="More" title=" "/>
+                                                                                <connections>
+                                                                                    <action selector="moreBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="hyt-y5-v70"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-Nr-WQX">
                                                                                 <rect key="frame" x="0.0" y="38" width="62.5" height="12"/>
