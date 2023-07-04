@@ -329,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="340" width="320" height="228"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1b-iE-PLL">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="500"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="400"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-XJ-pEr" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="300" height="70"/>
@@ -685,7 +685,7 @@
                                             <constraint firstItem="GuO-IT-5lS" firstAttribute="top" secondItem="edh-Me-D3s" secondAttribute="bottom" constant="10" id="RMl-LQ-25B"/>
                                             <constraint firstItem="m2F-XJ-pEr" firstAttribute="top" secondItem="I1b-iE-PLL" secondAttribute="top" constant="10" id="Tps-Yb-W6z"/>
                                             <constraint firstItem="Y7n-G4-W2s" firstAttribute="trailing" secondItem="GuO-IT-5lS" secondAttribute="trailing" id="fVC-by-vVg"/>
-                                            <constraint firstAttribute="height" constant="500" id="gmA-ag-Ufe"/>
+                                            <constraint firstAttribute="height" constant="400" id="gmA-ag-Ufe"/>
                                             <constraint firstItem="m2F-XJ-pEr" firstAttribute="leading" secondItem="I1b-iE-PLL" secondAttribute="leading" constant="10" id="iLG-DZ-gDx"/>
                                             <constraint firstItem="GuO-IT-5lS" firstAttribute="top" secondItem="Y7n-G4-W2s" secondAttribute="bottom" constant="8" symbolic="YES" id="ojK-Op-rTJ"/>
                                             <constraint firstItem="Y7n-G4-W2s" firstAttribute="top" secondItem="m2F-XJ-pEr" secondAttribute="bottom" constant="13" id="rzQ-fF-HO4"/>
