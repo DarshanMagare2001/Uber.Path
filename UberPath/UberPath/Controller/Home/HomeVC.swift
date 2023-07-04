@@ -18,7 +18,7 @@ class HomeVC: UIViewController {
     }
     
     
-    @IBAction func depositBtnPressed(_ sender: UIButton) {
+    @IBAction func depositBtnPressed(_ sender: Any) {
         print("Deposit")
     }
     

@@ -625,12 +625,12 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aRi-pa-Cob">
                                                                         <rect key="frame" x="0.0" y="0.0" width="62.5" height="50"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-9P-hhc" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-9P-hhc">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="62.5" height="38"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="Deposit" title=" "/>
                                                                                 <connections>
-                                                                                    <action selector="depositBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="CDd-8E-xat"/>
+                                                                                    <action selector="depositBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="joG-Oo-VPX"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFL-K7-YmV">
@@ -662,7 +662,7 @@
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="Transfers" title=" "/>
                                                                                 <connections>
-                                                                                    <action selector="transfersBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="fCt-cs-Oig"/>
+                                                                                    <action selector="transfersBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="tED-Ge-Uac"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Transfers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HZ-Ic-cL8">
@@ -694,7 +694,7 @@
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="Withdraw" title=" "/>
                                                                                 <connections>
-                                                                                    <action selector="withdrawBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="LBm-Lp-Ycb"/>
+                                                                                    <action selector="withdrawBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="2UN-gm-cFA"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Withdraw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osr-jS-liW">
@@ -726,7 +726,7 @@
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" image="More" title=" "/>
                                                                                 <connections>
-                                                                                    <action selector="moreBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="hyt-y5-v70"/>
+                                                                                    <action selector="moreBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="LvP-xe-XLV"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-Nr-WQX">
