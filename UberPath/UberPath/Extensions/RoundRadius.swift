@@ -66,17 +66,14 @@ class RoundedButtonWithBorder: UIButton {
 class CircleView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         // Set the corner radius to half of the view's width to make it a circle
         layer.cornerRadius = bounds.width / 2
         layer.masksToBounds = false
-        
         // Add shadow properties
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.5
         layer.shadowOffset = CGSize(width: 1, height: 5)
         layer.shadowRadius = 5
-        
         // Create a shadow path to improve performance
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
     }
