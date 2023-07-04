@@ -29,7 +29,7 @@ class MainTabVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+    
         navigationController?.setNavigationBarHidden(true, animated: true)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scanBtnViewTapped))
         scanBtnView.addGestureRecognizer(tapGesture)

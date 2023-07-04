@@ -61,21 +61,14 @@ extension UIDevice {
             "iPhone14,5": "iPhone 13",
             "iPhone14,2": "iPhone 13 Pro",
             "iPhone14,3": "iPhone 13 Pro Max",
-            "iPhone14,8": "iPhone 13 Pro Max",
-            "iPhone14,4": "iPhone 13 mini",
-            "iPhone14,5": "iPhone 13",
-            "iPhone14,2": "iPhone 13 Pro",
-            "iPhone14,3": "iPhone 13 Pro Max",
             "iPhone14,1": "iPhone 13 mini",
             "iPhone14,7": "iPhone 13",
-            "iPhone14,4": "iPhone 13 Pro",
-            "iPhone14,5": "iPhone 13 Pro Max",
-            
+            "iPhone14,6": "iPhone 13 Pro",
+            "iPhone14,8": "iPhone 13 Pro Max"
             // Add more mappings for other iPhone models if needed
         ]
         
         if let modelName = modelMapping[identifier] {
-            print(identifier)
             return modelName
         } else {
             return identifier
@@ -86,39 +79,39 @@ extension UIDevice {
 class FontManager {
     static func adjustedFontSize(forBaseSize baseSize: CGFloat) -> CGFloat {
         let device = UIDevice.current
-        let modelName = device.name
-        print(modelName)
+        
         var adjustedSize = baseSize // Default size
         
-        switch modelName {
+        switch device.modelName {
         case "iPhone 1G", "iPhone 3G", "iPhone 3GS":
             adjustedSize *= 0.8
         case "iPhone 4", "iPhone 4S":
             adjustedSize *= 0.9
-        case "iPhone 5", "iPhone 5C", "iPhone 5S","iPhone SE (1st generation)" :
-            adjustedSize *= 1
-        case "iPhone 6", "iPhone 6S", "iPhone 7", "iPhone 8" , "iPhone SE (2nd generation)":
+        case "iPhone 5", "iPhone 5C", "iPhone 5S", "iPhone SE (1st generation)":
+            adjustedSize *= 1.0
+        case "iPhone 6", "iPhone 6S", "iPhone 7", "iPhone 8", "iPhone SE (2nd generation)":
             adjustedSize *= 1.8
         case "iPhone 6 Plus", "iPhone 6S Plus", "iPhone 7 Plus", "iPhone 8 Plus":
             adjustedSize *= 2.1
-        case  "iPhone X", "iPhone XS","iPhone 11 Pro":
+        case "iPhone X", "iPhone XS", "iPhone 11 Pro":
             adjustedSize *= 1.8
-        case "iPhone XR" , "iPhone 11":
+        case "iPhone XR", "iPhone 11":
             adjustedSize *= 2.1
-        case "iPhone XS Max", "iPhone 11 Pro Max" :
+        case "iPhone XS Max", "iPhone 11 Pro Max":
             adjustedSize *= 2.1
-        case "iPhone 12 mini" , "iPhone 13 mini":
+        case "iPhone 12 mini", "iPhone 13 mini":
             adjustedSize *= 1.8
-        case "iPhone 12","iPhone 13":
+        case "iPhone 12", "iPhone 13":
             adjustedSize *= 1.8
-        case "iPhone 12 Pro Max","iPhone 13 Pro Max":
+        case "iPhone 12 Pro Max", "iPhone 13 Pro Max":
             adjustedSize *= 2.2
-        case "iPhone 12 Pro","iPhone 13 Pro":
+        case "iPhone 12 Pro", "iPhone 13 Pro":
             adjustedSize *= 1.9
         default:
             break // No adjustment needed
         }
-        print("Adjusted font size for \(modelName): \(adjustedSize)")
+        
+        print("Adjusted font size for \(device.modelName): \(adjustedSize)")
         return adjustedSize
     }
 }
