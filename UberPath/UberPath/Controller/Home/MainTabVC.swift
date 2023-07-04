@@ -29,12 +29,13 @@ class MainTabVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showTab(.home)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI(for: .home)
+        showTab(.home)
     }
     
     @IBAction func tabBtnPressed(_ sender: UIButton) {
@@ -90,9 +91,11 @@ class MainTabVC: UIViewController {
         }
         
         if let destinationVC = destinationVC {
+            destinationVC.view.frame = mainContentView.bounds
             mainContentView.addSubview(destinationVC.view)
         }
     }
+
     
     func showHome() {
         showTab(.home)

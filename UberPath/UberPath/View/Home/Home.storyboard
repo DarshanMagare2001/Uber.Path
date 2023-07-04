@@ -199,12 +199,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cRw-on-8IP" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" id="9RZ-Yj-IBv"/>
-                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="top" secondItem="Rnb-ec-8VM" secondAttribute="top" id="F03-xn-FAK"/>
+                            <constraint firstItem="cRw-on-8IP" firstAttribute="top" secondItem="XyN-kM-3Gi" secondAttribute="bottom" id="B2t-RD-f5U"/>
                             <constraint firstItem="Rnb-ec-8VM" firstAttribute="trailing" secondItem="cRw-on-8IP" secondAttribute="trailing" id="MvL-pK-El9"/>
-                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" id="TGm-H5-Sid"/>
-                            <constraint firstItem="Rnb-ec-8VM" firstAttribute="trailing" secondItem="XyN-kM-3Gi" secondAttribute="trailing" id="Uls-rq-19V"/>
-                            <constraint firstItem="cRw-on-8IP" firstAttribute="top" secondItem="XyN-kM-3Gi" secondAttribute="bottom" id="beq-VP-KK4"/>
+                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="top" secondItem="Rnb-ec-8VM" secondAttribute="top" id="U2a-9X-hLm"/>
+                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="trailing" secondItem="Rnb-ec-8VM" secondAttribute="trailing" id="Y5C-p7-Pzm"/>
                             <constraint firstAttribute="bottom" secondItem="cRw-on-8IP" secondAttribute="bottom" id="jE9-0Q-zJ3"/>
+                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" id="jT5-cl-8Jq"/>
                         </constraints>
                     </view>
                     <connections>
