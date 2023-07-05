@@ -505,6 +505,7 @@
                         <outlet property="chooseRecepientLbl" destination="D1Y-SX-6U4" id="Oy3-iV-B8i"/>
                         <outlet property="collectionViewOutlet" destination="GJC-lI-usr" id="GsG-jt-vCs"/>
                         <outlet property="recipientsCollectionView" destination="x2v-oj-ZxB" id="Vn9-hx-gzh"/>
+                        <outlet property="scrollView" destination="bkt-gI-UMH" id="uKa-jA-RDY"/>
                         <outlet property="textFld" destination="Yi4-Us-ZZU" id="qDl-yI-oTG"/>
                     </connections>
                 </viewController>
