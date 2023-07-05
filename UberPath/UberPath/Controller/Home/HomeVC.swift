@@ -32,13 +32,12 @@ class HomeVC: UIViewController {
     
     
     @IBAction func withdrawBtnPressed(_ sender: UIButton) {
-        
+        print("withdrawBtnPressed")
     }
     
     
     @IBAction func moreBtnPressed(_ sender: UIButton) {
-        
-        
+        print("moreBtnPressed")
     }
     
     
