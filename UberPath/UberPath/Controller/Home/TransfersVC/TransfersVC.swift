@@ -7,11 +7,12 @@
 
 import UIKit
 
-class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , UITextFieldDelegate {
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     @IBOutlet weak var recipientsCollectionView: UICollectionView!
     @IBOutlet weak var chooseCardsLbl: UILabel!
     @IBOutlet weak var chooseRecepientLbl: UILabel!
+    @IBOutlet weak var textFld: UITextField!
     var collectionViewOutletArray = ["CardStyleOne","CardStyleThree","CardStyleTwo"]
     var recipientsCollectionViewArray = ["Linda John","David William","Susan Charles"]
     override func viewDidLoad() {
@@ -21,6 +22,8 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         collectionViewOutlet.dataSource = self
         recipientsCollectionView.delegate = self
         recipientsCollectionView.dataSource = self
+        textFld.delegate = self
+        updatePlaceHolders()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,5 +55,14 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         chooseRecepientLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    func updatePlaceHolders(){
+        textFld.placeholder = "Search contacts..."
+    }
+    
 }
 
