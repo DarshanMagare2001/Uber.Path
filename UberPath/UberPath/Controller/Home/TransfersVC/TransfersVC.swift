@@ -48,8 +48,8 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func updateFont() {
-        chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
-        chooseRecepientLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
+        chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
+        chooseRecepientLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
         
     }
 }
