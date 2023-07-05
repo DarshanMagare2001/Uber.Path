@@ -13,10 +13,10 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        collectionViewOutlet.delegate = self
-        collectionViewOutlet.dataSource = self
         recipientsCollectionView.delegate = self
         recipientsCollectionView.dataSource = self
+        collectionViewOutlet.delegate = self
+        collectionViewOutlet.dataSource = self
         textFld.delegate = self
         updatePlaceholders()
         registerForKeyboardNotifications()
@@ -58,12 +58,14 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == collectionViewOutlet {
-            if let selectedCell = collectionView.cellForItem(at: indexPath) as? ChooseCardsCell {
+            print("collectionViewOutlet")
+            if let selectedCell = (collectionView.cellForItem(at: indexPath) as? ChooseCardsCell) {
                 selectedCell.isSelected = true
                 // Handle selected cell in collectionViewOutlet...
             }
         } else if collectionView == recipientsCollectionView {
-            if let selectedCell = collectionView.cellForItem(at: indexPath) as? ChooseRecipientsCell {
+            print("recipientsCollectionView")
+            if let selectedCell = (collectionView.cellForItem(at: indexPath) as? ChooseRecipientsCell) {
                 selectedCell.isSelected = true
                 let imageName = recipientsCollectionViewArray[indexPath.row]
                 print("Selected image name: \(imageName)")
@@ -72,6 +74,9 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         }
     }
 
+   
+    
+    
     
     func updateFont() {
         chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
