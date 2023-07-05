@@ -37,7 +37,7 @@ class RoundedButtonWithBorder: UIButton {
     }
     
     // Custom border width value
-    var borderWidth: CGFloat = 0.5 {
+    var borderWidth: CGFloat = 1 {
         didSet {
             setNeedsLayout()
         }

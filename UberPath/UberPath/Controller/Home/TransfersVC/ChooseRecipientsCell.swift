@@ -20,13 +20,12 @@ class ChooseRecipientsCell: UICollectionViewCell {
        }
        
     @objc func cellViewTapped() {
-        if cellView.backgroundColor == .green {
-            cellView.backgroundColor = .white
+        let launchscreenColor = UIColor(named: "LaunchscreenColor")?.cgColor
+        if cellView.layer.borderColor == launchscreenColor {
+            cellView.layer.borderColor = UIColor.gray.cgColor
         } else {
-            cellView.backgroundColor = .green
+            cellView.layer.borderColor = launchscreenColor
         }
         // Handle tap on cellView here...
     }
-
-
 }
