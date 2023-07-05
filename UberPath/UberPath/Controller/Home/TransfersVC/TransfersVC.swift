@@ -65,11 +65,13 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         } else if collectionView == recipientsCollectionView {
             if let selectedCell = collectionView.cellForItem(at: indexPath) as? ChooseRecipientsCell {
                 selectedCell.isSelected = true
+                let imageName = recipientsCollectionViewArray[indexPath.row]
+                print("Selected image name: \(imageName)")
                 // Handle selected cell in recipientsCollectionView...
             }
         }
-        
     }
+
     
     func updateFont() {
         chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
