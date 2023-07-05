@@ -9,4 +9,6 @@ import UIKit
 
 class ChooseCardsCell: UICollectionViewCell {
     
+    @IBOutlet weak var cellImage: UIImageView!
+    
 }

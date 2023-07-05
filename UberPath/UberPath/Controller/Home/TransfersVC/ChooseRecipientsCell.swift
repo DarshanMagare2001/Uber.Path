@@ -9,4 +9,6 @@ import UIKit
 
 class ChooseRecipientsCell: UICollectionViewCell {
     
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellLbl: UILabel!
 }
