@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MainTabVC: UIViewController {
+class MainTabVC: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+   
     var viewModel = AuthenticationModel()
     @IBOutlet weak var mainContentView: UIView!
     @IBOutlet weak var homeBtn: UIButton!
@@ -97,9 +98,59 @@ class MainTabVC: UIViewController {
         }
         
         if let destinationVC = destinationVC {
-            destinationVC.view.frame = mainContentView.bounds
-            mainContentView.addSubview(destinationVC.view)
+            let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+            pageViewController.setViewControllers([destinationVC], direction: .forward, animated: false, completion: nil)
+            pageViewController.dataSource = self
+            pageViewController.delegate = self
+            addChild(pageViewController)
+            mainContentView.addSubview(pageViewController.view)
+            pageViewController.view.frame = mainContentView.bounds
+            pageViewController.didMove(toParent: self)
         }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if let currentViewController = viewController as? HomeVC {
+            // Return the previous view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC
+        } else if let currentViewController = viewController as? MyCardVC {
+            // Return the previous view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+        } else if let currentViewController = viewController as? ActivityVC {
+            // Return the previous view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "MyCardVC") as? MyCardVC
+        } else if let currentViewController = viewController as? ProfileVC {
+            // Return the previous view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as? ActivityVC
+        }
+        
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if let currentViewController = viewController as? HomeVC {
+            // Return the next view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "MyCardVC") as? MyCardVC
+        } else if let currentViewController = viewController as? MyCardVC {
+            // Return the next view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "ActivityVC") as? ActivityVC
+        } else if let currentViewController = viewController as? ActivityVC {
+            // Return the next view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC
+        } else if let currentViewController = viewController as? ProfileVC {
+            // Return the next view controller based on your logic
+            // For example:
+            return storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+        }
+        
+        return nil
     }
     
     
@@ -109,4 +160,5 @@ class MainTabVC: UIViewController {
     }
     
 }
+
 
