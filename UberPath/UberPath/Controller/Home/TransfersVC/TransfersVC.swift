@@ -27,6 +27,12 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         unregisterFromKeyboardNotifications()
     }
     
+    
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewOutlet {
             return collectionViewOutletArray.count
@@ -79,8 +85,8 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @objc func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
-            return
-        }
+                  return
+              }
         
         let keyboardHeight = keyboardFrame.height
         let safeAreaBottomInset = view.safeAreaInsets.bottom
