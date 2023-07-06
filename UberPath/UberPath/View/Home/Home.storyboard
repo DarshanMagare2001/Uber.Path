@@ -696,10 +696,80 @@
                                     <action selector="continueBtnPresed:" destination="S9n-ru-wrS" eventType="touchUpInside" id="Leb-DP-0rx"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8r-AU-7ZY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PI-Ud-DIm">
+                                        <rect key="frame" x="20" y="84" width="280" height="400"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopUpTwo" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-QH-MTi">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="400"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Confirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THM-4g-Jnx">
+                                                <rect key="frame" x="20" y="100" width="240" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xl-q7-bLN" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="40" y="330" width="200" height="50"/>
+                                                <color key="backgroundColor" name="GlobalButtonColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="c3e-fE-Ibv"/>
+                                                    <constraint firstAttribute="height" constant="50" id="cQu-Go-5uF"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ok, Send Now!">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibe-qI-i2g">
+                                                <rect key="frame" x="15" y="134" width="250" height="186"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="xPg-3R-TX2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="THM-4g-Jnx" secondAttribute="trailing" constant="20" id="1v7-YI-cMw"/>
+                                            <constraint firstAttribute="bottom" secondItem="HHu-QH-MTi" secondAttribute="bottom" id="2n0-oN-B1L"/>
+                                            <constraint firstItem="Ibe-qI-i2g" firstAttribute="top" secondItem="THM-4g-Jnx" secondAttribute="bottom" constant="10" id="3Ft-ds-SRe"/>
+                                            <constraint firstItem="THM-4g-Jnx" firstAttribute="top" secondItem="0PI-Ud-DIm" secondAttribute="top" constant="100" id="8CI-cZ-Rxo"/>
+                                            <constraint firstItem="2Xl-q7-bLN" firstAttribute="top" secondItem="Ibe-qI-i2g" secondAttribute="bottom" constant="10" id="AFz-RJ-YCC"/>
+                                            <constraint firstAttribute="trailing" secondItem="HHu-QH-MTi" secondAttribute="trailing" id="ERi-90-098"/>
+                                            <constraint firstItem="THM-4g-Jnx" firstAttribute="centerX" secondItem="0PI-Ud-DIm" secondAttribute="centerX" id="IHh-AE-G4U"/>
+                                            <constraint firstItem="HHu-QH-MTi" firstAttribute="leading" secondItem="0PI-Ud-DIm" secondAttribute="leading" id="LTt-mZ-BiF"/>
+                                            <constraint firstItem="HHu-QH-MTi" firstAttribute="top" secondItem="0PI-Ud-DIm" secondAttribute="top" id="fIR-Bm-BIM"/>
+                                            <constraint firstItem="2Xl-q7-bLN" firstAttribute="centerX" secondItem="0PI-Ud-DIm" secondAttribute="centerX" id="gKq-RN-EqV"/>
+                                            <constraint firstItem="Ibe-qI-i2g" firstAttribute="centerX" secondItem="0PI-Ud-DIm" secondAttribute="centerX" id="gpH-Ei-T3D"/>
+                                            <constraint firstItem="THM-4g-Jnx" firstAttribute="leading" secondItem="0PI-Ud-DIm" secondAttribute="leading" constant="20" id="m17-HR-EB9"/>
+                                            <constraint firstAttribute="height" constant="400" id="qvQ-7a-01l"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Xl-q7-bLN" secondAttribute="bottom" constant="20" id="uPl-5e-HR7"/>
+                                            <constraint firstItem="THM-4g-Jnx" firstAttribute="height" secondItem="HHu-QH-MTi" secondAttribute="height" multiplier="0.06" id="vVF-K7-C9H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="0PI-Ud-DIm" firstAttribute="centerY" secondItem="q8r-AU-7ZY" secondAttribute="centerY" id="3eI-MZ-3uj"/>
+                                    <constraint firstItem="0PI-Ud-DIm" firstAttribute="centerX" secondItem="q8r-AU-7ZY" secondAttribute="centerX" id="aVo-pt-5KG"/>
+                                    <constraint firstItem="0PI-Ud-DIm" firstAttribute="leading" secondItem="q8r-AU-7ZY" secondAttribute="leading" constant="20" id="phh-ua-SUA"/>
+                                    <constraint firstAttribute="trailing" secondItem="0PI-Ud-DIm" secondAttribute="trailing" constant="20" id="wH0-L7-3B6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2IH-ci-tKG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="q8r-AU-7ZY" firstAttribute="trailing" secondItem="2IH-ci-tKG" secondAttribute="trailing" id="062-OA-7KS"/>
                             <constraint firstItem="K9D-Gb-R5D" firstAttribute="leading" secondItem="2IH-ci-tKG" secondAttribute="leading" constant="20" id="06H-xC-qO5"/>
                             <constraint firstItem="l2i-Kp-dJw" firstAttribute="top" secondItem="WyD-91-bTU" secondAttribute="bottom" constant="20" id="0yd-Nv-SGR"/>
                             <constraint firstItem="WyD-91-bTU" firstAttribute="top" secondItem="K9D-Gb-R5D" secondAttribute="bottom" constant="10" id="2Ob-42-WaL"/>
@@ -708,6 +778,8 @@
                             <constraint firstItem="e33-EF-q58" firstAttribute="leading" secondItem="2IH-ci-tKG" secondAttribute="leading" constant="5" id="HaL-dH-br7"/>
                             <constraint firstItem="3ff-x9-dIJ" firstAttribute="centerX" secondItem="4uP-aJ-iBv" secondAttribute="centerX" id="LMb-iE-NHK"/>
                             <constraint firstItem="2IH-ci-tKG" firstAttribute="trailing" secondItem="K9D-Gb-R5D" secondAttribute="trailing" constant="20" id="Lfw-Fr-D9P"/>
+                            <constraint firstItem="q8r-AU-7ZY" firstAttribute="top" secondItem="4uP-aJ-iBv" secondAttribute="top" id="QIS-1M-BJg"/>
+                            <constraint firstAttribute="bottom" secondItem="q8r-AU-7ZY" secondAttribute="bottom" id="R7I-dm-fXM"/>
                             <constraint firstItem="L6T-lH-j0J" firstAttribute="leading" secondItem="2IH-ci-tKG" secondAttribute="leading" constant="20" id="Xnj-Pa-XOg"/>
                             <constraint firstItem="e33-EF-q58" firstAttribute="top" secondItem="2IH-ci-tKG" secondAttribute="top" id="aQF-el-wI6"/>
                             <constraint firstItem="Xhp-F1-coO" firstAttribute="top" secondItem="3ff-x9-dIJ" secondAttribute="bottom" constant="30" id="auC-rG-uY6"/>
@@ -716,6 +788,7 @@
                             <constraint firstItem="L6T-lH-j0J" firstAttribute="centerX" secondItem="4uP-aJ-iBv" secondAttribute="centerX" id="fXc-a3-Wgh"/>
                             <constraint firstItem="2IH-ci-tKG" firstAttribute="bottom" secondItem="L6T-lH-j0J" secondAttribute="bottom" constant="20" id="gXl-ET-iOH"/>
                             <constraint firstItem="l2i-Kp-dJw" firstAttribute="leading" secondItem="2IH-ci-tKG" secondAttribute="leading" constant="20" id="lp8-pW-mvA"/>
+                            <constraint firstItem="q8r-AU-7ZY" firstAttribute="leading" secondItem="4uP-aJ-iBv" secondAttribute="leading" id="mL8-SQ-8eK"/>
                             <constraint firstItem="Xhp-F1-coO" firstAttribute="centerX" secondItem="4uP-aJ-iBv" secondAttribute="centerX" id="oOd-f3-BeO"/>
                             <constraint firstItem="2IH-ci-tKG" firstAttribute="trailing" secondItem="WyD-91-bTU" secondAttribute="trailing" constant="20" id="sLF-Q4-SEh"/>
                             <constraint firstItem="2IH-ci-tKG" firstAttribute="trailing" secondItem="L6T-lH-j0J" secondAttribute="trailing" constant="20" id="uW4-1J-6Y1"/>
@@ -1587,6 +1660,7 @@
         <image name="Flash" width="40" height="40"/>
         <image name="ForwardArrow" width="8" height="12"/>
         <image name="More" width="25" height="24"/>
+        <image name="PopUpTwo" width="327" height="464"/>
         <image name="Profile" width="24" height="25"/>
         <image name="Qrcode" width="210" height="210"/>
         <image name="Scan" width="19" height="18"/>
@@ -1609,6 +1683,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

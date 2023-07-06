@@ -36,7 +36,7 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
             currencyPickerBtn.setImage(UIImage(named: "ForwardArrow"), for: .normal)
         }
     }
-
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -77,15 +77,12 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         let currencyCodes = Array(viewModel.currencyDictionary.keys).sorted()
         return currencyCodes[row]
     }
-
-
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let currencyCodes = Array(viewModel.currencyDictionary.keys).sorted()
         let selectedCurrency = currencyCodes[row]
         let selectedCountry = viewModel.currencyDictionary[selectedCurrency]
         currencyShowLbl.text = selectedCountry
     }
-
-
     
 }
