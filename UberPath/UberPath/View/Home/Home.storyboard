@@ -664,7 +664,7 @@
                                 <rect key="frame" x="20" y="360.5" width="280" height="117.5"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-OO-yfX">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="118"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="117.5"/>
                                     </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -692,6 +692,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtnPresed:" destination="S9n-ru-wrS" eventType="touchUpInside" id="Leb-DP-0rx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2IH-ci-tKG"/>
@@ -721,6 +724,10 @@
                     </view>
                     <connections>
                         <outlet property="currencyPickerView" destination="l2i-Kp-dJw" id="KYx-2h-4ab"/>
+                        <outlet property="currencyShowLbl" destination="fAK-Nx-uUs" id="ZgV-Ub-mfL"/>
+                        <outlet property="currencyTxtFld" destination="hsI-QN-eAa" id="pWI-JR-OWV"/>
+                        <outlet property="userImageView" destination="ibG-Pt-kwd" id="Mex-qY-lVu"/>
+                        <outlet property="userNameLbl" destination="K9D-Gb-R5D" id="FvB-La-B2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9i-0R-dbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -736,7 +743,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-bD-9kp" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="20" y="110" width="280" height="90"/>
@@ -799,10 +806,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-f5-sAi" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="280" height="195.5"/>
+                                        <rect key="frame" x="20" y="240" width="280" height="250"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-WB-jPc">
-                                                <rect key="frame" x="20" y="20" width="240" height="155.5"/>
+                                                <rect key="frame" x="20" y="20" width="240" height="210"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -815,7 +822,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R03-9r-lrM">
-                                        <rect key="frame" x="20" y="455.5" width="280" height="92.5"/>
+                                        <rect key="frame" x="20" y="510" width="280" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMark" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-MK-yLM">
                                                 <rect key="frame" x="125" y="5" width="30" height="30"/>
@@ -825,7 +832,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a single-use code for your use only. Get a new code each time you pay with smartpay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Gl-FiX">
-                                                <rect key="frame" x="0.0" y="35" width="280" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="35" width="280" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -858,13 +865,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                        <rect key="frame" x="20" y="435" width="280" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="30" width="260" height="50"/>
