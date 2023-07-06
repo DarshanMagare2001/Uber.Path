@@ -9,10 +9,17 @@ import UIKit
 
 class TransferDetailVC: UIViewController {
     
+    @IBOutlet weak var currencyPickerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        currencyPickerView.isHidden = true
         
-        
+    }
+    
+    
+    @IBAction func currencyPickerBtnPressed(_ sender: UIButton) {
+        currencyPickerView.isHidden.toggle()
     }
     
     
