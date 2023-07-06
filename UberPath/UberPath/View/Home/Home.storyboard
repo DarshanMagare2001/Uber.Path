@@ -722,6 +722,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currencyPicker" destination="UJm-OO-yfX" id="DBU-Q5-wgX"/>
                         <outlet property="currencyPickerView" destination="l2i-Kp-dJw" id="KYx-2h-4ab"/>
                         <outlet property="currencyShowLbl" destination="fAK-Nx-uUs" id="ZgV-Ub-mfL"/>
                         <outlet property="currencyTxtFld" destination="hsI-QN-eAa" id="pWI-JR-OWV"/>
