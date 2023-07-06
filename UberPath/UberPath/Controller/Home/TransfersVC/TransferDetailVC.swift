@@ -9,17 +9,15 @@ import UIKit
 
 class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
     
-    private let currencyCodes = [
-        "USD", "EUR", "GBP", "JPY", "CAD"
-    ]
-    
     @IBOutlet weak var currencyPickerView: UIView!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var currencyShowLbl: UILabel!
     @IBOutlet weak var currencyTxtFld: UITextField!
     @IBOutlet weak var currencyPicker: UIPickerView!
-    
+    @IBOutlet weak var currencyPickerBtn: UIButton!
+    var viewModel = Model()
+    var isShow = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +28,15 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     }
     
     @IBAction func currencyPickerBtnPressed(_ sender: UIButton) {
+        isShow.toggle()
         currencyPickerView.isHidden.toggle()
+        if isShow {
+            currencyPickerBtn.setImage(UIImage(named: "DownArrow"), for: .normal)
+        }else {
+            currencyPickerBtn.setImage(UIImage(named: "ForwardArrow"), for: .normal)
+        }
     }
+
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -63,17 +68,17 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return currencyCodes.count
+        return viewModel.currencyCodes.count
     }
     
     // MARK: - UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return currencyCodes[row]
+        return viewModel.currencyCodes[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedCurrency = currencyCodes[row]
+        let selectedCurrency = viewModel.currencyCodes[row]
         currencyShowLbl.text = selectedCurrency
     }
     
