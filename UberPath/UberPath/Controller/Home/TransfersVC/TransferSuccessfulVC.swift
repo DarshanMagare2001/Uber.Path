@@ -15,7 +15,6 @@ class TransferSuccessfulVC: UIViewController {
         
     }
     
-    
     @IBAction func backToHomeBtnPressed(_ sender: UIButton) {
         if let navigationController = self.navigationController {
             navigationController.popToRootViewController(animated: true)
