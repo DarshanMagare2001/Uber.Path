@@ -28,6 +28,8 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         addDoneButtonToCurrencyTextField()
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(popUpViewTapped))
+        popUpView.addGestureRecognizer(tapGesture)
     }
     
     @IBAction func currencyPickerBtnPressed(_ sender: UIButton) {
@@ -47,6 +49,10 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     
     @IBAction func sendMoneyBtnPressed(_ sender: UIButton) {
         popUpView.isHidden = false
+    }
+    
+    @objc private func popUpViewTapped() {
+        popUpView.isHidden = true
     }
     
     private func addDoneButtonToCurrencyTextField() {
