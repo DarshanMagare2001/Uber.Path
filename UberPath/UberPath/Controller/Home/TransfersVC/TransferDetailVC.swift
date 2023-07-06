@@ -68,18 +68,21 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.currencyCodes.count
+        return viewModel.currencyDictionary.count
     }
     
     // MARK: - UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return viewModel.currencyCodes[row]
+        let currencyCodes = Array(viewModel.currencyDictionary.keys)
+        return currencyCodes[row]
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedCurrency = viewModel.currencyCodes[row]
+        let currencyCodes = Array(viewModel.currencyDictionary.keys)
+        let selectedCurrency = currencyCodes[row]
         currencyShowLbl.text = selectedCurrency
     }
+
     
 }
