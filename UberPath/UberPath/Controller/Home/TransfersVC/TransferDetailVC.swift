@@ -80,10 +80,12 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
 
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let currencyCodes = Array(viewModel.currencyDictionary.keys)
+        let currencyCodes = Array(viewModel.currencyDictionary.keys).sorted()
         let selectedCurrency = currencyCodes[row]
-        currencyShowLbl.text = selectedCurrency
+        let selectedCountry = viewModel.currencyDictionary[selectedCurrency]
+        currencyShowLbl.text = selectedCountry
     }
+
 
     
 }
