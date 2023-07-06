@@ -44,6 +44,7 @@
 		13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */; };
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
 		13DE6FB92A544BC200384D8F /* TransfersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB82A544BC200384D8F /* TransfersVC.swift */; };
+		13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E61B8C2A568C910047F43B /* TransferDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRecipientsCell.swift; sourceTree = "<group>"; };
 		13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeVC.swift; sourceTree = "<group>"; };
 		13DE6FB82A544BC200384D8F /* TransfersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersVC.swift; sourceTree = "<group>"; };
+		13E61B8C2A568C910047F43B /* TransferDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailVC.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				13DE6FB82A544BC200384D8F /* TransfersVC.swift */,
 				13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */,
 				13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */,
+				13E61B8C2A568C910047F43B /* TransferDetailVC.swift */,
 			);
 			path = TransfersVC;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,
 				139314D22A528D8A00248D92 /* HomeVC.swift in Sources */,
 				139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */,
+				13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,

@@ -33,6 +33,14 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func continueBtnPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewOutlet {
             return collectionViewOutletArray.count
@@ -73,11 +81,7 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             }
         }
     }
-
-   
-    
-    
-    
+  
     func updateFont() {
         chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
         chooseRecepientLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
