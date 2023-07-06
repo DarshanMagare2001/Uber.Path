@@ -26,20 +26,16 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         super.viewWillDisappear(animated)
         unregisterFromKeyboardNotifications()
     }
-    
-    
-    
+     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
-    
+     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
         navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionViewOutlet {
