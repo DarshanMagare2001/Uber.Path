@@ -17,7 +17,7 @@ class TransferDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPickerView.isHidden = true
-        
+        addDoneButtonToCurrencyTextField()
     }
     
     @IBAction func currencyPickerBtnPressed(_ sender: UIButton) {
@@ -30,6 +30,21 @@ class TransferDetailVC: UIViewController {
     
     @IBAction func continueBtnPresed(_ sender: UIButton) {
         
+    }
+    
+    private func addDoneButtonToCurrencyTextField() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonPressed))
+
+        toolbar.items = [flexibleSpace, doneButton]
+        currencyTxtFld.inputAccessoryView = toolbar
+    }
+
+    @objc private func doneButtonPressed() {
+        currencyTxtFld.resignFirstResponder()
     }
     
 }
