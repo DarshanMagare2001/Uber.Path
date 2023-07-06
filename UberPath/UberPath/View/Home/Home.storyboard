@@ -295,10 +295,20 @@
                                                                         <constraint firstAttribute="width" constant="250" id="YWL-pa-Wro"/>
                                                                     </constraints>
                                                                 </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0zC-IX-1yN">
+                                                                    <rect key="frame" x="239" y="20.5" width="25" height="24"/>
+                                                                    <color key="tintColor" name="LaunchscreenColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="9dE-Eg-qeI"/>
+                                                                        <constraint firstAttribute="width" constant="25" id="mgt-eA-O2e"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="gRH-o1-emV" firstAttribute="top" secondItem="V0Z-fT-PpC" secondAttribute="top" id="1DH-Fa-soo"/>
+                                                                <constraint firstItem="0zC-IX-1yN" firstAttribute="top" secondItem="V0Z-fT-PpC" secondAttribute="top" constant="20" id="1rE-Wu-I5O"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gRH-o1-emV" secondAttribute="trailing" constant="5" id="YrB-dk-dKC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0zC-IX-1yN" secondAttribute="trailing" constant="20" id="jQV-2N-Hmm"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gRH-o1-emV" secondAttribute="bottom" id="kYH-Sh-CAY"/>
                                                                 <constraint firstItem="gRH-o1-emV" firstAttribute="leading" secondItem="V0Z-fT-PpC" secondAttribute="leading" constant="5" id="uGI-0m-TUW"/>
                                                             </constraints>
@@ -306,6 +316,7 @@
                                                         <size key="customSize" width="284" height="173"/>
                                                         <connections>
                                                             <outlet property="cellImage" destination="gRH-o1-emV" id="osT-aN-Osq"/>
+                                                            <outlet property="tickMarkImageView" destination="0zC-IX-1yN" id="5ib-r6-hb5"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -1953,6 +1964,7 @@
         <image name="Transfers" width="25" height="24"/>
         <image name="Withdraw" width="25" height="24"/>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="personImage" width="48" height="48"/>

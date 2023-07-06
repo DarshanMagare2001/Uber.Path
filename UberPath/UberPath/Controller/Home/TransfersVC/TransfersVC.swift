@@ -50,6 +50,13 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         if collectionView == collectionViewOutlet {
             let cell = collectionViewOutlet.dequeueReusableCell(withReuseIdentifier: "cardCollectionCell", for: indexPath) as! ChooseCardsCell
             cell.cellImage.image = UIImage(named: collectionViewOutletArray[indexPath.row])
+            
+            if collectionViewOutlet.indexPathsForSelectedItems?.contains(indexPath) ?? false {
+                cell.showTickMark(true)
+            } else {
+                cell.showTickMark(false)
+            }
+            
             return cell
         } else if collectionView == recipientsCollectionView {
             let cell = recipientsCollectionView.dequeueReusableCell(withReuseIdentifier: "recipientsCollectionViewCell", for: indexPath) as! ChooseRecipientsCell
@@ -59,12 +66,14 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         }
         return UICollectionViewCell()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == collectionViewOutlet {
             print("collectionViewOutlet")
             if let selectedCell = (collectionView.cellForItem(at: indexPath) as? ChooseCardsCell) {
                 selectedCell.isSelected = true
+                collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
+                collectionView.reloadData() // Refresh collection view after selection
                 // Handle selected cell in collectionViewOutlet...
             }
         } else if collectionView == recipientsCollectionView {
@@ -77,6 +86,7 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             }
         }
     }
+
   
     func updateFont() {
         chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
