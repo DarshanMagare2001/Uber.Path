@@ -42,7 +42,7 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func continueBtnPresed(_ sender: UIButton) {
+    @IBAction func sendMoneyBtnPressed(_ sender: UIButton) {
         
     }
     
