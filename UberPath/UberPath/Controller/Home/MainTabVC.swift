@@ -35,6 +35,7 @@ class MainTabVC: UIViewController, UIPageViewControllerDelegate, UIPageViewContr
         scanBtnView.addGestureRecognizer(tapGesture)
         updateUI(for: .home)
         showTab(.home)
+//        viewModel.logout()
         
     }
     

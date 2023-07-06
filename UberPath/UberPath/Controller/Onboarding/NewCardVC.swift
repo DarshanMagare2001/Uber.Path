@@ -28,11 +28,17 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
         cardHolderTxtFld.delegate = self
         registerForKeyboardNotifications()
         loadCountryFromUserDefaults()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(popUpViewTapped))
+        popUpView.addGestureRecognizer(tapGesture)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unregisterFromKeyboardNotifications()
+    }
+    
+    @objc private func popUpViewTapped() {
+        popUpView.isHidden = true
     }
     
     func loadCountryFromUserDefaults() {
