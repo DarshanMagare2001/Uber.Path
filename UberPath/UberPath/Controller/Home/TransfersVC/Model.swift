@@ -8,24 +8,29 @@
 import Foundation
 
 class Model {
-    let currencyCodes = [
-        "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN", "BAM", "BBD",
-        "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BRL", "BSD", "BTN", "BWP", "BYN",
-        "BZD", "CAD", "CDF", "CHF", "CLP", "CNY", "COP", "CRC", "CUC", "CUP", "CVE", "CZK",
-        "DJF", "DKK", "DOP", "DZD", "EGP", "ERN", "ETB", "EUR", "FJD", "FKP", "GBP", "GEL",
-        "GGP", "GHS", "GIP", "GMD", "GNF", "GTQ", "GYD", "HKD", "HNL", "HRK", "HTG", "HUF",
-        "IDR", "ILS", "IMP", "INR", "IQD", "IRR", "ISK", "JEP", "JMD", "JOD", "JPY", "KES",
-        "KGS", "KHR", "KMF", "KPW", "KRW", "KWD", "KYD", "KZT", "LAK", "LBP", "LKR", "LRD",
-        "LSL", "LYD", "MAD", "MDL", "MGA", "MKD", "MMK", "MNT", "MOP", "MRO", "MUR", "MVR",
-        "MWK", "MXN", "MYR", "MZN", "NAD", "NGN", "NIO", "NOK", "NPR", "NZD", "OMR", "PAB",
-        "PEN", "PGK", "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RSD", "RUB", "RWF", "SAR",
-        "SBD", "SCR", "SDG", "SEK", "SGD", "SHP", "SLL", "SOS", "SPL", "SRD", "STN", "SVC",
-        "SYP", "SZL", "THB", "TJS", "TMT", "TND", "TOP", "TRY", "TTD", "TVD", "TWD", "TZS",
-        "UAH", "UGX", "USD", "UYU", "UZS", "VEF", "VND", "VUV", "WST", "XAF", "XCD", "XDR",
-        "XOF", "XPF", "YER", "ZAR", "ZMW", "ZWD"
+    let currencyDictionary: [String: String] = [
+        "AED": "ب.د", "AFN": "FBu", "ALL": "$", "AMD": "B$", "ANG": "Bs.", "AOA": "R$", "ARS": "BSD",
+        "AUD": "Nu.", "AWG": "P", "AZN": "Br", "BAM": "BZ$", "BBD": "$", "BDT": "FC", "BGN": "CHF",
+        "BHD": "$", "BIF": "¥", "BMD": "$", "BND": "₡", "BOB": "₱", "BRL": "R$", "BSD": "CUC", "BTN": "$",
+        "BWP": "CVE", "BYN": "Kč", "BZD": "Fdj", "CAD": "kr", "CDF": "RD$", "CHF": "د.ج", "CLP": "£",
+        "CNY": "Nfk", "COP": "Br", "CRC": "€", "CUC": "$", "CUP": "£", "CVE": "ლ", "CZK": "£",
+        "DJF": "GH₵", "DKK": "£", "DOP": "D", "DZD": "G", "EGP": "FG", "ERN": "Q", "ETB": "GY$",
+        "EUR": "HK$", "FJD": "L", "FKP": "kn", "GBP": "G", "GEL": "Ft", "GGP": "Rp", "GHS": "₪",
+        "GIP": "£", "GMD": "₹", "GNF": "$", "GTQ": "лв", "GYD": "₭", "HKD": "£", "HNL": "රු",
+        "HRK": "$", "HTG": "LSL", "HUF": "ل.د", "IDR": "د.م.", "ILS": "L", "IMP": "Ar", "INR": "MK",
+        "IQD": "K", "IRR": "₮", "ISK": "P", "JEP": "UM", "JMD": "₨", "JOD": "M", "JPY": "Rf",
+        "KES": "MK", "KGS": "$", "KHR": "RM", "KMF": "MT", "KPW": "$", "KRW": "N", "KWD": "₦",
+        "KYD": "C$", "KZT": "kr", "LAK": "₨", "LBP": "$", "LKR": "ر.ع.", "LRD": "B/.", "LSL": "S/.",
+        "LYD": "₱", "MAD": "₨", "MDL": "zł", "MGA": "Gs.", "MKD": "ر.ق", "MMK": "lei", "MNT": "дин.",
+        "MOP": "₽", "MRO": "RF", "MUR": "ر.س", "MVR": "$", "MWK": "₨", "MXN": "ج.س.", "MYR": "RM", "MZN": "₨", "NAD": "Le", "NGN": "S", "NIO": "Db", "NOK": "$", "NPR": "D", "NZD": "T",
+        "OMR": "₦", "PAB": "$", "PEN": "ر.ع.", "PGK": "B/.", "PHP": "S/.", "PKR": "NT$", "PLN": "TSh",
+        "PYG": "₴", "QAR": "USh", "RON": "$", "RSD": "$", "RUB": "₱", "RWF": "₨", "SAR": "zł",
+        "SBD": "₲", "SCR": "﷼", "SDG": "Дин.", "SEK": "₨", "SGD": "Le", "SHP": "Db", "SLL": "£",
+        "SOS": "S", "SPL": "Db", "SRD": "T", "STN": "TT$", "SVC": "$", "SYP": "NT$", "SZL": "TSh",
+        "THB": "₴", "TJS": "USh", "TMT": "$", "TND": "$", "TOP": "₫", "TRY": "Vt", "TTD": "WS$",
+        "TVD": "FCFA", "TWD": "EC$", "TZS": "SDR", "UAH": "CFA", "UGX": "₣", "USD": "﷼", "UYU": "ZK",
+        "UZS": "Z$", "VEF": ""
     ]
     
-    let currencySymbols = [ "ب.د", "FBu", "$", "B$", "Bs.", "R$", "BSD", "Nu.", "P","Br", "BZ$", "$", "FC", "CHF", "$", "¥", "$", "₡", "₱", "CUC", "$", "CVE", "Kč", "Fdj", "kr", "RD$", "د.ج", "£", "Nfk", "Br", "€", "$", "£", "ლ","£", "GH₵", "£", "D", "G", "FG", "Q", "GY$", "HK$", "L", "kn", "G", "Ft", "Rp", "₪", "£", "₹", "$", "лв", "₭","£", "රු", "$", "LSL", "ل.د", "د.م.", "L", "Ar", "MK", "K", "₮", "P", "UM", "₨", "M", "Rf","MK", "$", "RM", "MT", "$", "N", "₦", "C$", "kr", "₨", "$", "ر.ع.", "B/.", "S/.", "₱", "₨","zł", "Gs.", "ر.ق", "lei","дин.", "₽", "RF", "ر.س", "$", "₨", "ج.س.", "kr", "$", "£", "Le","S", "Db", "$", "D", "T", "₦", "$", "ر.ع.", "B/.", "S/.", "NT$", "TSh", "₴", "USh", "$", "$","₱", "₨", "zł", "₲", "﷼", "Дин.", "₨", "Le", "Db", "£", "S", "Db", "T", "TT$", "$", "NT$","TSh", "₴", "USh", "$", "$", "₫", "Vt", "WS$", "FCFA", "EC$", "SDR", "CFA", "₣", "﷼", "ZK","Z$"
-    ]
     
 }
