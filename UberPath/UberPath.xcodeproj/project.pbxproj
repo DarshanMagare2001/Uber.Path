@@ -41,6 +41,7 @@
 		13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00B12A4C4B6000524C82 /* CameraVC.swift */; };
 		13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB00B32A4C517700524C82 /* ProofOfResidencyVC.swift */; };
 		13CC92B22A56B8420024643B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC92B12A56B8420024643B /* Model.swift */; };
+		13CC92B42A56DA250024643B /* TransferSuccessfulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */; };
 		13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */; };
 		13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */; };
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
@@ -82,6 +83,7 @@
 		13BB00B12A4C4B6000524C82 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		13BB00B32A4C517700524C82 /* ProofOfResidencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofOfResidencyVC.swift; sourceTree = "<group>"; };
 		13CC92B12A56B8420024643B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferSuccessfulVC.swift; sourceTree = "<group>"; };
 		13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCardsCell.swift; sourceTree = "<group>"; };
 		13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRecipientsCell.swift; sourceTree = "<group>"; };
 		13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeVC.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */,
 				13E61B8C2A568C910047F43B /* TransferDetailVC.swift */,
 				13CC92B12A56B8420024643B /* Model.swift */,
+				13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */,
 			);
 			path = TransfersVC;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */,
 				138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */,
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,
+				13CC92B42A56DA250024643B /* TransferSuccessfulVC.swift in Sources */,
 				139314D22A528D8A00248D92 /* HomeVC.swift in Sources */,
 				139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */,
 				13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */,

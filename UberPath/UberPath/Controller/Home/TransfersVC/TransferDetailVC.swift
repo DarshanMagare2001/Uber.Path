@@ -32,6 +32,16 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         popUpView.addGestureRecognizer(tapGesture)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        popUpView.isHidden = true
+    }
+    
+    @IBAction func okBtnPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferSuccessfulVC") as! TransferSuccessfulVC
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     @IBAction func currencyPickerBtnPressed(_ sender: UIButton) {
         isShow.toggle()
         currencyPickerView.isHidden.toggle()
@@ -41,7 +51,6 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
             currencyPickerBtn.setImage(UIImage(named: "ForwardArrow"), for: .normal)
         }
     }
-    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
