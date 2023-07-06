@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import nanopb
 
 class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -16,12 +17,14 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var currencyTxtFld: UITextField!
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var currencyPickerBtn: UIButton!
+    @IBOutlet weak var popUpView: UIView!
     var viewModel = Model()
     var isShow = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPickerView.isHidden = true
+        popUpView.isHidden = true
         addDoneButtonToCurrencyTextField()
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
@@ -43,7 +46,7 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     }
     
     @IBAction func sendMoneyBtnPressed(_ sender: UIButton) {
-        
+        popUpView.isHidden = false
     }
     
     private func addDoneButtonToCurrencyTextField() {
