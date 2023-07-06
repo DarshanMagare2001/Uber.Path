@@ -1014,6 +1014,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backToHomeBtnPressed:" destination="59b-l4-T5n" eventType="touchUpInside" id="J2I-Ov-2NN"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Transfer Successful" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-71-uiN">
                                 <rect key="frame" x="20" y="70" width="280" height="211"/>
