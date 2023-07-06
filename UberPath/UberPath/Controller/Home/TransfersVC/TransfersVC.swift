@@ -122,14 +122,16 @@ class TransfersVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         if let activeTextField = findActiveTextField(),
            let activeTextFieldFrame = activeTextField.superview?.convert(activeTextField.frame, to: scrollView) {
-            let visibleContentHeight = max(0, scrollView.bounds.height - keyboardHeight + safeAreaBottomInset)
             
-            if !(0...visibleContentHeight).contains(activeTextFieldFrame.maxY) {
+            let visibleContentHeight = scrollView.bounds.height - scrollView.contentInset.bottom
+            
+            if !(activeTextFieldFrame.maxY <= visibleContentHeight) {
                 let scrollOffset = CGPoint(x: 0, y: activeTextFieldFrame.maxY - visibleContentHeight)
                 scrollView.setContentOffset(scrollOffset, animated: true)
             }
         }
     }
+
     
     @objc func keyboardWillHide(_ notification: Notification) {
         scrollView.contentInset = .zero
