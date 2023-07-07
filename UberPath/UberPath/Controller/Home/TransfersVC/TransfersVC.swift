@@ -20,7 +20,7 @@ class TransfersVC: UIViewController {
         updateFont()
         updateTxtFld()
     }
-     
+    
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
@@ -34,6 +34,10 @@ class TransfersVC: UIViewController {
     func updateFont(){
         chooseCardsLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
         chooseUserLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
+    }
+    
+    func updateTxtFld() {
+        searchContactsTxtFlad.placeholder = "Search contacts..."
     }
     
 }
@@ -68,13 +72,23 @@ extension TransfersVC : UICollectionViewDelegate , UICollectionViewDataSource , 
         if collectionView == chooseCardsCollectionView {
             print("chooseCardsCollectionView")
             
-        } else if collectionView == chooseRecipientsCollectionView {
+            // Deselect previously selected cells
+            let selectedItems = chooseCardsCollectionView.indexPathsForSelectedItems
+            for indexPath in selectedItems ?? [] {
+                chooseCardsCollectionView.deselectItem(at: indexPath, animated: false)
+                let cell = chooseCardsCollectionView.cellForItem(at: indexPath) as? ChooseCardsCell
+                cell?.checkMarkImageView.isHidden = true
+            }
+            
+            // Select the current cell
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
+            let cell = collectionView.cellForItem(at: indexPath) as? ChooseCardsCell
+            cell?.checkMarkImageView.isHidden = false
+        }
+        else if collectionView == chooseRecipientsCollectionView {
             print("chooseRecipientsCollectionView")
         }
     }
-    
-    func updateTxtFld() {
-        searchContactsTxtFlad.placeholder = "Search contacts..."
-    }
-    
 }
+
+

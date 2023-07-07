@@ -307,24 +307,35 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="302" height="160"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleOne" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-JK-ycg">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleOne" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-JK-ycg">
                                                                     <rect key="frame" x="0.0" y="0.0" width="302" height="160"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="230" id="3ac-If-m4l"/>
+                                                                        <constraint firstAttribute="height" constant="200" id="3ac-If-m4l"/>
                                                                         <constraint firstAttribute="width" constant="300" id="qEP-hF-GTf"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-fK-W2E">
+                                                                    <rect key="frame" x="252" y="20.5" width="30" height="19"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="30" id="ca0-vD-tVE"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="gwz-JK-ycg" secondAttribute="bottom" id="4e4-WM-w8Q"/>
+                                                                <constraint firstItem="kJd-fK-W2E" firstAttribute="top" secondItem="30m-0t-q2k" secondAttribute="top" constant="20" id="9YW-pg-Y9i"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gwz-JK-ycg" secondAttribute="trailing" id="Caf-lP-qg4"/>
                                                                 <constraint firstItem="gwz-JK-ycg" firstAttribute="top" secondItem="30m-0t-q2k" secondAttribute="top" id="DaD-dW-9KR"/>
+                                                                <constraint firstItem="kJd-fK-W2E" firstAttribute="height" secondItem="gwz-JK-ycg" secondAttribute="height" multiplier="0.125" id="FQy-O4-xuT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="kJd-fK-W2E" secondAttribute="trailing" constant="20" id="FR7-oY-8lY"/>
                                                                 <constraint firstItem="gwz-JK-ycg" firstAttribute="leading" secondItem="30m-0t-q2k" secondAttribute="leading" id="m1f-3e-ekJ"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="302" height="160"/>
                                                         <connections>
                                                             <outlet property="cellImage" destination="gwz-JK-ycg" id="wrS-xZ-hhg"/>
+                                                            <outlet property="checkMarkImageView" destination="kJd-fK-W2E" id="LMK-2L-mZ6"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -1113,7 +1124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-bD-9kp" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="20" y="110" width="280" height="90"/>
@@ -1176,10 +1187,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-f5-sAi" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="280" height="195.5"/>
+                                        <rect key="frame" x="20" y="240" width="280" height="250"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-WB-jPc">
-                                                <rect key="frame" x="20" y="20" width="240" height="155.5"/>
+                                                <rect key="frame" x="20" y="20" width="240" height="210"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1192,7 +1203,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R03-9r-lrM">
-                                        <rect key="frame" x="20" y="455.5" width="280" height="92.5"/>
+                                        <rect key="frame" x="20" y="510" width="280" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMark" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-MK-yLM">
                                                 <rect key="frame" x="125" y="5" width="30" height="30"/>
@@ -1202,7 +1213,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a single-use code for your use only. Get a new code each time you pay with smartpay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Gl-FiX">
-                                                <rect key="frame" x="0.0" y="35" width="280" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="35" width="280" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1235,13 +1246,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                        <rect key="frame" x="20" y="435" width="280" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="30" width="260" height="50"/>
@@ -1966,6 +1977,7 @@
         <image name="Transfers" width="25" height="24"/>
         <image name="Withdraw" width="25" height="24"/>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="personImage" width="48" height="48"/>
