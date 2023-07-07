@@ -386,7 +386,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="240" height="115"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-lY-8VS">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-lY-8VS" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="115"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-bK-jRc">
@@ -410,6 +410,7 @@
                                                                         <constraint firstAttribute="bottom" secondItem="k8N-bK-jRc" secondAttribute="bottom" constant="10" id="8g8-xd-baO"/>
                                                                         <constraint firstAttribute="trailing" secondItem="k8N-bK-jRc" secondAttribute="trailing" constant="10" id="GZW-Xb-YqF"/>
                                                                         <constraint firstItem="k8N-bK-jRc" firstAttribute="leading" secondItem="n2M-lY-8VS" secondAttribute="leading" constant="10" id="mXg-7j-GzI"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="rGb-Xw-ZOR"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
