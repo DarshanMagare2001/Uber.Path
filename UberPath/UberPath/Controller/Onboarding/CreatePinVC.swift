@@ -23,10 +23,7 @@ class CreatePinVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
-    
-    
-    
-    
+     
     func updateFont() {
         setPinLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 18.0))
         weUseLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))

@@ -8,10 +8,13 @@
 import UIKit
 
 class TransferSuccessfulVC: UIViewController {
+    @IBOutlet weak var transferLbl: UILabel!
+    @IBOutlet weak var transferReviewlbl: UILabel!
+    @IBOutlet weak var amountLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateFont()
         
     }
     
@@ -24,5 +27,12 @@ class TransferSuccessfulVC: UIViewController {
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func updateFont() {
+        transferLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
+        transferReviewlbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 12.0))
+        amountLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
+    }
+    
     
 }
