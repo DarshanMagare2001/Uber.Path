@@ -12,15 +12,15 @@ class TransfersVC: UIViewController {
     @IBOutlet weak var chooseRecipientsCollectionView: UICollectionView!
     @IBOutlet weak var chooseCardsLbl: UILabel!
     @IBOutlet weak var chooseUserLbl: UILabel!
+    @IBOutlet weak var searchContactsTxtFlad: UITextField!
     var collectionViewOutletArray = ["CardStyleOne", "CardStyleThree", "CardStyleTwo"]
     var recipientsCollectionViewArray = ["Linda John", "David William", "Susan Charles"]
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        
+        updateTxtFld()
     }
-    
-    
+     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
@@ -73,5 +73,8 @@ extension TransfersVC : UICollectionViewDelegate , UICollectionViewDataSource , 
         }
     }
     
+    func updateTxtFld() {
+        searchContactsTxtFlad.placeholder = "Search contacts..."
+    }
     
 }
