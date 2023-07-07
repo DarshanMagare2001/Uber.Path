@@ -20,6 +20,13 @@ class TransfersVC: UIViewController {
         
     }
     
+    
+    @IBAction func continueBtnPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }

@@ -271,6 +271,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtnPressed:" destination="cNc-0W-QCn" eventType="touchUpInside" id="pl6-Bv-GG3"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCa-Ht-Sp3">
                                 <rect key="frame" x="0.0" y="70" width="320" height="428"/>
