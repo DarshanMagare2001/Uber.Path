@@ -22,8 +22,6 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var toLbl: UILabel!
     @IBOutlet weak var totalAmountLbl: UILabel!
     @IBOutlet weak var amountTxtFld: UITextField!
-    
-    
     var viewModel = Model()
     var isShow = false
     var userImageName : String?
@@ -43,11 +41,16 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         popUpView.isHidden = true
+        amountTxtFld.text = ""
     }
     
     @IBAction func okBtnPressed(_ sender: UIButton) {
+        guard let amountText = amountTxtFld.text else { return }
+        guard let selectedCurrency = currencyShowLbl.text else { return }
+        let totalAmountText = "\(selectedCurrency) \(amountText)"
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferSuccessfulVC") as! TransferSuccessfulVC
+        destinationVC.amount = totalAmountText
         navigationController?.pushViewController(destinationVC, animated: true)
     }
     

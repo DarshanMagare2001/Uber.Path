@@ -11,11 +11,12 @@ class TransferSuccessfulVC: UIViewController {
     @IBOutlet weak var transferLbl: UILabel!
     @IBOutlet weak var transferReviewlbl: UILabel!
     @IBOutlet weak var amountLbl: UILabel!
-    
+    var amount : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        
+        guard let money = amount else {return}
+        amountLbl.text = money
     }
     
     @IBAction func backToHomeBtnPressed(_ sender: UIButton) {
