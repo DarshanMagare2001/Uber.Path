@@ -276,7 +276,7 @@
                                 <rect key="frame" x="0.0" y="70" width="320" height="428"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg4-g7-OTf">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose cards" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-a6-vpB">
                                                 <rect key="frame" x="10" y="0.0" width="300" height="24"/>
@@ -370,33 +370,36 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WVk-E7-UvS">
-                                                <rect key="frame" x="10" y="348" width="300" height="142"/>
+                                                <rect key="frame" x="10" y="348" width="300" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="d0A-wd-31Q"/>
+                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tBu-8p-eVo">
-                                                    <size key="itemSize" width="240" height="115"/>
+                                                    <size key="itemSize" width="295" height="64"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chooseRecipientsCollectionViewCell" id="M02-EN-k96" customClass="ChooseRecipientsCell" customModule="UberPath" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="13.5" width="240" height="115"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="64"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lzp-cj-4DO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="115"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="64"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-lY-8VS" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="115"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="64"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-bK-jRc">
-                                                                            <rect key="frame" x="10" y="10" width="220" height="95"/>
+                                                                            <rect key="frame" x="10" y="10" width="275" height="44"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="David William" translatesAutoresizingMaskIntoConstraints="NO" id="Iu3-Bn-zfC">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="220" height="42.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="17"/>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-nL-byA">
-                                                                                    <rect key="frame" x="0.0" y="52.5" width="220" height="42.5"/>
+                                                                                    <rect key="frame" x="0.0" y="27" width="275" height="17"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -421,7 +424,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="n2M-lY-8VS" secondAttribute="trailing" id="xax-QA-Acf"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
-                                                        <size key="customSize" width="240" height="115"/>
+                                                        <size key="customSize" width="295" height="64"/>
                                                         <connections>
                                                             <outlet property="userImageView" destination="Iu3-Bn-zfC" id="BEl-pK-8Ps"/>
                                                             <outlet property="userNameLbl" destination="JXQ-nL-byA" id="mx6-Ez-itk"/>
@@ -441,11 +444,10 @@
                                             <constraint firstItem="doC-Ao-DEw" firstAttribute="top" secondItem="UxO-a6-vpB" secondAttribute="bottom" id="FVh-eI-FUd"/>
                                             <constraint firstAttribute="trailing" secondItem="doC-Ao-DEw" secondAttribute="trailing" constant="10" id="H72-Ck-HM8"/>
                                             <constraint firstItem="UxO-a6-vpB" firstAttribute="leading" secondItem="Lg4-g7-OTf" secondAttribute="leading" constant="10" id="M9Q-VB-qIA"/>
-                                            <constraint firstAttribute="height" constant="500" id="OqO-u3-Zo4"/>
+                                            <constraint firstAttribute="height" constant="550" id="OqO-u3-Zo4"/>
                                             <constraint firstAttribute="trailing" secondItem="6Mb-VS-Iev" secondAttribute="trailing" constant="10" id="VF5-f8-Df5"/>
                                             <constraint firstItem="C3N-V8-6jV" firstAttribute="top" secondItem="6Mb-VS-Iev" secondAttribute="bottom" constant="10" id="VgF-4I-3o9"/>
                                             <constraint firstItem="6Mb-VS-Iev" firstAttribute="top" secondItem="doC-Ao-DEw" secondAttribute="bottom" constant="10" id="lgT-Kz-dGO"/>
-                                            <constraint firstAttribute="bottom" secondItem="WVk-E7-UvS" secondAttribute="bottom" constant="10" id="n08-db-WoO"/>
                                             <constraint firstItem="6Mb-VS-Iev" firstAttribute="leading" secondItem="Lg4-g7-OTf" secondAttribute="leading" constant="10" id="nbT-zJ-iK5"/>
                                             <constraint firstAttribute="trailing" secondItem="UxO-a6-vpB" secondAttribute="trailing" constant="10" id="oAx-tv-FJQ"/>
                                             <constraint firstItem="WVk-E7-UvS" firstAttribute="leading" secondItem="Lg4-g7-OTf" secondAttribute="leading" constant="10" id="oZB-yR-J4H"/>
@@ -1107,7 +1109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-bD-9kp" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="20" y="110" width="280" height="90"/>
@@ -1170,10 +1172,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-f5-sAi" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="280" height="195.5"/>
+                                        <rect key="frame" x="20" y="240" width="280" height="250"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-WB-jPc">
-                                                <rect key="frame" x="20" y="20" width="240" height="155.5"/>
+                                                <rect key="frame" x="20" y="20" width="240" height="210"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1186,7 +1188,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R03-9r-lrM">
-                                        <rect key="frame" x="20" y="455.5" width="280" height="92.5"/>
+                                        <rect key="frame" x="20" y="510" width="280" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMark" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-MK-yLM">
                                                 <rect key="frame" x="125" y="5" width="30" height="30"/>
@@ -1196,7 +1198,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a single-use code for your use only. Get a new code each time you pay with smartpay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Gl-FiX">
-                                                <rect key="frame" x="0.0" y="35" width="280" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="35" width="280" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1229,13 +1231,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                        <rect key="frame" x="20" y="435" width="280" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="30" width="260" height="50"/>
