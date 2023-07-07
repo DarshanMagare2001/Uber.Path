@@ -23,10 +23,23 @@ class TransfersVC: UIViewController {
     }
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
-        navigationController?.pushViewController(destinationVC, animated: true)
+        guard let selectedIndexPath = selectedRecipientIndexPath else {
+            // Handle case when no recipient is selected
+            return
+        }
+        
+        let selectedUserImageName = recipientsCollectionViewArray[selectedIndexPath.row]
+        if let cell = chooseRecipientsCollectionView.cellForItem(at: selectedIndexPath) as? ChooseRecipientsCell {
+            let selectedUserName = cell.userNameLbl.text
+            
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "TransferDetailVC") as! TransferDetailVC
+            destinationVC.userImageName = selectedUserImageName
+            destinationVC.userName = selectedUserName
+            navigationController?.pushViewController(destinationVC, animated: true)
+        }
     }
+
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

@@ -20,9 +20,12 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var popUpView: UIView!
     var viewModel = Model()
     var isShow = false
+    var userImageName : String?
+    var userName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUserImage()
         currencyPickerView.isHidden = true
         popUpView.isHidden = true
         addDoneButtonToCurrencyTextField()
@@ -30,6 +33,7 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         currencyPicker.dataSource = self
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(popUpViewTapped))
         popUpView.addGestureRecognizer(tapGesture)
+     
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,6 +105,13 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         let selectedCurrency = currencyCodes[row]
         let selectedCountry = viewModel.currencyDictionary[selectedCurrency]
         currencyShowLbl.text = selectedCountry
+    }
+    
+    func updateUserImage(){
+        guard let image = userImageName else {return}
+        userImageView.image = UIImage(named: image)
+        guard let text = userName else {return}
+        userNameLbl.text = text
     }
     
 }
