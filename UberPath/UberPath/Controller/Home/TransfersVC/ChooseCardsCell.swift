@@ -10,5 +10,15 @@ import UIKit
 class ChooseCardsCell: UICollectionViewCell {
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var checkMarkImageView: UIImageView!
-    
+
+    override var isSelected: Bool {
+        didSet {
+            checkMarkImageView.isHidden = !isSelected
+        }
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        checkMarkImageView.isHidden = true
+    }
 }

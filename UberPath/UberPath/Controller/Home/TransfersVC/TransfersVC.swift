@@ -72,20 +72,10 @@ extension TransfersVC : UICollectionViewDelegate , UICollectionViewDataSource , 
         if collectionView == chooseCardsCollectionView {
             print("chooseCardsCollectionView")
             
-            // Deselect previously selected cells
-            let selectedItems = chooseCardsCollectionView.indexPathsForSelectedItems
-            for indexPath in selectedItems ?? [] {
-                chooseCardsCollectionView.deselectItem(at: indexPath, animated: false)
-                let cell = chooseCardsCollectionView.cellForItem(at: indexPath) as? ChooseCardsCell
-                cell?.checkMarkImageView.isHidden = true
+            if let cell = collectionView.cellForItem(at: indexPath) as? ChooseCardsCell {
+                cell.isSelected = !cell.isSelected
             }
-            
-            // Select the current cell
-            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .centeredVertically)
-            let cell = collectionView.cellForItem(at: indexPath) as? ChooseCardsCell
-            cell?.checkMarkImageView.isHidden = false
-        }
-        else if collectionView == chooseRecipientsCollectionView {
+        } else if collectionView == chooseRecipientsCollectionView {
             print("chooseRecipientsCollectionView")
         }
     }
