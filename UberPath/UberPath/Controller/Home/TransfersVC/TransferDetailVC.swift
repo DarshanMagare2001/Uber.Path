@@ -18,6 +18,12 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var currencyPickerBtn: UIButton!
     @IBOutlet weak var popUpView: UIView!
+    @IBOutlet weak var fromlbl: UILabel!
+    @IBOutlet weak var toLbl: UILabel!
+    @IBOutlet weak var totalAmountLbl: UILabel!
+    @IBOutlet weak var amountTxtFld: UITextField!
+    
+    
     var viewModel = Model()
     var isShow = false
     var userImageName : String?
@@ -61,8 +67,24 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     }
     
     @IBAction func sendMoneyBtnPressed(_ sender: UIButton) {
+        guard let amountText = amountTxtFld.text, !amountText.isEmpty else {
+            // Show UIAlertController to indicate that the amount is not entered
+            let alertController = UIAlertController(title: "Warning!", message: "Please enter the amount", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let selectedCurrency = currencyShowLbl.text else {
+            // Handle case when currency is not selected
+            return
+        }
+        let totalAmountText = "\(selectedCurrency) \(amountText)"
+        totalAmountLbl.text = totalAmountText
         popUpView.isHidden = false
     }
+
+
     
     @objc private func popUpViewTapped() {
         popUpView.isHidden = true
@@ -112,6 +134,7 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         userImageView.image = UIImage(named: image)
         guard let text = userName else {return}
         userNameLbl.text = text
+        toLbl.text = text
     }
     
 }
