@@ -34,12 +34,11 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         updateUserImage()
         currencyPickerView.isHidden = true
         popUpView.isHidden = true
-        addDoneButtonToCurrencyTextField()
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(popUpViewTapped))
         popUpView.addGestureRecognizer(tapGesture)
-     
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,26 +82,11 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         totalAmountLbl.text = totalAmountText
         popUpView.isHidden = false
     }
-
-
+    
+    
     
     @objc private func popUpViewTapped() {
         popUpView.isHidden = true
-    }
-    
-    private func addDoneButtonToCurrencyTextField() {
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonPressed))
-        
-        toolbar.items = [flexibleSpace, doneButton]
-        currencyTxtFld.inputAccessoryView = toolbar
-    }
-    
-    @objc private func doneButtonPressed() {
-        currencyTxtFld.resignFirstResponder()
     }
     
     // MARK: - UIPickerViewDataSource
