@@ -282,7 +282,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="21.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose cards" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-a6-vpB">
-                                                        <rect key="frame" x="20" y="0.0" width="280" height="21.5"/>
+                                                        <rect key="frame" x="10" y="0.0" width="300" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
@@ -291,9 +291,9 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="UxO-a6-vpB" firstAttribute="top" secondItem="FkM-Dl-IYD" secondAttribute="top" id="6mE-dI-hVs"/>
-                                                    <constraint firstItem="UxO-a6-vpB" firstAttribute="leading" secondItem="FkM-Dl-IYD" secondAttribute="leading" constant="20" id="PZ3-lt-z7m"/>
+                                                    <constraint firstItem="UxO-a6-vpB" firstAttribute="leading" secondItem="FkM-Dl-IYD" secondAttribute="leading" constant="10" id="PZ3-lt-z7m"/>
                                                     <constraint firstAttribute="bottom" secondItem="UxO-a6-vpB" secondAttribute="bottom" id="QLP-Rr-tLD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="UxO-a6-vpB" secondAttribute="trailing" constant="20" id="x4J-xe-SC3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UxO-a6-vpB" secondAttribute="trailing" constant="10" id="x4J-xe-SC3"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZc-P3-WrS">
@@ -355,7 +355,7 @@
                                                 <rect key="frame" x="0.0" y="235.5" width="320" height="42.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose recipients" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-VS-Iev">
-                                                        <rect key="frame" x="20" y="0.0" width="280" height="42.5"/>
+                                                        <rect key="frame" x="10" y="0.0" width="300" height="42.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
@@ -364,19 +364,19 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="6Mb-VS-Iev" firstAttribute="top" secondItem="0O8-Iq-icm" secondAttribute="top" id="8Fc-53-hUT"/>
-                                                    <constraint firstAttribute="trailing" secondItem="6Mb-VS-Iev" secondAttribute="trailing" constant="20" id="Aib-vU-0PU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6Mb-VS-Iev" secondAttribute="trailing" constant="10" id="Aib-vU-0PU"/>
                                                     <constraint firstAttribute="bottom" secondItem="6Mb-VS-Iev" secondAttribute="bottom" id="nke-UO-o21"/>
-                                                    <constraint firstItem="6Mb-VS-Iev" firstAttribute="leading" secondItem="0O8-Iq-icm" secondAttribute="leading" constant="20" id="sME-hg-X6z"/>
+                                                    <constraint firstItem="6Mb-VS-Iev" firstAttribute="leading" secondItem="0O8-Iq-icm" secondAttribute="leading" constant="10" id="sME-hg-X6z"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-4W-yXZ">
                                                 <rect key="frame" x="0.0" y="278" width="320" height="64.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3N-V8-6jV" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="10" width="280" height="44.5"/>
+                                                        <rect key="frame" x="10" y="10" width="300" height="44.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDO-rT-h4n">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="44.5"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMf-wY-Y86">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44.5"/>
@@ -388,7 +388,7 @@
                                                                         <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=" "/>
                                                                     </button>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fsw-Wg-1g6">
-                                                                        <rect key="frame" x="60" y="0.0" width="220" height="44.5"/>
+                                                                        <rect key="frame" x="60" y="0.0" width="240" height="44.5"/>
                                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -409,8 +409,8 @@
                                                 <constraints>
                                                     <constraint firstItem="C3N-V8-6jV" firstAttribute="top" secondItem="Nal-4W-yXZ" secondAttribute="top" constant="10" id="4hl-I8-S4d"/>
                                                     <constraint firstAttribute="bottom" secondItem="C3N-V8-6jV" secondAttribute="bottom" constant="10" id="KHR-fg-kbI"/>
-                                                    <constraint firstItem="C3N-V8-6jV" firstAttribute="leading" secondItem="Nal-4W-yXZ" secondAttribute="leading" constant="20" id="UYC-39-jyf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="C3N-V8-6jV" secondAttribute="trailing" constant="20" id="aZ5-6i-gKP"/>
+                                                    <constraint firstItem="C3N-V8-6jV" firstAttribute="leading" secondItem="Nal-4W-yXZ" secondAttribute="leading" constant="10" id="UYC-39-jyf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C3N-V8-6jV" secondAttribute="trailing" constant="10" id="aZ5-6i-gKP"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8q-4o-GKE">
