@@ -15,6 +15,7 @@ class TransfersVC: UIViewController {
     @IBOutlet weak var searchContactsTxtFlad: UITextField!
     var collectionViewOutletArray = ["CardStyleOne", "CardStyleThree", "CardStyleTwo"]
     var recipientsCollectionViewArray = ["Linda John", "David William", "Susan Charles"]
+    var selectedRecipientIndexPath: IndexPath?
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
@@ -70,15 +71,41 @@ extension TransfersVC : UICollectionViewDelegate , UICollectionViewDataSource , 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == chooseCardsCollectionView {
-            print("chooseCardsCollectionView")
-            
-            if let cell = collectionView.cellForItem(at: indexPath) as? ChooseCardsCell {
-                cell.isSelected = !cell.isSelected
-            }
+            // Handle chooseCardsCollectionView selection
         } else if collectionView == chooseRecipientsCollectionView {
-            print("chooseRecipientsCollectionView")
+            if let selectedIndexPath = selectedRecipientIndexPath {
+                // Deselect the previously selected cell
+                if let selectedCell = collectionView.cellForItem(at: selectedIndexPath) as? ChooseRecipientsCell {
+                    selectedCell.cellView.layer.borderWidth = 0.0
+                    for subview in selectedCell.cellView.subviews {
+                        if let tickImageView = subview as? UIImageView {
+                            tickImageView.removeFromSuperview()
+                        }
+                    }
+                }
+            }
+            
+            // Select the newly selected cell
+            if let cell = collectionView.cellForItem(at: indexPath) as? ChooseRecipientsCell {
+                cell.cellView.layer.borderWidth = 2.0
+                cell.cellView.layer.borderColor = UIColor.green.cgColor
+                
+                let tickImageView = UIImageView(image: UIImage(systemName: "checkmark"))
+                tickImageView.tintColor = .green
+                
+                let padding: CGFloat = 5.0
+                
+                let originX = cell.cellView.bounds.width - tickImageView.bounds.width - padding
+                let originY = padding
+                
+                tickImageView.frame = CGRect(x: originX, y: originY, width: tickImageView.bounds.width, height: tickImageView.bounds.height)
+                cell.cellView.addSubview(tickImageView)
+                
+                selectedRecipientIndexPath = indexPath
+            }
         }
     }
+     
 }
 
 
