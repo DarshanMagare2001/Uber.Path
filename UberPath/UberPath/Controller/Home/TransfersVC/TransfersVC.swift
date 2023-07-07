@@ -50,6 +50,8 @@ extension TransfersVC : UICollectionViewDelegate , UICollectionViewDataSource , 
             
         } else if collectionView == chooseRecipientsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chooseRecipientsCollectionViewCell", for: indexPath) as! ChooseRecipientsCell
+            cell.userImageView.image = UIImage(named:recipientsCollectionViewArray[indexPath.row])
+            cell.userNameLbl.text = recipientsCollectionViewArray[indexPath.row]
             return cell
         }
         return UICollectionViewCell()
