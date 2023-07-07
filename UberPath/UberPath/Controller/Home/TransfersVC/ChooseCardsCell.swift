@@ -9,9 +9,5 @@ import UIKit
 
 class ChooseCardsCell: UICollectionViewCell {
     @IBOutlet weak var cellImage: UIImageView!
-    @IBOutlet weak var tickMarkImageView: UIImageView!
-    
-    func showTickMark(_ show: Bool) {
-        tickMarkImageView.isHidden = !show
-    }
+      
 }
