@@ -34,5 +34,4 @@ class TransferSuccessfulVC: UIViewController {
         amountLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
     }
     
-    
 }
