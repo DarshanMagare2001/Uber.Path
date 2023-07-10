@@ -1621,6 +1621,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="CO7-Er-RFN" eventType="touchUpInside" id="DBe-aU-xjY"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xZ-Qg-gjd">
                                 <rect key="frame" x="0.0" y="60" width="320" height="418"/>

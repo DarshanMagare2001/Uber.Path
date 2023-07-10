@@ -31,9 +31,14 @@ class EditCardVC: UIViewController {
         manageLblView.layer.borderColor = UIColor.black.cgColor
         manageLblView.layer.cornerRadius = 10.0
     }
-
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func saveBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
@@ -76,7 +81,7 @@ class EditCardVC: UIViewController {
             selectedView?.layer.shadowRadius = 2.0
         }
     }
-
-
+    
+    
 }
 
