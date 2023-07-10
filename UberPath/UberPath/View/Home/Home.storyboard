@@ -204,6 +204,7 @@
                             <constraint firstItem="Rnb-ec-8VM" firstAttribute="trailing" secondItem="cRw-on-8IP" secondAttribute="trailing" id="MvL-pK-El9"/>
                             <constraint firstItem="XyN-kM-3Gi" firstAttribute="top" secondItem="Rnb-ec-8VM" secondAttribute="top" id="U2a-9X-hLm"/>
                             <constraint firstItem="XyN-kM-3Gi" firstAttribute="trailing" secondItem="Rnb-ec-8VM" secondAttribute="trailing" id="Y5C-p7-Pzm"/>
+                            <constraint firstItem="XyN-kM-3Gi" firstAttribute="width" secondItem="vLY-7T-8vi" secondAttribute="width" id="YLN-i9-G3z"/>
                             <constraint firstAttribute="bottom" secondItem="cRw-on-8IP" secondAttribute="bottom" id="jE9-0Q-zJ3"/>
                             <constraint firstItem="XyN-kM-3Gi" firstAttribute="leading" secondItem="Rnb-ec-8VM" secondAttribute="leading" id="jT5-cl-8Jq"/>
                         </constraints>
@@ -1129,7 +1130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-bD-9kp" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="20" y="110" width="280" height="90"/>
@@ -1192,10 +1193,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-f5-sAi" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="280" height="250"/>
+                                        <rect key="frame" x="20" y="240" width="280" height="195.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-WB-jPc">
-                                                <rect key="frame" x="20" y="20" width="240" height="210"/>
+                                                <rect key="frame" x="20" y="20" width="240" height="155.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1208,7 +1209,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R03-9r-lrM">
-                                        <rect key="frame" x="20" y="510" width="280" height="125"/>
+                                        <rect key="frame" x="20" y="455.5" width="280" height="92.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMark" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-MK-yLM">
                                                 <rect key="frame" x="125" y="5" width="30" height="30"/>
@@ -1218,7 +1219,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a single-use code for your use only. Get a new code each time you pay with smartpay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Gl-FiX">
-                                                <rect key="frame" x="0.0" y="35" width="280" height="90"/>
+                                                <rect key="frame" x="0.0" y="35" width="280" height="57.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1251,13 +1252,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="435" width="280" height="200"/>
+                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="30" width="260" height="50"/>
@@ -1393,8 +1394,33 @@
                     <view key="view" contentMode="scaleToFill" id="SiF-TM-NVe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7g1-23-dqv" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                <rect key="frame" x="20" y="498" width="280" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JhT-cP-saE"/>
+                                </constraints>
+                                <color key="tintColor" name="GlobalButtonColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="  Add new card">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="z6G-62-WyI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z6G-62-WyI" firstAttribute="trailing" secondItem="7g1-23-dqv" secondAttribute="trailing" constant="20" id="9g9-3b-d0s"/>
+                            <constraint firstItem="z6G-62-WyI" firstAttribute="bottom" secondItem="7g1-23-dqv" secondAttribute="bottom" constant="20" id="B85-RY-qxB"/>
+                            <constraint firstItem="7g1-23-dqv" firstAttribute="leading" secondItem="z6G-62-WyI" secondAttribute="leading" constant="20" id="G0w-Hj-nLn"/>
+                            <constraint firstItem="7g1-23-dqv" firstAttribute="centerX" secondItem="SiF-TM-NVe" secondAttribute="centerX" id="Zhv-cQ-x1Q"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Card" image="Card" id="DB5-JS-IkQ"/>
                 </viewController>
@@ -1986,6 +2012,7 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="personImage" width="48" height="48"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="GlobalButtonColor">
             <color red="0.11372549019607843" green="0.22745098039215686" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

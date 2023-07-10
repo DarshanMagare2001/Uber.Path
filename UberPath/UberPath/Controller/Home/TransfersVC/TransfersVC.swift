@@ -39,7 +39,7 @@ class TransfersVC: UIViewController {
             navigationController?.pushViewController(destinationVC, animated: true)
         }
     }
-
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -102,23 +102,18 @@ extension TransfersVC : UICollectionViewDelegate , UICollectionViewDataSource , 
             if let cell = collectionView.cellForItem(at: indexPath) as? ChooseRecipientsCell {
                 cell.cellView.layer.borderWidth = 2.0
                 cell.cellView.layer.borderColor = UIColor.green.cgColor
-                
                 let tickImageView = UIImageView(image: UIImage(systemName: "checkmark"))
                 tickImageView.tintColor = .green
-                
                 let padding: CGFloat = 5.0
-                
                 let originX = cell.cellView.bounds.width - tickImageView.bounds.width - padding
                 let originY = padding
-                
                 tickImageView.frame = CGRect(x: originX, y: originY, width: tickImageView.bounds.width, height: tickImageView.bounds.height)
                 cell.cellView.addSubview(tickImageView)
-                
                 selectedRecipientIndexPath = indexPath
             }
         }
     }
-     
+    
 }
 
 
