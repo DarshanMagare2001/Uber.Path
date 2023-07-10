@@ -16,6 +16,8 @@
 		1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */; };
 		1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360B6062A496A7F001FD948 /* AuthenticationModel.swift */; };
 		136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6852A5BD10F006FDE26 /* MyCardCell.swift */; };
+		136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */; };
+		136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */; };
 		136FF0232A57D99600907C9F /* TransfersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FF0222A57D99600907C9F /* TransfersVC.swift */; };
 		136FF0262A57E04400907C9F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 136FF0252A57E04400907C9F /* IQKeyboardManagerSwift */; };
 		137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE66F2A4AA3B200B40F2D /* FirebaseAuth */; };
@@ -61,6 +63,8 @@
 		1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1360B6062A496A7F001FD948 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		136FE6852A5BD10F006FDE26 /* MyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
+		136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardVC.swift; sourceTree = "<group>"; };
+		136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardCellTableViewCell.swift; sourceTree = "<group>"; };
 		136FF0222A57D99600907C9F /* TransfersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersVC.swift; sourceTree = "<group>"; };
 		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetYourPasswordVC.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 			children = (
 				139314D32A528DAC00248D92 /* MyCardVC.swift */,
 				136FE6852A5BD10F006FDE26 /* MyCardCell.swift */,
+				136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */,
+				136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */,
 			);
 			path = MyCard;
 			sourceTree = "<group>";
@@ -495,10 +501,12 @@
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
+				136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */,
 				13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13CC92B22A56B8420024643B /* Model.swift in Sources */,
+				136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */,
 				139314D62A528DC100248D92 /* ActivityVC.swift in Sources */,
 				139314D82A528DD900248D92 /* ProfileVC.swift in Sources */,
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,

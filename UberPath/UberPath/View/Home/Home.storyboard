@@ -1415,8 +1415,8 @@
                                     <action selector="addNewCardBtnPressed:" destination="zDJ-5E-Fbg" eventType="touchUpInside" id="lGg-p6-MIC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-30-tOi">
-                                <rect key="frame" x="120.5" y="15" width="79" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-30-tOi">
+                                <rect key="frame" x="121" y="15" width="78.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1492,7 +1492,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAo-a2-3T0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="-364.43661971830988"/>
+            <point key="canvasLocation" x="3092" y="-365"/>
+        </scene>
+        <!--Add New CardVC-->
+        <scene sceneID="Aif-wB-cVb">
+            <objects>
+                <viewController storyboardIdentifier="AddNewCardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aOO-b9-CQq" customClass="AddNewCardVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdT-7Q-mSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-xr-Ci6">
+                                <rect key="frame" x="0.0" y="59" width="320" height="509"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addNewCardCellTableViewCell" rowHeight="156" id="84n-Yb-Anl" customClass="AddNewCardCellTableViewCell" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="84n-Yb-Anl" id="jyX-zX-tIj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sah-HK-ZCY">
+                                                    <rect key="frame" x="26" y="21" width="268" height="114"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleOne" translatesAutoresizingMaskIntoConstraints="NO" id="43r-QN-X3c">
+                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="114"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="0Wx-RF-WJA"/>
+                                                                <constraint firstAttribute="height" constant="200" id="Hac-mC-3AM"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="43r-QN-X3c" secondAttribute="trailing" id="4xh-yo-xs9"/>
+                                                        <constraint firstItem="43r-QN-X3c" firstAttribute="leading" secondItem="Sah-HK-ZCY" secondAttribute="leading" id="6XS-qf-zUs"/>
+                                                        <constraint firstItem="43r-QN-X3c" firstAttribute="top" secondItem="Sah-HK-ZCY" secondAttribute="top" id="ids-kP-JkP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="43r-QN-X3c" secondAttribute="bottom" id="wNn-lP-Ay5"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sah-HK-ZCY" firstAttribute="top" secondItem="jyX-zX-tIj" secondAttribute="topMargin" constant="10" id="LoZ-qK-VW0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Sah-HK-ZCY" secondAttribute="trailing" constant="10" id="Vp9-3O-83t"/>
+                                                <constraint firstItem="Sah-HK-ZCY" firstAttribute="leading" secondItem="jyX-zX-tIj" secondAttribute="leadingMargin" constant="10" id="aDF-mP-gTX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Sah-HK-ZCY" secondAttribute="bottom" constant="10" id="x9D-iX-wcM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardImageView" destination="43r-QN-X3c" id="ptK-8P-p7t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aOO-b9-CQq" id="0TP-f0-NbG"/>
+                                    <outlet property="delegate" destination="aOO-b9-CQq" id="6lD-jY-oAa"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on card to select" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nn-zA-kcF">
+                                <rect key="frame" x="63" y="15" width="194" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PWY-zI-YIE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ddc-xr-Ci6" firstAttribute="top" secondItem="7Nn-zA-kcF" secondAttribute="bottom" constant="20" id="3jd-JA-xej"/>
+                            <constraint firstItem="ddc-xr-Ci6" firstAttribute="leading" secondItem="PWY-zI-YIE" secondAttribute="leading" id="DFh-df-Ypw"/>
+                            <constraint firstItem="PWY-zI-YIE" firstAttribute="bottom" secondItem="ddc-xr-Ci6" secondAttribute="bottom" id="eXA-3C-sZz"/>
+                            <constraint firstItem="PWY-zI-YIE" firstAttribute="trailing" secondItem="ddc-xr-Ci6" secondAttribute="trailing" id="gWh-li-qW8"/>
+                            <constraint firstItem="7Nn-zA-kcF" firstAttribute="centerX" secondItem="cdT-7Q-mSQ" secondAttribute="centerX" id="ien-3I-Dgw"/>
+                            <constraint firstItem="7Nn-zA-kcF" firstAttribute="top" secondItem="PWY-zI-YIE" secondAttribute="top" constant="15" id="m1D-He-i5g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableOutlet" destination="ddc-xr-Ci6" id="vZb-Q6-IMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEB-rr-Heq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735" y="-364.43661971830988"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="CB6-AQ-kNC">
@@ -2043,7 +2125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HK-0L-8F6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3718" y="-363"/>
+            <point key="canvasLocation" x="4410" y="-380"/>
         </scene>
         <!--Profile-->
         <scene sceneID="zJr-iC-Nvm">
@@ -2059,7 +2141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ce-eq-n77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4350" y="-364"/>
+            <point key="canvasLocation" x="5061" y="-382"/>
         </scene>
     </scenes>
     <resources>
