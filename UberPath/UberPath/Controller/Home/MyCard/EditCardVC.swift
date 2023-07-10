@@ -19,7 +19,19 @@ class EditCardVC: UIViewController {
         addTapGesture(to: personLblView)
         addTapGesture(to: manageLblView)
         addTapGesture(to: detailLblView)
+        
+        // Set the manageLblView as the initially selected view
+        selectedView = manageLblView
+        selectedView?.backgroundColor = UIColor.white
+        selectedView?.layer.shadowOpacity = 0.5
+        selectedView?.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        // Add border and corner radius to the manageLblView
+        manageLblView.layer.borderWidth = 1.0
+        manageLblView.layer.borderColor = UIColor.black.cgColor
+        manageLblView.layer.cornerRadius = 10.0
     }
+
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -46,17 +58,25 @@ class EditCardVC: UIViewController {
         if tappedView != selectedView {
             // Restore previous view appearance
             selectedView?.backgroundColor = UIColor.clear
+            selectedView?.layer.borderWidth = 0
+            selectedView?.layer.cornerRadius = 0
             selectedView?.layer.shadowOpacity = 0.0
-            selectedView?.layer.shadowOffset = CGSize(width: 0, height: 0)
             
             // Update the selected view
             selectedView = tappedView
             
             // Apply appearance changes to the selected view
             selectedView?.backgroundColor = UIColor.white
+            selectedView?.layer.borderWidth = 1.0
+            selectedView?.layer.borderColor = UIColor.black.cgColor
+            selectedView?.layer.cornerRadius = 10.0
+            selectedView?.layer.shadowColor = UIColor.black.cgColor
             selectedView?.layer.shadowOpacity = 0.5
             selectedView?.layer.shadowOffset = CGSize(width: 0, height: 3)
+            selectedView?.layer.shadowRadius = 2.0
         }
     }
+
+
 }
 
