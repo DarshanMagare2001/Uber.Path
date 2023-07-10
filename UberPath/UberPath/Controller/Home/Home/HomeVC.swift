@@ -10,11 +10,11 @@ import UIKit
 class HomeVC: UIViewController {
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
-    
+    @IBOutlet weak var cardImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        
+        updateCard()
     }
     
     
@@ -47,5 +47,10 @@ class HomeVC: UIViewController {
         nameLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
     }
     
+    func updateCard(){
+        if let selectedImageName = UserDefaults.standard.string(forKey: "SelectedImageName") {
+            cardImage.image = UIImage(named:selectedImageName)
+        }
+    }
     
 }

@@ -103,11 +103,14 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
             // Animation completion
             let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
             let destinationVC = storyBoard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+            // Store selectedImageName in UserDefaults
+            let selectedImageName = self.selectedImageName
+            UserDefaults.standard.set(selectedImageName, forKey: "SelectedImageName")
             self.navigationController?.pushViewController(destinationVC, animated: true)
         }
         popUpView.isHidden = true
-        
     }
+
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

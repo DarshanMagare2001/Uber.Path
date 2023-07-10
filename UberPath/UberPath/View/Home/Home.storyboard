@@ -1950,6 +1950,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tWC-KN-4m8"/>
                     <connections>
+                        <outlet property="cardImage" destination="bPC-zW-pd8" id="HbN-1j-GsJ"/>
                         <outlet property="nameLbl" destination="w8n-ct-9rU" id="sDG-3z-OsJ"/>
                         <outlet property="welcomeLbl" destination="rJF-ed-xYv" id="wTC-IA-q3e"/>
                     </connections>
