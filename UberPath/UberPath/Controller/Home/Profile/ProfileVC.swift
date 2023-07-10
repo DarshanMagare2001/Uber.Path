@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ProfileVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
     var cellAray : [String] = ["Referral Code","Account Info","Contact List","Language","General Setting","Change Password","Change Log In PIN","FAQs","Rate Us"]
@@ -28,11 +29,17 @@ extension ProfileVC : UITableViewDataSource , UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileVCCell", for: indexPath) as! ProfileVCCell
-        cell.img.image = UIImage(named:cellAray[indexPath.row])
+        cell.img.image = UIImage(named: cellAray[indexPath.row])
         cell.cellLbl.text = cellAray[indexPath.row]
+        
+        if (indexPath.row + 1) % 4 == 0 {
+            cell.divider.backgroundColor = UIColor.black
+        } else {
+            cell.divider.backgroundColor = UIColor.white
+        }
         
         return cell
     }
-    
-    
+
+   
 }
