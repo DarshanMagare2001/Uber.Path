@@ -20,6 +20,7 @@
 		136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */; };
 		136FE68C2A5BE721006FDE26 /* EditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE68B2A5BE721006FDE26 /* EditCardVC.swift */; };
 		136FE68E2A5C1BB1006FDE26 /* ProfileVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE68D2A5C1BB1006FDE26 /* ProfileVCCell.swift */; };
+		136FE6902A5C315D006FDE26 /* AccountInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE68F2A5C315D006FDE26 /* AccountInfoVC.swift */; };
 		136FF0232A57D99600907C9F /* TransfersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FF0222A57D99600907C9F /* TransfersVC.swift */; };
 		136FF0262A57E04400907C9F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 136FF0252A57E04400907C9F /* IQKeyboardManagerSwift */; };
 		137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE66F2A4AA3B200B40F2D /* FirebaseAuth */; };
@@ -69,6 +70,7 @@
 		136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardCellTableViewCell.swift; sourceTree = "<group>"; };
 		136FE68B2A5BE721006FDE26 /* EditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardVC.swift; sourceTree = "<group>"; };
 		136FE68D2A5C1BB1006FDE26 /* ProfileVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCCell.swift; sourceTree = "<group>"; };
+		136FE68F2A5C315D006FDE26 /* AccountInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoVC.swift; sourceTree = "<group>"; };
 		136FF0222A57D99600907C9F /* TransfersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersVC.swift; sourceTree = "<group>"; };
 		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetYourPasswordVC.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				139314D72A528DD900248D92 /* ProfileVC.swift */,
 				136FE68D2A5C1BB1006FDE26 /* ProfileVCCell.swift */,
+				136FE68F2A5C315D006FDE26 /* AccountInfoVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
+				136FE6902A5C315D006FDE26 /* AccountInfoVC.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
 				138924782A4D80100018BBEF /* NewCardVC.swift in Sources */,

@@ -36,16 +36,28 @@ extension ProfileVC : UITableViewDataSource , UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileVCCell", for: indexPath) as! ProfileVCCell
         cell.img.image = UIImage(named: cellAray[indexPath.row])
         cell.cellLbl.text = cellAray[indexPath.row]
-        if indexPath.row == 3{
-            cell.divider.backgroundColor = UIColor.black
-        }else if indexPath.row == 6 {
-            cell.divider.backgroundColor = UIColor.black
-        }else{
-            cell.divider.isHidden = true
+        cell.divider.isHidden = !(indexPath.row == 3 || indexPath.row == 6)
+        
+        // Set button action for the desired cell
+        if indexPath.row == 1 {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "AccountInfoVC") as! AccountInfoVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
         }
         
         return cell
     }
+
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if indexPath.row == 1 {
+//            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "ScanQRCodeVC") as! ScanQRCodeVC
+//            navigationController?.pushViewController(destinationVC, animated: true)
+//        }
+//    }
     
     
 }
