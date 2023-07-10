@@ -2517,7 +2517,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M42-ht-klj" customClass="CircleView" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="110" y="79" width="100" height="100"/>
+                                <rect key="frame" x="110" y="69" width="100" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="David William" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-u6-jz0">
                                         <rect key="frame" x="10" y="10" width="80" height="80"/>
@@ -2534,7 +2534,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QB5-Xk-9V0">
-                                <rect key="frame" x="20" y="199" width="280" height="58"/>
+                                <rect key="frame" x="20" y="189" width="280" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darshan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aq-OF-n0T">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
@@ -2551,7 +2551,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Kf-MO-haw">
-                                <rect key="frame" x="0.0" y="277" width="320" height="291"/>
+                                <rect key="frame" x="0.0" y="267" width="320" height="301"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileVCCell" rowHeight="156" id="cpg-58-jVk" customClass="ProfileVCCell" customModule="UberPath" customModuleProvider="target">
@@ -2640,7 +2640,7 @@
                             <constraint firstItem="k6v-Sv-vkS" firstAttribute="trailing" secondItem="6Kf-MO-haw" secondAttribute="trailing" id="HGH-rJ-i89"/>
                             <constraint firstItem="M42-ht-klj" firstAttribute="centerX" secondItem="eNI-xP-yFV" secondAttribute="centerX" id="Kfq-3a-TcQ"/>
                             <constraint firstItem="6Kf-MO-haw" firstAttribute="leading" secondItem="k6v-Sv-vkS" secondAttribute="leading" id="Lvi-ip-4OV"/>
-                            <constraint firstItem="M42-ht-klj" firstAttribute="top" secondItem="65W-ph-JFF" secondAttribute="bottom" constant="40" id="O81-V7-AWy"/>
+                            <constraint firstItem="M42-ht-klj" firstAttribute="top" secondItem="65W-ph-JFF" secondAttribute="bottom" constant="30" id="O81-V7-AWy"/>
                             <constraint firstItem="65W-ph-JFF" firstAttribute="centerX" secondItem="eNI-xP-yFV" secondAttribute="centerX" id="YPi-Ss-65V"/>
                             <constraint firstItem="QB5-Xk-9V0" firstAttribute="top" secondItem="M42-ht-klj" secondAttribute="bottom" constant="20" id="ZBc-L8-BmR"/>
                             <constraint firstItem="QB5-Xk-9V0" firstAttribute="leading" secondItem="k6v-Sv-vkS" secondAttribute="leading" constant="20" id="cvG-tK-gcM"/>
