@@ -1659,7 +1659,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="xhf-nQ-BAl" secondAttribute="bottom" constant="2" id="Acr-Ij-CHZ"/>
                                                                     <constraint firstItem="xhf-nQ-BAl" firstAttribute="top" secondItem="nw0-4g-BcY" secondAttribute="top" constant="2" id="UPF-RH-IPi"/>
@@ -1677,7 +1677,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <constraints>
                                                                     <constraint firstItem="GKN-WB-Ac1" firstAttribute="top" secondItem="t27-ks-34J" secondAttribute="top" constant="2" id="Pnv-qF-6JM"/>
                                                                     <constraint firstAttribute="bottom" secondItem="GKN-WB-Ac1" secondAttribute="bottom" constant="2" id="fpP-rE-BBo"/>
@@ -1695,7 +1695,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <constraints>
                                                                     <constraint firstItem="KhT-jG-BeB" firstAttribute="leading" secondItem="Mec-0p-XXv" secondAttribute="leading" constant="2" id="Dxe-mp-8T1"/>
                                                                     <constraint firstItem="KhT-jG-BeB" firstAttribute="top" secondItem="Mec-0p-XXv" secondAttribute="top" constant="2" id="hbK-8K-3fh"/>
