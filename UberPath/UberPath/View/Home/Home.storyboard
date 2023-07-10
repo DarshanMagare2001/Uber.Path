@@ -1501,23 +1501,35 @@
                                         <rect key="frame" x="0.0" y="187" width="320" height="73"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleTwo" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-zW-pd8">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSB-Ho-NTC" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="10" y="45" width="300" height="215"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleTwo" translatesAutoresizingMaskIntoConstraints="NO" id="bPC-zW-pd8">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="215"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bPC-zW-pd8" firstAttribute="leading" secondItem="vSB-Ho-NTC" secondAttribute="leading" id="IFC-XX-IEy"/>
+                                            <constraint firstAttribute="bottom" secondItem="bPC-zW-pd8" secondAttribute="bottom" id="Jxu-Cx-CSk"/>
+                                            <constraint firstAttribute="trailing" secondItem="bPC-zW-pd8" secondAttribute="trailing" id="K1z-DO-t1C"/>
+                                            <constraint firstItem="bPC-zW-pd8" firstAttribute="top" secondItem="vSB-Ho-NTC" secondAttribute="top" id="frt-8F-0Ew"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
                                 <constraints>
                                     <constraint firstItem="Ckm-uc-9lj" firstAttribute="leading" secondItem="dn3-9b-Mpf" secondAttribute="leading" id="3J6-8p-yLi"/>
-                                    <constraint firstAttribute="trailing" secondItem="bPC-zW-pd8" secondAttribute="trailing" constant="10" id="9OU-JK-lWV"/>
+                                    <constraint firstAttribute="trailing" secondItem="vSB-Ho-NTC" secondAttribute="trailing" constant="10" id="AMi-Iw-2Bz"/>
                                     <constraint firstItem="rxZ-JI-kCR" firstAttribute="top" secondItem="Ckm-uc-9lj" secondAttribute="bottom" id="DGG-af-v6U"/>
-                                    <constraint firstItem="bPC-zW-pd8" firstAttribute="top" secondItem="dn3-9b-Mpf" secondAttribute="top" constant="45" id="Nnf-Ed-CdN"/>
+                                    <constraint firstItem="vSB-Ho-NTC" firstAttribute="leading" secondItem="dn3-9b-Mpf" secondAttribute="leading" constant="10" id="HVZ-HA-WNp"/>
                                     <constraint firstAttribute="trailing" secondItem="rxZ-JI-kCR" secondAttribute="trailing" id="R4P-si-Yfn"/>
+                                    <constraint firstAttribute="bottom" secondItem="vSB-Ho-NTC" secondAttribute="bottom" id="UHe-Ct-nQi"/>
                                     <constraint firstAttribute="trailing" secondItem="Ckm-uc-9lj" secondAttribute="trailing" id="Vor-FQ-pG7"/>
                                     <constraint firstItem="rxZ-JI-kCR" firstAttribute="leading" secondItem="dn3-9b-Mpf" secondAttribute="leading" id="Wat-IA-lmp"/>
                                     <constraint firstItem="Ckm-uc-9lj" firstAttribute="top" secondItem="dn3-9b-Mpf" secondAttribute="top" id="f6m-Vl-n2j"/>
+                                    <constraint firstItem="vSB-Ho-NTC" firstAttribute="top" secondItem="dn3-9b-Mpf" secondAttribute="top" constant="45" id="j3o-Fn-iSU"/>
                                     <constraint firstAttribute="height" constant="260" id="jDc-a8-Fz3"/>
-                                    <constraint firstItem="bPC-zW-pd8" firstAttribute="leading" secondItem="dn3-9b-Mpf" secondAttribute="leading" constant="10" id="l9X-ut-5of"/>
-                                    <constraint firstAttribute="bottom" secondItem="bPC-zW-pd8" secondAttribute="bottom" id="ml6-o6-oF5"/>
                                     <constraint firstAttribute="bottom" secondItem="rxZ-JI-kCR" secondAttribute="bottom" id="uuq-aR-Mgs"/>
                                 </constraints>
                             </view>

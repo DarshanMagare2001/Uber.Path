@@ -35,7 +35,7 @@ class MainTabVC: UIViewController {
         scanBtnView.addGestureRecognizer(tapGesture)
         updateUI(for: .home)
         showTab(.home)
-        viewModel.logout()
+//        viewModel.logout()
         
     }
     
