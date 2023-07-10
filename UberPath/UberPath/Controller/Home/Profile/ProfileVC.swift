@@ -31,15 +31,16 @@ extension ProfileVC : UITableViewDataSource , UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileVCCell", for: indexPath) as! ProfileVCCell
         cell.img.image = UIImage(named: cellAray[indexPath.row])
         cell.cellLbl.text = cellAray[indexPath.row]
-        
-        if (indexPath.row + 1) % 4 == 0 {
+        if indexPath.row == 3{
             cell.divider.backgroundColor = UIColor.black
-        } else {
-            cell.divider.backgroundColor = UIColor.white
+        }else if indexPath.row == 6 {
+            cell.divider.backgroundColor = UIColor.black
+        }else{
+            cell.divider.isHidden = true
         }
         
         return cell
     }
-
-   
+    
+    
 }
