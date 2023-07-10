@@ -1013,19 +1013,19 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="34" width="280" height="28.5"/>
+                                                        <rect key="frame" x="0.0" y="34" width="280" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="72.5" width="280" height="99"/>
+                                                        <rect key="frame" x="0.0" y="73" width="280" height="98.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="99"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="98.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="99"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="98.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1641,19 +1641,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfK-SO-JIa">
-                                        <rect key="frame" x="0.0" y="183.5" width="320" height="55"/>
+                                        <rect key="frame" x="0.0" y="183.5" width="320" height="49"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="975-DX-YQL" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="0.0" width="280" height="55"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="975-DX-YQL" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="0.0" width="280" height="49"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sak-ve-e3L">
-                                                        <rect key="frame" x="10" y="10" width="260" height="35"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sak-ve-e3L">
+                                                        <rect key="frame" x="5" y="5" width="270" height="39"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-4g-BcY" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-4g-BcY" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="39"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-nQ-BAl">
-                                                                        <rect key="frame" x="2" y="2" width="76" height="31"/>
+                                                                        <rect key="frame" x="2" y="2" width="82.5" height="35"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1667,11 +1667,11 @@
                                                                     <constraint firstAttribute="trailing" secondItem="xhf-nQ-BAl" secondAttribute="trailing" constant="2" id="yvr-cI-Bbg"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t27-ks-34J" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="90" y="0.0" width="80" height="35"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t27-ks-34J" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                                <rect key="frame" x="91.5" y="0.0" width="87" height="39"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-WB-Ac1">
-                                                                        <rect key="frame" x="2" y="2" width="76" height="31"/>
+                                                                        <rect key="frame" x="2" y="2" width="83" height="35"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1685,11 +1685,11 @@
                                                                     <constraint firstAttribute="trailing" secondItem="GKN-WB-Ac1" secondAttribute="trailing" constant="2" id="wc0-Xf-EGz"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mec-0p-XXv" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="180" y="0.0" width="80" height="35"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mec-0p-XXv" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                                <rect key="frame" x="183.5" y="0.0" width="86.5" height="39"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhT-jG-BeB">
-                                                                        <rect key="frame" x="2" y="2" width="76" height="31"/>
+                                                                        <rect key="frame" x="2" y="2" width="82.5" height="35"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1708,10 +1708,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="sak-ve-e3L" secondAttribute="bottom" constant="10" id="NMv-hr-MGU"/>
-                                                    <constraint firstItem="sak-ve-e3L" firstAttribute="leading" secondItem="975-DX-YQL" secondAttribute="leading" constant="10" id="iNv-Fq-tG4"/>
-                                                    <constraint firstItem="sak-ve-e3L" firstAttribute="top" secondItem="975-DX-YQL" secondAttribute="top" constant="10" id="n7a-d3-qT3"/>
-                                                    <constraint firstAttribute="trailing" secondItem="sak-ve-e3L" secondAttribute="trailing" constant="10" id="npj-Fi-MqP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sak-ve-e3L" secondAttribute="bottom" constant="5" id="NMv-hr-MGU"/>
+                                                    <constraint firstItem="sak-ve-e3L" firstAttribute="leading" secondItem="975-DX-YQL" secondAttribute="leading" constant="5" id="iNv-Fq-tG4"/>
+                                                    <constraint firstItem="sak-ve-e3L" firstAttribute="top" secondItem="975-DX-YQL" secondAttribute="top" constant="5" id="n7a-d3-qT3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sak-ve-e3L" secondAttribute="trailing" constant="5" id="npj-Fi-MqP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1724,7 +1724,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdb-SA-gZF">
-                                        <rect key="frame" x="0.0" y="238.5" width="320" height="169.5"/>
+                                        <rect key="frame" x="0.0" y="232.5" width="320" height="175.5"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </view>
                                 </subviews>
@@ -1734,7 +1734,7 @@
                                     <constraint firstItem="FfK-SO-JIa" firstAttribute="leading" secondItem="9xZ-Qg-gjd" secondAttribute="leading" id="8PF-2n-kwa"/>
                                     <constraint firstItem="aa7-7R-cLB" firstAttribute="width" secondItem="9xZ-Qg-gjd" secondAttribute="width" id="CJZ-Ag-qY9"/>
                                     <constraint firstAttribute="trailing" secondItem="aa7-7R-cLB" secondAttribute="trailing" id="DTX-2Z-xX4"/>
-                                    <constraint firstItem="FfK-SO-JIa" firstAttribute="height" secondItem="9xZ-Qg-gjd" secondAttribute="height" multiplier="0.135" id="HjB-9L-LCa"/>
+                                    <constraint firstItem="FfK-SO-JIa" firstAttribute="height" secondItem="9xZ-Qg-gjd" secondAttribute="height" multiplier="0.12" id="HjB-9L-LCa"/>
                                     <constraint firstItem="aa7-7R-cLB" firstAttribute="leading" secondItem="9xZ-Qg-gjd" secondAttribute="leading" id="PHk-Bp-bNj"/>
                                     <constraint firstAttribute="trailing" secondItem="gdb-SA-gZF" secondAttribute="trailing" id="URH-5x-dhb"/>
                                     <constraint firstItem="FfK-SO-JIa" firstAttribute="width" secondItem="9xZ-Qg-gjd" secondAttribute="width" id="UZr-GH-i6l"/>
