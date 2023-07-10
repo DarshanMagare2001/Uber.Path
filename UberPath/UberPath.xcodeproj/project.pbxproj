@@ -128,6 +128,54 @@
 			path = AuthenticationModel;
 			sourceTree = "<group>";
 		};
+		136FE67F2A5BBD44006FDE26 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				139314D12A528D8A00248D92 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		136FE6802A5BBD59006FDE26 /* MyCard */ = {
+			isa = PBXGroup;
+			children = (
+				139314D32A528DAC00248D92 /* MyCardVC.swift */,
+			);
+			path = MyCard;
+			sourceTree = "<group>";
+		};
+		136FE6812A5BBD66006FDE26 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				139314D52A528DC100248D92 /* ActivityVC.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		136FE6822A5BBD79006FDE26 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				139314D72A528DD900248D92 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		136FE6832A5BBD8C006FDE26 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				13A2A3AC2A4EFE0200137315 /* MainTabVC.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		136FE6842A5BBDA5006FDE26 /* ScanQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */,
+			);
+			path = ScanQRCode;
+			sourceTree = "<group>";
+		};
 		137CE6772A4ADEC500B40F2D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,12 +294,12 @@
 		13A2A3AB2A4EFDE700137315 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				13A2A3AC2A4EFE0200137315 /* MainTabVC.swift */,
-				139314D12A528D8A00248D92 /* HomeVC.swift */,
-				139314D32A528DAC00248D92 /* MyCardVC.swift */,
-				139314D52A528DC100248D92 /* ActivityVC.swift */,
-				139314D72A528DD900248D92 /* ProfileVC.swift */,
-				13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */,
+				136FE6832A5BBD8C006FDE26 /* MainTab */,
+				136FE67F2A5BBD44006FDE26 /* Home */,
+				136FE6802A5BBD59006FDE26 /* MyCard */,
+				136FE6812A5BBD66006FDE26 /* Activity */,
+				136FE6822A5BBD79006FDE26 /* Profile */,
+				136FE6842A5BBDA5006FDE26 /* ScanQRCode */,
 				13D9D5732A55412700E3AE75 /* TransfersVC */,
 			);
 			path = Home;
