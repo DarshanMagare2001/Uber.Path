@@ -35,7 +35,8 @@ class MainTabVC: UIViewController {
         scanBtnView.addGestureRecognizer(tapGesture)
         updateUI(for: .home)
         showTab(.home)
-//        viewModel.logout()
+        storeCardInUserDefaultArray()
+        viewModel.logout()
         
     }
     
@@ -113,8 +114,21 @@ class MainTabVC: UIViewController {
         updateUI(for: .home)
     }
     
-   
-    
+    func storeCardInUserDefaultArray() {
+        if let selectedImageName = UserDefaults.standard.string(forKey: "SelectedImageName") {
+            // Retrieve the existing card array from UserDefaults
+            var cardArray = UserDefaults.standard.stringArray(forKey: "CardArray") ?? []
+            // Check if the selectedImageName is not already in the card array
+            if !cardArray.contains(selectedImageName) {
+                // Empty the card array
+                cardArray.removeAll()
+                // Append the selectedImageName to the card array
+                cardArray.append(selectedImageName)
+                // Store the updated card array back in UserDefaults
+                UserDefaults.standard.set(cardArray, forKey: "CardArray")
+            }
+        }
+    }
 }
 
 

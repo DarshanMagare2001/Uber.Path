@@ -81,7 +81,7 @@ class CircleView: UIView {
 
 class RoundedViewWithBorder: UIView {
     // Custom corner radius value
-    var cornerRadius: CGFloat = 15 {
+    var cornerRadius: CGFloat = 20 {
         didSet {
             setNeedsLayout()
         }

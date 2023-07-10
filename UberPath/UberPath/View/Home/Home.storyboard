@@ -1411,6 +1411,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewCardBtnPressed:" destination="zDJ-5E-Fbg" eventType="touchUpInside" id="lGg-p6-MIC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-30-tOi">
                                 <rect key="frame" x="120.5" y="15" width="79" height="24"/>
@@ -1418,23 +1421,74 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="180-5O-VBF">
+                                <rect key="frame" x="0.0" y="59" width="320" height="419"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCardCell" rowHeight="177" id="IpK-uw-G3d" customClass="MyCardCell" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="177"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IpK-uw-G3d" id="ljU-dH-x0s">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ou-FD-TsL" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="10" width="300" height="157"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardStyleOne" translatesAutoresizingMaskIntoConstraints="NO" id="OVi-hm-zRs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="157"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="OVi-hm-zRs" secondAttribute="bottom" id="CQg-RO-Ggq"/>
+                                                        <constraint firstItem="OVi-hm-zRs" firstAttribute="top" secondItem="5ou-FD-TsL" secondAttribute="top" id="Gjq-fg-lSp"/>
+                                                        <constraint firstItem="OVi-hm-zRs" firstAttribute="leading" secondItem="5ou-FD-TsL" secondAttribute="leading" id="OIh-bl-x76"/>
+                                                        <constraint firstAttribute="trailing" secondItem="OVi-hm-zRs" secondAttribute="trailing" id="iwZ-u0-Bd0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5ou-FD-TsL" secondAttribute="bottom" constant="10" id="NbZ-yj-4Zw"/>
+                                                <constraint firstItem="5ou-FD-TsL" firstAttribute="top" secondItem="ljU-dH-x0s" secondAttribute="top" constant="10" id="i2a-LF-mXi"/>
+                                                <constraint firstAttribute="trailing" secondItem="5ou-FD-TsL" secondAttribute="trailing" constant="10" id="lIp-EL-96I"/>
+                                                <constraint firstItem="5ou-FD-TsL" firstAttribute="leading" secondItem="ljU-dH-x0s" secondAttribute="leading" constant="10" id="ove-Xu-Bez"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardImageView" destination="OVi-hm-zRs" id="tuR-ey-GCo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zDJ-5E-Fbg" id="E87-ax-06p"/>
+                                    <outlet property="delegate" destination="zDJ-5E-Fbg" id="dkO-Rh-aiu"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z6G-62-WyI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="180-5O-VBF" firstAttribute="leading" secondItem="z6G-62-WyI" secondAttribute="leading" id="2x1-bj-F2s"/>
                             <constraint firstItem="z6G-62-WyI" firstAttribute="trailing" secondItem="7g1-23-dqv" secondAttribute="trailing" constant="20" id="9g9-3b-d0s"/>
                             <constraint firstItem="z6G-62-WyI" firstAttribute="bottom" secondItem="7g1-23-dqv" secondAttribute="bottom" constant="20" id="B85-RY-qxB"/>
+                            <constraint firstItem="z6G-62-WyI" firstAttribute="trailing" secondItem="180-5O-VBF" secondAttribute="trailing" id="E14-sO-dTo"/>
                             <constraint firstItem="7g1-23-dqv" firstAttribute="leading" secondItem="z6G-62-WyI" secondAttribute="leading" constant="20" id="G0w-Hj-nLn"/>
                             <constraint firstItem="YyN-30-tOi" firstAttribute="top" secondItem="z6G-62-WyI" secondAttribute="top" constant="15" id="HL3-Uh-fFm"/>
+                            <constraint firstItem="7g1-23-dqv" firstAttribute="top" secondItem="180-5O-VBF" secondAttribute="bottom" constant="20" id="PfJ-HE-vtz"/>
                             <constraint firstItem="7g1-23-dqv" firstAttribute="centerX" secondItem="SiF-TM-NVe" secondAttribute="centerX" id="Zhv-cQ-x1Q"/>
+                            <constraint firstItem="180-5O-VBF" firstAttribute="top" secondItem="YyN-30-tOi" secondAttribute="bottom" constant="20" id="qck-4v-IZI"/>
                             <constraint firstItem="YyN-30-tOi" firstAttribute="centerX" secondItem="SiF-TM-NVe" secondAttribute="centerX" id="yC6-7x-xKM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Card" image="Card" id="DB5-JS-IkQ"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="180-5O-VBF" id="5hg-eo-96Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAo-a2-3T0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="-364"/>
+            <point key="canvasLocation" x="3090" y="-364.43661971830988"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="CB6-AQ-kNC">
