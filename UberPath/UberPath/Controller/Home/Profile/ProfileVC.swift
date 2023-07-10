@@ -10,15 +10,20 @@ import UIKit
 
 class ProfileVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
     var cellAray : [String] = ["Referral Code","Account Info","Contact List","Language","General Setting","Change Password","Change Log In PIN","FAQs","Rate Us"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateFont()
         
     }
     
     
-    
+    func updateFont(){
+        nameLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
+        emailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
+    }
     
 }
 
