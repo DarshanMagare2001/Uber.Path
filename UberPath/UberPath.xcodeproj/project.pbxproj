@@ -18,6 +18,7 @@
 		136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6852A5BD10F006FDE26 /* MyCardCell.swift */; };
 		136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */; };
 		136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */; };
+		136FE68C2A5BE721006FDE26 /* EditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE68B2A5BE721006FDE26 /* EditCardVC.swift */; };
 		136FF0232A57D99600907C9F /* TransfersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FF0222A57D99600907C9F /* TransfersVC.swift */; };
 		136FF0262A57E04400907C9F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 136FF0252A57E04400907C9F /* IQKeyboardManagerSwift */; };
 		137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE66F2A4AA3B200B40F2D /* FirebaseAuth */; };
@@ -65,6 +66,7 @@
 		136FE6852A5BD10F006FDE26 /* MyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
 		136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardVC.swift; sourceTree = "<group>"; };
 		136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardCellTableViewCell.swift; sourceTree = "<group>"; };
+		136FE68B2A5BE721006FDE26 /* EditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardVC.swift; sourceTree = "<group>"; };
 		136FF0222A57D99600907C9F /* TransfersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersVC.swift; sourceTree = "<group>"; };
 		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetYourPasswordVC.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				136FE6852A5BD10F006FDE26 /* MyCardCell.swift */,
 				136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */,
 				136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */,
+				136FE68B2A5BE721006FDE26 /* EditCardVC.swift */,
 			);
 			path = MyCard;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */,
+				136FE68C2A5BE721006FDE26 /* EditCardVC.swift in Sources */,
 				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */,
