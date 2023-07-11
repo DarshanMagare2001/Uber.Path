@@ -3238,23 +3238,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRz-1G-Onu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44o-rS-uYS" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44o-rS-uYS" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="50" y="234" width="220" height="100"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-XW-vEg">
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-XW-vEg">
                                                 <rect key="frame" x="100" y="40" width="20" height="20"/>
                                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Kz9-02-bVT"/>
-                                            <constraint firstItem="KFl-XW-vEg" firstAttribute="centerX" secondItem="44o-rS-uYS" secondAttribute="centerX" id="Qhs-8p-MMx"/>
-                                            <constraint firstItem="KFl-XW-vEg" firstAttribute="centerY" secondItem="44o-rS-uYS" secondAttribute="centerY" id="av1-ri-dCh"/>
+                                            <constraint firstAttribute="height" constant="100" id="WvQ-TQ-Sfj"/>
+                                            <constraint firstItem="KFl-XW-vEg" firstAttribute="centerY" secondItem="44o-rS-uYS" secondAttribute="centerY" id="Xq3-sV-DWw"/>
+                                            <constraint firstItem="KFl-XW-vEg" firstAttribute="centerX" secondItem="44o-rS-uYS" secondAttribute="centerX" id="Yux-I2-Ivp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="44o-rS-uYS" firstAttribute="centerX" secondItem="FRz-1G-Onu" secondAttribute="centerX" id="8di-YD-e32"/>
+                                    <constraint firstAttribute="trailing" secondItem="44o-rS-uYS" secondAttribute="trailing" constant="50" id="bQP-tx-JpJ"/>
+                                    <constraint firstItem="44o-rS-uYS" firstAttribute="leading" secondItem="FRz-1G-Onu" secondAttribute="leading" constant="50" id="fpd-VW-DYI"/>
+                                    <constraint firstItem="44o-rS-uYS" firstAttribute="centerY" secondItem="FRz-1G-Onu" secondAttribute="centerY" id="v9f-ft-MUb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dwM-QL-1Rf"/>
