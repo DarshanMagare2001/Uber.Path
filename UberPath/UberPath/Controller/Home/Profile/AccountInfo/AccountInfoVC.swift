@@ -13,6 +13,7 @@ class AccountInfoVC: UIViewController {
     @IBOutlet weak var employerLbl: UILabel!
     @IBOutlet weak var phoneNumberLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var editBtnImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
