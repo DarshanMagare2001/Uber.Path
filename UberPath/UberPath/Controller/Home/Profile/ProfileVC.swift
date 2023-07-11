@@ -39,25 +39,63 @@ extension ProfileVC : UITableViewDataSource , UITableViewDelegate {
         cell.divider.isHidden = !(indexPath.row == 3 || indexPath.row == 6)
         
         // Set button action for the desired cell
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "ReferralCodeVC") as! ReferralCodeVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        } else if indexPath.row == 1  {
             cell.buttonAction = { [weak self] in
                 let storyboard = UIStoryboard(name: "Home", bundle: nil)
                 let destinationVC = storyboard.instantiateViewController(withIdentifier: "AccountInfoVC") as! AccountInfoVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 2  {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "ContactListVC") as! ContactListVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 3  {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "LanguageVC") as! LanguageVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 4  {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "GeneralSettingVC") as! GeneralSettingVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 5 {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 6  {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "ChangeLogInPinVC") as! ChangeLogInPinVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 7  {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "FAQsVC") as! FAQsVC
+                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            }
+        }else if indexPath.row == 8  {
+            cell.buttonAction = { [weak self] in
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                let destinationVC = storyboard.instantiateViewController(withIdentifier: "RateUsVC") as! RateUsVC
                 self?.navigationController?.pushViewController(destinationVC, animated: true)
             }
         }
         
         return cell
     }
-
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 1 {
-//            let storyboard = UIStoryboard(name: "Home", bundle: nil)
-//            let destinationVC = storyboard.instantiateViewController(withIdentifier: "ScanQRCodeVC") as! ScanQRCodeVC
-//            navigationController?.pushViewController(destinationVC, animated: true)
-//        }
-//    }
-    
     
 }
