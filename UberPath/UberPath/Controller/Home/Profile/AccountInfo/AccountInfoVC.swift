@@ -15,6 +15,8 @@ class AccountInfoVC: UIViewController {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var editBtnImageView: UIImageView!
     
+    @IBOutlet weak var userImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLbl()
