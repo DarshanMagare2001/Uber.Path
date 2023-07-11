@@ -20,6 +20,10 @@ class ProfileVC: UIViewController {
         updateUserInfo()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateUserInfo()
+    }
+    
     func updateFont() {
         nameLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
         emailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
