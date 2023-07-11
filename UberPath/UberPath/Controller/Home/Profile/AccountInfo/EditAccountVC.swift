@@ -43,19 +43,21 @@ class EditAccountVC: UIViewController {
         let defaults = UserDefaults.standard
         if yourNameTxtFld.text != "" {
             defaults.setValue(yourNameTxtFld.text, forKey: "yourName")
-        } else if occupationTxtFld.text != "" {
+        }
+        if occupationTxtFld.text != "" {
             defaults.setValue(occupationTxtFld.text, forKey: "occupation")
         }
-        else if employerTxtFld.text != "" {
-            defaults.setValue(employerTxtFld.text , forKey: "employer")
+        if employerTxtFld.text != "" {
+            defaults.setValue(employerTxtFld.text, forKey: "employer")
         }
-        else if phoneNumberTxtFld.text != ""  {
+        if phoneNumberTxtFld.text != "" {
             defaults.setValue(phoneNumberTxtFld.text, forKey: "phoneNumber")
         }
-        else if emailTxtFld.text != ""{
+        if emailTxtFld.text != "" {
             defaults.setValue(emailTxtFld.text, forKey: "email")
         }
     }
+
     
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Incomplete Information", message: message, preferredStyle: .alert)
