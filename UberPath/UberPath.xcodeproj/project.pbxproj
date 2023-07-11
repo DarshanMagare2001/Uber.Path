@@ -55,6 +55,14 @@
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
 		13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E61B8C2A568C910047F43B /* TransferDetailVC.swift */; };
 		13E69C312A5D1B5200313832 /* EditAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C302A5D1B5200313832 /* EditAccountVC.swift */; };
+		13E69C3B2A5D4D0B00313832 /* ReferralCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C3A2A5D4D0B00313832 /* ReferralCodeVC.swift */; };
+		13E69C3D2A5D4D2D00313832 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C3C2A5D4D2D00313832 /* ContactListVC.swift */; };
+		13E69C3F2A5D4D4700313832 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C3E2A5D4D4700313832 /* LanguageVC.swift */; };
+		13E69C412A5D4D6300313832 /* GeneralSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C402A5D4D6300313832 /* GeneralSettingVC.swift */; };
+		13E69C432A5D4D7F00313832 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C422A5D4D7F00313832 /* ChangePasswordVC.swift */; };
+		13E69C452A5D4DA800313832 /* ChangeLogInPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */; };
+		13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C462A5D4DC300313832 /* FAQsVC.swift */; };
+		13E69C492A5D4DDE00313832 /* RateUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C482A5D4DDE00313832 /* RateUsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +112,14 @@
 		13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeVC.swift; sourceTree = "<group>"; };
 		13E61B8C2A568C910047F43B /* TransferDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailVC.swift; sourceTree = "<group>"; };
 		13E69C302A5D1B5200313832 /* EditAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountVC.swift; sourceTree = "<group>"; };
+		13E69C3A2A5D4D0B00313832 /* ReferralCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralCodeVC.swift; sourceTree = "<group>"; };
+		13E69C3C2A5D4D2D00313832 /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
+		13E69C3E2A5D4D4700313832 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
+		13E69C402A5D4D6300313832 /* GeneralSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingVC.swift; sourceTree = "<group>"; };
+		13E69C422A5D4D7F00313832 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogInPinVC.swift; sourceTree = "<group>"; };
+		13E69C462A5D4DC300313832 /* FAQsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsVC.swift; sourceTree = "<group>"; };
+		13E69C482A5D4DDE00313832 /* RateUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsVC.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,7 +191,15 @@
 			children = (
 				139314D72A528DD900248D92 /* ProfileVC.swift */,
 				136FE68D2A5C1BB1006FDE26 /* ProfileVCCell.swift */,
+				13E69C322A5D4C2600313832 /* ReferralCode */,
 				13E69C2F2A5D1B1600313832 /* AccountInfo */,
+				13E69C382A5D4C4D00313832 /* Contact List */,
+				13E69C372A5D4C4A00313832 /* Language */,
+				13E69C362A5D4C4800313832 /* General Setting */,
+				13E69C352A5D4C4600313832 /* Change Password */,
+				13E69C342A5D4C4400313832 /* Change Log In PIN */,
+				13E69C332A5D4C4100313832 /* FAQs */,
+				13E69C392A5D4CB600313832 /* Rate Us */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -347,6 +371,70 @@
 			path = AccountInfo;
 			sourceTree = "<group>";
 		};
+		13E69C322A5D4C2600313832 /* ReferralCode */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C3A2A5D4D0B00313832 /* ReferralCodeVC.swift */,
+			);
+			path = ReferralCode;
+			sourceTree = "<group>";
+		};
+		13E69C332A5D4C4100313832 /* FAQs */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C462A5D4DC300313832 /* FAQsVC.swift */,
+			);
+			path = FAQs;
+			sourceTree = "<group>";
+		};
+		13E69C342A5D4C4400313832 /* Change Log In PIN */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */,
+			);
+			path = "Change Log In PIN";
+			sourceTree = "<group>";
+		};
+		13E69C352A5D4C4600313832 /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C422A5D4D7F00313832 /* ChangePasswordVC.swift */,
+			);
+			path = "Change Password";
+			sourceTree = "<group>";
+		};
+		13E69C362A5D4C4800313832 /* General Setting */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C402A5D4D6300313832 /* GeneralSettingVC.swift */,
+			);
+			path = "General Setting";
+			sourceTree = "<group>";
+		};
+		13E69C372A5D4C4A00313832 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C3E2A5D4D4700313832 /* LanguageVC.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		13E69C382A5D4C4D00313832 /* Contact List */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C3C2A5D4D2D00313832 /* ContactListVC.swift */,
+			);
+			path = "Contact List";
+			sourceTree = "<group>";
+		};
+		13E69C392A5D4CB600313832 /* Rate Us */ = {
+			isa = PBXGroup;
+			children = (
+				13E69C482A5D4DDE00313832 /* RateUsVC.swift */,
+			);
+			path = "Rate Us";
+			sourceTree = "<group>";
+		};
 		4834731299117B92F6450414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,15 +601,19 @@
 				136FE68C2A5BE721006FDE26 /* EditCardVC.swift in Sources */,
 				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
+				13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */,
 				136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */,
 				137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */,
 				13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */,
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
 				13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */,
+				13E69C492A5D4DDE00313832 /* RateUsVC.swift in Sources */,
 				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
+				13E69C452A5D4DA800313832 /* ChangeLogInPinVC.swift in Sources */,
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
+				13E69C432A5D4D7F00313832 /* ChangePasswordVC.swift in Sources */,
 				136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */,
 				13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
@@ -536,6 +628,7 @@
 				138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */,
 				136FE68E2A5C1BB1006FDE26 /* ProfileVCCell.swift in Sources */,
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,
+				13E69C3B2A5D4D0B00313832 /* ReferralCodeVC.swift in Sources */,
 				13CC92B42A56DA250024643B /* TransferSuccessfulVC.swift in Sources */,
 				139314D22A528D8A00248D92 /* HomeVC.swift in Sources */,
 				139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */,
@@ -547,6 +640,9 @@
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
 				138924782A4D80100018BBEF /* NewCardVC.swift in Sources */,
 				136FF0232A57D99600907C9F /* TransfersVC.swift in Sources */,
+				13E69C3D2A5D4D2D00313832 /* ContactListVC.swift in Sources */,
+				13E69C412A5D4D6300313832 /* GeneralSettingVC.swift in Sources */,
+				13E69C3F2A5D4D4700313832 /* LanguageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
