@@ -63,6 +63,7 @@
 		13E69C452A5D4DA800313832 /* ChangeLogInPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */; };
 		13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C462A5D4DC300313832 /* FAQsVC.swift */; };
 		13E69C492A5D4DDE00313832 /* RateUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C482A5D4DDE00313832 /* RateUsVC.swift */; };
+		13E69C4B2A5D584400313832 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C4A2A5D584400313832 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogInPinVC.swift; sourceTree = "<group>"; };
 		13E69C462A5D4DC300313832 /* FAQsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsVC.swift; sourceTree = "<group>"; };
 		13E69C482A5D4DDE00313832 /* RateUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsVC.swift; sourceTree = "<group>"; };
+		13E69C4A2A5D584400313832 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				1326A74B2A4565DF00BB4E39 /* Fonts.swift */,
 				1326A7522A45A76200BB4E39 /* RoundRadius.swift */,
+				13E69C4A2A5D584400313832 /* ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137CE6762A4ADEB500B40F2D /* VerifyYourIdentityVC.swift in Sources */,
+				13E69C4B2A5D584400313832 /* ImagePicker.swift in Sources */,
 				136FE68C2A5BE721006FDE26 /* EditCardVC.swift in Sources */,
 				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
