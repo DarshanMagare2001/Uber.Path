@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="34" width="280" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="32" width="280" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="58.5" width="280" height="113"/>
+                                                        <rect key="frame" x="0.0" y="69" width="280" height="102.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="113"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="102.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="102.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1130,7 +1130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-bD-9kp" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="20" y="110" width="280" height="90"/>
@@ -1193,10 +1193,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-f5-sAi" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="280" height="195.5"/>
+                                        <rect key="frame" x="20" y="240" width="280" height="250"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-WB-jPc">
-                                                <rect key="frame" x="20" y="20" width="240" height="155.5"/>
+                                                <rect key="frame" x="20" y="20" width="240" height="210"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1209,7 +1209,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R03-9r-lrM">
-                                        <rect key="frame" x="20" y="455.5" width="280" height="92.5"/>
+                                        <rect key="frame" x="20" y="510" width="280" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMark" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-MK-yLM">
                                                 <rect key="frame" x="125" y="5" width="30" height="30"/>
@@ -1219,7 +1219,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a single-use code for your use only. Get a new code each time you pay with smartpay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Gl-FiX">
-                                                <rect key="frame" x="0.0" y="35" width="280" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="35" width="280" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1252,13 +1252,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                        <rect key="frame" x="20" y="435" width="280" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="30" width="260" height="50"/>
@@ -3002,6 +3002,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="jgt-4E-15E" eventType="touchUpInside" id="9SF-Hv-Uwc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6p-on-xSL">
                                 <rect key="frame" x="100" y="15" width="120" height="24"/>
@@ -3025,27 +3028,30 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="jgt-4E-15E" eventType="touchUpInside" id="SMI-q2-wCk"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmq-eb-Byc">
                                 <rect key="frame" x="0.0" y="70" width="320" height="418"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VA9-pC-Zg4">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="442.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uTy-6e-HR7">
-                                                <rect key="frame" x="20" y="0.0" width="280" height="460"/>
+                                                <rect key="frame" x="20" y="0.0" width="280" height="442.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJB-Ng-LYm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="84"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="80.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2I-W2-Aqx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY2-qv-5WR" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="34" width="280" height="50"/>
+                                                                <rect key="frame" x="0.0" y="30.5" width="280" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6X-Bz-YDW">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -3066,16 +3072,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZYc-iI-OGa">
-                                                        <rect key="frame" x="0.0" y="94" width="280" height="84"/>
+                                                        <rect key="frame" x="0.0" y="90.5" width="280" height="80.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgR-C2-lEy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVA-N9-dCB" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="34" width="280" height="50"/>
+                                                                <rect key="frame" x="0.0" y="30.5" width="280" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-E7-9qe">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -3096,16 +3102,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xPW-XF-ltf">
-                                                        <rect key="frame" x="0.0" y="188" width="280" height="84"/>
+                                                        <rect key="frame" x="0.0" y="181" width="280" height="80.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-JX-z5z">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWu-sg-KB2" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="34" width="280" height="50"/>
+                                                                <rect key="frame" x="0.0" y="30.5" width="280" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5j-hB-lkC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -3126,16 +3132,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E3q-vp-Ei9">
-                                                        <rect key="frame" x="0.0" y="282" width="280" height="84"/>
+                                                        <rect key="frame" x="0.0" y="271.5" width="280" height="80.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-DE-pCQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgM-bD-d1U" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="34" width="280" height="50"/>
+                                                                <rect key="frame" x="0.0" y="30.5" width="280" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-V6-qXz">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -3156,16 +3162,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jbq-Ip-fGi">
-                                                        <rect key="frame" x="0.0" y="376" width="280" height="84"/>
+                                                        <rect key="frame" x="0.0" y="362" width="280" height="80.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clP-l7-1GU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwx-2Y-Kob" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="34" width="280" height="50"/>
+                                                                <rect key="frame" x="0.0" y="30.5" width="280" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEK-vf-dcj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -3223,6 +3229,18 @@
                             <constraint firstItem="dwM-QL-1Rf" firstAttribute="trailing" secondItem="Hmq-eb-Byc" secondAttribute="trailing" id="vwJ-nV-QVn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="OccupationLbl" destination="cgR-C2-lEy" id="aFe-yO-oxZ"/>
+                        <outlet property="OccupationTxtFld" destination="6Xd-E7-9qe" id="kaB-Vb-80G"/>
+                        <outlet property="emailLbl" destination="clP-l7-1GU" id="yu6-yw-Bcz"/>
+                        <outlet property="emailTxtFld" destination="GEK-vf-dcj" id="EoM-PI-brN"/>
+                        <outlet property="employerLbl" destination="dTb-JX-z5z" id="x5U-x1-508"/>
+                        <outlet property="employerTxtFld" destination="O5j-hB-lkC" id="nH7-rD-ML9"/>
+                        <outlet property="phoneNumberLbl" destination="Ar3-DE-pCQ" id="zod-7G-JeD"/>
+                        <outlet property="phoneNumberTxtFld" destination="Vrb-V6-qXz" id="nuA-Tm-W1I"/>
+                        <outlet property="yourNameLbl" destination="a2I-W2-Aqx" id="8v2-ZY-skN"/>
+                        <outlet property="yourNameTxtFld" destination="X6X-Bz-YDW" id="IAd-wG-KCY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIA-tK-fSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
