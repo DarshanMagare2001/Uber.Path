@@ -54,6 +54,7 @@
 		13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */; };
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
 		13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E61B8C2A568C910047F43B /* TransferDetailVC.swift */; };
+		13E69C312A5D1B5200313832 /* EditAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C302A5D1B5200313832 /* EditAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRecipientsCell.swift; sourceTree = "<group>"; };
 		13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeVC.swift; sourceTree = "<group>"; };
 		13E61B8C2A568C910047F43B /* TransferDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailVC.swift; sourceTree = "<group>"; };
+		13E69C302A5D1B5200313832 /* EditAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountVC.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +175,7 @@
 			children = (
 				139314D72A528DD900248D92 /* ProfileVC.swift */,
 				136FE68D2A5C1BB1006FDE26 /* ProfileVCCell.swift */,
-				136FE68F2A5C315D006FDE26 /* AccountInfoVC.swift */,
+				13E69C2F2A5D1B1600313832 /* AccountInfo */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -334,6 +336,15 @@
 				13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */,
 			);
 			path = TransfersVC;
+			sourceTree = "<group>";
+		};
+		13E69C2F2A5D1B1600313832 /* AccountInfo */ = {
+			isa = PBXGroup;
+			children = (
+				136FE68F2A5C315D006FDE26 /* AccountInfoVC.swift */,
+				13E69C302A5D1B5200313832 /* EditAccountVC.swift */,
+			);
+			path = AccountInfo;
 			sourceTree = "<group>";
 		};
 		4834731299117B92F6450414 /* Frameworks */ = {
@@ -516,6 +527,7 @@
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13CC92B22A56B8420024643B /* Model.swift in Sources */,
+				13E69C312A5D1B5200313832 /* EditAccountVC.swift in Sources */,
 				136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */,
 				139314D62A528DC100248D92 /* ActivityVC.swift in Sources */,
 				139314D82A528DD900248D92 /* ProfileVC.swift in Sources */,
