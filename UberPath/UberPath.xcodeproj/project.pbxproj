@@ -162,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				139314D12A528D8A00248D92 /* HomeVC.swift */,
+				13D9D5732A55412700E3AE75 /* TransfersVC */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -344,7 +345,6 @@
 				136FE6812A5BBD66006FDE26 /* Activity */,
 				136FE6822A5BBD79006FDE26 /* Profile */,
 				136FE6842A5BBDA5006FDE26 /* ScanQRCode */,
-				13D9D5732A55412700E3AE75 /* TransfersVC */,
 			);
 			path = Home;
 			sourceTree = "<group>";

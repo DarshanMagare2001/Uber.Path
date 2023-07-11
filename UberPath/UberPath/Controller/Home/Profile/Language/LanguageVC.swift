@@ -15,6 +15,8 @@ class LanguageVC: UIViewController {
         
     }
     
-
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 
 }

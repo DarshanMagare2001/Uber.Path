@@ -15,7 +15,9 @@ class ChangeLogInPinVC: UIViewController {
         
     }
     
-
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
 
 }
