@@ -22,6 +22,7 @@ class EditAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
+        updateTxtFlds()
         
     }
     
@@ -40,6 +41,15 @@ class EditAccountVC: UIViewController {
         employerLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 17.0))
         phoneNumberLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 17.0))
         emailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 17.0))
+    }
+    
+    func updateTxtFlds(){
+        yourNameTxtFld.placeholder = "Darshan Magare"
+        OccupationTxtFld.placeholder = "Manager"
+        employerTxtFld.placeholder = "Overlay Design"
+        phoneNumberTxtFld.placeholder = "(1) 3256 8456 888"
+        emailTxtFld.placeholder = "darshan@gmail.com"
+        phoneNumberTxtFld.keyboardType = .numberPad
     }
     
 }
