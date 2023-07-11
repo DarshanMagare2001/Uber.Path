@@ -30,3 +30,62 @@ class ProfileVCCell: UITableViewCell {
         buttonAction?() // Invoke the closure
     }
 }
+
+enum ProfileCell: Int, CaseIterable {
+    case referralCode
+    case accountInfo
+    case contactList
+    case language
+    case generalSetting
+    case changePassword
+    case changeLogInPin
+    case FAQs
+    case rateUs
+    
+    var title: String {
+        switch self {
+        case .referralCode:
+            return "Referral Code"
+        case .accountInfo:
+            return "Account Info"
+        case .contactList:
+            return "Contact List"
+        case .language:
+            return "Language"
+        case .generalSetting:
+            return "General Setting"
+        case .changePassword:
+            return "Change Password"
+        case .changeLogInPin:
+            return "Change Log In PIN"
+        case .FAQs:
+            return "FAQs"
+        case .rateUs:
+            return "Rate Us"
+        }
+    }
+    
+    var viewController: UIViewController {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        switch self {
+        case .referralCode:
+            return storyboard.instantiateViewController(withIdentifier: "ReferralCodeVC") as! ReferralCodeVC
+        case .accountInfo:
+            return storyboard.instantiateViewController(withIdentifier: "AccountInfoVC") as! AccountInfoVC
+        case .contactList:
+            return storyboard.instantiateViewController(withIdentifier: "ContactListVC") as! ContactListVC
+        case .language:
+            return storyboard.instantiateViewController(withIdentifier: "LanguageVC") as! LanguageVC
+        case .generalSetting:
+            return storyboard.instantiateViewController(withIdentifier: "GeneralSettingVC") as! GeneralSettingVC
+        case .changePassword:
+            return storyboard.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
+        case .changeLogInPin:
+            return storyboard.instantiateViewController(withIdentifier: "ChangeLogInPinVC") as! ChangeLogInPinVC
+        case .FAQs:
+            return storyboard.instantiateViewController(withIdentifier: "FAQsVC") as! FAQsVC
+        case .rateUs:
+            return storyboard.instantiateViewController(withIdentifier: "RateUsVC") as! RateUsVC
+        }
+    }
+}
