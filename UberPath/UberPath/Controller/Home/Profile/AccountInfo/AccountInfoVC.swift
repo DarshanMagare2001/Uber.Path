@@ -39,20 +39,33 @@ class AccountInfoVC: UIViewController {
         let defaults = UserDefaults.standard
         if let yourName = defaults.string(forKey: "yourName") {
             nameLbl.text = yourName
+        }else{
+            nameLbl.text = "Darshan Magare"
         }
         if let occupation = defaults.string(forKey: "occupation") {
             occupationLbl.text = occupation
+        }else{
+            occupationLbl.text = "Manager"
         }
+        
         if let employer = defaults.string(forKey: "employer") {
             employerLbl.text = employer
+        }else{
+            employerLbl.text = "Overlay Design"
         }
+        
         if let phoneNumber = defaults.string(forKey: "phoneNumber") {
             phoneNumberLbl.text = phoneNumber
+        }else{
+            phoneNumberLbl.text = "(1) 3256 8456 888"
         }
+        
         if let email = defaults.string(forKey: "email") {
             emailLbl.text = email
+        } else {
+            emailLbl.text = "darshan@gmail.com"
         }
+        
     }
-
     
 }
