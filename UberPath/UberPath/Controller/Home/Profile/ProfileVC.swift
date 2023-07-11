@@ -11,18 +11,38 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
-    
+    @IBOutlet weak var userImageView: CircleImageView!
     let cellArray: [ProfileCell] = [.referralCode, .accountInfo, .contactList, .language, .generalSetting, .changePassword, .changeLogInPin, .FAQs, .rateUs]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
+        updateUserInfo()
     }
     
     func updateFont() {
         nameLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
         emailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
     }
+    func updateUserInfo(){
+        let defaults = UserDefaults.standard
+        if let yourName = defaults.string(forKey: "yourName") {
+            nameLbl.text = yourName
+        } else {
+            nameLbl.text = "Darshan Magare"
+        }
+        if let email = defaults.string(forKey: "email") {
+            emailLbl.text = email
+        } else {
+            emailLbl.text = "darshan@gmail.com"
+        }
+        if let imageData = defaults.data(forKey: "userImage") {
+            if let image = UIImage(data: imageData) {
+                userImageView.image = image
+            }
+        }
+    }
+    
 }
 
 extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
