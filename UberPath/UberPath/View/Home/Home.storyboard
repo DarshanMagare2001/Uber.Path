@@ -1130,7 +1130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-Vj-Q75" userLabel="ReadyCodeView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-bD-9kp" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="20" y="110" width="280" height="90"/>
@@ -1193,10 +1193,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-f5-sAi" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="280" height="195.5"/>
+                                        <rect key="frame" x="20" y="240" width="280" height="250"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-WB-jPc">
-                                                <rect key="frame" x="20" y="20" width="240" height="155.5"/>
+                                                <rect key="frame" x="20" y="20" width="240" height="210"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1209,7 +1209,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R03-9r-lrM">
-                                        <rect key="frame" x="20" y="455.5" width="280" height="92.5"/>
+                                        <rect key="frame" x="20" y="510" width="280" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMark" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-MK-yLM">
                                                 <rect key="frame" x="125" y="5" width="30" height="30"/>
@@ -1219,7 +1219,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a single-use code for your use only. Get a new code each time you pay with smartpay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Gl-FiX">
-                                                <rect key="frame" x="0.0" y="35" width="280" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="35" width="280" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1252,13 +1252,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-0R-wUJ" userLabel="ScanQRView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImg" translatesAutoresizingMaskIntoConstraints="NO" id="70w-uv-Zqv">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-fj-t1h">
-                                        <rect key="frame" x="20" y="348" width="280" height="200"/>
+                                        <rect key="frame" x="20" y="435" width="280" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Tu-so6" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="30" width="260" height="50"/>
@@ -3238,10 +3238,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRz-1G-Onu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44o-rS-uYS" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44o-rS-uYS" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="50" y="234" width="220" height="100"/>
                                         <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-XW-vEg">
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-XW-vEg">
                                                 <rect key="frame" x="100" y="40" width="20" height="20"/>
                                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </activityIndicatorView>
@@ -3255,34 +3255,28 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
-                                <constraints>
-                                    <constraint firstItem="44o-rS-uYS" firstAttribute="centerY" secondItem="FRz-1G-Onu" secondAttribute="centerY" id="2tf-t5-iSC"/>
-                                    <constraint firstItem="44o-rS-uYS" firstAttribute="centerX" secondItem="FRz-1G-Onu" secondAttribute="centerX" id="H8k-3n-dy9"/>
-                                    <constraint firstAttribute="trailing" secondItem="44o-rS-uYS" secondAttribute="trailing" constant="50" id="TqB-at-Gw8"/>
-                                    <constraint firstItem="44o-rS-uYS" firstAttribute="leading" secondItem="FRz-1G-Onu" secondAttribute="leading" constant="50" id="l8r-P4-Hfh"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dwM-QL-1Rf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GKk-Un-uIx" firstAttribute="top" secondItem="dwM-QL-1Rf" secondAttribute="top" id="0Dd-BR-mC8"/>
+                            <constraint firstAttribute="trailing" secondItem="FRz-1G-Onu" secondAttribute="trailing" id="2t5-wI-jis"/>
                             <constraint firstItem="i6p-on-xSL" firstAttribute="centerX" secondItem="xZW-QT-JGz" secondAttribute="centerX" id="80o-pr-8nb"/>
                             <constraint firstItem="GKk-Un-uIx" firstAttribute="leading" secondItem="dwM-QL-1Rf" secondAttribute="leading" constant="5" id="9AA-kX-Gsy"/>
                             <constraint firstItem="VA9-pC-Zg4" firstAttribute="width" secondItem="xZW-QT-JGz" secondAttribute="width" id="9Ep-g4-Z3G"/>
                             <constraint firstItem="YgZ-dQ-Irh" firstAttribute="centerX" secondItem="xZW-QT-JGz" secondAttribute="centerX" id="AiT-aB-XGv"/>
                             <constraint firstItem="YgZ-dQ-Irh" firstAttribute="leading" secondItem="dwM-QL-1Rf" secondAttribute="leading" constant="20" id="Hfr-fV-Sf6"/>
+                            <constraint firstAttribute="bottom" secondItem="FRz-1G-Onu" secondAttribute="bottom" id="ImW-7r-5Sw"/>
                             <constraint firstItem="YgZ-dQ-Irh" firstAttribute="top" secondItem="Hmq-eb-Byc" secondAttribute="bottom" constant="10" id="JUa-O0-CJ9"/>
                             <constraint firstItem="dwM-QL-1Rf" firstAttribute="trailing" secondItem="YgZ-dQ-Irh" secondAttribute="trailing" constant="20" id="RUU-Xk-7Bt"/>
-                            <constraint firstAttribute="trailing" secondItem="FRz-1G-Onu" secondAttribute="trailing" id="S5n-gR-hAp"/>
+                            <constraint firstItem="FRz-1G-Onu" firstAttribute="leading" secondItem="xZW-QT-JGz" secondAttribute="leading" id="Rka-I4-sMu"/>
                             <constraint firstItem="Hmq-eb-Byc" firstAttribute="top" secondItem="GKk-Un-uIx" secondAttribute="bottom" constant="20" id="Y91-Px-nst"/>
                             <constraint firstItem="dwM-QL-1Rf" firstAttribute="bottom" secondItem="YgZ-dQ-Irh" secondAttribute="bottom" constant="20" id="f6k-dn-8EE"/>
                             <constraint firstItem="i6p-on-xSL" firstAttribute="top" secondItem="dwM-QL-1Rf" secondAttribute="top" constant="15" id="kiD-co-pTv"/>
-                            <constraint firstItem="FRz-1G-Onu" firstAttribute="leading" secondItem="xZW-QT-JGz" secondAttribute="leading" id="n26-hy-pgH"/>
                             <constraint firstItem="Hmq-eb-Byc" firstAttribute="leading" secondItem="dwM-QL-1Rf" secondAttribute="leading" id="nUM-EM-ChJ"/>
                             <constraint firstItem="dwM-QL-1Rf" firstAttribute="trailing" secondItem="Hmq-eb-Byc" secondAttribute="trailing" id="vwJ-nV-QVn"/>
-                            <constraint firstItem="FRz-1G-Onu" firstAttribute="bottom" secondItem="dwM-QL-1Rf" secondAttribute="bottom" id="ym3-3E-s8l"/>
-                            <constraint firstItem="FRz-1G-Onu" firstAttribute="top" secondItem="dwM-QL-1Rf" secondAttribute="top" id="yme-Cs-9Gb"/>
+                            <constraint firstItem="FRz-1G-Onu" firstAttribute="top" secondItem="xZW-QT-JGz" secondAttribute="top" id="w43-5I-c8e"/>
                         </constraints>
                     </view>
                     <connections>
