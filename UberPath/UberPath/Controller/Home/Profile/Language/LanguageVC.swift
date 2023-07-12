@@ -15,6 +15,8 @@ class LanguageVC: UIViewController {
     let countryKit = CountryKit()
     var countriesArray = [Country]()
     var filteredCountriesArray = [Country]()
+    var tappedButtonIndex: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class LanguageVC: UIViewController {
     @IBAction func searchBtnPressed(_ sender: UIButton) {
         searchTxtFld.resignFirstResponder()
     }
- 
+    
     @objc func searchTextDidChange() {
         if let searchText = searchTxtFld.text, !searchText.isEmpty {
             filteredCountriesArray = countriesArray.filter { $0.name.lowercased().contains(searchText.lowercased()) }
@@ -42,6 +44,7 @@ class LanguageVC: UIViewController {
         
         tableViewOutlet.reloadData()
     }
+    
 }
 
 extension LanguageVC: UITableViewDelegate, UITableViewDataSource {
@@ -64,6 +67,20 @@ extension LanguageVC: UITableViewDelegate, UITableViewDataSource {
         let language = CountryModel().countryLanguages[country.name] ?? ""
         cell.countryLanguageLbl.text = language
         
+        // Update button appearance based on selection
+        if let tappedButtonIndex = tappedButtonIndex, indexPath.row == tappedButtonIndex {
+            cell.cellBtn.isSelected = true
+        } else {
+            cell.cellBtn.isSelected = false
+        }
+        
+        // Set the buttonTapAction closure
+        cell.buttonTapAction = { [weak self] in
+            self?.tappedButtonIndex = indexPath.row
+            tableView.reloadData()
+        }
+        
         return cell
     }
 }
+
