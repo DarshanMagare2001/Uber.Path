@@ -6,13 +6,15 @@
 //
 
 import UIKit
-import ADCountryPicker
+import CountryKit
 
 class LanguageVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
+    let countryKit = CountryKit()
+    var countriesArray = [Country]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        countriesArray = countryKit.countries
         
     }
     
@@ -21,16 +23,24 @@ class LanguageVC: UIViewController {
     }
     
 }
-extension LanguageVC : UITableViewDelegate , UITableViewDataSource {
+
+extension LanguageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return countriesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "languageVCCell", for: indexPath) as! LanguageVCCell
-        return cell
+        let country = countriesArray[indexPath.row]
         
+        if let flagImage = country.flagImage {
+            cell.cellImage.image = flagImage
+        } else {
+            cell.cellImage.image = UIImage(named: "defaultFlag")
+        }
+        
+        cell.cellLbl.text = country.name
+        return cell
     }
-    
-    
 }
+

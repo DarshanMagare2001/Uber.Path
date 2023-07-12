@@ -51,6 +51,7 @@
 		13CC92B22A56B8420024643B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC92B12A56B8420024643B /* Model.swift */; };
 		13CC92B42A56DA250024643B /* TransferSuccessfulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */; };
 		13CD19082A5E62AF0014C3D0 /* LanguageVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD19072A5E62AF0014C3D0 /* LanguageVCCell.swift */; };
+		13CD190B2A5E6E250014C3D0 /* CountryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13CD190A2A5E6E250014C3D0 /* CountryKit */; };
 		13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */; };
 		13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */; };
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
@@ -138,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CD190B2A5E6E250014C3D0 /* CountryKit in Frameworks */,
 				136FF0262A57E04400907C9F /* IQKeyboardManagerSwift in Frameworks */,
 				01435BF6AD0AEE3CA6F79FA2 /* Pods_UberPath.framework in Frameworks */,
 				137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */,
@@ -488,6 +490,7 @@
 				137CE6712A4AA3B200B40F2D /* FirebaseFirestore */,
 				137CE6732A4AA3B200B40F2D /* FirebaseFirestoreSwift */,
 				136FF0252A57E04400907C9F /* IQKeyboardManagerSwift */,
+				13CD190A2A5E6E250014C3D0 /* CountryKit */,
 			);
 			productName = UberPath;
 			productReference = 13A12AA42A445F1A00532BC6 /* UberPath.app */;
@@ -520,6 +523,7 @@
 			packageReferences = (
 				137CE66E2A4AA3B200B40F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit" */,
 			);
 			productRefGroup = 13A12AA52A445F1A00532BC6 /* Products */;
 			projectDirPath = "";
@@ -902,6 +906,14 @@
 				version = 9.6.0;
 			};
 		};
+		13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alemar11/CountryKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -924,6 +936,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 137CE66E2A4AA3B200B40F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		13CD190A2A5E6E250014C3D0 /* CountryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit" */;
+			productName = CountryKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
