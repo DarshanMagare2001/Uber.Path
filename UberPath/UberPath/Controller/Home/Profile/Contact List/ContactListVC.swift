@@ -10,11 +10,13 @@ import UIKit
 class ContactListVC: UIViewController {
     @IBOutlet weak var recentContactsTableViewOutlet: UITableView!
     @IBOutlet weak var allContactsTableViewOutlet: UITableView!
+    @IBOutlet weak var searchTxtFld: UITextField!
     var viewModel = cellData()
     override func viewDidLoad() {
         super.viewDidLoad()
         recentContactsTableViewOutlet.register(UINib(nibName: "ContactsCell", bundle: nil), forCellReuseIdentifier: "contactsCell")
         allContactsTableViewOutlet.register(UINib(nibName: "ContactsCell", bundle: nil), forCellReuseIdentifier: "contactsCell")
+        searchTxtFld.placeholder = "Search"
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {

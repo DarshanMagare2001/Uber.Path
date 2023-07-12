@@ -3039,6 +3039,7 @@
                     <connections>
                         <outlet property="allContactsTableViewOutlet" destination="Gg3-b4-y03" id="ves-Fl-qjO"/>
                         <outlet property="recentContactsTableViewOutlet" destination="h4d-Gf-m93" id="oJv-lr-cfF"/>
+                        <outlet property="searchTxtFld" destination="nXP-iW-gDf" id="foI-CX-DF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EU-WC-l0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
