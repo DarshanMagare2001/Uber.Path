@@ -124,4 +124,67 @@ class CircleImageView: UIImageView {
     }
 }
 
+class ShadowedView: UIView {
+    // Custom corner radius value
+    var cornerRadius: CGFloat = 10 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    // Custom border width value
+    var borderWidth: CGFloat = 1 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    // Custom border color value
+    var borderColor: UIColor = .gray {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    // Shadow properties
+    var shadowColor: UIColor = .black {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    var shadowOpacity: Float = 0.5 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    var shadowOffset: CGSize = CGSize(width: 0, height: 2) {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    var shadowRadius: CGFloat = 4 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Set corner radius
+        layer.cornerRadius = cornerRadius
+        layer.masksToBounds = true
+        
+        // Set border
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+        
+        // Set shadow
+        layer.shadowColor = shadowColor.cgColor
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowOffset = shadowOffset
+        layer.shadowRadius = shadowRadius
+    }
+}
+
 
