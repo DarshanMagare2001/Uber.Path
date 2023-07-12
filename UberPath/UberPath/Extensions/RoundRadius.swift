@@ -168,12 +168,16 @@ class ShadowedView: UIView {
         }
     }
     
+    override class var layerClass: AnyClass {
+        return CAShapeLayer.self
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         // Set corner radius
         layer.cornerRadius = cornerRadius
-        layer.masksToBounds = true
+        layer.masksToBounds = false
         
         // Set border
         layer.borderWidth = borderWidth
@@ -184,7 +188,9 @@ class ShadowedView: UIView {
         layer.shadowOpacity = shadowOpacity
         layer.shadowOffset = shadowOffset
         layer.shadowRadius = shadowRadius
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
     }
 }
+
 
 
