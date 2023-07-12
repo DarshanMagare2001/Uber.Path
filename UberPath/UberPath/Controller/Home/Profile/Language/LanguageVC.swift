@@ -10,12 +10,15 @@ import CountryKit
 
 class LanguageVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
+    var viewModel = CountryModel()
     let countryKit = CountryKit()
     var countriesArray = [Country]()
     override func viewDidLoad() {
         super.viewDidLoad()
         countriesArray = countryKit.countries
-        
+        for i in countriesArray {
+            print(i.name)
+        }
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -38,7 +41,10 @@ extension LanguageVC: UITableViewDelegate, UITableViewDataSource {
             cell.countryImage.image = UIImage(named: "defaultFlag")
         }
         cell.countryName.text = country.name
+        let language = CountryModel().countryLanguages[country.name] ?? ""
+        cell.countryLanguageLbl.text = language
         return cell
     }
 }
+
 

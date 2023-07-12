@@ -52,6 +52,7 @@
 		13CC92B42A56DA250024643B /* TransferSuccessfulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */; };
 		13CD19082A5E62AF0014C3D0 /* LanguageVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD19072A5E62AF0014C3D0 /* LanguageVCCell.swift */; };
 		13CD190B2A5E6E250014C3D0 /* CountryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13CD190A2A5E6E250014C3D0 /* CountryKit */; };
+		13CD190D2A5E82EC0014C3D0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD190C2A5E82EC0014C3D0 /* CountryModel.swift */; };
 		13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */; };
 		13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */; };
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
@@ -113,6 +114,7 @@
 		13CC92B12A56B8420024643B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferSuccessfulVC.swift; sourceTree = "<group>"; };
 		13CD19072A5E62AF0014C3D0 /* LanguageVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVCCell.swift; sourceTree = "<group>"; };
+		13CD190C2A5E82EC0014C3D0 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCardsCell.swift; sourceTree = "<group>"; };
 		13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRecipientsCell.swift; sourceTree = "<group>"; };
 		13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeVC.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 			children = (
 				13E69C3E2A5D4D4700313832 /* LanguageVC.swift */,
 				13CD19072A5E62AF0014C3D0 /* LanguageVCCell.swift */,
+				13CD190C2A5E82EC0014C3D0 /* CountryModel.swift */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
 				13CC92B22A56B8420024643B /* Model.swift in Sources */,
 				13E69C312A5D1B5200313832 /* EditAccountVC.swift in Sources */,
+				13CD190D2A5E82EC0014C3D0 /* CountryModel.swift in Sources */,
 				136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */,
 				139314D62A528DC100248D92 /* ActivityVC.swift in Sources */,
 				139314D82A528DD900248D92 /* ProfileVC.swift in Sources */,
