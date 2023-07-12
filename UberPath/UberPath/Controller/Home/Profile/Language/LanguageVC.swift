@@ -32,14 +32,12 @@ extension LanguageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "languageVCCell", for: indexPath) as! LanguageVCCell
         let country = countriesArray[indexPath.row]
-        
         if let flagImage = country.flagImage {
-            cell.cellImage.image = flagImage
+            cell.countryImage.image = flagImage
         } else {
-            cell.cellImage.image = UIImage(named: "defaultFlag")
+            cell.countryImage.image = UIImage(named: "defaultFlag")
         }
-        
-        cell.cellLbl.text = country.name
+        cell.countryName.text = country.name
         return cell
     }
 }

@@ -8,8 +8,9 @@
 import UIKit
 
 class LanguageVCCell: UITableViewCell {
-    @IBOutlet weak var cellImage: UIImageView!
-    @IBOutlet weak var cellLbl: UILabel!
+    @IBOutlet weak var countryImage: UIImageView!
+    @IBOutlet weak var countryName: UILabel!
+    @IBOutlet weak var countryLanguageLbl: UILabel!
     @IBOutlet weak var cellBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
