@@ -53,6 +53,7 @@
 		13CD19082A5E62AF0014C3D0 /* LanguageVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD19072A5E62AF0014C3D0 /* LanguageVCCell.swift */; };
 		13CD190B2A5E6E250014C3D0 /* CountryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13CD190A2A5E6E250014C3D0 /* CountryKit */; };
 		13CD190D2A5E82EC0014C3D0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD190C2A5E82EC0014C3D0 /* CountryModel.swift */; };
+		13CD190F2A5EC4B90014C3D0 /* IBinspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD190E2A5EC4B90014C3D0 /* IBinspectable.swift */; };
 		13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */; };
 		13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */; };
 		13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */; };
@@ -115,6 +116,7 @@
 		13CC92B32A56DA250024643B /* TransferSuccessfulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferSuccessfulVC.swift; sourceTree = "<group>"; };
 		13CD19072A5E62AF0014C3D0 /* LanguageVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVCCell.swift; sourceTree = "<group>"; };
 		13CD190C2A5E82EC0014C3D0 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		13CD190E2A5EC4B90014C3D0 /* IBinspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBinspectable.swift; sourceTree = "<group>"; };
 		13D9D5742A55416A00E3AE75 /* ChooseCardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCardsCell.swift; sourceTree = "<group>"; };
 		13D9D5762A5541A300E3AE75 /* ChooseRecipientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRecipientsCell.swift; sourceTree = "<group>"; };
 		13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeVC.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				1326A74B2A4565DF00BB4E39 /* Fonts.swift */,
 				1326A7522A45A76200BB4E39 /* RoundRadius.swift */,
 				13E69C4A2A5D584400313832 /* ImagePicker.swift */,
+				13CD190E2A5EC4B90014C3D0 /* IBinspectable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */,
 				137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */,
 				13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */,
+				13CD190F2A5EC4B90014C3D0 /* IBinspectable.swift in Sources */,
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
 				13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */,
 				13E69C492A5D4DDE00313832 /* RateUsVC.swift in Sources */,
