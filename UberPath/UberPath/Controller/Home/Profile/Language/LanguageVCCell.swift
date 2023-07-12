@@ -20,7 +20,7 @@ class LanguageVCCell: UITableViewCell {
         
         // Set initial button image
         cellBtn.setImage(UIImage(systemName: "circle"), for: .normal)
-        cellBtn.setImage(UIImage(systemName: "record.circle"), for: .selected)
+        cellBtn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .selected)
         
         // Add button action
         cellBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
