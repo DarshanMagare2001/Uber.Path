@@ -10,6 +10,7 @@ import CountryKit
 
 class LanguageVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
+    @IBOutlet weak var searchTxtFld: UITextField!
     var viewModel = CountryModel()
     let countryKit = CountryKit()
     var countriesArray = [Country]()
