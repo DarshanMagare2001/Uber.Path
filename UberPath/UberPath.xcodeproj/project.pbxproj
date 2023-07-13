@@ -474,9 +474,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13A12AB82A445F1D00532BC6 /* Build configuration list for PBXNativeTarget "UberPath" */;
 			buildPhases = (
+				E1F90A4A5C8F4418BF70E3F6 /* [CP] Check Pods Manifest.lock */,
 				13A12AA02A445F1A00532BC6 /* Sources */,
 				13A12AA12A445F1A00532BC6 /* Frameworks */,
 				13A12AA22A445F1A00532BC6 /* Resources */,
+				B8A8D2CDF22A55B0D3EFB050 /* [CP] Embed Pods Frameworks */,
+				483F5D60D708CB43CDB752B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -520,8 +523,8 @@
 			mainGroup = 13A12A9B2A445F1A00532BC6;
 			packageReferences = (
 				137CE66E2A4AA3B200B40F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit" */,
+				136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */,
+				13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit.git" */,
 			);
 			productRefGroup = 13A12AA52A445F1A00532BC6 /* Products */;
 			projectDirPath = "";
@@ -547,6 +550,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		483F5D60D708CB43CDB752B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8A8D2CDF22A55B0D3EFB050 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UberPath/Pods-UberPath-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1F90A4A5C8F4418BF70E3F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UberPath-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13A12AA02A445F1A00532BC6 /* Sources */ = {
@@ -832,7 +894,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -848,7 +910,7 @@
 				version = 9.6.0;
 			};
 		};
-		13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit" */ = {
+		13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alemar11/CountryKit.git";
 			requirement = {
@@ -861,7 +923,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		136FF0252A57E04400907C9F /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 136FF0242A57E04400907C9F /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */;
 			productName = IQKeyboardManagerSwift;
 		};
 		137CE66F2A4AA3B200B40F2D /* FirebaseAuth */ = {
@@ -881,7 +943,7 @@
 		};
 		13CD190A2A5E6E250014C3D0 /* CountryKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit" */;
+			package = 13CD19092A5E6E240014C3D0 /* XCRemoteSwiftPackageReference "CountryKit.git" */;
 			productName = CountryKit;
 		};
 /* End XCSwiftPackageProductDependency section */

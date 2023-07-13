@@ -13,7 +13,7 @@ class FAQsVC: UIViewController {
     var viewModel = cellModelDataForFAQsVCCell()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchTxtFld.placeholder = "Search"
         
     }
     
