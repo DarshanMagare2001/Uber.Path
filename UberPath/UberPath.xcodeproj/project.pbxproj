@@ -69,8 +69,8 @@
 		13E69C4E2A5D7BD100313832 /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C4C2A5D7BD100313832 /* ContactsCell.swift */; };
 		13E69C4F2A5D7BD100313832 /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E69C4D2A5D7BD100313832 /* ContactsCell.xib */; };
 		13FAAB0D2A5FB5F300FD49AD /* AddFingerPrintVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAAB0C2A5FB5F300FD49AD /* AddFingerPrintVC.swift */; };
-		13FAAB0F2A5FBF8F00FD49AD /* FAQsVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAAB0E2A5FBF8F00FD49AD /* FAQsVCCell.swift */; };
-		13FAAB112A5FC0D300FD49AD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAAB102A5FC0D300FD49AD /* Model.swift */; };
+		13FAAB0F2A5FBF8F00FD49AD /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAAB0E2A5FBF8F00FD49AD /* cell.swift */; };
+		13FAAB112A5FC0D300FD49AD /* cellModelForFAQsVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAAB102A5FC0D300FD49AD /* cellModelForFAQsVCCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,8 +133,8 @@
 		13E69C4C2A5D7BD100313832 /* ContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		13E69C4D2A5D7BD100313832 /* ContactsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
 		13FAAB0C2A5FB5F300FD49AD /* AddFingerPrintVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFingerPrintVC.swift; sourceTree = "<group>"; };
-		13FAAB0E2A5FBF8F00FD49AD /* FAQsVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsVCCell.swift; sourceTree = "<group>"; };
-		13FAAB102A5FC0D300FD49AD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		13FAAB0E2A5FBF8F00FD49AD /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
+		13FAAB102A5FC0D300FD49AD /* cellModelForFAQsVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellModelForFAQsVCCell.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -400,8 +400,8 @@
 			isa = PBXGroup;
 			children = (
 				13E69C462A5D4DC300313832 /* FAQsVC.swift */,
-				13FAAB0E2A5FBF8F00FD49AD /* FAQsVCCell.swift */,
-				13FAAB102A5FC0D300FD49AD /* Model.swift */,
+				13FAAB0E2A5FBF8F00FD49AD /* cell.swift */,
+				13FAAB102A5FC0D300FD49AD /* cellModelForFAQsVCCell.swift */,
 			);
 			path = FAQs;
 			sourceTree = "<group>";
@@ -572,7 +572,7 @@
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
 				136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */,
-				13FAAB112A5FC0D300FD49AD /* Model.swift in Sources */,
+				13FAAB112A5FC0D300FD49AD /* cellModelForFAQsVCCell.swift in Sources */,
 				13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,
 				13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */,
@@ -585,7 +585,7 @@
 				13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */,
 				1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */,
 				138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */,
-				13FAAB0F2A5FBF8F00FD49AD /* FAQsVCCell.swift in Sources */,
+				13FAAB0F2A5FBF8F00FD49AD /* cell.swift in Sources */,
 				136FE68E2A5C1BB1006FDE26 /* ProfileVCCell.swift in Sources */,
 				13CD19082A5E62AF0014C3D0 /* LanguageVCCell.swift in Sources */,
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FAQsVCCell: UITableViewCell {
+class cell: UITableViewCell {
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
     override func awakeFromNib() {

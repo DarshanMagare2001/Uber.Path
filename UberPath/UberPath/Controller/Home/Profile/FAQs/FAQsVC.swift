@@ -33,7 +33,7 @@ extension FAQsVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fAQsVCCell", for: indexPath) as! FAQsVCCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cell
         cell.lbl1.text = viewModel.cellDataArray[indexPath.row].question
         cell.lbl2.text = viewModel.cellDataArray[indexPath.row].ans
         return cell
