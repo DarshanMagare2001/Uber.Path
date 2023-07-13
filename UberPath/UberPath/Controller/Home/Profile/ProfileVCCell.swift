@@ -86,7 +86,7 @@ enum ProfileCell: Int, CaseIterable {
         case .changePassword:
             return storyboardForMain.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
         case .changeLogInPin:
-            return storyboard.instantiateViewController(withIdentifier: "ChangeLogInPinVC") as! ChangeLogInPinVC
+            return storyboardForMain.instantiateViewController(withIdentifier: "CreatePinVC") as! CreatePinVC
         case .FAQs:
             return storyboard.instantiateViewController(withIdentifier: "FAQsVC") as! FAQsVC
         case .rateUs:

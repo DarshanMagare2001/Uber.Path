@@ -36,7 +36,7 @@ class MainTabVC: UIViewController {
         updateUI(for: .home)
         showTab(.home)
         storeCardInUserDefaultArray()
-//        viewModel.logout()
+        viewModel.logout()
         
     }
     

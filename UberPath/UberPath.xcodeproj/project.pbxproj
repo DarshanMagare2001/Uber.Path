@@ -63,8 +63,6 @@
 		13E69C3D2A5D4D2D00313832 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C3C2A5D4D2D00313832 /* ContactListVC.swift */; };
 		13E69C3F2A5D4D4700313832 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C3E2A5D4D4700313832 /* LanguageVC.swift */; };
 		13E69C412A5D4D6300313832 /* GeneralSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C402A5D4D6300313832 /* GeneralSettingVC.swift */; };
-		13E69C432A5D4D7F00313832 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C422A5D4D7F00313832 /* ChangePasswordVC.swift */; };
-		13E69C452A5D4DA800313832 /* ChangeLogInPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */; };
 		13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C462A5D4DC300313832 /* FAQsVC.swift */; };
 		13E69C492A5D4DDE00313832 /* RateUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C482A5D4DDE00313832 /* RateUsVC.swift */; };
 		13E69C4B2A5D584400313832 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C4A2A5D584400313832 /* ImagePicker.swift */; };
@@ -127,8 +125,6 @@
 		13E69C3C2A5D4D2D00313832 /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
 		13E69C3E2A5D4D4700313832 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
 		13E69C402A5D4D6300313832 /* GeneralSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingVC.swift; sourceTree = "<group>"; };
-		13E69C422A5D4D7F00313832 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
-		13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogInPinVC.swift; sourceTree = "<group>"; };
 		13E69C462A5D4DC300313832 /* FAQsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsVC.swift; sourceTree = "<group>"; };
 		13E69C482A5D4DDE00313832 /* RateUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsVC.swift; sourceTree = "<group>"; };
 		13E69C4A2A5D584400313832 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -215,8 +211,6 @@
 				13E69C382A5D4C4D00313832 /* Contact List */,
 				13E69C372A5D4C4A00313832 /* Language */,
 				13E69C362A5D4C4800313832 /* General Setting */,
-				13E69C352A5D4C4600313832 /* Change Password */,
-				13E69C342A5D4C4400313832 /* Change Log In PIN */,
 				13E69C332A5D4C4100313832 /* FAQs */,
 				13E69C392A5D4CB600313832 /* Rate Us */,
 				13FAAB0B2A5FB5C600FD49AD /* Add FingerPrint */,
@@ -404,22 +398,6 @@
 				13E69C462A5D4DC300313832 /* FAQsVC.swift */,
 			);
 			path = FAQs;
-			sourceTree = "<group>";
-		};
-		13E69C342A5D4C4400313832 /* Change Log In PIN */ = {
-			isa = PBXGroup;
-			children = (
-				13E69C442A5D4DA800313832 /* ChangeLogInPinVC.swift */,
-			);
-			path = "Change Log In PIN";
-			sourceTree = "<group>";
-		};
-		13E69C352A5D4C4600313832 /* Change Password */ = {
-			isa = PBXGroup;
-			children = (
-				13E69C422A5D4D7F00313832 /* ChangePasswordVC.swift */,
-			);
-			path = "Change Password";
 			sourceTree = "<group>";
 		};
 		13E69C362A5D4C4800313832 /* General Setting */ = {
@@ -648,9 +626,7 @@
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
 				13FAAB0D2A5FB5F300FD49AD /* AddFingerPrintVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
-				13E69C452A5D4DA800313832 /* ChangeLogInPinVC.swift in Sources */,
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
-				13E69C432A5D4D7F00313832 /* ChangePasswordVC.swift in Sources */,
 				136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */,
 				13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,

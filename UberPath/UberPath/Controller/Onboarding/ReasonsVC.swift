@@ -47,7 +47,7 @@ class ReasonsVC: UIViewController {
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CreatePinVC") as! CreatePinVC
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "VerifyIdentityVC") as! VerifyIdentityVC
         self.navigationController?.pushViewController(destinationVC, animated: true)
         
     }

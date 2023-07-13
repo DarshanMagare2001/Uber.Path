@@ -3477,94 +3477,6 @@
             </objects>
             <point key="canvasLocation" x="3046.875" y="1946.8309859154929"/>
         </scene>
-        <!--Change PasswordVC-->
-        <scene sceneID="Qr5-HB-2VO">
-            <objects>
-                <viewController storyboardIdentifier="ChangePasswordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ots-fg-hqd" customClass="ChangePasswordVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f7Q-Gs-cMA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6f-k8-c68">
-                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="8pJ-qw-831"/>
-                                    <constraint firstAttribute="height" constant="50" id="gga-rH-lU6"/>
-                                    <constraint firstAttribute="width" constant="50" id="qKy-l5-D7m"/>
-                                    <constraint firstAttribute="height" constant="50" id="yHj-sF-awe"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
-                                <connections>
-                                    <action selector="backBtnPressed:" destination="Ots-fg-hqd" eventType="touchUpInside" id="sQt-2Y-TxU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChangePasswordVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUO-vc-nNJ">
-                                <rect key="frame" x="82.5" y="274" width="155" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="tgi-1P-Xae"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="P6f-k8-c68" firstAttribute="leading" secondItem="tgi-1P-Xae" secondAttribute="leading" constant="5" id="AoM-ex-clk"/>
-                            <constraint firstItem="eUO-vc-nNJ" firstAttribute="centerY" secondItem="f7Q-Gs-cMA" secondAttribute="centerY" id="DIB-8J-XdI"/>
-                            <constraint firstItem="P6f-k8-c68" firstAttribute="top" secondItem="tgi-1P-Xae" secondAttribute="top" id="TKV-Lo-Wkn"/>
-                            <constraint firstItem="eUO-vc-nNJ" firstAttribute="centerX" secondItem="f7Q-Gs-cMA" secondAttribute="centerX" id="lKM-NO-P2a"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cNr-V5-omF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3703" y="1946"/>
-        </scene>
-        <!--Change Log In PinVC-->
-        <scene sceneID="L2a-mu-LDQ">
-            <objects>
-                <viewController storyboardIdentifier="ChangeLogInPinVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fee-8E-GJq" customClass="ChangeLogInPinVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QiB-rL-VWL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-Qt-Bd4">
-                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="9cz-kA-hMl"/>
-                                    <constraint firstAttribute="height" constant="50" id="T0T-x8-i2G"/>
-                                    <constraint firstAttribute="height" constant="50" id="c3W-1m-Y0j"/>
-                                    <constraint firstAttribute="width" constant="50" id="cLA-IX-h2A"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
-                                <connections>
-                                    <action selector="backBtnPressed:" destination="Fee-8E-GJq" eventType="touchUpInside" id="rp5-Wb-HfI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChangeLogInPinVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtQ-3x-qQC">
-                                <rect key="frame" x="87" y="274" width="146.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="wgR-BQ-Jyt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="WtQ-3x-qQC" firstAttribute="centerY" secondItem="QiB-rL-VWL" secondAttribute="centerY" id="8Ny-9A-c8x"/>
-                            <constraint firstItem="4Ha-Qt-Bd4" firstAttribute="top" secondItem="wgR-BQ-Jyt" secondAttribute="top" id="F5v-d6-LuI"/>
-                            <constraint firstItem="4Ha-Qt-Bd4" firstAttribute="leading" secondItem="wgR-BQ-Jyt" secondAttribute="leading" constant="5" id="HvH-8E-Lmt"/>
-                            <constraint firstItem="WtQ-3x-qQC" firstAttribute="centerX" secondItem="QiB-rL-VWL" secondAttribute="centerX" id="RYB-i1-A4t"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l6c-xd-EWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4348" y="1936"/>
-        </scene>
         <!--QsVC-->
         <scene sceneID="EVw-Tg-c9k">
             <objects>
@@ -3607,7 +3519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcH-es-8Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5004" y="1939"/>
+            <point key="canvasLocation" x="3677" y="1947"/>
         </scene>
         <!--Rate UsVC-->
         <scene sceneID="kRr-vs-W8t">
@@ -3651,7 +3563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUi-tT-PmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5657" y="1934"/>
+            <point key="canvasLocation" x="4314" y="1947"/>
         </scene>
         <!--Add Finger PrintVC-->
         <scene sceneID="uF9-1U-Yyy">
@@ -3695,7 +3607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnA-IT-YGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6289" y="1931"/>
+            <point key="canvasLocation" x="4952" y="1948"/>
         </scene>
         <!--Account InfoVC-->
         <scene sceneID="8Vc-8L-LYQ">
