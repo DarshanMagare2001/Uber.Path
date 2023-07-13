@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "chevron-bottom@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "chevron-bottom@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
