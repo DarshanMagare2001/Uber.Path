@@ -3678,50 +3678,6 @@
             </objects>
             <point key="canvasLocation" x="3676.875" y="1946.8309859154929"/>
         </scene>
-        <!--Rate UsVC-->
-        <scene sceneID="kRr-vs-W8t">
-            <objects>
-                <viewController storyboardIdentifier="RateUsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zoi-JN-PZ4" customClass="RateUsVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NWT-TH-u0g">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shq-kK-2z5">
-                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hmp-9J-Me6"/>
-                                    <constraint firstAttribute="width" constant="50" id="tW1-2X-Ty2"/>
-                                    <constraint firstAttribute="width" constant="50" id="tdf-jK-tII"/>
-                                    <constraint firstAttribute="height" constant="50" id="wcz-Ar-gjn"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
-                                <connections>
-                                    <action selector="backBtnPressed:" destination="zoi-JN-PZ4" eventType="touchUpInside" id="qUh-56-eB6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RateUsVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE2-rw-avm">
-                                <rect key="frame" x="121.5" y="273.5" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="YsJ-AU-UxL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Shq-kK-2z5" firstAttribute="top" secondItem="YsJ-AU-UxL" secondAttribute="top" id="4Hj-gZ-mAQ"/>
-                            <constraint firstItem="QE2-rw-avm" firstAttribute="centerX" secondItem="NWT-TH-u0g" secondAttribute="centerX" id="E3A-Cv-Hks"/>
-                            <constraint firstItem="Shq-kK-2z5" firstAttribute="leading" secondItem="YsJ-AU-UxL" secondAttribute="leading" constant="5" id="bU1-pd-WRF"/>
-                            <constraint firstItem="QE2-rw-avm" firstAttribute="centerY" secondItem="NWT-TH-u0g" secondAttribute="centerY" id="dba-uh-F4t"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fUi-tT-PmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4314" y="1947"/>
-        </scene>
         <!--Add Finger PrintVC-->
         <scene sceneID="uF9-1U-Yyy">
             <objects>
@@ -3745,26 +3701,79 @@
                                     <action selector="backBtnPressed:" destination="abK-Zg-xxT" eventType="touchUpInside" id="dl9-rd-GEH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AddFingerPrintVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-9o-bfB">
-                                <rect key="frame" x="92" y="273.5" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-yb-gwP">
+                                <rect key="frame" x="20" y="70" width="280" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable biometric Access" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnm-la-Luo">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="GlobalButtonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login quickly and securely with the fingerprint stored on this device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qme-he-aJp">
+                                        <rect key="frame" x="0.0" y="31.5" width="280" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IK-PL-1CU" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                <rect key="frame" x="20" y="460" width="280" height="50"/>
+                                <color key="backgroundColor" name="GlobalButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wEq-7q-he7"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back to Home">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I’ll do this later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRY-Ej-2o1">
+                                <rect key="frame" x="20" y="530" width="280" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" name="LaunchscreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FingerPrintIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0eC-fi-5Cs">
+                                <rect key="frame" x="110" y="187.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="K7r-Mv-yA7"/>
+                                    <constraint firstAttribute="height" constant="100" id="Tj0-ZM-L2z"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMf-lX-ta4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mKC-yb-gwP" firstAttribute="leading" secondItem="rMf-lX-ta4" secondAttribute="leading" constant="20" id="3Em-11-nPJ"/>
+                            <constraint firstItem="0eC-fi-5Cs" firstAttribute="centerX" secondItem="ga0-Ic-oFe" secondAttribute="centerX" id="3II-rn-hCM"/>
+                            <constraint firstItem="rMf-lX-ta4" firstAttribute="bottom" secondItem="pRY-Ej-2o1" secondAttribute="bottom" constant="20" id="75d-AQ-Ibt"/>
+                            <constraint firstItem="mKC-yb-gwP" firstAttribute="top" secondItem="ODD-NL-lZo" secondAttribute="bottom" constant="20" id="92Q-Vf-5Vu"/>
+                            <constraint firstItem="mKC-yb-gwP" firstAttribute="centerX" secondItem="ga0-Ic-oFe" secondAttribute="centerX" id="Hl9-mD-fxf"/>
                             <constraint firstItem="ODD-NL-lZo" firstAttribute="top" secondItem="rMf-lX-ta4" secondAttribute="top" id="LCP-oo-RA1"/>
-                            <constraint firstItem="vK9-9o-bfB" firstAttribute="centerX" secondItem="ga0-Ic-oFe" secondAttribute="centerX" id="Tfb-sY-WiY"/>
-                            <constraint firstItem="vK9-9o-bfB" firstAttribute="centerY" secondItem="ga0-Ic-oFe" secondAttribute="centerY" id="Txy-Kt-0J3"/>
+                            <constraint firstItem="1IK-PL-1CU" firstAttribute="centerX" secondItem="ga0-Ic-oFe" secondAttribute="centerX" id="OQ1-qh-jcM"/>
+                            <constraint firstItem="rMf-lX-ta4" firstAttribute="trailing" secondItem="pRY-Ej-2o1" secondAttribute="trailing" constant="20" id="OoK-ag-Vho"/>
+                            <constraint firstItem="rMf-lX-ta4" firstAttribute="trailing" secondItem="mKC-yb-gwP" secondAttribute="trailing" constant="20" id="OrT-m2-ytW"/>
+                            <constraint firstItem="mKC-yb-gwP" firstAttribute="centerX" secondItem="ga0-Ic-oFe" secondAttribute="centerX" id="USF-h8-Dmk"/>
                             <constraint firstItem="ODD-NL-lZo" firstAttribute="leading" secondItem="rMf-lX-ta4" secondAttribute="leading" constant="5" id="Z2G-g1-HLK"/>
+                            <constraint firstItem="pRY-Ej-2o1" firstAttribute="top" secondItem="1IK-PL-1CU" secondAttribute="bottom" constant="20" id="mqZ-Us-xc8"/>
+                            <constraint firstItem="0eC-fi-5Cs" firstAttribute="top" secondItem="mKC-yb-gwP" secondAttribute="bottom" constant="50" id="uLt-bC-2Nz"/>
+                            <constraint firstItem="rMf-lX-ta4" firstAttribute="trailing" secondItem="1IK-PL-1CU" secondAttribute="trailing" constant="20" id="ubQ-kQ-Ojx"/>
+                            <constraint firstItem="1IK-PL-1CU" firstAttribute="leading" secondItem="rMf-lX-ta4" secondAttribute="leading" constant="20" id="up6-pl-PUp"/>
+                            <constraint firstItem="pRY-Ej-2o1" firstAttribute="leading" secondItem="rMf-lX-ta4" secondAttribute="leading" constant="20" id="yhz-Wb-Yfm"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnA-IT-YGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4952" y="1948"/>
+            <point key="canvasLocation" x="4318" y="1949"/>
         </scene>
         <!--Account InfoVC-->
         <scene sceneID="8Vc-8L-LYQ">
@@ -4443,6 +4452,7 @@
         <image name="DownArrow" width="20" height="20"/>
         <image name="EditBtn" width="28" height="28"/>
         <image name="ExclamationMark" width="24" height="24"/>
+        <image name="FingerPrintIcon" width="132" height="132"/>
         <image name="Flash" width="40" height="40"/>
         <image name="ForwardArrow" width="20" height="20"/>
         <image name="GoogleIcon" width="24" height="24"/>
