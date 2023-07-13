@@ -41,6 +41,7 @@ enum ProfileCell: Int, CaseIterable {
     case changeLogInPin
     case FAQs
     case rateUs
+    case addFingerprint
     
     var title: String {
         switch self {
@@ -62,6 +63,9 @@ enum ProfileCell: Int, CaseIterable {
             return "FAQs"
         case .rateUs:
             return "Rate Us"
+        case .addFingerprint:
+            return "Add Fingerprint"
+            
         }
     }
     
@@ -87,6 +91,8 @@ enum ProfileCell: Int, CaseIterable {
             return storyboard.instantiateViewController(withIdentifier: "FAQsVC") as! FAQsVC
         case .rateUs:
             return storyboard.instantiateViewController(withIdentifier: "RateUsVC") as! RateUsVC
+        case .addFingerprint:
+            return storyboard.instantiateViewController(withIdentifier: "AddFingerPrintVC") as! AddFingerPrintVC
         }
     }
 }

@@ -3653,6 +3653,50 @@
             </objects>
             <point key="canvasLocation" x="5657" y="1934"/>
         </scene>
+        <!--Add Finger PrintVC-->
+        <scene sceneID="uF9-1U-Yyy">
+            <objects>
+                <viewController storyboardIdentifier="AddFingerPrintVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="abK-Zg-xxT" customClass="AddFingerPrintVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ga0-Ic-oFe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODD-NL-lZo">
+                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TIi-R4-nQx"/>
+                                    <constraint firstAttribute="width" constant="50" id="efm-Zc-VPD"/>
+                                    <constraint firstAttribute="width" constant="50" id="eiM-Xw-aYK"/>
+                                    <constraint firstAttribute="height" constant="50" id="tfh-2u-AEc"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="abK-Zg-xxT" eventType="touchUpInside" id="dl9-rd-GEH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AddFingerPrintVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-9o-bfB">
+                                <rect key="frame" x="92" y="274" width="136" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rMf-lX-ta4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ODD-NL-lZo" firstAttribute="top" secondItem="rMf-lX-ta4" secondAttribute="top" id="LCP-oo-RA1"/>
+                            <constraint firstItem="vK9-9o-bfB" firstAttribute="centerX" secondItem="ga0-Ic-oFe" secondAttribute="centerX" id="Tfb-sY-WiY"/>
+                            <constraint firstItem="vK9-9o-bfB" firstAttribute="centerY" secondItem="ga0-Ic-oFe" secondAttribute="centerY" id="Txy-Kt-0J3"/>
+                            <constraint firstItem="ODD-NL-lZo" firstAttribute="leading" secondItem="rMf-lX-ta4" secondAttribute="leading" constant="5" id="Z2G-g1-HLK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnA-IT-YGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6289" y="1931"/>
+        </scene>
         <!--Account InfoVC-->
         <scene sceneID="8Vc-8L-LYQ">
             <objects>

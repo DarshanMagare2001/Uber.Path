@@ -70,6 +70,7 @@
 		13E69C4B2A5D584400313832 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C4A2A5D584400313832 /* ImagePicker.swift */; };
 		13E69C4E2A5D7BD100313832 /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E69C4C2A5D7BD100313832 /* ContactsCell.swift */; };
 		13E69C4F2A5D7BD100313832 /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E69C4D2A5D7BD100313832 /* ContactsCell.xib */; };
+		13FAAB0D2A5FB5F300FD49AD /* AddFingerPrintVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAAB0C2A5FB5F300FD49AD /* AddFingerPrintVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		13E69C4A2A5D584400313832 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		13E69C4C2A5D7BD100313832 /* ContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		13E69C4D2A5D7BD100313832 /* ContactsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
+		13FAAB0C2A5FB5F300FD49AD /* AddFingerPrintVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFingerPrintVC.swift; sourceTree = "<group>"; };
 		A63C70C62231FF3F1946BC21 /* Pods-UberPath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.debug.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.debug.xcconfig"; sourceTree = "<group>"; };
 		D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberPath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30BDD2B9C74FD987E7BDB94 /* Pods-UberPath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberPath.release.xcconfig"; path = "Target Support Files/Pods-UberPath/Pods-UberPath.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				13E69C342A5D4C4400313832 /* Change Log In PIN */,
 				13E69C332A5D4C4100313832 /* FAQs */,
 				13E69C392A5D4CB600313832 /* Rate Us */,
+				13FAAB0B2A5FB5C600FD49AD /* Add FingerPrint */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -455,6 +458,14 @@
 			path = "Rate Us";
 			sourceTree = "<group>";
 		};
+		13FAAB0B2A5FB5C600FD49AD /* Add FingerPrint */ = {
+			isa = PBXGroup;
+			children = (
+				13FAAB0C2A5FB5F300FD49AD /* AddFingerPrintVC.swift */,
+			);
+			path = "Add FingerPrint";
+			sourceTree = "<group>";
+		};
 		4834731299117B92F6450414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +646,7 @@
 				13E69C492A5D4DDE00313832 /* RateUsVC.swift in Sources */,
 				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
+				13FAAB0D2A5FB5F300FD49AD /* AddFingerPrintVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
 				13E69C452A5D4DA800313832 /* ChangeLogInPinVC.swift in Sources */,
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
