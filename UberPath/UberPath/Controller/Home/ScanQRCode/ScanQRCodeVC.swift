@@ -20,7 +20,6 @@ class ScanQRCodeVC: UIViewController {
         ReadyCodeView.isHidden = true
     }
     
-    
     @IBAction func scanQrBtnPressed(_ sender: UIButton) {
         UIView.transition(with: view, duration: 0.5, options: [.transitionFlipFromRight, .showHideTransitionViews], animations: {
             self.ScanQRView.isHidden = true
@@ -37,7 +36,6 @@ class ScanQRCodeVC: UIViewController {
     }
     func updateFont(){
         warninglbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 15.0))
-        
     }
     
     

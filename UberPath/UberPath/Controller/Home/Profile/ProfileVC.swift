@@ -12,7 +12,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var userImageView: CircleImageView!
-    let cellArray: [ProfileCell] = [.referralCode, .accountInfo, .contactList, .language, .generalSetting, .changePassword, .changeLogInPin, .FAQs, .rateUs ,.addFingerprint]
+    let cellArray: [ProfileCell] = [.referralCode, .accountInfo, .contactList, .language, .generalSetting, .changePassword, .changeLogInPin, .FAQs,.addFingerprint]
     
     override func viewDidLoad() {
         super.viewDidLoad()
