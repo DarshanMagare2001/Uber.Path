@@ -67,6 +67,7 @@ enum ProfileCell: Int, CaseIterable {
     
     var viewController: UIViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let storyboardForMain = UIStoryboard(name: "Main", bundle: nil)
         switch self {
         case .referralCode:
             return storyboard.instantiateViewController(withIdentifier: "ReferralCodeVC") as! ReferralCodeVC
@@ -79,7 +80,7 @@ enum ProfileCell: Int, CaseIterable {
         case .generalSetting:
             return storyboard.instantiateViewController(withIdentifier: "GeneralSettingVC") as! GeneralSettingVC
         case .changePassword:
-            return storyboard.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
+            return storyboardForMain.instantiateViewController(withIdentifier: "OTPAuthenticationVC") as! OTPAuthenticationVC
         case .changeLogInPin:
             return storyboard.instantiateViewController(withIdentifier: "ChangeLogInPinVC") as! ChangeLogInPinVC
         case .FAQs:
