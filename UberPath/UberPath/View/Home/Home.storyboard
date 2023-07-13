@@ -2538,12 +2538,21 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="RightTick" title=" "/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMy-bc-hs4">
+                                <rect key="frame" x="20" y="70" width="280" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MYD-56-a1e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9DJ-k3-h79" firstAttribute="centerX" secondItem="9hF-Qs-gIh" secondAttribute="centerX" id="4EG-Ud-n4M"/>
+                            <constraint firstItem="MMy-bc-hs4" firstAttribute="top" secondItem="lJR-Uz-ZBG" secondAttribute="bottom" constant="20" id="610-2x-b4u"/>
                             <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="w9H-bF-4mC" secondAttribute="trailing" constant="5" id="95y-L3-bp1"/>
+                            <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="MMy-bc-hs4" secondAttribute="trailing" constant="20" id="Twv-du-IOo"/>
+                            <constraint firstItem="MMy-bc-hs4" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="20" id="gIB-Ud-18m"/>
                             <constraint firstItem="lJR-Uz-ZBG" firstAttribute="top" secondItem="MYD-56-a1e" secondAttribute="top" id="jje-MA-SFb"/>
                             <constraint firstItem="lJR-Uz-ZBG" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="5" id="svH-Wo-10i"/>
                             <constraint firstItem="w9H-bF-4mC" firstAttribute="top" secondItem="MYD-56-a1e" secondAttribute="top" id="uJE-3G-ggX"/>
