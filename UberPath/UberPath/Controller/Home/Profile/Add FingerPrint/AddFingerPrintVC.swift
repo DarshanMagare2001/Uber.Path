@@ -8,16 +8,20 @@
 import UIKit
 
 class AddFingerPrintVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-   
-
+    
+    @IBAction func backToHomeBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 }
