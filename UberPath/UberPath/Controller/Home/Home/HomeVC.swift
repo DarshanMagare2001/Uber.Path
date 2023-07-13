@@ -41,6 +41,12 @@ class HomeVC: UIViewController {
     }
     
     
+    @IBAction func notificationBtnPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     
     func updateFont(){
         welcomeLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))

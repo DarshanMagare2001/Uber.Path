@@ -36,6 +36,7 @@
 		139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D32A528DAC00248D92 /* MyCardVC.swift */; };
 		139314D62A528DC100248D92 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D52A528DC100248D92 /* ActivityVC.swift */; };
 		139314D82A528DD900248D92 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139314D72A528DD900248D92 /* ProfileVC.swift */; };
+		1396C8892A60279100FA4526 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396C8882A60279100FA4526 /* NotificationVC.swift */; };
 		13A12AA82A445F1A00532BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA72A445F1A00532BC6 /* AppDelegate.swift */; };
 		13A12AAA2A445F1A00532BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */; };
 		13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A12AAB2A445F1A00532BC6 /* OnboardingVC.swift */; };
@@ -98,6 +99,7 @@
 		139314D32A528DAC00248D92 /* MyCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardVC.swift; sourceTree = "<group>"; };
 		139314D52A528DC100248D92 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		139314D72A528DD900248D92 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		1396C8882A60279100FA4526 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		13A12AA42A445F1A00532BC6 /* UberPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A12AA72A445F1A00532BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A12AA92A445F1A00532BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				139314D12A528D8A00248D92 /* HomeVC.swift */,
 				13D9D5732A55412700E3AE75 /* TransfersVC */,
+				1396C8882A60279100FA4526 /* NotificationVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */,
 				13CD190F2A5EC4B90014C3D0 /* IBinspectable.swift in Sources */,
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
+				1396C8892A60279100FA4526 /* NotificationVC.swift in Sources */,
 				13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */,
 				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
