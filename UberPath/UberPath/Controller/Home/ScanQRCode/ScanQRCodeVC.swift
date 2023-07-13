@@ -13,6 +13,7 @@ class ScanQRCodeVC: UIViewController {
     @IBOutlet weak var ReadyCodeView: UIView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var threeDotsBtn: UIButton!
+    @IBOutlet weak var showQrLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
@@ -26,6 +27,7 @@ class ScanQRCodeVC: UIViewController {
             self.ReadyCodeView.isHidden = false
             self.backBtn.tintColor = UIColor.black
             self.threeDotsBtn.tintColor = UIColor.black
+            self.showQrLbl.textColor = UIColor.black
         }, completion: nil)
     }
     
