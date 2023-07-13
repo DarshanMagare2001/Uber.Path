@@ -8,13 +8,11 @@ class EditCardVC: UIViewController {
     @IBOutlet weak var manageLbl: UILabel!
     @IBOutlet weak var detailLblView: UIView!
     @IBOutlet weak var detailLbl: UILabel!
-    
+    @IBOutlet weak var cardImageView: UIImageView!
     var selectedView: UIView? // Track the currently selected view
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
-        
         // Add tap gestures to the views
         addTapGesture(to: personLblView)
         addTapGesture(to: manageLblView)
@@ -46,6 +44,8 @@ class EditCardVC: UIViewController {
         personLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
         manageLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
         detailLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
+        guard let data = cardImage else {return}
+        cardImageView.image = UIImage(named: data)
     }
     
     // Function to add tap gesture to a view

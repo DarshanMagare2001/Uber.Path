@@ -52,7 +52,7 @@ extension MyCardVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
           let storyboard = UIStoryboard(name: "Home", bundle: nil)
           let destinationVC = storyboard.instantiateViewController(withIdentifier: "EditCardVC") as! EditCardVC
-          destinationVC.cardImage = cardArray[indexPath.row] // Assuming you want to pass the selected card image name
+          destinationVC.cardImage = cardArray[indexPath.row]
          navigationController?.pushViewController(destinationVC, animated: true)
       }
     
