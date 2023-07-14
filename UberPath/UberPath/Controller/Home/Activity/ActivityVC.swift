@@ -113,7 +113,7 @@ class ActivityVC: UIViewController {
             let barY = barGraphHeight - (barValue / maxBarValue) * barGraphHeight
             
             let barLayer = CALayer()
-            barLayer.frame = CGRect(x: barX, y: barY, width: 12, height: barGraphHeight - barY) // Adjust the bar size as per your preference
+            barLayer.frame = CGRect(x: barX, y: barY, width: 15, height: barGraphHeight - barY) // Adjust the bar size as per your preference
             barLayer.backgroundColor = UIColor.blue.cgColor // Adjust the color as per your preference
             
             barGraphView.layer.addSublayer(barLayer)
