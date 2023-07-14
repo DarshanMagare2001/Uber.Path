@@ -10,13 +10,18 @@ import UIKit
 class ActivityVC: UIViewController {
     @IBOutlet weak var collectionViewOne: UICollectionView!
     @IBOutlet weak var pageControllForCollectionViewOne: UIPageControl!
-    var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var btn4: UIButton!
     
+    var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
         updateCell()
+        
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
@@ -24,6 +29,17 @@ class ActivityVC: UIViewController {
         let offsetX = CGFloat(page) * collectionViewOne.frame.width
         let offset = CGPoint(x: offsetX, y: 0)
         collectionViewOne.setContentOffset(offset, animated: true)
+    }
+    
+    @IBAction func barBtnPressed(_ sender: UIButton) {
+        let buttons = [btn1, btn2, btn3, btn4] // Replace with your button outlets
+        for button in buttons {
+            if button?.tag == sender.tag {
+                button?.backgroundColor = UIColor.systemGray6
+            } else {
+                button?.backgroundColor = UIColor.white
+            }
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -43,6 +59,8 @@ class ActivityVC: UIViewController {
         layout.scrollDirection = .horizontal
         collectionViewOne.collectionViewLayout = layout
     }
+    
+    
 }
 
 extension ActivityVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
