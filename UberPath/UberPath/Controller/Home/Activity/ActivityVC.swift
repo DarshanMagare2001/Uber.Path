@@ -42,11 +42,13 @@ class ActivityVC: UIViewController {
         }
         // Set the tapped label's background color to gray
         tappedLabel.backgroundColor = .systemGray6
+        tappedLabel.font = UIFont.boldSystemFont(ofSize: tappedLabel.font.pointSize)
         // Set the background color of all other labels to white
         let allLabels = [btn1, btn2, btn3, btn4]
         for label in allLabels {
             if label != tappedLabel {
                 label?.backgroundColor = .white
+                label?.font = UIFont.systemFont(ofSize: (label?.font.pointSize)!)
                 label?.layer.borderWidth = 0
                 label?.layer.borderColor = UIColor.white.cgColor
                 label?.layer.cornerRadius = 0
