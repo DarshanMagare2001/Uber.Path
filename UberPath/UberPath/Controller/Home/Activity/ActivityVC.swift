@@ -16,16 +16,13 @@ class ActivityVC: UIViewController {
         super.viewDidLoad()
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
-        pageControllForCollectionViewOne.numberOfPages = collectionViewOneArray.count
-        
-        let layout = UICollectionViewFlowLayout()
-        let cellWidth = collectionViewOne.frame.width - 40 // Adjust the width as per your requirement
-        layout.itemSize = CGSize(width: cellWidth, height: collectionViewOne.frame.height)
-        layout.minimumLineSpacing = 40 // Adjust the spacing as per your requirement
-        let horizontalInset = (collectionViewOne.frame.width - cellWidth) / 2
-        layout.sectionInset = UIEdgeInsets(top: 20, left: horizontalInset, bottom: 20, right: horizontalInset) // Adjust the insets as per your requirement
-        layout.scrollDirection = .horizontal
-        collectionViewOne.collectionViewLayout = layout
+    }
+    
+    @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
+        let page = sender.currentPage
+        let offsetX = CGFloat(page) * collectionViewOne.frame.width
+        let offset = CGPoint(x: offsetX, y: 0)
+        collectionViewOne.setContentOffset(offset, animated: true)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -34,11 +31,16 @@ class ActivityVC: UIViewController {
         pageControllForCollectionViewOne.currentPage = currentPage
     }
     
-    @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
-        let page = sender.currentPage
-        let offsetX = CGFloat(page) * collectionViewOne.frame.width
-        let offset = CGPoint(x: offsetX, y: 0)
-        collectionViewOne.setContentOffset(offset, animated: true)
+    func updateCell(){
+        pageControllForCollectionViewOne.numberOfPages = collectionViewOneArray.count
+        let layout = UICollectionViewFlowLayout()
+        let cellWidth = collectionViewOne.frame.width - 40 // Adjust the width as per your requirement
+        layout.itemSize = CGSize(width: cellWidth, height: collectionViewOne.frame.height)
+        layout.minimumLineSpacing = 40 // Adjust the spacing as per your requirement
+        let horizontalInset = (collectionViewOne.frame.width - cellWidth) / 2
+        layout.sectionInset = UIEdgeInsets(top: 20, left: horizontalInset, bottom: 20, right: horizontalInset) // Adjust the insets as per your requirement
+        layout.scrollDirection = .horizontal
+        collectionViewOne.collectionViewLayout = layout
     }
 }
 
