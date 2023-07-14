@@ -10,18 +10,22 @@ import UIKit
 class ActivityVC: UIViewController {
     @IBOutlet weak var collectionViewOne: UICollectionView!
     @IBOutlet weak var pageControllForCollectionViewOne: UIPageControl!
-    @IBOutlet weak var btn1: UIButton!
-    @IBOutlet weak var btn2: UIButton!
-    @IBOutlet weak var btn3: UIButton!
-    @IBOutlet weak var btn4: UIButton!
-    
+    @IBOutlet weak var btn1: UILabel!
+    @IBOutlet weak var btn2: UILabel!
+    @IBOutlet weak var btn3: UILabel!
+    @IBOutlet weak var btn4: UILabel!
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
         updateCell()
-        
+        [btn1, btn2, btn3, btn4].enumerated().forEach { index, button in
+            button?.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(btnTapped(_:)))
+            tapGesture.view?.tag = index
+            button?.addGestureRecognizer(tapGesture)
+        }
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
@@ -31,17 +35,28 @@ class ActivityVC: UIViewController {
         collectionViewOne.setContentOffset(offset, animated: true)
     }
     
-    @IBAction func barBtnPressed(_ sender: UIButton) {
-        let buttons = [btn1, btn2, btn3, btn4]
-        for button in buttons {
-            if button?.tag == sender.tag {
-                button?.backgroundColor = UIColor.systemGray6
-            } else {
-                button?.backgroundColor = UIColor.white
+ 
+    @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
+        guard let tappedLabel = gesture.view as? UILabel else {
+            return
+        }
+        
+        // Set the tapped label's background color to gray
+        tappedLabel.backgroundColor = .systemGray6
+        
+        // Set the background color of all other labels to white
+        let allLabels = [btn1, btn2, btn3, btn4]
+        for label in allLabels {
+            if label != tappedLabel {
+                label?.backgroundColor = .white
             }
         }
     }
-    
+
+
+
+
+     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.width
         let currentPage = Int(scrollView.contentOffset.x / pageWidth)
