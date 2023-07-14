@@ -21,8 +21,9 @@ class ActivityVC: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let cellWidth = collectionViewOne.frame.width - 40 // Adjust the width as per your requirement
         layout.itemSize = CGSize(width: cellWidth, height: collectionViewOne.frame.height)
-        layout.minimumLineSpacing = 20 // Adjust the spacing as per your requirement
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20) // Adjust the insets as per your requirement
+        layout.minimumLineSpacing = 40 // Adjust the spacing as per your requirement
+        let horizontalInset = (collectionViewOne.frame.width - cellWidth) / 2
+        layout.sectionInset = UIEdgeInsets(top: 20, left: horizontalInset, bottom: 20, right: horizontalInset) // Adjust the insets as per your requirement
         layout.scrollDirection = .horizontal
         collectionViewOne.collectionViewLayout = layout
     }
