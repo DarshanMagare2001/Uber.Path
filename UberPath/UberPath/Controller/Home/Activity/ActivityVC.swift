@@ -32,7 +32,7 @@ class ActivityVC: UIViewController {
     }
     
     @IBAction func barBtnPressed(_ sender: UIButton) {
-        let buttons = [btn1, btn2, btn3, btn4] // Replace with your button outlets
+        let buttons = [btn1, btn2, btn3, btn4]
         for button in buttons {
             if button?.tag == sender.tag {
                 button?.backgroundColor = UIColor.systemGray6

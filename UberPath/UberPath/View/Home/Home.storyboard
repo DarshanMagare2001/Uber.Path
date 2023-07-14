@@ -2706,48 +2706,48 @@
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="18e-Xl-Obo">
+                                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="18e-Xl-Obo">
                                                         <rect key="frame" x="10" y="76" width="260" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quy-fR-spm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Day">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="barBtnPressed:" destination="5Kd-4b-Lto" eventType="touchUpInside" id="xE6-Bb-raI"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-PS-lN3">
-                                                                <rect key="frame" x="65" y="0.0" width="65" height="30"/>
+                                                                <rect key="frame" x="66.5" y="0.0" width="61" height="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Week">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="barBtnPressed:" destination="5Kd-4b-Lto" eventType="touchUpInside" id="0wW-xt-oiF"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDZ-b2-wDS">
-                                                                <rect key="frame" x="130" y="0.0" width="65" height="30"/>
+                                                                <rect key="frame" x="132.5" y="0.0" width="61.5" height="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Month">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="barBtnPressed:" destination="5Kd-4b-Lto" eventType="touchUpInside" id="DSa-Nf-lsx"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zw-3H-apf">
-                                                                <rect key="frame" x="195" y="0.0" width="65" height="30"/>
+                                                                <rect key="frame" x="199" y="0.0" width="61" height="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Year">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="barBtnPressed:" destination="5Kd-4b-Lto" eventType="touchUpInside" id="ODd-aY-cMk"/>
