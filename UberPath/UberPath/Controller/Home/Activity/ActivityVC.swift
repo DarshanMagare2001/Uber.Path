@@ -17,6 +17,8 @@ class ActivityVC: UIViewController {
     @IBOutlet weak var barGraphView: RoundedButtonWithBorder!
     
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
+    var barGraphLayers: [CALayer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
@@ -69,6 +71,8 @@ class ActivityVC: UIViewController {
         tappedLabel.layer.shadowRadius = 4.0
         tappedLabel.layer.shadowOpacity = 0.5
         
+        removeBarGraph()
+        
         switch tappedLabel {
         case btn1:
             drawBarGraph(withTimeInterval: .day)
@@ -115,6 +119,7 @@ class ActivityVC: UIViewController {
             barLayer.backgroundColor = UIColor.blue.cgColor // Adjust the color as per your preference
             
             barGraphView.layer.addSublayer(barLayer)
+            barGraphLayers.append(barLayer)
             
             if index < barValues.count - 1 {
                 let nextBarValue = barValues[index + 1]
@@ -131,11 +136,17 @@ class ActivityVC: UIViewController {
                 lineLayer.lineWidth = 1.0 // Adjust the line width as per your preference
                 
                 barGraphView.layer.addSublayer(lineLayer)
+                barGraphLayers.append(lineLayer)
             }
         }
     }
     
-    
+    func removeBarGraph() {
+        for layer in barGraphLayers {
+            layer.removeFromSuperlayer()
+        }
+        barGraphLayers.removeAll()
+    }
     
     
     
@@ -156,7 +167,6 @@ class ActivityVC: UIViewController {
         layout.scrollDirection = .horizontal
         collectionViewOne.collectionViewLayout = layout
     }
-    
     
 }
 
