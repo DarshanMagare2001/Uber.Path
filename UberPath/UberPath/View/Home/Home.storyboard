@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="23.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="32.5" width="280" height="26.5"/>
+                                                        <rect key="frame" x="0.0" y="33.5" width="280" height="28.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="69" width="280" height="102.5"/>
+                                                        <rect key="frame" x="0.0" y="72" width="280" height="99.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="102.5"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="99.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="99.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2692,7 +2692,7 @@
                                                 </connections>
                                             </pageControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-3v-Z5d" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="110" width="280" height="300"/>
+                                                <rect key="frame" x="20" y="110" width="280" height="350"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Spending" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxW-X4-Pdq">
                                                         <rect key="frame" x="98" y="20" width="84.5" height="14.5"/>
@@ -2739,73 +2739,90 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwm-9T-FGd" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="118.5" width="260" height="153.5"/>
+                                                        <rect key="frame" x="10" y="118.5" width="260" height="162.5"/>
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-r6-GVc">
-                                                        <rect key="frame" x="0.0" y="272" width="260" height="18"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-r6-GVc">
+                                                        <rect key="frame" x="0.0" y="281" width="260" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iet-5v-vI1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="37" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I44-Sb-dyK">
-                                                                <rect key="frame" x="37" y="0.0" width="37.5" height="18"/>
+                                                                <rect key="frame" x="37.5" y="0.0" width="35.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMv-zZ-A1k">
-                                                                <rect key="frame" x="74.5" y="0.0" width="37" height="18"/>
+                                                                <rect key="frame" x="75" y="0.0" width="35.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PQ-7M-nrE">
-                                                                <rect key="frame" x="111.5" y="0.0" width="37" height="18"/>
+                                                                <rect key="frame" x="112.5" y="0.0" width="35" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPH-9U-qgn">
-                                                                <rect key="frame" x="148.5" y="0.0" width="37" height="18"/>
+                                                                <rect key="frame" x="149.5" y="0.0" width="35.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIp-xG-8yl">
-                                                                <rect key="frame" x="185.5" y="0.0" width="37.5" height="18"/>
+                                                                <rect key="frame" x="187" y="0.0" width="35.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXw-Ie-qpw">
-                                                                <rect key="frame" x="223" y="0.0" width="37" height="18"/>
+                                                                <rect key="frame" x="224.5" y="0.0" width="35.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <color key="textColor" name="GlobalButtonColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-jq-UeC">
+                                                        <rect key="frame" x="10" y="309" width="260" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Bar" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-a2-DCG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="211" height="31"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25W-VG-KCw">
+                                                                <rect key="frame" x="211" y="0.0" width="51" height="31"/>
+                                                            </switch>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="BDm-jq-UeC" secondAttribute="trailing" constant="10" id="2cZ-fh-vRv"/>
                                                     <constraint firstItem="2Yv-r6-GVc" firstAttribute="top" secondItem="Uwm-9T-FGd" secondAttribute="bottom" id="6CT-0A-Bvp"/>
                                                     <constraint firstItem="l8D-Vq-ySc" firstAttribute="top" secondItem="oxW-X4-Pdq" secondAttribute="bottom" constant="10" id="B4A-fU-ceT"/>
+                                                    <constraint firstItem="BDm-jq-UeC" firstAttribute="top" secondItem="2Yv-r6-GVc" secondAttribute="bottom" constant="10" id="BE9-1r-37V"/>
                                                     <constraint firstItem="2Yv-r6-GVc" firstAttribute="leading" secondItem="eAd-3v-Z5d" secondAttribute="leading" id="CMn-EZ-cTl"/>
+                                                    <constraint firstItem="BDm-jq-UeC" firstAttribute="leading" secondItem="eAd-3v-Z5d" secondAttribute="leading" constant="10" id="Cxx-eq-h5m"/>
                                                     <constraint firstItem="oxW-X4-Pdq" firstAttribute="top" secondItem="eAd-3v-Z5d" secondAttribute="top" constant="20" id="H4Q-id-1WW"/>
+                                                    <constraint firstItem="2Yv-r6-GVc" firstAttribute="width" secondItem="Uwm-9T-FGd" secondAttribute="width" id="IHb-Gj-Ge3"/>
                                                     <constraint firstItem="l8D-Vq-ySc" firstAttribute="centerX" secondItem="eAd-3v-Z5d" secondAttribute="centerX" id="Or2-hi-U2W"/>
                                                     <constraint firstItem="jfu-tm-sFH" firstAttribute="top" secondItem="l8D-Vq-ySc" secondAttribute="bottom" constant="10" id="PG6-JO-fLb"/>
                                                     <constraint firstItem="jfu-tm-sFH" firstAttribute="leading" secondItem="eAd-3v-Z5d" secondAttribute="leading" constant="10" id="VKr-UU-08U"/>
-                                                    <constraint firstAttribute="height" constant="300" id="Wlc-HE-kVq"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2Yv-r6-GVc" secondAttribute="trailing" constant="20" id="Y3r-XA-KCT"/>
+                                                    <constraint firstAttribute="height" constant="350" id="Wlc-HE-kVq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BDm-jq-UeC" secondAttribute="bottom" constant="10" id="d64-cC-yZu"/>
                                                     <constraint firstItem="Uwm-9T-FGd" firstAttribute="leading" secondItem="eAd-3v-Z5d" secondAttribute="leading" constant="10" id="n0X-mo-aym"/>
                                                     <constraint firstAttribute="trailing" secondItem="Uwm-9T-FGd" secondAttribute="trailing" constant="10" id="ov3-zQ-U5t"/>
                                                     <constraint firstItem="oxW-X4-Pdq" firstAttribute="centerX" secondItem="eAd-3v-Z5d" secondAttribute="centerX" id="p4g-2r-Erz"/>
                                                     <constraint firstItem="Uwm-9T-FGd" firstAttribute="top" secondItem="jfu-tm-sFH" secondAttribute="bottom" constant="10" id="pvB-Tz-tQd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2Yv-r6-GVc" secondAttribute="bottom" constant="10" id="sj0-d8-ec0"/>
                                                     <constraint firstAttribute="trailing" secondItem="jfu-tm-sFH" secondAttribute="trailing" constant="10" id="uzX-la-XYq"/>
                                                 </constraints>
                                             </view>

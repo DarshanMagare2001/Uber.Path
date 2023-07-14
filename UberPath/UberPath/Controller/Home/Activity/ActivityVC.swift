@@ -86,7 +86,7 @@ class ActivityVC: UIViewController {
             break
         }
     }
-   
+    
     func drawBarGraph(withTimeInterval timeInterval: Calendar.Component) {
         let barGraphHeight = barGraphView.frame.height
         let barGraphWidth = barGraphView.frame.width
@@ -111,28 +111,22 @@ class ActivityVC: UIViewController {
         for (index, barValue) in barValues.enumerated() {
             let barX = (barGraphWidth / 7.0) * CGFloat(index)
             let barY = barGraphHeight - (barValue / maxBarValue) * barGraphHeight
-            
             let barLayer = CALayer()
-            barLayer.frame = CGRect(x: barX, y: barY, width: 15, height: barGraphHeight - barY) // Adjust the bar size as per your preference
+            barLayer.frame = CGRect(x: barX, y: barY, width: 20, height: barGraphHeight - barY) // Adjust the bar size as per your preference
             barLayer.backgroundColor = UIColor.blue.cgColor // Adjust the color as per your preference
-            
             barGraphView.layer.addSublayer(barLayer)
             barGraphLayers.append(barLayer)
-            
             if index < barValues.count - 1 {
                 let nextBarValue = barValues[index + 1]
                 let nextBarX = (barGraphWidth / 7.0) * CGFloat(index + 1)
                 let nextBarY = barGraphHeight - (nextBarValue / maxBarValue) * barGraphHeight
-                
                 let lineLayer = CAShapeLayer()
                 let linePath = UIBezierPath()
                 linePath.move(to: CGPoint(x: barX + 6, y: barY))
                 linePath.addLine(to: CGPoint(x: nextBarX + 6, y: nextBarY))
-                
                 lineLayer.path = linePath.cgPath
                 lineLayer.strokeColor = UIColor.blue.cgColor // Adjust the line color as per your preference
                 lineLayer.lineWidth = 1.0 // Adjust the line width as per your preference
-                
                 barGraphView.layer.addSublayer(lineLayer)
                 barGraphLayers.append(lineLayer)
             }
@@ -148,13 +142,12 @@ class ActivityVC: UIViewController {
                 label.textColor = .black
                 label.textAlignment = .center
                 label.font = UIFont.systemFont(ofSize: 12) // Adjust the font as per your preference
-                
                 barGraphView.addSubview(label)
             }
         }
     }
-
-
+    
+    
     
     func dayOfWeekLabel(forIndex index: Int) -> String? {
         let calendar = Calendar.current
@@ -166,7 +159,7 @@ class ActivityVC: UIViewController {
         
         return nil
     }
-
+    
     
     func removeBarGraph() {
         for layer in barGraphLayers {
