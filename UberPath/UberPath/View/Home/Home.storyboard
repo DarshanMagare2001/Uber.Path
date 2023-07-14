@@ -2799,6 +2799,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Activity" image="Activity" id="SDB-ma-h72"/>
                     <connections>
+                        <outlet property="barGraphView" destination="Uwm-9T-FGd" id="oxj-LW-pFD"/>
                         <outlet property="btn1" destination="Jl7-gd-rUC" id="uhN-av-IVj"/>
                         <outlet property="btn2" destination="Pti-c1-vtj" id="MGZ-cv-XGF"/>
                         <outlet property="btn3" destination="V2A-sJ-L43" id="ASs-SH-6ia"/>

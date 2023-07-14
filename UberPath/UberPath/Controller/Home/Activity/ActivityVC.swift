@@ -14,6 +14,8 @@ class ActivityVC: UIViewController {
     @IBOutlet weak var btn2: UILabel!
     @IBOutlet weak var btn3: UILabel!
     @IBOutlet weak var btn4: UILabel!
+    @IBOutlet weak var barGraphView: RoundedButtonWithBorder!
+    
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,7 @@ class ActivityVC: UIViewController {
         collectionViewOne.setContentOffset(offset, animated: true)
     }
     
- 
+    
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
             return
@@ -66,13 +68,77 @@ class ActivityVC: UIViewController {
         tappedLabel.layer.shadowOffset = CGSize(width: 0, height: 2)
         tappedLabel.layer.shadowRadius = 4.0
         tappedLabel.layer.shadowOpacity = 0.5
+        
+        switch tappedLabel {
+        case btn1:
+            drawBarGraph(withTimeInterval: .day)
+        case btn2:
+            drawBarGraph(withTimeInterval: .weekOfYear)
+        case btn3:
+            drawBarGraph(withTimeInterval: .month)
+        case btn4:
+            drawBarGraph(withTimeInterval: .year)
+        default:
+            break
+        }
     }
-
-
-
-
-
-     
+    
+    
+    
+    func drawBarGraph(withTimeInterval timeInterval: Calendar.Component) {
+        let barGraphHeight = barGraphView.frame.height
+        let barGraphWidth = barGraphView.frame.width
+        
+        // Sample data values for the different time intervals
+        let barValues: [CGFloat]
+        switch timeInterval {
+        case .day:
+            barValues = [50, 80, 120, 90, 110, 70, 100]
+        case .weekOfYear:
+            barValues = [70, 110, 90, 120, 80, 100, 50]
+        case .month:
+            barValues = [120, 90, 110, 100, 80, 70, 50]
+        case .year:
+            barValues = [110, 80, 90, 70, 50, 120, 100]
+        default:
+            barValues = []
+        }
+        
+        let maxBarValue = barValues.max() ?? 0 // Get the maximum value from the data
+        
+        for (index, barValue) in barValues.enumerated() {
+            let barX = (barGraphWidth / 6.0) * CGFloat(index)
+            let barY = barGraphHeight - (barValue / maxBarValue) * barGraphHeight
+            
+            let barLayer = CALayer()
+            barLayer.frame = CGRect(x: barX, y: barY, width: 12, height: barGraphHeight - barY) // Adjust the bar size as per your preference
+            barLayer.backgroundColor = UIColor.blue.cgColor // Adjust the color as per your preference
+            
+            barGraphView.layer.addSublayer(barLayer)
+            
+            if index < barValues.count - 1 {
+                let nextBarValue = barValues[index + 1]
+                let nextBarX = (barGraphWidth / 6.0) * CGFloat(index + 1)
+                let nextBarY = barGraphHeight - (nextBarValue / maxBarValue) * barGraphHeight
+                
+                let lineLayer = CAShapeLayer()
+                let linePath = UIBezierPath()
+                linePath.move(to: CGPoint(x: barX + 6, y: barY))
+                linePath.addLine(to: CGPoint(x: nextBarX + 6, y: nextBarY))
+                
+                lineLayer.path = linePath.cgPath
+                lineLayer.strokeColor = UIColor.blue.cgColor // Adjust the line color as per your preference
+                lineLayer.lineWidth = 1.0 // Adjust the line width as per your preference
+                
+                barGraphView.layer.addSublayer(lineLayer)
+            }
+        }
+    }
+    
+    
+    
+    
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.width
         let currentPage = Int(scrollView.contentOffset.x / pageWidth)
