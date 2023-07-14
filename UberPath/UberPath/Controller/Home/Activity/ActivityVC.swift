@@ -15,10 +15,9 @@ class ActivityVC: UIViewController {
     @IBOutlet weak var btn3: UILabel!
     @IBOutlet weak var btn4: UILabel!
     @IBOutlet weak var barGraphView: RoundedButtonWithBorder!
-    
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     var barGraphLayers: [CALayer] = []
-    
+    var showBar : Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
@@ -43,8 +42,10 @@ class ActivityVC: UIViewController {
     @IBAction func toggleBtnPressed(_ sender: UISwitch) {
         if sender.isOn {
             showBarGraph()
+            showBar = true
         } else {
             hideBarGraph()
+            showBar = false
         }
     }
 
@@ -102,7 +103,6 @@ class ActivityVC: UIViewController {
         tappedLabel.layer.shadowOffset = CGSize(width: 0, height: 2)
         tappedLabel.layer.shadowRadius = 4.0
         tappedLabel.layer.shadowOpacity = 0.5
-        
         removeBarGraph()
         
         switch tappedLabel {
@@ -148,6 +148,26 @@ class ActivityVC: UIViewController {
             barLayer.backgroundColor = UIColor.blue.cgColor // Adjust the color as per your preference
             barGraphView.layer.addSublayer(barLayer)
             barGraphLayers.append(barLayer)
+            if showBar {
+                for layer in barGraphLayers {
+                    if let barLayer = layer as? CALayer {
+                        barLayer.isHidden = false
+                    }
+                    if let lineLayer = layer as? CAShapeLayer {
+                        lineLayer.isHidden = false
+                    }
+                }
+            }else{
+                for layer in barGraphLayers {
+                    if let barLayer = layer as? CALayer {
+                        barLayer.isHidden = true
+                    }
+                    if let lineLayer = layer as? CAShapeLayer {
+                        lineLayer.isHidden = false
+                    }
+                }
+            }
+            
             if index < barValues.count - 1 {
                 let nextBarValue = barValues[index + 1]
                 let nextBarX = (barGraphWidth / 7.0) * CGFloat(index + 1)
@@ -162,36 +182,9 @@ class ActivityVC: UIViewController {
                 barGraphView.layer.addSublayer(lineLayer)
                 barGraphLayers.append(lineLayer)
             }
-            
-            if let dayOfWeekLabel = dayOfWeekLabel(forIndex: index) {
-                let labelX = barX - 10 // Adjust the position of the label as per your preference
-                let labelY = barGraphHeight + 5 // Adjust the position of the label as per your preference
-                let labelWidth: CGFloat = barGraphWidth / 7.0 // Adjust the width of the label as per your preference
-                let labelHeight: CGFloat = 20 // Adjust the height of the label as per your preference
-                
-                let label = UILabel(frame: CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight))
-                label.text = dayOfWeekLabel
-                label.textColor = .black
-                label.textAlignment = .center
-                label.font = UIFont.systemFont(ofSize: 12) // Adjust the font as per your preference
-                barGraphView.addSubview(label)
-            }
+           
         }
     }
-    
-    
-    
-    func dayOfWeekLabel(forIndex index: Int) -> String? {
-        let calendar = Calendar.current
-        let weekdaySymbols = calendar.shortWeekdaySymbols
-        
-        if weekdaySymbols.indices.contains(index) {
-            return weekdaySymbols[index]
-        }
-        
-        return nil
-    }
-    
     
     func removeBarGraph() {
         for layer in barGraphLayers {
