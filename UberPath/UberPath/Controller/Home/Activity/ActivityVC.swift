@@ -86,9 +86,7 @@ class ActivityVC: UIViewController {
             break
         }
     }
-    
-    
-    
+   
     func drawBarGraph(withTimeInterval timeInterval: Calendar.Component) {
         let barGraphHeight = barGraphView.frame.height
         let barGraphWidth = barGraphView.frame.width
@@ -111,7 +109,7 @@ class ActivityVC: UIViewController {
         let maxBarValue = barValues.max() ?? 0 // Get the maximum value from the data
         
         for (index, barValue) in barValues.enumerated() {
-            let barX = (barGraphWidth / 6.0) * CGFloat(index)
+            let barX = (barGraphWidth / 7.0) * CGFloat(index)
             let barY = barGraphHeight - (barValue / maxBarValue) * barGraphHeight
             
             let barLayer = CALayer()
@@ -123,7 +121,7 @@ class ActivityVC: UIViewController {
             
             if index < barValues.count - 1 {
                 let nextBarValue = barValues[index + 1]
-                let nextBarX = (barGraphWidth / 6.0) * CGFloat(index + 1)
+                let nextBarX = (barGraphWidth / 7.0) * CGFloat(index + 1)
                 let nextBarY = barGraphHeight - (nextBarValue / maxBarValue) * barGraphHeight
                 
                 let lineLayer = CAShapeLayer()
@@ -138,8 +136,36 @@ class ActivityVC: UIViewController {
                 barGraphView.layer.addSublayer(lineLayer)
                 barGraphLayers.append(lineLayer)
             }
+            
+            if let dayOfWeekLabel = dayOfWeekLabel(forIndex: index) {
+                let labelX = barX - 10 // Adjust the position of the label as per your preference
+                let labelY = barGraphHeight + 10 // Adjust the position of the label as per your preference
+                let labelWidth: CGFloat = 40 // Adjust the width of the label as per your preference
+                let labelHeight: CGFloat = 20 // Adjust the height of the label as per your preference
+                
+                let label = UILabel(frame: CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight))
+                label.text = dayOfWeekLabel
+                label.textColor = .black
+                label.textAlignment = .center
+                label.font = UIFont.systemFont(ofSize: 12) // Adjust the font as per your preference
+                
+                barGraphView.addSubview(label)
+            }
         }
     }
+
+    
+    func dayOfWeekLabel(forIndex index: Int) -> String? {
+        let calendar = Calendar.current
+        let weekdaySymbols = calendar.shortWeekdaySymbols
+        
+        if weekdaySymbols.indices.contains(index) {
+            return weekdaySymbols[index]
+        }
+        
+        return nil
+    }
+
     
     func removeBarGraph() {
         for layer in barGraphLayers {
