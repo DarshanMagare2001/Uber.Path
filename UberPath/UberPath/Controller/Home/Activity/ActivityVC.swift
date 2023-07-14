@@ -139,8 +139,8 @@ class ActivityVC: UIViewController {
             
             if let dayOfWeekLabel = dayOfWeekLabel(forIndex: index) {
                 let labelX = barX - 10 // Adjust the position of the label as per your preference
-                let labelY = barGraphHeight + 10 // Adjust the position of the label as per your preference
-                let labelWidth: CGFloat = 40 // Adjust the width of the label as per your preference
+                let labelY = barGraphHeight + 5 // Adjust the position of the label as per your preference
+                let labelWidth: CGFloat = barGraphWidth / 7.0 // Adjust the width of the label as per your preference
                 let labelHeight: CGFloat = 20 // Adjust the height of the label as per your preference
                 
                 let label = UILabel(frame: CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight))
@@ -153,6 +153,7 @@ class ActivityVC: UIViewController {
             }
         }
     }
+
 
     
     func dayOfWeekLabel(forIndex index: Int) -> String? {
