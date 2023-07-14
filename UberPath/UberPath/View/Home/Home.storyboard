@@ -2544,21 +2544,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-Pj-pNB">
+                                <rect key="frame" x="20" y="108" width="280" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6EM-n4-c2y"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="AZc-RL-X2Z" id="y6I-jz-rnX"/>
+                                    <outlet property="delegate" destination="AZc-RL-X2Z" id="dMc-M7-mjZ"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-7s-Iue">
+                                <rect key="frame" x="20" y="278" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xvo-gt-oWg">
+                                <rect key="frame" x="20" y="319" width="280" height="229"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AZc-RL-X2Z" id="lKE-Ne-C4a"/>
+                                    <outlet property="delegate" destination="AZc-RL-X2Z" id="z2a-NP-mCn"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MYD-56-a1e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="uUL-Pj-pNB" secondAttribute="trailing" constant="20" id="3sA-6m-M0T"/>
                             <constraint firstItem="9DJ-k3-h79" firstAttribute="centerX" secondItem="9hF-Qs-gIh" secondAttribute="centerX" id="4EG-Ud-n4M"/>
                             <constraint firstItem="MMy-bc-hs4" firstAttribute="top" secondItem="lJR-Uz-ZBG" secondAttribute="bottom" constant="20" id="610-2x-b4u"/>
                             <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="w9H-bF-4mC" secondAttribute="trailing" constant="5" id="95y-L3-bp1"/>
+                            <constraint firstItem="oAu-7s-Iue" firstAttribute="centerX" secondItem="9hF-Qs-gIh" secondAttribute="centerX" id="9nO-qC-Vfb"/>
+                            <constraint firstItem="uUL-Pj-pNB" firstAttribute="top" secondItem="MMy-bc-hs4" secondAttribute="bottom" constant="20" id="Ach-Kc-OQV"/>
+                            <constraint firstItem="Xvo-gt-oWg" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="20" id="CEf-WM-j1t"/>
+                            <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="Xvo-gt-oWg" secondAttribute="trailing" constant="20" id="DOt-Lg-W2r"/>
+                            <constraint firstItem="oAu-7s-Iue" firstAttribute="top" secondItem="uUL-Pj-pNB" secondAttribute="bottom" constant="20" id="KWT-ND-eoA"/>
+                            <constraint firstItem="Xvo-gt-oWg" firstAttribute="top" secondItem="oAu-7s-Iue" secondAttribute="bottom" constant="20" id="Mnt-QI-L25"/>
+                            <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="oAu-7s-Iue" secondAttribute="trailing" constant="20" id="PyW-0d-RQ5"/>
                             <constraint firstItem="MYD-56-a1e" firstAttribute="trailing" secondItem="MMy-bc-hs4" secondAttribute="trailing" constant="20" id="Twv-du-IOo"/>
+                            <constraint firstItem="MYD-56-a1e" firstAttribute="bottom" secondItem="Xvo-gt-oWg" secondAttribute="bottom" constant="20" id="ace-E5-uMk"/>
+                            <constraint firstItem="uUL-Pj-pNB" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="20" id="cS1-yT-reo"/>
                             <constraint firstItem="MMy-bc-hs4" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="20" id="gIB-Ud-18m"/>
+                            <constraint firstItem="oAu-7s-Iue" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="20" id="hZI-HK-Y2G"/>
                             <constraint firstItem="lJR-Uz-ZBG" firstAttribute="top" secondItem="MYD-56-a1e" secondAttribute="top" id="jje-MA-SFb"/>
                             <constraint firstItem="lJR-Uz-ZBG" firstAttribute="leading" secondItem="MYD-56-a1e" secondAttribute="leading" constant="5" id="svH-Wo-10i"/>
                             <constraint firstItem="w9H-bF-4mC" firstAttribute="top" secondItem="MYD-56-a1e" secondAttribute="top" id="uJE-3G-ggX"/>
                             <constraint firstItem="9DJ-k3-h79" firstAttribute="top" secondItem="MYD-56-a1e" secondAttribute="top" constant="15" id="ucN-g3-FUX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="thisWeekTableView" destination="Xvo-gt-oWg" id="IXq-Th-Rbe"/>
+                        <outlet property="todayTableView" destination="uUL-Pj-pNB" id="zzk-gn-5T2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddl-Tn-s28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
