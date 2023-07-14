@@ -39,7 +39,39 @@ class ActivityVC: UIViewController {
         collectionViewOne.setContentOffset(offset, animated: true)
     }
     
-    
+   
+    @IBAction func toggleBtnPressed(_ sender: UISwitch) {
+        if sender.isOn {
+            showBarGraph()
+        } else {
+            hideBarGraph()
+        }
+    }
+
+    func showBarGraph() {
+        for layer in barGraphLayers {
+            if let barLayer = layer as? CALayer {
+                barLayer.isHidden = false
+            }
+            
+            if let lineLayer = layer as? CAShapeLayer {
+                lineLayer.isHidden = false
+            }
+        }
+    }
+
+    func hideBarGraph() {
+        for layer in barGraphLayers {
+            if let barLayer = layer as? CALayer {
+                barLayer.isHidden = true
+            }
+            if let lineLayer = layer as? CAShapeLayer {
+                lineLayer.isHidden = false
+            }
+        }
+    }
+
+
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
             return
