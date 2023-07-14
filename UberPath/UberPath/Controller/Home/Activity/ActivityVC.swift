@@ -40,18 +40,32 @@ class ActivityVC: UIViewController {
         guard let tappedLabel = gesture.view as? UILabel else {
             return
         }
-        
         // Set the tapped label's background color to gray
         tappedLabel.backgroundColor = .systemGray6
-        
         // Set the background color of all other labels to white
         let allLabels = [btn1, btn2, btn3, btn4]
         for label in allLabels {
             if label != tappedLabel {
                 label?.backgroundColor = .white
+                label?.layer.borderWidth = 0
+                label?.layer.borderColor = UIColor.white.cgColor
+                label?.layer.cornerRadius = 0
+                label?.layer.shadowColor = UIColor.white.cgColor
+                label?.layer.shadowOffset = CGSize(width: 0, height: 0)
+                label?.layer.shadowRadius = 0
+                label?.layer.shadowOpacity = 0
             }
         }
+        // Add border and shadow to the tapped label
+        tappedLabel.layer.borderWidth = 1.0
+        tappedLabel.layer.borderColor = UIColor.gray.cgColor
+        tappedLabel.layer.cornerRadius = 5.0
+        tappedLabel.layer.shadowColor = UIColor.black.cgColor
+        tappedLabel.layer.shadowOffset = CGSize(width: 0, height: 2)
+        tappedLabel.layer.shadowRadius = 4.0
+        tappedLabel.layer.shadowOpacity = 0.5
     }
+
 
 
 
