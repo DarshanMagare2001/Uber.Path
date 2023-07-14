@@ -18,6 +18,7 @@
 		136A00982A610F7500A5E74E /* NotificationVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A00962A610F7500A5E74E /* NotificationVCCell.swift */; };
 		136A00992A610F7500A5E74E /* NotificationVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 136A00972A610F7500A5E74E /* NotificationVCCell.xib */; };
 		136A009B2A61134000A5E74E /* NotificationVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A009A2A61134000A5E74E /* NotificationVCModel.swift */; };
+		136A009D2A6122D700A5E74E /* CollectionViewOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A009C2A6122D700A5E74E /* CollectionViewOneCell.swift */; };
 		136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6852A5BD10F006FDE26 /* MyCardCell.swift */; };
 		136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */; };
 		136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */; };
@@ -88,6 +89,7 @@
 		136A00962A610F7500A5E74E /* NotificationVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVCCell.swift; sourceTree = "<group>"; };
 		136A00972A610F7500A5E74E /* NotificationVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationVCCell.xib; sourceTree = "<group>"; };
 		136A009A2A61134000A5E74E /* NotificationVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVCModel.swift; sourceTree = "<group>"; };
+		136A009C2A6122D700A5E74E /* CollectionViewOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewOneCell.swift; sourceTree = "<group>"; };
 		136FE6852A5BD10F006FDE26 /* MyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
 		136FE6872A5BD8E3006FDE26 /* AddNewCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardVC.swift; sourceTree = "<group>"; };
 		136FE6892A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				139314D52A528DC100248D92 /* ActivityVC.swift */,
+				136A009C2A6122D700A5E74E /* CollectionViewOneCell.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
+				136A009D2A6122D700A5E74E /* CollectionViewOneCell.swift in Sources */,
 				136FE6902A5C315D006FDE26 /* AccountInfoVC.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
