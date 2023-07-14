@@ -53,7 +53,6 @@ extension NotificationVC : UITableViewDelegate , UITableViewDataSource {
             cell.cellLbl3.text = viewModel.NotificationVCModelClassArray[indexPath.row].time
             return cell
         }
-        
         return UITableViewCell()
     }
 }
