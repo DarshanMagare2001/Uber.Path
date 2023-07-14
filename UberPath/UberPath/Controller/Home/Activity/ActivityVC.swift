@@ -16,6 +16,7 @@ class ActivityVC: UIViewController {
         super.viewDidLoad()
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
+        updateCell()
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
