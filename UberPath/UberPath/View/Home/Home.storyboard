@@ -2688,6 +2688,9 @@
                                                     <constraint firstAttribute="height" constant="20" id="Mdn-p9-Okm"/>
                                                 </constraints>
                                                 <color key="currentPageIndicatorTintColor" name="GlobalButtonColor"/>
+                                                <connections>
+                                                    <action selector="pageControlValueChanged:" destination="5Kd-4b-Lto" eventType="valueChanged" id="YJt-GE-2CD"/>
+                                                </connections>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>

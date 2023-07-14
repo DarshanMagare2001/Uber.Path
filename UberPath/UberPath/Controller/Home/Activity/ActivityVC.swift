@@ -13,7 +13,21 @@ class ActivityVC: UIViewController {
     var collectionViewOneArray = ["Co.payment Cards","Smartpay Cards"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewOne.delegate = self
+        collectionViewOne.dataSource = self
+        pageControllForCollectionViewOne.numberOfPages = collectionViewOneArray.count
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x / scrollView.frame.width)
+        pageControllForCollectionViewOne.currentPage = Int(pageIndex)
+    }
+    
+    @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
+           let page = sender.currentPage
+           let indexPath = IndexPath(item: page, section: 0)
+           collectionViewOne.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+       }
     
 }
 
