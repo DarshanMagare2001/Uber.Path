@@ -84,14 +84,35 @@ class ActivityVC: UIViewController {
     }
     
     @IBAction func durationShowBtnPressed(_ sender: UIButton) {
-        durationView.isHidden.toggle()
         showDurationBtn.toggle()
+        
         if showDurationBtn {
             durationShowBtn.setImage(UIImage(named: "ForwardArrow"), for: .normal)
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.durationView.frame.size.height = 0
+                self?.durationView.alpha = 0
+            } completion: { [weak self] _ in
+                self?.durationView.isHidden = true
+                self?.durationView.frame.size.height = self?.durationView.intrinsicContentSize.height ?? 0
+                UIView.animate(withDuration: 0.3) {
+                    self?.durationView.alpha = 1
+                }
+            }
         } else {
             durationShowBtn.setImage(UIImage(named: "DownArrow"), for: .normal)
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.durationView.alpha = 0
+            } completion: { [weak self] _ in
+                self?.durationView.isHidden = false
+                UIView.animate(withDuration: 0.3) {
+                    self?.durationView.frame.size.height = self?.durationView.intrinsicContentSize.height ?? 0
+                    self?.durationView.alpha = 1
+                }
+            }
         }
     }
+
+
 
     
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
