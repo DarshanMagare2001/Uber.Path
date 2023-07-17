@@ -34,8 +34,6 @@ class WithdrawVC: UIViewController {
     @IBAction func withdrawBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "SelectBankWithdrawVC") as! SelectBankWithdrawVC
-        // Set the modal presentation style to full screen
-        destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
 

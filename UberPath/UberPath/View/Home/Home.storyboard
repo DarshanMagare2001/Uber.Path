@@ -2159,8 +2159,20 @@
                     <view key="view" contentMode="scaleToFill" id="e5s-gZ-Sex">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darshan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzK-J7-Pyt">
+                                <rect key="frame" x="128.5" y="273.5" width="63.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ymo-aL-Tbu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MzK-J7-Pyt" firstAttribute="centerY" secondItem="e5s-gZ-Sex" secondAttribute="centerY" id="ZJj-xf-eEg"/>
+                            <constraint firstItem="MzK-J7-Pyt" firstAttribute="centerX" secondItem="e5s-gZ-Sex" secondAttribute="centerX" id="pTE-Fk-C4P"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmX-lU-LKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
