@@ -2974,6 +2974,9 @@
                                                                                         </constraints>
                                                                                         <state key="normal" title="Button"/>
                                                                                         <buttonConfiguration key="configuration" style="plain" image="DownArrow" title=" "/>
+                                                                                        <connections>
+                                                                                            <action selector="durationShowBtnPressed:" destination="5Kd-4b-Lto" eventType="touchUpInside" id="JB6-VB-ni2"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>
@@ -3159,8 +3162,15 @@
                         <outlet property="btn3" destination="V2A-sJ-L43" id="ASs-SH-6ia"/>
                         <outlet property="btn4" destination="Btr-1X-vdh" id="rSt-Ie-9Mp"/>
                         <outlet property="collectionViewOne" destination="QLI-fE-Z4v" id="JDK-R6-A7J"/>
+                        <outlet property="dayLbl" destination="mCN-Em-1VG" id="c3H-Nx-S4C"/>
+                        <outlet property="durationShowBtn" destination="Aft-Vj-Lj9" id="jU3-eR-yRS"/>
+                        <outlet property="durationShowLbl" destination="1jZ-ii-EzK" id="Cxi-Wa-xFt"/>
+                        <outlet property="durationView" destination="jhm-Sg-57U" id="k0b-uI-Yi2"/>
+                        <outlet property="monthLbl" destination="1Xx-Ih-45p" id="nVz-ib-4N4"/>
                         <outlet property="pageControllForCollectionViewOne" destination="QZW-tW-H8q" id="F2t-Lx-bc9"/>
                         <outlet property="tableViewOutlet" destination="BwO-ix-cTF" id="De7-T5-cro"/>
+                        <outlet property="weekLbl" destination="rYf-q2-By0" id="JWo-w0-gGP"/>
+                        <outlet property="yearLbl" destination="Cki-pM-kjd" id="DQr-GS-hWu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HK-0L-8F6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

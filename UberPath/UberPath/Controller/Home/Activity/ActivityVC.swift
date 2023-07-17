@@ -16,6 +16,14 @@ class ActivityVC: UIViewController {
     @IBOutlet weak var btn4: UILabel!
     @IBOutlet weak var barGraphView: RoundedButtonWithBorder!
     @IBOutlet weak var tableViewOutlet: UITableView!
+    @IBOutlet weak var durationShowLbl: UILabel!
+    @IBOutlet weak var durationShowBtn: UIButton!
+    @IBOutlet weak var dayLbl: UILabel!
+    @IBOutlet weak var weekLbl: UILabel!
+    @IBOutlet weak var monthLbl: UILabel!
+    @IBOutlet weak var yearLbl: UILabel!
+    @IBOutlet weak var durationView: RoundedButtonWithBorder!
+    
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     var barGraphLayers: [CALayer] = []
     var showBar : Bool = true
@@ -74,6 +82,9 @@ class ActivityVC: UIViewController {
         }
     }
     
+    @IBAction func durationShowBtnPressed(_ sender: UIButton) {
+        
+    }
     
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
@@ -248,5 +259,5 @@ extension ActivityVC : UITableViewDelegate , UITableViewDataSource {
         cell.cellLbl3.text = viewModel.TableViewModelClassArray[indexPath.row].lbl3
         return cell
     }
-     
+    
 }
