@@ -16,6 +16,7 @@ class WithdrawVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBtns()
+        selectButton(btn4)
     }
     
     @IBAction func percentageBtnPressed(_ sender: UIButton) {
@@ -28,7 +29,7 @@ class WithdrawVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func configureBtns(){
+    func configureBtns() {
         applyRoundedCornerAndShadow(to: btn1)
         applyRoundedCornerAndShadow(to: btn2)
         applyRoundedCornerAndShadow(to: btn3)
@@ -52,5 +53,10 @@ class WithdrawVC: UIViewController {
             button?.backgroundColor = defaultColor
             button?.tintColor = defaultTintColor
         }
+    }
+    
+    func selectButton(_ button: UIButton) {
+        button.backgroundColor = UIColor(named: "LaunchscreenColor")
+        button.tintColor = .white
     }
 }
