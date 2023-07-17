@@ -230,10 +230,10 @@
 			children = (
 				139314D52A528DC100248D92 /* ActivityVC.swift */,
 				136A009C2A6122D700A5E74E /* CollectionViewOneCell.swift */,
-				137288A82A650B0A00187267 /* TableViewCell.swift */,
-				137288AA2A650BF800187267 /* TableViewModel.swift */,
 				137288AC2A653C4800187267 /* CollectionViewTwoCell.swift */,
 				137288AE2A653D6D00187267 /* CollectionViewTwoModel.swift */,
+				137288A82A650B0A00187267 /* TableViewCell.swift */,
+				137288AA2A650BF800187267 /* TableViewModel.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
