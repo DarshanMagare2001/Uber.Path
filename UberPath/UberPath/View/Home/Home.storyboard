@@ -2109,6 +2109,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="withdrawBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="fv9-r2-9FD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mhv-2G-u4v"/>
@@ -2148,6 +2151,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5is-u6-Y0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3054.375" y="-73.943661971830991"/>
+        </scene>
+        <!--Select Bank WithdrawVC-->
+        <scene sceneID="Qpd-cd-Ft5">
+            <objects>
+                <viewController storyboardIdentifier="SelectBankWithdrawVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3fJ-64-CtX" customClass="SelectBankWithdrawVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e5s-gZ-Sex">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ymo-aL-Tbu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmX-lU-LKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3705" y="-75"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="CB6-AQ-kNC">

@@ -32,6 +32,7 @@
 		137288AD2A653C4800187267 /* CollectionViewTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288AC2A653C4800187267 /* CollectionViewTwoCell.swift */; };
 		137288AF2A653D6D00187267 /* CollectionViewTwoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288AE2A653D6D00187267 /* CollectionViewTwoModel.swift */; };
 		137288B22A654D6200187267 /* WithdrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288B12A654D6200187267 /* WithdrawVC.swift */; };
+		137288B42A656C4600187267 /* SelectBankWithdrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288B32A656C4600187267 /* SelectBankWithdrawVC.swift */; };
 		137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE66F2A4AA3B200B40F2D /* FirebaseAuth */; };
 		137CE6722A4AA3B200B40F2D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE6712A4AA3B200B40F2D /* FirebaseFirestore */; };
 		137CE6742A4AA3B200B40F2D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE6732A4AA3B200B40F2D /* FirebaseFirestoreSwift */; };
@@ -107,6 +108,7 @@
 		137288AC2A653C4800187267 /* CollectionViewTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTwoCell.swift; sourceTree = "<group>"; };
 		137288AE2A653D6D00187267 /* CollectionViewTwoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTwoModel.swift; sourceTree = "<group>"; };
 		137288B12A654D6200187267 /* WithdrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawVC.swift; sourceTree = "<group>"; };
+		137288B32A656C4600187267 /* SelectBankWithdrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBankWithdrawVC.swift; sourceTree = "<group>"; };
 		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetYourPasswordVC.swift; sourceTree = "<group>"; };
 		137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonsVC.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				137288B12A654D6200187267 /* WithdrawVC.swift */,
+				137288B32A656C4600187267 /* SelectBankWithdrawVC.swift */,
 			);
 			path = Withdraw;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */,
+				137288B42A656C4600187267 /* SelectBankWithdrawVC.swift in Sources */,
 				136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */,
 				137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */,
 				13DE6FB72A53F9E000384D8F /* ScanQRCodeVC.swift in Sources */,
