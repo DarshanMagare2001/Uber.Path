@@ -32,29 +32,10 @@ class ActivityVC: UIViewController {
         super.viewDidLoad()
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
-        updateCell()
         durationView.isHidden = true
-        [btn1, btn2, btn3, btn4].enumerated().forEach { index, button in
-            button?.isUserInteractionEnabled = true
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(btnTapped(_:)))
-            tapGesture.view?.tag = index
-            button?.addGestureRecognizer(tapGesture)
-        }
-        let dayTapGesture = UITapGestureRecognizer(target: self, action: #selector(dayLabelTapped))
-        dayLbl.isUserInteractionEnabled = true
-        dayLbl.addGestureRecognizer(dayTapGesture)
+        updateCell()
+        addTapGestures()
         
-        let weekTapGesture = UITapGestureRecognizer(target: self, action: #selector(weekLabelTapped))
-        weekLbl.isUserInteractionEnabled = true
-        weekLbl.addGestureRecognizer(weekTapGesture)
-        
-        let monthTapGesture = UITapGestureRecognizer(target: self, action: #selector(monthLabelTapped))
-        monthLbl.isUserInteractionEnabled = true
-        monthLbl.addGestureRecognizer(monthTapGesture)
-        
-        let yearTapGesture = UITapGestureRecognizer(target: self, action: #selector(yearLabelTapped))
-        yearLbl.isUserInteractionEnabled = true
-        yearLbl.addGestureRecognizer(yearTapGesture)
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
@@ -98,28 +79,31 @@ class ActivityVC: UIViewController {
         }
     }
     
-    @objc func dayLabelTapped() {
-        durationShowLbl.text = "Day"
-      
+    func addTapGestures() {
+        
+        [btn1, btn2, btn3, btn4].enumerated().forEach { index, button in
+            button?.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(btnTapped(_:)))
+            tapGesture.view?.tag = index
+            button?.addGestureRecognizer(tapGesture)
+        }
+        
+        let labels = [dayLbl, weekLbl, monthLbl, yearLbl]
+        let texts = ["Day", "Week", "Month", "Year"]
+        for (index, label) in labels.enumerated() {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+            label?.isUserInteractionEnabled = true
+            label?.addGestureRecognizer(tapGesture)
+            tapGesture.view?.tag = index
+        }
     }
-    
-    // Handle tap gesture for week label
-    @objc func weekLabelTapped() {
-        durationShowLbl.text = "Week"
-       
+
+    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+        guard let index = sender.view?.tag else { return }
+        let texts = ["Day", "Week", "Month", "Year"]
+        durationShowLbl.text = texts[index]
     }
-    
-    // Handle tap gesture for month label
-    @objc func monthLabelTapped() {
-        durationShowLbl.text = "Month"
-     
-    }
-    
-    // Handle tap gesture for year label
-    @objc func yearLabelTapped() {
-        durationShowLbl.text = "Year"
-      
-    }
+
     
     @IBAction func durationShowBtnPressed(_ sender: UIButton) {
         showDurationBtn.toggle()
@@ -131,9 +115,6 @@ class ActivityVC: UIViewController {
             durationView.isHidden = true
         }
     }
-    
-    
-    
     
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
