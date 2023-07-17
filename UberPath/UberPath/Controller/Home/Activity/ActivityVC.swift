@@ -9,6 +9,7 @@ import UIKit
 
 class ActivityVC: UIViewController {
     @IBOutlet weak var collectionViewOne: UICollectionView!
+    @IBOutlet weak var collectionViewTwo: UICollectionView!
     @IBOutlet weak var pageControllForCollectionViewOne: UIPageControl!
     @IBOutlet weak var btn1: UILabel!
     @IBOutlet weak var btn2: UILabel!
@@ -27,11 +28,14 @@ class ActivityVC: UIViewController {
     var barGraphLayers: [CALayer] = []
     var showBar : Bool = true
     var viewModel = TableViewModelClass()
+    var viewModelForCollectionViewTwo = CollectionViewTwoModelClass()
     var showDurationBtn = false
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
+        collectionViewTwo.delegate = self
+        collectionViewTwo.dataSource = self
         durationView.isHidden = true
         updateCell()
         addTapGestures()
@@ -96,13 +100,13 @@ class ActivityVC: UIViewController {
             tapGesture.view?.tag = index
         }
     }
-
+    
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
         guard let index = sender.view?.tag else { return }
         let texts = ["Day", "Week", "Month", "Year"]
         durationShowLbl.text = texts[index]
     }
-
+    
     
     @IBAction func durationShowBtnPressed(_ sender: UIButton) {
         showDurationBtn.toggle()
@@ -259,13 +263,31 @@ class ActivityVC: UIViewController {
 
 extension ActivityVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionViewOneArray.count
+        
+        if collectionView == collectionViewOne {
+            return collectionViewOneArray.count
+        }
+        if collectionView == collectionViewTwo{
+            return viewModelForCollectionViewTwo.CollectionViewTwoModelClassArray.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewOneCell", for: indexPath) as! CollectionViewOneCell
-        cell.cellImg.image = UIImage(named: collectionViewOneArray[indexPath.row])
-        return cell
+        if collectionView == collectionViewOne {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewOneCell", for: indexPath) as! CollectionViewOneCell
+            cell.cellImg.image = UIImage(named: collectionViewOneArray[indexPath.row])
+            return cell
+        }
+        if collectionView == collectionViewTwo {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewTwoCell", for: indexPath) as! CollectionViewTwoCell
+            cell.cellImg.image = UIImage(named: viewModelForCollectionViewTwo.CollectionViewTwoModelClassArray[indexPath.row].img)
+            cell.lbl1.text = viewModelForCollectionViewTwo.CollectionViewTwoModelClassArray[indexPath.row].lbl1
+            cell.lbl2.text = viewModelForCollectionViewTwo.CollectionViewTwoModelClassArray[indexPath.row].lbl2
+            return cell
+        }
+        
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
