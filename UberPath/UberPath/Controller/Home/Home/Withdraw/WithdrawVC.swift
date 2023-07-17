@@ -12,6 +12,7 @@ class WithdrawVC: UIViewController {
     @IBOutlet weak var btn2: RoundedButtonWithBorder!
     @IBOutlet weak var btn3: RoundedButtonWithBorder!
     @IBOutlet weak var btn4: RoundedButtonWithBorder!
+    @IBOutlet weak var amounttxtFld: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class WithdrawVC: UIViewController {
         applyRoundedCornerAndShadow(to: btn2)
         applyRoundedCornerAndShadow(to: btn3)
         applyRoundedCornerAndShadow(to: btn4)
+        amounttxtFld.placeholder = "Enter Amount"
     }
     
     func applyRoundedCornerAndShadow(to button: UIButton) {

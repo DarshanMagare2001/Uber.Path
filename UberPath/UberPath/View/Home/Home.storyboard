@@ -2138,6 +2138,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amounttxtFld" destination="oEv-V9-Vgh" id="vg1-DE-Vma"/>
                         <outlet property="btn1" destination="3fz-pt-Oes" id="HN6-9l-PV9"/>
                         <outlet property="btn2" destination="3G5-3g-2zy" id="vNn-9E-tEL"/>
                         <outlet property="btn3" destination="pHE-a4-Hzk" id="nTE-e6-I8P"/>
