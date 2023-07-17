@@ -2052,6 +2052,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="25%"/>
+                                        <connections>
+                                            <action selector="percentageBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="Ywv-VT-Dmg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-3g-2zy" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="77.5" y="0.0" width="67.5" height="40"/>
@@ -2059,6 +2062,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="50%"/>
+                                        <connections>
+                                            <action selector="percentageBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="Lho-cc-He5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHE-a4-Hzk" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="155" y="0.0" width="67.5" height="40"/>
@@ -2066,6 +2072,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="75%"/>
+                                        <connections>
+                                            <action selector="percentageBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="8Av-2o-gmO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaP-iU-LZc" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                         <rect key="frame" x="232.5" y="0.0" width="67.5" height="40"/>
@@ -2073,6 +2082,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="100%"/>
+                                        <connections>
+                                            <action selector="percentageBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="rnx-7D-3N7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
