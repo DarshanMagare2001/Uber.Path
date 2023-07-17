@@ -40,6 +40,21 @@ class ActivityVC: UIViewController {
             tapGesture.view?.tag = index
             button?.addGestureRecognizer(tapGesture)
         }
+        let dayTapGesture = UITapGestureRecognizer(target: self, action: #selector(dayLabelTapped))
+        dayLbl.isUserInteractionEnabled = true
+        dayLbl.addGestureRecognizer(dayTapGesture)
+        
+        let weekTapGesture = UITapGestureRecognizer(target: self, action: #selector(weekLabelTapped))
+        weekLbl.isUserInteractionEnabled = true
+        weekLbl.addGestureRecognizer(weekTapGesture)
+        
+        let monthTapGesture = UITapGestureRecognizer(target: self, action: #selector(monthLabelTapped))
+        monthLbl.isUserInteractionEnabled = true
+        monthLbl.addGestureRecognizer(monthTapGesture)
+        
+        let yearTapGesture = UITapGestureRecognizer(target: self, action: #selector(yearLabelTapped))
+        yearLbl.isUserInteractionEnabled = true
+        yearLbl.addGestureRecognizer(yearTapGesture)
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
@@ -83,6 +98,29 @@ class ActivityVC: UIViewController {
         }
     }
     
+    @objc func dayLabelTapped() {
+        durationShowLbl.text = "Day"
+      
+    }
+    
+    // Handle tap gesture for week label
+    @objc func weekLabelTapped() {
+        durationShowLbl.text = "Week"
+       
+    }
+    
+    // Handle tap gesture for month label
+    @objc func monthLabelTapped() {
+        durationShowLbl.text = "Month"
+     
+    }
+    
+    // Handle tap gesture for year label
+    @objc func yearLabelTapped() {
+        durationShowLbl.text = "Year"
+      
+    }
+    
     @IBAction func durationShowBtnPressed(_ sender: UIButton) {
         showDurationBtn.toggle()
         if showDurationBtn {
@@ -93,9 +131,9 @@ class ActivityVC: UIViewController {
             durationView.isHidden = true
         }
     }
-
-
-
+    
+    
+    
     
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
