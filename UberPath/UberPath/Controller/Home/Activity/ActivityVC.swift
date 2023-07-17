@@ -39,7 +39,7 @@ class ActivityVC: UIViewController {
         durationView.isHidden = true
         updateCell()
         addTapGestures()
-        
+       
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
@@ -89,6 +89,10 @@ class ActivityVC: UIViewController {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(btnTapped(_:)))
             tapGesture.view?.tag = index
             button?.addGestureRecognizer(tapGesture)
+        }
+        
+        if let tapGesture = btn1.gestureRecognizers?.first as? UITapGestureRecognizer {
+            btnTapped(tapGesture)
         }
         
         let labels = [dayLbl, weekLbl, monthLbl, yearLbl]
