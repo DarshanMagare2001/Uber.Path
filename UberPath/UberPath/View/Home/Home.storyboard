@@ -1981,10 +1981,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sl-yc-gJ9" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="20" y="70" width="280" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <rect key="frame" x="20" y="70" width="280" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="COF-bw-xsO">
+                                        <rect key="frame" x="20" y="20" width="240" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bank of America" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-26-Ejq">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8uu-sg-Xez"/>
+                                                    <constraint firstAttribute="width" constant="50" id="hWJ-rg-O0h"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rfg-xe-Li0">
+                                                <rect key="frame" x="65" y="0.0" width="150" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank of America" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWs-SS-vvG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <color key="textColor" name="GlobalButtonColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** **** 1121" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYq-kd-NOT">
+                                                        <rect key="frame" x="0.0" y="25" width="150" height="25"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxA-8C-47P">
+                                                <rect key="frame" x="230" y="0.0" width="10" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="10" id="S2s-fA-82i"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="DownArrow" title=" "/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Gu7-XT-8PR"/>
+                                    <constraint firstAttribute="trailing" secondItem="COF-bw-xsO" secondAttribute="trailing" constant="20" id="BtD-iL-2PY"/>
+                                    <constraint firstItem="COF-bw-xsO" firstAttribute="top" secondItem="8sl-yc-gJ9" secondAttribute="top" constant="20" id="ibD-bW-rGB"/>
+                                    <constraint firstAttribute="bottom" secondItem="COF-bw-xsO" secondAttribute="bottom" constant="20" id="qRl-py-tRp"/>
+                                    <constraint firstItem="COF-bw-xsO" firstAttribute="leading" secondItem="8sl-yc-gJ9" secondAttribute="leading" constant="20" id="qTN-2P-kaV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -2003,7 +2044,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5is-u6-Y0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3056" y="-73"/>
+            <point key="canvasLocation" x="3054.375" y="-73.943661971830991"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="CB6-AQ-kNC">
@@ -5390,6 +5431,7 @@
         <image name="Activity" width="21" height="21"/>
         <image name="AppleIcon" width="20" height="24"/>
         <image name="BackArrow" width="40" height="40"/>
+        <image name="Bank of America" width="48" height="48"/>
         <image name="BasketBall" width="22" height="22"/>
         <image name="Bell" width="18" height="18"/>
         <image name="Card" width="24.5" height="24"/>
