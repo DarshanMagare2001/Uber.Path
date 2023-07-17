@@ -2017,6 +2017,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="DownArrow" title=" "/>
+                                                <connections>
+                                                    <action selector="selectBankBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="RCT-Ue-aGW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2109,9 +2112,6 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="withdrawBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="fv9-r2-9FD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mhv-2G-u4v"/>

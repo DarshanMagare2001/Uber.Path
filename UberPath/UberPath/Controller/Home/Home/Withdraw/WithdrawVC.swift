@@ -30,14 +30,12 @@ class WithdrawVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
-    @IBAction func withdrawBtnPressed(_ sender: UIButton) {
+    @IBAction func selectBankBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "SelectBankWithdrawVC") as! SelectBankWithdrawVC
         present(destinationVC, animated: true, completion: nil)
     }
-
-     
+    
     func configureBtns() {
         applyRoundedCornerAndShadow(to: btn1)
         applyRoundedCornerAndShadow(to: btn2)
