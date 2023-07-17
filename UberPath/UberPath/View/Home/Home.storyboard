@@ -3165,7 +3165,7 @@
                         <outlet property="dayLbl" destination="mCN-Em-1VG" id="c3H-Nx-S4C"/>
                         <outlet property="durationShowBtn" destination="Aft-Vj-Lj9" id="jU3-eR-yRS"/>
                         <outlet property="durationShowLbl" destination="1jZ-ii-EzK" id="Cxi-Wa-xFt"/>
-                        <outlet property="durationView" destination="jhm-Sg-57U" id="k0b-uI-Yi2"/>
+                        <outlet property="durationView" destination="wfv-xb-slg" id="dD9-y7-uj7"/>
                         <outlet property="monthLbl" destination="1Xx-Ih-45p" id="nVz-ib-4N4"/>
                         <outlet property="pageControllForCollectionViewOne" destination="QZW-tW-H8q" id="F2t-Lx-bc9"/>
                         <outlet property="tableViewOutlet" destination="BwO-ix-cTF" id="De7-T5-cro"/>

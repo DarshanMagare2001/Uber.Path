@@ -23,7 +23,6 @@ class ActivityVC: UIViewController {
     @IBOutlet weak var monthLbl: UILabel!
     @IBOutlet weak var yearLbl: UILabel!
     @IBOutlet weak var durationView: RoundedButtonWithBorder!
-    
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     var barGraphLayers: [CALayer] = []
     var showBar : Bool = true
@@ -33,6 +32,7 @@ class ActivityVC: UIViewController {
         collectionViewOne.delegate = self
         collectionViewOne.dataSource = self
         updateCell()
+        durationView.isHidden = true
         [btn1, btn2, btn3, btn4].enumerated().forEach { index, button in
             button?.isUserInteractionEnabled = true
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(btnTapped(_:)))
@@ -83,7 +83,7 @@ class ActivityVC: UIViewController {
     }
     
     @IBAction func durationShowBtnPressed(_ sender: UIButton) {
-        
+        durationView.isHidden.toggle()
     }
     
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
