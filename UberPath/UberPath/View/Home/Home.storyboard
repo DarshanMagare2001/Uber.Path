@@ -1951,6 +1951,60 @@
             </objects>
             <point key="canvasLocation" x="2394" y="-72"/>
         </scene>
+        <!--WithdrawVC-->
+        <scene sceneID="ohB-sq-XUV">
+            <objects>
+                <viewController storyboardIdentifier="WithdrawVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bA5-YG-6B9" customClass="WithdrawVC" customModule="UberPath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9Z-xF-JUN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mx-ak-UA2">
+                                <rect key="frame" x="5" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dck-f0-WlG"/>
+                                    <constraint firstAttribute="height" constant="50" id="Pyw-Bu-tJC"/>
+                                    <constraint firstAttribute="width" constant="50" id="zC0-4p-418"/>
+                                    <constraint firstAttribute="width" constant="50" id="zmX-wl-HNu"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="exj-wX-XhL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Withdraw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfy-H6-nwi">
+                                <rect key="frame" x="114.5" y="15" width="91.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sl-yc-gJ9" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                <rect key="frame" x="20" y="70" width="280" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Gu7-XT-8PR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mhv-2G-u4v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2mx-ak-UA2" firstAttribute="top" secondItem="Mhv-2G-u4v" secondAttribute="top" id="1rM-Z9-HXe"/>
+                            <constraint firstItem="2mx-ak-UA2" firstAttribute="leading" secondItem="Mhv-2G-u4v" secondAttribute="leading" constant="5" id="8Cg-2z-B5t"/>
+                            <constraint firstItem="8sl-yc-gJ9" firstAttribute="top" secondItem="2mx-ak-UA2" secondAttribute="bottom" constant="20" id="WSX-jt-C7x"/>
+                            <constraint firstItem="Xfy-H6-nwi" firstAttribute="centerX" secondItem="o9Z-xF-JUN" secondAttribute="centerX" id="c3Q-Fl-smu"/>
+                            <constraint firstItem="Mhv-2G-u4v" firstAttribute="trailing" secondItem="8sl-yc-gJ9" secondAttribute="trailing" constant="20" id="cgN-N5-ze0"/>
+                            <constraint firstItem="Xfy-H6-nwi" firstAttribute="top" secondItem="Mhv-2G-u4v" secondAttribute="top" constant="15" id="mw6-JO-sqQ"/>
+                            <constraint firstItem="8sl-yc-gJ9" firstAttribute="leading" secondItem="Mhv-2G-u4v" secondAttribute="leading" constant="20" id="ocB-Gw-Uqb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5is-u6-Y0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3056" y="-73"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="CB6-AQ-kNC">
             <objects>

@@ -32,7 +32,9 @@ class HomeVC: UIViewController {
     
     
     @IBAction func withdrawBtnPressed(_ sender: UIButton) {
-        print("withdrawBtnPressed")
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "WithdrawVC") as! WithdrawVC
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     

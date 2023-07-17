@@ -31,6 +31,7 @@
 		137288AB2A650BF800187267 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288AA2A650BF800187267 /* TableViewModel.swift */; };
 		137288AD2A653C4800187267 /* CollectionViewTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288AC2A653C4800187267 /* CollectionViewTwoCell.swift */; };
 		137288AF2A653D6D00187267 /* CollectionViewTwoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288AE2A653D6D00187267 /* CollectionViewTwoModel.swift */; };
+		137288B22A654D6200187267 /* WithdrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137288B12A654D6200187267 /* WithdrawVC.swift */; };
 		137CE6702A4AA3B200B40F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE66F2A4AA3B200B40F2D /* FirebaseAuth */; };
 		137CE6722A4AA3B200B40F2D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE6712A4AA3B200B40F2D /* FirebaseFirestore */; };
 		137CE6742A4AA3B200B40F2D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 137CE6732A4AA3B200B40F2D /* FirebaseFirestoreSwift */; };
@@ -105,6 +106,7 @@
 		137288AA2A650BF800187267 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		137288AC2A653C4800187267 /* CollectionViewTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTwoCell.swift; sourceTree = "<group>"; };
 		137288AE2A653D6D00187267 /* CollectionViewTwoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTwoModel.swift; sourceTree = "<group>"; };
+		137288B12A654D6200187267 /* WithdrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawVC.swift; sourceTree = "<group>"; };
 		137CE6752A4ADEB500B40F2D /* VerifyYourIdentityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourIdentityVC.swift; sourceTree = "<group>"; };
 		137CE6782A4AF66100B40F2D /* ResetYourPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetYourPasswordVC.swift; sourceTree = "<group>"; };
 		137CE67A2A4B05F300B40F2D /* ReasonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonsVC.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		136FE67F2A5BBD44006FDE26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				137288B02A654D3500187267 /* Withdraw */,
 				139314D12A528D8A00248D92 /* HomeVC.swift */,
 				13D9D5732A55412700E3AE75 /* TransfersVC */,
 				136A00932A610ECE00A5E74E /* Notification */,
@@ -268,6 +271,14 @@
 				13DE6FB62A53F9E000384D8F /* ScanQRCodeVC.swift */,
 			);
 			path = ScanQRCode;
+			sourceTree = "<group>";
+		};
+		137288B02A654D3500187267 /* Withdraw */ = {
+			isa = PBXGroup;
+			children = (
+				137288B12A654D6200187267 /* WithdrawVC.swift */,
+			);
+			path = Withdraw;
 			sourceTree = "<group>";
 		};
 		137CE6772A4ADEC500B40F2D /* Onboarding */ = {
@@ -670,6 +681,7 @@
 				13E69C312A5D1B5200313832 /* EditAccountVC.swift in Sources */,
 				137288AD2A653C4800187267 /* CollectionViewTwoCell.swift in Sources */,
 				13CD190D2A5E82EC0014C3D0 /* CountryModel.swift in Sources */,
+				137288B22A654D6200187267 /* WithdrawVC.swift in Sources */,
 				136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */,
 				139314D62A528DC100248D92 /* ActivityVC.swift in Sources */,
 				139314D82A528DD900248D92 /* ProfileVC.swift in Sources */,
