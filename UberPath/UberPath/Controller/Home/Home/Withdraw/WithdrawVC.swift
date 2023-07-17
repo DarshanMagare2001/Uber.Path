@@ -56,7 +56,6 @@ class WithdrawVC: UIViewController {
     func resetButtonsToDefaultState() {
         let defaultColor = UIColor.systemGray6
         let defaultTintColor = UIColor.black
-        
         [btn1, btn2, btn3, btn4].forEach { button in
             button?.backgroundColor = defaultColor
             button?.tintColor = defaultTintColor
