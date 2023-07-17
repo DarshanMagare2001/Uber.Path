@@ -45,7 +45,6 @@ class ActivityVC: UIViewController {
         collectionViewOne.setContentOffset(offset, animated: true)
     }
     
-    
     @IBAction func toggleBtnPressed(_ sender: UISwitch) {
         if sender.isOn {
             showBarGraph()
