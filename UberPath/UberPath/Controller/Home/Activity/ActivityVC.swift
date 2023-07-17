@@ -15,9 +15,11 @@ class ActivityVC: UIViewController {
     @IBOutlet weak var btn3: UILabel!
     @IBOutlet weak var btn4: UILabel!
     @IBOutlet weak var barGraphView: RoundedButtonWithBorder!
+    @IBOutlet weak var tableViewOutlet: UITableView!
     var collectionViewOneArray = ["Co.payment Cards", "Smartpay Cards"]
     var barGraphLayers: [CALayer] = []
     var showBar : Bool = true
+    var viewModel = TableViewModelClass()
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
@@ -38,7 +40,7 @@ class ActivityVC: UIViewController {
         collectionViewOne.setContentOffset(offset, animated: true)
     }
     
-   
+    
     @IBAction func toggleBtnPressed(_ sender: UISwitch) {
         if sender.isOn {
             showBarGraph()
@@ -48,7 +50,7 @@ class ActivityVC: UIViewController {
             showBar = false
         }
     }
-
+    
     func showBarGraph() {
         for layer in barGraphLayers {
             if let barLayer = layer as? CALayer {
@@ -60,7 +62,7 @@ class ActivityVC: UIViewController {
             }
         }
     }
-
+    
     func hideBarGraph() {
         for layer in barGraphLayers {
             if let barLayer = layer as? CALayer {
@@ -71,8 +73,8 @@ class ActivityVC: UIViewController {
             }
         }
     }
-
-
+    
+    
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
             return
@@ -182,7 +184,7 @@ class ActivityVC: UIViewController {
                 barGraphView.layer.addSublayer(lineLayer)
                 barGraphLayers.append(lineLayer)
             }
-           
+            
         }
     }
     
@@ -231,4 +233,20 @@ extension ActivityVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         return CGSize(width: cellWidth, height: collectionView.frame.height)
     }
     
+}
+
+extension ActivityVC : UITableViewDelegate , UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.TableViewModelClassArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
+        cell.cellImg.image = UIImage(named: viewModel.TableViewModelClassArray[indexPath.row].img)
+        cell.cellLbl1.text = viewModel.TableViewModelClassArray[indexPath.row].lbl1
+        cell.cellLbl2.text = viewModel.TableViewModelClassArray[indexPath.row].lbl2
+        cell.cellLbl3.text = viewModel.TableViewModelClassArray[indexPath.row].lbl3
+        return cell
+    }
+     
 }
