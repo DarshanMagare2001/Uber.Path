@@ -27,6 +27,7 @@ class ActivityVC: UIViewController {
     var barGraphLayers: [CALayer] = []
     var showBar : Bool = true
     var viewModel = TableViewModelClass()
+    var showDurationBtn = false
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewOne.delegate = self
@@ -84,7 +85,14 @@ class ActivityVC: UIViewController {
     
     @IBAction func durationShowBtnPressed(_ sender: UIButton) {
         durationView.isHidden.toggle()
+        showDurationBtn.toggle()
+        if showDurationBtn {
+            durationShowBtn.setImage(UIImage(named: "ForwardArrow"), for: .normal)
+        } else {
+            durationShowBtn.setImage(UIImage(named: "DownArrow"), for: .normal)
+        }
     }
+
     
     @objc func btnTapped(_ gesture: UITapGestureRecognizer) {
         guard let tappedLabel = gesture.view as? UILabel else {
