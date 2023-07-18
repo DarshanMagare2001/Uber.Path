@@ -260,3 +260,37 @@ class ShadowedImageView: UIImageView {
 
 
 
+class RoundedViewWithBorderTwo: UIView {
+    // Custom corner radius value
+    var cornerRadius: CGFloat = 50 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    // Custom border width value
+    var borderWidth: CGFloat = 1 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    // Custom border color value
+    var borderColor: UIColor = .gray {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Set corner radius
+        layer.cornerRadius = cornerRadius
+        layer.masksToBounds = true
+        
+        // Set border
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+    }
+}
