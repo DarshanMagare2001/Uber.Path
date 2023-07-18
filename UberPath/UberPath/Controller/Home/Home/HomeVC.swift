@@ -50,6 +50,12 @@ class HomeVC: UIViewController {
     }
     
     
+    @IBAction func allTransactionBtnPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "HistoryTrasactionVC") as! HistoryTrasactionVC
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     func updateFont(){
         welcomeLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 10.0))
         nameLbl.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 20.0))
