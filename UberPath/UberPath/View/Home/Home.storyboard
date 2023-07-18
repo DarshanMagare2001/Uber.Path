@@ -1134,8 +1134,62 @@
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X64-xE-F0S">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nDb-Cd-dzj">
+                                        <rect key="frame" x="10" y="70" width="300" height="120"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current balance" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zu-Fp-syl">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="40"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-xS-bPV">
+                                                <rect key="frame" x="0.0" y="40" width="226.5" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5j-BL-Ti9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12,256.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqT-Wh-CSu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="uqT-Wh-CSu" secondAttribute="bottom" id="9VD-aA-DdR"/>
+                                                            <constraint firstItem="uqT-Wh-CSu" firstAttribute="top" secondItem="c5j-BL-Ti9" secondAttribute="top" id="Hm3-By-Xic"/>
+                                                            <constraint firstItem="uqT-Wh-CSu" firstAttribute="leading" secondItem="c5j-BL-Ti9" secondAttribute="leading" id="LoD-lF-qK2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uqT-Wh-CSu" secondAttribute="trailing" id="nvc-lk-4uj"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJh-aF-AmE">
+                                                        <rect key="frame" x="170.5" y="0.0" width="56" height="40"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system" title=" "/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Bank account : 2564  8546  8421  1121" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-Qg-fd7">
+                                                <rect key="frame" x="0.0" y="80" width="198" height="40"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="32a-ne-sMD"/>
+                                    <constraint firstItem="nDb-Cd-dzj" firstAttribute="top" secondItem="X64-xE-F0S" secondAttribute="top" constant="70" id="5nE-Gp-p88"/>
+                                    <constraint firstAttribute="bottom" secondItem="nDb-Cd-dzj" secondAttribute="bottom" constant="10" id="9PC-p2-7kn"/>
+                                    <constraint firstItem="nDb-Cd-dzj" firstAttribute="leading" secondItem="X64-xE-F0S" secondAttribute="leading" constant="10" id="Smf-FZ-QT5"/>
+                                    <constraint firstAttribute="trailing" secondItem="nDb-Cd-dzj" secondAttribute="trailing" constant="10" id="hvW-cZ-uVM"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-fk-jZj">
                                 <rect key="frame" x="5" y="0.0" width="50" height="50"/>
@@ -1161,7 +1215,6 @@
                             <constraint firstItem="X64-xE-F0S" firstAttribute="top" secondItem="RIA-kR-qj3" secondAttribute="bottom" id="DEK-oK-yiv"/>
                             <constraint firstItem="X64-xE-F0S" firstAttribute="top" secondItem="9kL-I7-bKJ" secondAttribute="top" id="EZf-1N-ZQD"/>
                             <constraint firstItem="UUG-fk-jZj" firstAttribute="leading" secondItem="9kL-I7-bKJ" secondAttribute="leading" constant="5" id="Gga-lW-tfO"/>
-                            <constraint firstItem="X64-xE-F0S" firstAttribute="height" secondItem="7KR-wT-LTj" secondAttribute="height" multiplier="0.3" id="I9R-HE-8qh"/>
                             <constraint firstItem="UUG-fk-jZj" firstAttribute="top" secondItem="9kL-I7-bKJ" secondAttribute="top" id="jT8-sC-eOc"/>
                             <constraint firstItem="9kL-I7-bKJ" firstAttribute="trailing" secondItem="X64-xE-F0S" secondAttribute="trailing" id="jY3-Ah-thM"/>
                             <constraint firstItem="RIA-kR-qj3" firstAttribute="leading" secondItem="7KR-wT-LTj" secondAttribute="leading" id="mFX-rh-upw"/>
@@ -5839,6 +5892,7 @@
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="personImage" width="80" height="80"/>
