@@ -12,6 +12,7 @@ class HistoryTrasactionVC: UIViewController {
     @IBOutlet weak var amountHideShowBtn: UIButton!
     @IBOutlet weak var tableViewOne: UITableView!
     @IBOutlet weak var tableViewTwo: UITableView!
+    @IBOutlet weak var tableViewThree: UITableView!
     @IBOutlet weak var janLbl: UILabel!
     @IBOutlet weak var febLbl: UILabel!
     @IBOutlet weak var marLbl: UILabel!
@@ -27,13 +28,14 @@ class HistoryTrasactionVC: UIViewController {
     var previouslyTappedLabel: UILabel? = nil
     var isAmountShow = true
     var viewModel = TableViewModelClass()
+    var viewModelForTableViewThree = TableViewThreeModelClass()
     override func viewDidLoad() {
         super.viewDidLoad()
         amountShowLblView.isHidden = false
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "TableViewCellForOneAndTwo", bundle: bundle)
+        let nib = UINib(nibName: "TableViewCellForOneAndTwo", bundle: nil)
         tableViewOne.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
         tableViewTwo.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
+        tableViewThree.register(TableViewThreeCell.self, forCellReuseIdentifier: "TableViewThreeCell")
         configureLbls()
         
     }
@@ -128,6 +130,9 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
         if tableView == tableViewTwo {
             return 3
         }
+        if tableView == tableViewThree {
+            return viewModelForTableViewThree.TableViewThreeModelClassArray.count
+        }
         return 0
     }
     
@@ -150,6 +155,14 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
             cell.lbl3.text = dataFortableViewTwo[indexPath.row].lbl3
             return cell
         }
+        
+        if tableView == tableViewThree {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewThreeCell", for: indexPath) as!TableViewThreeCell
+            cell.lbl1.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl1
+            cell.lbl2.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl2
+            return cell
+        }
+        
         return UITableViewCell()
     }
     
