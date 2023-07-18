@@ -54,23 +54,25 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellForOneAndTwo", for: indexPath) as! TableViewCellForOneAndTwo
+        let dataFortableViewOne = viewModel.TableViewModelClassArray
+        let dataFortableViewTwo = viewModel.TableViewModelClassArray.enumerated().filter { $0.offset > 2 }.map { $0.element }
         if tableView == tableViewOne {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellForOneAndTwo", for: indexPath) as! TableViewCellForOneAndTwo
-            cell.img.image = UIImage(named: viewModel.TableViewModelClassArray[indexPath.row].img)
-            cell.lbl1.text = viewModel.TableViewModelClassArray[indexPath.row].lbl1
-            cell.lbl2.text = viewModel.TableViewModelClassArray[indexPath.row].lbl2
-            cell.lbl3.text = viewModel.TableViewModelClassArray[indexPath.row].lbl3
-            return cell
-        }
-        if tableView == tableViewTwo {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellForOneAndTwo", for: indexPath) as! TableViewCellForOneAndTwo
-            cell.img.image = UIImage(named: viewModel.TableViewModelClassArray[indexPath.row].img)
-            cell.lbl1.text = viewModel.TableViewModelClassArray[indexPath.row].lbl1
-            cell.lbl2.text = viewModel.TableViewModelClassArray[indexPath.row].lbl2
-            cell.lbl3.text = viewModel.TableViewModelClassArray[indexPath.row].lbl3
+            cell.img.image = UIImage(named: dataFortableViewOne[indexPath.row].img)
+            cell.lbl1.text = dataFortableViewOne[indexPath.row].lbl1
+            cell.lbl2.text = dataFortableViewOne[indexPath.row].lbl2
+            cell.lbl3.text = dataFortableViewOne[indexPath.row].lbl3
             return cell
         }
         
+        if tableView == tableViewTwo {
+            cell.img.image = UIImage(named: dataFortableViewTwo[indexPath.row].img)
+            cell.lbl1.text = dataFortableViewTwo[indexPath.row].lbl1
+            cell.lbl2.text = dataFortableViewTwo[indexPath.row].lbl2
+            cell.lbl3.text = dataFortableViewTwo[indexPath.row].lbl3
+            return cell
+        }
         return UITableViewCell()
     }
+    
 }
