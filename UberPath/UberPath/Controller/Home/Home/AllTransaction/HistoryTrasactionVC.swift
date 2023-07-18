@@ -12,6 +12,21 @@ class HistoryTrasactionVC: UIViewController {
     @IBOutlet weak var amountHideShowBtn: UIButton!
     @IBOutlet weak var tableViewOne: UITableView!
     @IBOutlet weak var tableViewTwo: UITableView!
+    @IBOutlet weak var janLbl: UILabel!
+    @IBOutlet weak var febLbl: UILabel!
+    @IBOutlet weak var marLbl: UILabel!
+    @IBOutlet weak var aprlbl: UILabel!
+    @IBOutlet weak var mayLbl: UILabel!
+    @IBOutlet weak var junLbl: UILabel!
+    @IBOutlet weak var janBarView: UIView!
+    @IBOutlet weak var febBarView: UIView!
+    @IBOutlet weak var marBarView: UIView!
+    @IBOutlet weak var aprBarView: UIView!
+    @IBOutlet weak var mayBarView: UIView!
+    @IBOutlet weak var junBarView: UIView!
+    
+    
+    
     var isAmountShow = true
     var viewModel = TableViewModelClass()
     override func viewDidLoad() {

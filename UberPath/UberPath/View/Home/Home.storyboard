@@ -1704,6 +1704,18 @@
                     <connections>
                         <outlet property="amountHideShowBtn" destination="xJh-aF-AmE" id="n56-7x-86y"/>
                         <outlet property="amountShowLblView" destination="c5j-BL-Ti9" id="nQb-Jc-TX3"/>
+                        <outlet property="aprBarView" destination="ust-Fi-4um" id="XFh-uE-OlQ"/>
+                        <outlet property="aprlbl" destination="FYb-tU-shJ" id="itn-hv-9bK"/>
+                        <outlet property="febBarView" destination="Fal-CL-lGa" id="laf-Q3-qse"/>
+                        <outlet property="febLbl" destination="cdV-Xd-cz7" id="OFg-yU-4ui"/>
+                        <outlet property="janBarView" destination="BRB-yy-8MJ" id="dTW-rx-Uqb"/>
+                        <outlet property="janLbl" destination="V0w-PW-1Nq" id="OE9-UD-Upe"/>
+                        <outlet property="junBarView" destination="Tgv-dO-cTM" id="pla-Vy-rIV"/>
+                        <outlet property="junLbl" destination="wBQ-g3-per" id="Dzd-Nw-y24"/>
+                        <outlet property="marBarView" destination="9RO-Ra-fU4" id="Ey8-bt-IMx"/>
+                        <outlet property="marLbl" destination="Wf6-2K-zHB" id="82n-iB-2c8"/>
+                        <outlet property="mayBarView" destination="EI4-T6-1tR" id="RKp-c6-Gj5"/>
+                        <outlet property="mayLbl" destination="ghK-u5-kAI" id="3uB-On-UCN"/>
                         <outlet property="tableViewOne" destination="AVC-tF-ww9" id="xQS-cg-zhc"/>
                         <outlet property="tableViewTwo" destination="dCB-pR-K8t" id="Hr5-ra-1Wo"/>
                     </connections>
