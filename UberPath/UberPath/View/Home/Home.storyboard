@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="15"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="32.5" width="280" height="27"/>
+                                                        <rect key="frame" x="0.0" y="25" width="280" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="69.5" width="280" height="102"/>
+                                                        <rect key="frame" x="0.0" y="53" width="280" height="118.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="102"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="118.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="102"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="118.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1129,6 +1129,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-kR-qj3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                <color key="backgroundColor" name="LaunchscreenColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X64-xE-F0S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                <color key="backgroundColor" name="LaunchscreenColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-fk-jZj">
                                 <rect key="frame" x="5" y="0.0" width="50" height="50"/>
                                 <constraints>
@@ -1137,7 +1145,7 @@
                                     <constraint firstAttribute="height" constant="50" id="oKL-Yt-LyK"/>
                                     <constraint firstAttribute="height" constant="50" id="tqO-0C-thR"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="BackArrow" title=" "/>
                                 <connections>
@@ -1148,14 +1156,23 @@
                         <viewLayoutGuide key="safeArea" id="9kL-I7-bKJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RIA-kR-qj3" secondAttribute="trailing" id="8Bp-Lc-1gs"/>
+                            <constraint firstItem="X64-xE-F0S" firstAttribute="leading" secondItem="9kL-I7-bKJ" secondAttribute="leading" id="BaD-Oo-NGd"/>
+                            <constraint firstItem="X64-xE-F0S" firstAttribute="top" secondItem="RIA-kR-qj3" secondAttribute="bottom" id="DEK-oK-yiv"/>
+                            <constraint firstItem="X64-xE-F0S" firstAttribute="top" secondItem="9kL-I7-bKJ" secondAttribute="top" id="EZf-1N-ZQD"/>
                             <constraint firstItem="UUG-fk-jZj" firstAttribute="leading" secondItem="9kL-I7-bKJ" secondAttribute="leading" constant="5" id="Gga-lW-tfO"/>
+                            <constraint firstItem="X64-xE-F0S" firstAttribute="height" secondItem="7KR-wT-LTj" secondAttribute="height" multiplier="0.225352" id="I9R-HE-8qh"/>
                             <constraint firstItem="UUG-fk-jZj" firstAttribute="top" secondItem="9kL-I7-bKJ" secondAttribute="top" id="jT8-sC-eOc"/>
+                            <constraint firstItem="9kL-I7-bKJ" firstAttribute="trailing" secondItem="X64-xE-F0S" secondAttribute="trailing" id="jY3-Ah-thM"/>
+                            <constraint firstItem="RIA-kR-qj3" firstAttribute="leading" secondItem="7KR-wT-LTj" secondAttribute="leading" id="mFX-rh-upw"/>
+                            <constraint firstItem="X64-xE-F0S" firstAttribute="width" secondItem="7KR-wT-LTj" secondAttribute="width" id="qKk-8b-G6e"/>
+                            <constraint firstItem="RIA-kR-qj3" firstAttribute="top" secondItem="7KR-wT-LTj" secondAttribute="top" id="yFp-Cc-oHn"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2U-XI-Fj4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="604"/>
+            <point key="canvasLocation" x="3051.8691588785045" y="601.94384449244069"/>
         </scene>
         <!--ScanQR CodeVC-->
         <scene sceneID="lnN-Tx-Vb4">
