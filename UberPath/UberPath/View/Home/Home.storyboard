@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="25.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="32" width="280" height="27"/>
+                                                        <rect key="frame" x="0.0" y="35.5" width="280" height="15.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="69" width="280" height="102.5"/>
+                                                        <rect key="frame" x="0.0" y="61" width="280" height="110.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="102.5"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="110.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="102.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="110.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2161,7 +2161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W76-pB-aLv" customClass="RoundedViewWithBorderTwo" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="170.5" width="320" height="397.5"/>
+                                <rect key="frame" x="0.0" y="227" width="320" height="341"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your bank" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9El-2U-haQ">
                                         <rect key="frame" x="20" y="30" width="280" height="21.5"/>
@@ -2259,26 +2259,6 @@
                                             <constraint firstAttribute="bottom" secondItem="0XP-l2-8TC" secondAttribute="bottom" id="wy0-uX-RRa"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQh-0m-Stc" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="327.5" width="280" height="50"/>
-                                        <color key="backgroundColor" name="GlobalButtonColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="iw9-EK-zpB"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Confirm">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="confirmBtnPressed:" destination="3fJ-64-CtX" eventType="touchUpInside" id="FWI-sV-kDx"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2286,13 +2266,9 @@
                                     <constraint firstAttribute="trailing" secondItem="k8l-jT-aV7" secondAttribute="trailing" constant="20" id="5Am-I5-dY3"/>
                                     <constraint firstItem="KFO-rQ-414" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="AZz-OU-HpP"/>
                                     <constraint firstItem="9El-2U-haQ" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="Ah0-dp-yoh"/>
-                                    <constraint firstItem="RQh-0m-Stc" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="F9l-3l-ERY"/>
                                     <constraint firstAttribute="trailing" secondItem="KFO-rQ-414" secondAttribute="trailing" constant="20" id="GY1-aq-ocw"/>
                                     <constraint firstAttribute="trailing" secondItem="9El-2U-haQ" secondAttribute="trailing" constant="20" id="Rmu-sL-PrX"/>
-                                    <constraint firstAttribute="bottom" secondItem="RQh-0m-Stc" secondAttribute="bottom" constant="20" id="SKV-vU-IUf"/>
                                     <constraint firstItem="k8l-jT-aV7" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="agc-w1-SBV"/>
-                                    <constraint firstAttribute="trailing" secondItem="RQh-0m-Stc" secondAttribute="trailing" constant="20" id="isq-GI-8T3"/>
-                                    <constraint firstItem="RQh-0m-Stc" firstAttribute="centerX" secondItem="W76-pB-aLv" secondAttribute="centerX" id="jox-1O-xjQ"/>
                                     <constraint firstItem="KFO-rQ-414" firstAttribute="centerX" secondItem="W76-pB-aLv" secondAttribute="centerX" id="mqT-19-nPO"/>
                                     <constraint firstItem="KFO-rQ-414" firstAttribute="top" secondItem="9El-2U-haQ" secondAttribute="bottom" constant="20" id="tgf-bb-RNq"/>
                                     <constraint firstItem="9El-2U-haQ" firstAttribute="top" secondItem="W76-pB-aLv" secondAttribute="top" constant="30" id="voT-sJ-PtZ"/>
@@ -2313,7 +2289,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooi-bV-BTG" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="110" y="150.5" width="100" height="10"/>
+                                <rect key="frame" x="110" y="207" width="100" height="10"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="6YV-Xk-zUt"/>
@@ -2328,15 +2304,50 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMa-xG-Prh">
+                                <rect key="frame" x="1" y="478" width="320" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQh-0m-Stc" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="280" height="50"/>
+                                        <color key="backgroundColor" name="GlobalButtonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5WQ-M3-nPd"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Confirm">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmBtnPressed:" destination="3fJ-64-CtX" eventType="touchUpInside" id="FWI-sV-kDx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RQh-0m-Stc" firstAttribute="top" secondItem="tMa-xG-Prh" secondAttribute="top" constant="20" id="0nD-WW-FLb"/>
+                                    <constraint firstAttribute="trailing" secondItem="RQh-0m-Stc" secondAttribute="trailing" constant="20" id="k5b-RC-7j8"/>
+                                    <constraint firstItem="RQh-0m-Stc" firstAttribute="leading" secondItem="tMa-xG-Prh" secondAttribute="leading" constant="20" id="pd6-uP-fUE"/>
+                                    <constraint firstAttribute="bottom" secondItem="RQh-0m-Stc" secondAttribute="bottom" constant="20" id="zvB-6v-qge"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ymo-aL-Tbu"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="separatorColor"/>
                         <constraints>
                             <constraint firstItem="W76-pB-aLv" firstAttribute="top" secondItem="ooi-bV-BTG" secondAttribute="bottom" constant="10" id="1Og-kG-5kL"/>
-                            <constraint firstItem="W76-pB-aLv" firstAttribute="height" secondItem="e5s-gZ-Sex" secondAttribute="height" multiplier="0.7" id="7uU-g0-8zg"/>
+                            <constraint firstItem="W76-pB-aLv" firstAttribute="height" secondItem="e5s-gZ-Sex" secondAttribute="height" multiplier="0.6" id="7uU-g0-8zg"/>
                             <constraint firstItem="ooi-bV-BTG" firstAttribute="centerX" secondItem="e5s-gZ-Sex" secondAttribute="centerX" id="Eg2-jD-nip"/>
+                            <constraint firstItem="tMa-xG-Prh" firstAttribute="leading" secondItem="Ymo-aL-Tbu" secondAttribute="leading" constant="1" id="Jb5-1c-8Ft"/>
                             <constraint firstItem="Ymo-aL-Tbu" firstAttribute="trailing" secondItem="W76-pB-aLv" secondAttribute="trailing" id="OFb-Zh-Nbl"/>
                             <constraint firstItem="W76-pB-aLv" firstAttribute="leading" secondItem="Ymo-aL-Tbu" secondAttribute="leading" id="aL8-S2-mHc"/>
+                            <constraint firstItem="tMa-xG-Prh" firstAttribute="trailing" secondItem="Ymo-aL-Tbu" secondAttribute="trailing" constant="1" id="d5Y-tA-gmX"/>
+                            <constraint firstItem="Ymo-aL-Tbu" firstAttribute="bottom" secondItem="tMa-xG-Prh" secondAttribute="bottom" id="f3b-Xj-duX"/>
                             <constraint firstAttribute="bottom" secondItem="W76-pB-aLv" secondAttribute="bottom" id="hwf-Oe-mx0"/>
                             <constraint firstItem="W76-pB-aLv" firstAttribute="width" secondItem="e5s-gZ-Sex" secondAttribute="width" id="iA1-bY-6AB"/>
                         </constraints>
