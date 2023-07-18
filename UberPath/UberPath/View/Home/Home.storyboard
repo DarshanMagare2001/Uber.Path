@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="34.5" width="280" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="32" width="280" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="59" width="280" height="112.5"/>
+                                                        <rect key="frame" x="0.0" y="69" width="280" height="102.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="112.5"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="102.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="112.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="102.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2161,8 +2161,142 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W76-pB-aLv" customClass="RoundedViewWithBorderTwo" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="284" width="320" height="284"/>
+                                <rect key="frame" x="0.0" y="170.5" width="320" height="397.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your bank" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9El-2U-haQ">
+                                        <rect key="frame" x="20" y="30" width="280" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="GlobalButtonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFO-rQ-414" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="71.5" width="280" height="90"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L2J-Au-u2e">
+                                                <rect key="frame" x="20" y="20" width="240" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bank of America" translatesAutoresizingMaskIntoConstraints="NO" id="8tc-qt-MWc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="bfk-Ty-0l8"/>
+                                                            <constraint firstAttribute="height" constant="50" id="hN1-Lq-qXA"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qix-0F-bOg">
+                                                        <rect key="frame" x="65" y="0.0" width="150" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank of America" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-zB-2UI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** **** 1121" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-gC-L81">
+                                                                <rect key="frame" x="0.0" y="25" width="150" height="25"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ber-pZ-M3j">
+                                                        <rect key="frame" x="230" y="0.0" width="10" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="10" id="eti-tc-cnJ"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="GreenTick" title=" "/>
+                                                        <connections>
+                                                            <action selector="selectBankBtnPressed:" destination="bA5-YG-6B9" eventType="touchUpInside" id="lBq-yE-sak"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="L2J-Au-u2e" firstAttribute="top" secondItem="KFO-rQ-414" secondAttribute="top" constant="20" id="WsB-Hn-xfi"/>
+                                            <constraint firstAttribute="trailing" secondItem="L2J-Au-u2e" secondAttribute="trailing" constant="20" id="YR6-T1-300"/>
+                                            <constraint firstAttribute="bottom" secondItem="L2J-Au-u2e" secondAttribute="bottom" constant="20" id="wYR-1O-r9b"/>
+                                            <constraint firstItem="L2J-Au-u2e" firstAttribute="leading" secondItem="KFO-rQ-414" secondAttribute="leading" constant="20" id="z7a-Xr-Pvg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8l-jT-aV7" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="181.5" width="280" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Investments" translatesAutoresizingMaskIntoConstraints="NO" id="00C-ea-kJj">
+                                                <rect key="frame" x="10" y="10" width="50" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Wxt-F1-3Lv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new bank" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-Jc-PXV">
+                                                <rect key="frame" x="70" y="0.0" width="150" height="50"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XP-l2-8TC">
+                                                <rect key="frame" x="230" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="mNM-Wa-bBS"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="ForwardArrow" title=" "/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="00C-ea-kJj" secondAttribute="bottom" constant="10" id="Fzl-ST-Nli"/>
+                                            <constraint firstItem="X6h-Jc-PXV" firstAttribute="leading" secondItem="00C-ea-kJj" secondAttribute="trailing" constant="10" id="HBm-iH-Jew"/>
+                                            <constraint firstAttribute="trailing" secondItem="0XP-l2-8TC" secondAttribute="trailing" id="Lgs-23-PKj"/>
+                                            <constraint firstAttribute="height" constant="50" id="VsG-QG-xwy"/>
+                                            <constraint firstItem="00C-ea-kJj" firstAttribute="leading" secondItem="k8l-jT-aV7" secondAttribute="leading" constant="10" id="eS2-sa-BHj"/>
+                                            <constraint firstItem="0XP-l2-8TC" firstAttribute="leading" secondItem="X6h-Jc-PXV" secondAttribute="trailing" constant="10" id="ghr-AE-PxI"/>
+                                            <constraint firstItem="0XP-l2-8TC" firstAttribute="top" secondItem="k8l-jT-aV7" secondAttribute="top" id="gme-fu-QVc"/>
+                                            <constraint firstItem="X6h-Jc-PXV" firstAttribute="top" secondItem="k8l-jT-aV7" secondAttribute="top" id="k3U-bS-cvA"/>
+                                            <constraint firstItem="00C-ea-kJj" firstAttribute="top" secondItem="k8l-jT-aV7" secondAttribute="top" constant="10" id="ric-8f-CKx"/>
+                                            <constraint firstAttribute="bottom" secondItem="X6h-Jc-PXV" secondAttribute="bottom" id="tW8-21-xMN"/>
+                                            <constraint firstAttribute="bottom" secondItem="0XP-l2-8TC" secondAttribute="bottom" id="wy0-uX-RRa"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQh-0m-Stc" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="327.5" width="280" height="50"/>
+                                        <color key="backgroundColor" name="GlobalButtonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iw9-EK-zpB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Confirm">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmBtnPressed:" destination="3fJ-64-CtX" eventType="touchUpInside" id="FWI-sV-kDx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="k8l-jT-aV7" firstAttribute="top" secondItem="KFO-rQ-414" secondAttribute="bottom" constant="20" id="3DJ-i6-naM"/>
+                                    <constraint firstAttribute="trailing" secondItem="k8l-jT-aV7" secondAttribute="trailing" constant="20" id="5Am-I5-dY3"/>
+                                    <constraint firstItem="KFO-rQ-414" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="AZz-OU-HpP"/>
+                                    <constraint firstItem="9El-2U-haQ" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="Ah0-dp-yoh"/>
+                                    <constraint firstItem="RQh-0m-Stc" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="F9l-3l-ERY"/>
+                                    <constraint firstAttribute="trailing" secondItem="KFO-rQ-414" secondAttribute="trailing" constant="20" id="GY1-aq-ocw"/>
+                                    <constraint firstAttribute="trailing" secondItem="9El-2U-haQ" secondAttribute="trailing" constant="20" id="Rmu-sL-PrX"/>
+                                    <constraint firstAttribute="bottom" secondItem="RQh-0m-Stc" secondAttribute="bottom" constant="20" id="SKV-vU-IUf"/>
+                                    <constraint firstItem="k8l-jT-aV7" firstAttribute="leading" secondItem="W76-pB-aLv" secondAttribute="leading" constant="20" id="agc-w1-SBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="RQh-0m-Stc" secondAttribute="trailing" constant="20" id="isq-GI-8T3"/>
+                                    <constraint firstItem="RQh-0m-Stc" firstAttribute="centerX" secondItem="W76-pB-aLv" secondAttribute="centerX" id="jox-1O-xjQ"/>
+                                    <constraint firstItem="KFO-rQ-414" firstAttribute="centerX" secondItem="W76-pB-aLv" secondAttribute="centerX" id="mqT-19-nPO"/>
+                                    <constraint firstItem="KFO-rQ-414" firstAttribute="top" secondItem="9El-2U-haQ" secondAttribute="bottom" constant="20" id="tgf-bb-RNq"/>
+                                    <constraint firstItem="9El-2U-haQ" firstAttribute="top" secondItem="W76-pB-aLv" secondAttribute="top" constant="30" id="voT-sJ-PtZ"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="40"/>
@@ -2179,7 +2313,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooi-bV-BTG" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="110" y="264" width="100" height="10"/>
+                                <rect key="frame" x="110" y="150.5" width="100" height="10"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="6YV-Xk-zUt"/>
@@ -2199,7 +2333,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="W76-pB-aLv" firstAttribute="top" secondItem="ooi-bV-BTG" secondAttribute="bottom" constant="10" id="1Og-kG-5kL"/>
-                            <constraint firstItem="W76-pB-aLv" firstAttribute="height" secondItem="e5s-gZ-Sex" secondAttribute="height" multiplier="0.5" id="7uU-g0-8zg"/>
+                            <constraint firstItem="W76-pB-aLv" firstAttribute="height" secondItem="e5s-gZ-Sex" secondAttribute="height" multiplier="0.7" id="7uU-g0-8zg"/>
                             <constraint firstItem="ooi-bV-BTG" firstAttribute="centerX" secondItem="e5s-gZ-Sex" secondAttribute="centerX" id="Eg2-jD-nip"/>
                             <constraint firstItem="Ymo-aL-Tbu" firstAttribute="trailing" secondItem="W76-pB-aLv" secondAttribute="trailing" id="OFb-Zh-Nbl"/>
                             <constraint firstItem="W76-pB-aLv" firstAttribute="leading" secondItem="Ymo-aL-Tbu" secondAttribute="leading" id="aL8-S2-mHc"/>
@@ -5619,6 +5753,8 @@
         <image name="Graph" width="327" height="193"/>
         <image name="GreenLock" width="12" height="14"/>
         <image name="GreenSettings" width="18" height="18"/>
+        <image name="GreenTick" width="24" height="24"/>
+        <image name="Investments" width="24.5" height="24"/>
         <image name="More" width="24.5" height="24"/>
         <image name="PopUpTwo" width="327" height="464"/>
         <image name="Profile" width="24" height="24"/>

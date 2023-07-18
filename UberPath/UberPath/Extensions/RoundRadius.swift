@@ -262,7 +262,7 @@ class ShadowedImageView: UIImageView {
 
 class RoundedViewWithBorderTwo: UIView {
     // Custom corner radius value
-    var cornerRadius: CGFloat = 50 {
+    var cornerRadius: CGFloat = 40 {
         didSet {
             setNeedsLayout()
         }

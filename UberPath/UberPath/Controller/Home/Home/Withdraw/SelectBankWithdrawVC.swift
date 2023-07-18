@@ -8,13 +8,16 @@
 import UIKit
 
 class SelectBankWithdrawVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
     
-
-
+    
+    @IBAction func confirmBtnPressed(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }
