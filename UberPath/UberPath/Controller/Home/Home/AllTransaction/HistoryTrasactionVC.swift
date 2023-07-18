@@ -72,13 +72,35 @@ class HistoryTrasactionVC: UIViewController {
     
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
         if let tappedLabel = sender.view as? UILabel {
-            let LaunchscreenColor = UIColor(named: "LaunchscreenColor")
-            let GlobalButtonColor = UIColor(named: "GlobalButtonColor")
+            guard let LaunchscreenColor = UIColor(named: "LaunchscreenColor") else {return}
+            guard let GlobalButtonColor = UIColor(named: "GlobalButtonColor") else {return}
             tappedLabel.textColor = LaunchscreenColor
-            // Reset the color of the previously tapped label
+            // Reset the color of the previously tapped label and its corresponding view
             previouslyTappedLabel?.textColor = .black
+            updateViewColorForLabel(previouslyTappedLabel, withColor: GlobalButtonColor )
             // Store the current tapped label as the previously tapped label
             previouslyTappedLabel = tappedLabel
+            // Update the corresponding view's color for the current tapped label
+            updateViewColorForLabel(tappedLabel, withColor: LaunchscreenColor)
+        }
+    }
+    
+    private func updateViewColorForLabel(_ label: UILabel?, withColor color: UIColor) {
+        switch label {
+        case janLbl:
+            janBarView.backgroundColor = color
+        case febLbl:
+            febBarView.backgroundColor = color
+        case marLbl:
+            marBarView.backgroundColor = color
+        case aprlbl:
+            aprBarView.backgroundColor = color
+        case mayLbl:
+            mayBarView.backgroundColor = color
+        case junLbl:
+            junBarView.backgroundColor = color
+        default:
+            break
         }
     }
     
