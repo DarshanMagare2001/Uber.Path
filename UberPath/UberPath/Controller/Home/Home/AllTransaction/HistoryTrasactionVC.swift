@@ -24,9 +24,7 @@ class HistoryTrasactionVC: UIViewController {
     @IBOutlet weak var aprBarView: UIView!
     @IBOutlet weak var mayBarView: UIView!
     @IBOutlet weak var junBarView: UIView!
-    
-    
-    
+    var previouslyTappedLabel: UILabel? = nil
     var isAmountShow = true
     var viewModel = TableViewModelClass()
     override func viewDidLoad() {
@@ -74,7 +72,14 @@ class HistoryTrasactionVC: UIViewController {
     
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
         if let tappedLabel = sender.view as? UILabel {
-            tappedLabel.textColor = .green
+            let color = UIColor(named: "LaunchscreenColor")
+            tappedLabel.textColor = color
+            
+            // Reset the color of the previously tapped label
+            previouslyTappedLabel?.textColor = .black
+            
+            // Store the current tapped label as the previously tapped label
+            previouslyTappedLabel = tappedLabel
         }
     }
     
