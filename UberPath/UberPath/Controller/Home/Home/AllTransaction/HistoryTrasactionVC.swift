@@ -62,6 +62,9 @@ class HistoryTrasactionVC: UIViewController {
         addTapGestureToLabel(aprlbl)
         addTapGestureToLabel(mayLbl)
         addTapGestureToLabel(junLbl)
+        if let janLblTapGesture = janLbl.gestureRecognizers?.first as? UITapGestureRecognizer {
+            labelTapped(janLblTapGesture)
+        }
     }
     
     func addTapGestureToLabel(_ label: UILabel) {
@@ -72,16 +75,27 @@ class HistoryTrasactionVC: UIViewController {
     
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
         if let tappedLabel = sender.view as? UILabel {
-            guard let LaunchscreenColor = UIColor(named: "LaunchscreenColor") else {return}
-            guard let GlobalButtonColor = UIColor(named: "GlobalButtonColor") else {return}
+            guard let LaunchscreenColor = UIColor(named: "LaunchscreenColor") else { return }
+            guard let GlobalButtonColor = UIColor(named: "GlobalButtonColor") else { return }
             tappedLabel.textColor = LaunchscreenColor
             // Reset the color of the previously tapped label and its corresponding view
             previouslyTappedLabel?.textColor = .black
-            updateViewColorForLabel(previouslyTappedLabel, withColor: GlobalButtonColor )
+            updateViewColorForLabel(previouslyTappedLabel, withColor: GlobalButtonColor)
+            // Remove border and shadow from the previously tapped label
+            previouslyTappedLabel?.layer.borderWidth = 0
+            previouslyTappedLabel?.layer.shadowOpacity = 0
             // Store the current tapped label as the previously tapped label
             previouslyTappedLabel = tappedLabel
             // Update the corresponding view's color for the current tapped label
             updateViewColorForLabel(tappedLabel, withColor: LaunchscreenColor)
+            // Add border and shadow to the tapped label
+            tappedLabel.layer.borderWidth = 1.0
+            tappedLabel.layer.borderColor = GlobalButtonColor.cgColor
+            tappedLabel.layer.cornerRadius = 5.0
+            tappedLabel.layer.shadowColor = GlobalButtonColor.cgColor
+            tappedLabel.layer.shadowOffset = CGSize(width: 0, height: 2)
+            tappedLabel.layer.shadowOpacity = 0.5
+            tappedLabel.layer.shadowRadius = 2.0
         }
     }
     
