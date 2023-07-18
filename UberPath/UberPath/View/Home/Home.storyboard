@@ -1134,7 +1134,7 @@
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X64-xE-F0S">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-fk-jZj">
@@ -1161,7 +1161,7 @@
                             <constraint firstItem="X64-xE-F0S" firstAttribute="top" secondItem="RIA-kR-qj3" secondAttribute="bottom" id="DEK-oK-yiv"/>
                             <constraint firstItem="X64-xE-F0S" firstAttribute="top" secondItem="9kL-I7-bKJ" secondAttribute="top" id="EZf-1N-ZQD"/>
                             <constraint firstItem="UUG-fk-jZj" firstAttribute="leading" secondItem="9kL-I7-bKJ" secondAttribute="leading" constant="5" id="Gga-lW-tfO"/>
-                            <constraint firstItem="X64-xE-F0S" firstAttribute="height" secondItem="7KR-wT-LTj" secondAttribute="height" multiplier="0.225352" id="I9R-HE-8qh"/>
+                            <constraint firstItem="X64-xE-F0S" firstAttribute="height" secondItem="7KR-wT-LTj" secondAttribute="height" multiplier="0.3" id="I9R-HE-8qh"/>
                             <constraint firstItem="UUG-fk-jZj" firstAttribute="top" secondItem="9kL-I7-bKJ" secondAttribute="top" id="jT8-sC-eOc"/>
                             <constraint firstItem="9kL-I7-bKJ" firstAttribute="trailing" secondItem="X64-xE-F0S" secondAttribute="trailing" id="jY3-Ah-thM"/>
                             <constraint firstItem="RIA-kR-qj3" firstAttribute="leading" secondItem="7KR-wT-LTj" secondAttribute="leading" id="mFX-rh-upw"/>
