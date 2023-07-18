@@ -14,8 +14,8 @@
 		133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */; };
 		133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */; };
 		135134592A66664300DCCF19 /* HistoryTrasactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */; };
-		1351345F2A6682B100DCCF19 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1351345D2A6682B100DCCF19 /* TableViewCell.xib */; };
-		135134612A66839C00DCCF19 /* TableViewCellForOneAndTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134602A66839C00DCCF19 /* TableViewCellForOneAndTwo.swift */; };
+		135134642A66873600DCCF19 /* TableViewCellForOneAndTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134622A66873600DCCF19 /* TableViewCellForOneAndTwo.swift */; };
+		135134652A66873600DCCF19 /* TableViewCellForOneAndTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135134632A66873600DCCF19 /* TableViewCellForOneAndTwo.xib */; };
 		1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */; };
 		1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360B6062A496A7F001FD948 /* AuthenticationModel.swift */; };
 		136A00982A610F7500A5E74E /* NotificationVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A00962A610F7500A5E74E /* NotificationVCCell.swift */; };
@@ -94,8 +94,8 @@
 		133DE36A2A499042003C2C60 /* CountryofResidenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryofResidenceVC.swift; sourceTree = "<group>"; };
 		133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthenticationVC.swift; sourceTree = "<group>"; };
 		135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrasactionVC.swift; sourceTree = "<group>"; };
-		1351345D2A6682B100DCCF19 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		135134602A66839C00DCCF19 /* TableViewCellForOneAndTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForOneAndTwo.swift; sourceTree = "<group>"; };
+		135134622A66873600DCCF19 /* TableViewCellForOneAndTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForOneAndTwo.swift; sourceTree = "<group>"; };
+		135134632A66873600DCCF19 /* TableViewCellForOneAndTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellForOneAndTwo.xib; sourceTree = "<group>"; };
 		1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1360B6062A496A7F001FD948 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		136A00962A610F7500A5E74E /* NotificationVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVCCell.swift; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */,
-				135134602A66839C00DCCF19 /* TableViewCellForOneAndTwo.swift */,
-				1351345D2A6682B100DCCF19 /* TableViewCell.xib */,
+				135134622A66873600DCCF19 /* TableViewCellForOneAndTwo.swift */,
+				135134632A66873600DCCF19 /* TableViewCellForOneAndTwo.xib */,
 			);
 			path = AllTransaction;
 			sourceTree = "<group>";
@@ -600,9 +600,9 @@
 				13A2A3AA2A4EFDBC00137315 /* Home.storyboard in Resources */,
 				136A00992A610F7500A5E74E /* NotificationVCCell.xib in Resources */,
 				1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */,
-				1351345F2A6682B100DCCF19 /* TableViewCell.xib in Resources */,
 				13A12AB12A445F1D00532BC6 /* Assets.xcassets in Resources */,
 				13A12AAF2A445F1A00532BC6 /* Main.storyboard in Resources */,
+				135134652A66873600DCCF19 /* TableViewCellForOneAndTwo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +678,7 @@
 				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */,
-				135134612A66839C00DCCF19 /* TableViewCellForOneAndTwo.swift in Sources */,
+				135134642A66873600DCCF19 /* TableViewCellForOneAndTwo.swift in Sources */,
 				137288B42A656C4600187267 /* SelectBankWithdrawVC.swift in Sources */,
 				136FE6862A5BD10F006FDE26 /* MyCardCell.swift in Sources */,
 				137CE67B2A4B05F300B40F2D /* ReasonsVC.swift in Sources */,

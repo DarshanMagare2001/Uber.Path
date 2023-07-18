@@ -17,7 +17,8 @@ class HistoryTrasactionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         amountShowLblView.isHidden = false
-        let nib = UINib(nibName: "TableViewCellForOneAndTwo", bundle: nil)
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "TableViewCellForOneAndTwo", bundle: bundle)
         tableViewOne.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
         tableViewTwo.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
     }
