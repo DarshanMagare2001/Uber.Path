@@ -36,6 +36,8 @@ class HistoryTrasactionVC: UIViewController {
         let nib = UINib(nibName: "TableViewCellForOneAndTwo", bundle: bundle)
         tableViewOne.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
         tableViewTwo.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
+        configureLbls()
+        
     }
     
     @IBAction func amountHideShowBtnPressed(_ sender: UIButton) {
@@ -53,6 +55,27 @@ class HistoryTrasactionVC: UIViewController {
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func configureLbls(){
+        addTapGestureToLabel(janLbl)
+        addTapGestureToLabel(febLbl)
+        addTapGestureToLabel(marLbl)
+        addTapGestureToLabel(aprlbl)
+        addTapGestureToLabel(mayLbl)
+        addTapGestureToLabel(junLbl)
+    }
+    
+    func addTapGestureToLabel(_ label: UILabel) {
+        label.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+        label.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+        if let tappedLabel = sender.view as? UILabel {
+            tappedLabel.textColor = .green
+        }
     }
     
 }
