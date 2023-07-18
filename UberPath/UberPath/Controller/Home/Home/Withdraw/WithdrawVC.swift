@@ -33,6 +33,8 @@ class WithdrawVC: UIViewController {
     @IBAction func selectBankBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "SelectBankWithdrawVC") as! SelectBankWithdrawVC
+        // Set the modal presentation style to .overFullScreen or .overCurrentContext
+        destinationVC.modalPresentationStyle = .overFullScreen
         present(destinationVC, animated: true, completion: nil)
     }
     
