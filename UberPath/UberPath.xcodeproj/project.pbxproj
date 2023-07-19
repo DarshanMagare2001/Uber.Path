@@ -17,6 +17,7 @@
 		134864B72A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134864B52A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib */; };
 		134864BA2A67A8B900D8EB32 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864B92A67A8B800D8EB32 /* MoreVC.swift */; };
 		134864BC2A67AA8000D8EB32 /* MoreVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */; };
+		134864C12A67B09100D8EB32 /* ATMFinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864C02A67B09100D8EB32 /* ATMFinderVC.swift */; };
 		135134592A66664300DCCF19 /* HistoryTrasactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */; };
 		135134672A66B41A00DCCF19 /* TableViewThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */; };
 		135134692A66B4C500DCCF19 /* TableViewThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */; };
@@ -101,6 +102,7 @@
 		134864B52A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewOneAndTwoCell.xib; sourceTree = "<group>"; };
 		134864B92A67A8B800D8EB32 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVCTableViewCell.swift; sourceTree = "<group>"; };
+		134864C02A67B09100D8EB32 /* ATMFinderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMFinderVC.swift; sourceTree = "<group>"; };
 		135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrasactionVC.swift; sourceTree = "<group>"; };
 		135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeCell.swift; sourceTree = "<group>"; };
 		135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeModel.swift; sourceTree = "<group>"; };
@@ -205,10 +207,19 @@
 		134864B82A67A89700D8EB32 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				134864BD2A67B04400D8EB32 /* ATM */,
 				134864B92A67A8B800D8EB32 /* MoreVC.swift */,
 				134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		134864BD2A67B04400D8EB32 /* ATM */ = {
+			isa = PBXGroup;
+			children = (
+				134864C02A67B09100D8EB32 /* ATMFinderVC.swift */,
+			);
+			path = ATM;
 			sourceTree = "<group>";
 		};
 		135134572A66661500DCCF19 /* AllTransaction */ = {
@@ -739,6 +750,7 @@
 				138924742A4D5B940018BBEF /* CreateCardVC.swift in Sources */,
 				13FAAB0F2A5FBF8F00FD49AD /* cell.swift in Sources */,
 				136FE68E2A5C1BB1006FDE26 /* ProfileVCCell.swift in Sources */,
+				134864C12A67B09100D8EB32 /* ATMFinderVC.swift in Sources */,
 				13CD19082A5E62AF0014C3D0 /* LanguageVCCell.swift in Sources */,
 				13BB00AE2A4C264900524C82 /* CreatePinVC.swift in Sources */,
 				135134672A66B41A00DCCF19 /* TableViewThreeCell.swift in Sources */,

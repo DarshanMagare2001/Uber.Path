@@ -29,6 +29,7 @@ extension MoreVC : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MoreVCTableViewCell", for: indexPath) as! MoreVCTableViewCell
         cell.img.image = UIImage(named: cellModelArray[indexPath.row])
         cell.lbl.text = cellModelArray[indexPath.row]
+        
         return cell
     }
 }
