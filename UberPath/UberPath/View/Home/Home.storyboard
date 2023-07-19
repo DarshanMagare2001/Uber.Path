@@ -1013,19 +1013,19 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="34" width="280" height="15"/>
+                                                        <rect key="frame" x="0.0" y="34" width="280" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="59" width="280" height="112.5"/>
+                                                        <rect key="frame" x="0.0" y="58.5" width="280" height="113"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="112.5"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="113"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="112.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -6842,6 +6842,13 @@
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L1t-Pn-vgU">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="418"/>
                                             </mapView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1W-Go-avH" customClass="ShadowedView" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="258" width="280" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="G00-Qe-PCQ"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nL8-Ku-yDS" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="438" width="280" height="50"/>
                                                 <subviews>
@@ -6888,7 +6895,10 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="nL8-Ku-yDS" firstAttribute="top" secondItem="L1t-Pn-vgU" secondAttribute="bottom" constant="20" id="0WM-xH-bal"/>
+                                            <constraint firstItem="nL8-Ku-yDS" firstAttribute="top" secondItem="e1W-Go-avH" secondAttribute="bottom" constant="60" id="0mh-Rx-fg5"/>
                                             <constraint firstItem="nL8-Ku-yDS" firstAttribute="leading" secondItem="yIi-uf-YHW" secondAttribute="leading" constant="20" id="G7N-Qo-3X3"/>
+                                            <constraint firstItem="e1W-Go-avH" firstAttribute="leading" secondItem="yIi-uf-YHW" secondAttribute="leading" constant="20" id="SZC-bT-uBD"/>
+                                            <constraint firstAttribute="trailing" secondItem="e1W-Go-avH" secondAttribute="trailing" constant="20" id="WQ7-6c-Byz"/>
                                             <constraint firstAttribute="trailing" secondItem="nL8-Ku-yDS" secondAttribute="trailing" constant="20" id="WQy-o8-ynH"/>
                                             <constraint firstItem="L1t-Pn-vgU" firstAttribute="leading" secondItem="yIi-uf-YHW" secondAttribute="leading" id="aIc-iS-8af"/>
                                             <constraint firstAttribute="trailing" secondItem="L1t-Pn-vgU" secondAttribute="trailing" id="g1m-v6-gTR"/>
