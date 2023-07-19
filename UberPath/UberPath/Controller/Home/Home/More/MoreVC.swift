@@ -29,7 +29,13 @@ extension MoreVC : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MoreVCTableViewCell", for: indexPath) as! MoreVCTableViewCell
         cell.img.image = UIImage(named: cellModelArray[indexPath.row])
         cell.lbl.text = cellModelArray[indexPath.row]
-        
+        cell.buttonTapHandler = { [weak self] in
+            // Perform the navigation when the button is tapped
+            guard let destinationVC = self?.storyboard?.instantiateViewController(withIdentifier: "ATMFinderVC") as? ATMFinderVC else {
+                return
+            }
+            self?.navigationController?.pushViewController(destinationVC, animated: true)
+        }
         return cell
     }
 }
