@@ -15,6 +15,8 @@
 		133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */; };
 		134864B62A67A25C00D8EB32 /* TableViewOneAndTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864B42A67A25C00D8EB32 /* TableViewOneAndTwoCell.swift */; };
 		134864B72A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134864B52A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib */; };
+		134864BA2A67A8B900D8EB32 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864B92A67A8B800D8EB32 /* MoreVC.swift */; };
+		134864BC2A67AA8000D8EB32 /* MoreVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */; };
 		135134592A66664300DCCF19 /* HistoryTrasactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */; };
 		135134672A66B41A00DCCF19 /* TableViewThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */; };
 		135134692A66B4C500DCCF19 /* TableViewThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */; };
@@ -97,6 +99,8 @@
 		133DE36C2A49B7F1003C2C60 /* OTPAuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthenticationVC.swift; sourceTree = "<group>"; };
 		134864B42A67A25C00D8EB32 /* TableViewOneAndTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewOneAndTwoCell.swift; sourceTree = "<group>"; };
 		134864B52A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewOneAndTwoCell.xib; sourceTree = "<group>"; };
+		134864B92A67A8B800D8EB32 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
+		134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVCTableViewCell.swift; sourceTree = "<group>"; };
 		135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrasactionVC.swift; sourceTree = "<group>"; };
 		135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeCell.swift; sourceTree = "<group>"; };
 		135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeModel.swift; sourceTree = "<group>"; };
@@ -198,6 +202,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		134864B82A67A89700D8EB32 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				134864B92A67A8B800D8EB32 /* MoreVC.swift */,
+				134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		135134572A66661500DCCF19 /* AllTransaction */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				139314D12A528D8A00248D92 /* HomeVC.swift */,
+				134864B82A67A89700D8EB32 /* More */,
 				135134572A66661500DCCF19 /* AllTransaction */,
 				137288B02A654D3500187267 /* Withdraw */,
 				13D9D5732A55412700E3AE75 /* TransfersVC */,
@@ -683,6 +697,7 @@
 				136FE68C2A5BE721006FDE26 /* EditCardVC.swift in Sources */,
 				134864B62A67A25C00D8EB32 /* TableViewOneAndTwoCell.swift in Sources */,
 				13A2A3AD2A4EFE0200137315 /* MainTabVC.swift in Sources */,
+				134864BC2A67AA8000D8EB32 /* MoreVCTableViewCell.swift in Sources */,
 				133DE36D2A49B7F1003C2C60 /* OTPAuthenticationVC.swift in Sources */,
 				13E69C472A5D4DC300313832 /* FAQsVC.swift in Sources */,
 				137288B42A656C4600187267 /* SelectBankWithdrawVC.swift in Sources */,
@@ -703,6 +718,7 @@
 				137288AF2A653D6D00187267 /* CollectionViewTwoModel.swift in Sources */,
 				135134592A66664300DCCF19 /* HistoryTrasactionVC.swift in Sources */,
 				136FE68A2A5BD9C7006FDE26 /* AddNewCardCellTableViewCell.swift in Sources */,
+				134864BA2A67A8B900D8EB32 /* MoreVC.swift in Sources */,
 				13FAAB112A5FC0D300FD49AD /* cellModelForFAQsVCCell.swift in Sources */,
 				13D9D5772A5541A300E3AE75 /* ChooseRecipientsCell.swift in Sources */,
 				13A12AAC2A445F1A00532BC6 /* OnboardingVC.swift in Sources */,

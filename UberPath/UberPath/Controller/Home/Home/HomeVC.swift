@@ -39,7 +39,9 @@ class HomeVC: UIViewController {
     
     
     @IBAction func moreBtnPressed(_ sender: UIButton) {
-        print("moreBtnPressed")
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MoreVC") as! MoreVC
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     
