@@ -30,24 +30,15 @@ extension MoreVC : UITableViewDelegate , UITableViewDataSource {
         cell.img.image = UIImage(named: cellModelArray[indexPath.row])
         cell.lbl.text = cellModelArray[indexPath.row]
         cell.buttonTapHandler = { [weak self] in
-            if indexPath.row == 0 {
-                guard let destinationVC = self?.storyboard?.instantiateViewController(withIdentifier: "ATMFinderVC") as? ATMFinderVC else {
-                    return
-                }
-                self?.navigationController?.pushViewController(destinationVC, animated: true)
-            }else if indexPath.row == 1{
-                guard let destinationVC = self?.storyboard?.instantiateViewController(withIdentifier: "ChatAsistantVC") as? ChatAsistantVC else {
-                    return
-                }
-                self?.navigationController?.pushViewController(destinationVC, animated: true)
-            }else if indexPath.row == 2 {
-                guard let destinationVC = self?.storyboard?.instantiateViewController(withIdentifier: "TopUpVC") as? TopUpVC else {
-                    return
-                }
-                self?.navigationController?.pushViewController(destinationVC, animated: true)
+            guard let cellType = CellType(rawValue: indexPath.row) else {
+                return
             }
-            
+            guard let destinationVC = self?.storyboard?.instantiateViewController(withIdentifier: cellType.viewControllerIdentifier) else {
+                return
+            }
+            self?.navigationController?.pushViewController(destinationVC, animated: true)
         }
+        
         return cell
     }
 }

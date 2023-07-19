@@ -28,3 +28,26 @@ class MoreVCTableViewCell: UITableViewCell {
     }
     
 }
+
+enum CellType: Int {
+    case atmFinder
+    case chatAssistant
+    case topUp
+    
+    var viewControllerIdentifier: String {
+        switch self {
+        case .atmFinder: return "ATMFinderVC"
+        case .chatAssistant: return "ChatAsistantVC"
+        case .topUp: return "TopUpVC"
+        }
+    }
+    // Add an initializer to make the enum instantiable from an integer value (rawValue)
+    init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .atmFinder
+        case 1: self = .chatAssistant
+        case 2: self = .topUp
+        default: return nil
+        }
+    }
+}
