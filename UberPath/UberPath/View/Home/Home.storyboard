@@ -6889,8 +6889,33 @@
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvN-Co-ruU" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="70" width="240" height="50"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAj-oH-esk">
+                                                                        <rect key="frame" x="20" y="0.0" width="220" height="50"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Direction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tao-jb-3KZ">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
+                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88n-Tw-zu6">
+                                                                                <rect key="frame" x="170" y="0.0" width="50" height="50"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="50" id="KX6-qC-yrq"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="plain" image="UternArrow" title=" "/>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
                                                                 <color key="backgroundColor" name="GlobalButtonColor"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="lAj-oH-esk" secondAttribute="bottom" id="0ts-a8-9lf"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="lAj-oH-esk" secondAttribute="trailing" id="1Fd-pS-Wws"/>
+                                                                    <constraint firstItem="lAj-oH-esk" firstAttribute="top" secondItem="QvN-Co-ruU" secondAttribute="top" id="VoQ-kn-JwY"/>
+                                                                    <constraint firstItem="lAj-oH-esk" firstAttribute="leading" secondItem="QvN-Co-ruU" secondAttribute="leading" constant="20" id="esO-Ea-vQm"/>
                                                                     <constraint firstAttribute="height" constant="50" id="gth-2J-aTe"/>
                                                                 </constraints>
                                                             </view>
@@ -6919,6 +6944,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=" "/>
+                                                                <connections>
+                                                                    <action selector="searchBtnPressed:" destination="vHM-Sw-Aqm" eventType="touchUpInside" id="0Q2-Hx-CLl"/>
+                                                                </connections>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXr-1J-7Ub">
                                                                 <rect key="frame" x="60" y="0.0" width="160" height="50"/>
@@ -6934,6 +6962,9 @@
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="GreenCancel" title=" "/>
+                                                                <connections>
+                                                                    <action selector="cancelBtnPressed:" destination="vHM-Sw-Aqm" eventType="touchUpInside" id="ka6-nN-UL5"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -6994,6 +7025,10 @@
                             <constraint firstItem="QJg-vA-RK6" firstAttribute="width" secondItem="BrH-O3-d9v" secondAttribute="width" id="yWn-ZD-KJ6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="popUpView" destination="e1W-Go-avH" id="mM8-EC-BIe"/>
+                        <outlet property="searchTxtFld" destination="IXr-1J-7Ub" id="3YE-Nu-RY3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZF7-Rr-qGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -7046,6 +7081,7 @@
         <image name="Transfers" width="24.5" height="24"/>
         <image name="Tricolor" width="42" height="108"/>
         <image name="UpBigArrow" width="20" height="20"/>
+        <image name="UternArrow" width="24" height="24"/>
         <image name="Withdraw" width="24.5" height="24"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="btn1" width="32" height="32"/>

@@ -8,16 +8,24 @@
 import UIKit
 
 class ATMFinderDetailVC: UIViewController {
-
+    @IBOutlet weak var popUpView: ShadowedView!
+    @IBOutlet weak var searchTxtFld: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        popUpView.isHidden = true
+        searchTxtFld.text = "Bank of America ATM"
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-  
-
+    
+    @IBAction func searchBtnPressed(_ sender: UIButton) {
+        popUpView.isHidden = false
+    }
+    
+    @IBAction func cancelBtnPressed(_ sender: UIButton) {
+        popUpView.isHidden = true
+    }
+    
 }
