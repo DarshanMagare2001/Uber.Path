@@ -213,9 +213,9 @@
 			children = (
 				134864B92A67A8B800D8EB32 /* MoreVC.swift */,
 				134864BB2A67AA8000D8EB32 /* MoreVCTableViewCell.swift */,
-				134864C52A67B21600D8EB32 /* TopUp */,
-				134864C22A67B16800D8EB32 /* ChatAsistant */,
 				134864BD2A67B04400D8EB32 /* ATM */,
+				134864C22A67B16800D8EB32 /* ChatAsistant */,
+				134864C52A67B21600D8EB32 /* TopUp */,
 			);
 			path = More;
 			sourceTree = "<group>";
