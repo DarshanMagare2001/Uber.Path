@@ -5474,22 +5474,25 @@
                                         <rect key="frame" x="60" y="0.0" width="220" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9v-d8-loR">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
+                                                <rect key="frame" x="5" y="0.0" width="215" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fpt-D7-GCe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-fe-vxf">
-                                                        <rect key="frame" x="170" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="165" y="0.0" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="CB3-Ry-IWq"/>
                                                             <constraint firstAttribute="width" constant="50" id="cdJ-Qf-GFV"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="GreenDoubleArrow" title=" "/>
+                                                        <connections>
+                                                            <action selector="sendMsgBtnPressed:" destination="Vkd-Gu-wIh" eventType="touchUpInside" id="AR2-bJ-JEr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -5498,7 +5501,7 @@
                                         <constraints>
                                             <constraint firstItem="A9v-d8-loR" firstAttribute="top" secondItem="yO7-hb-9no" secondAttribute="top" id="DGK-fA-Mha"/>
                                             <constraint firstAttribute="bottom" secondItem="A9v-d8-loR" secondAttribute="bottom" id="GYx-53-qms"/>
-                                            <constraint firstItem="A9v-d8-loR" firstAttribute="leading" secondItem="yO7-hb-9no" secondAttribute="leading" id="X1B-Di-iux"/>
+                                            <constraint firstItem="A9v-d8-loR" firstAttribute="leading" secondItem="yO7-hb-9no" secondAttribute="leading" constant="5" id="X1B-Di-iux"/>
                                             <constraint firstAttribute="trailing" secondItem="A9v-d8-loR" secondAttribute="trailing" id="wxP-WE-wsF"/>
                                         </constraints>
                                     </view>
@@ -5529,7 +5532,7 @@
                                                             <rect key="frame" x="50" y="0.0" width="188" height="67"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-oV-izF">
-                                                                    <rect key="frame" x="5" y="5" width="178" height="57"/>
+                                                                    <rect key="frame" x="10" y="10" width="168" height="47"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -5537,10 +5540,10 @@
                                                             </subviews>
                                                             <color key="backgroundColor" name="GlobalButtonColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="cJe-oV-izF" secondAttribute="trailing" constant="5" id="9Jw-BF-tkX"/>
-                                                                <constraint firstItem="cJe-oV-izF" firstAttribute="leading" secondItem="rtg-2p-iw1" secondAttribute="leading" constant="5" id="SMf-ii-MYa"/>
-                                                                <constraint firstAttribute="bottom" secondItem="cJe-oV-izF" secondAttribute="bottom" constant="5" id="mba-fx-rLi"/>
-                                                                <constraint firstItem="cJe-oV-izF" firstAttribute="top" secondItem="rtg-2p-iw1" secondAttribute="top" constant="5" id="xXH-DX-Ozu"/>
+                                                                <constraint firstItem="cJe-oV-izF" firstAttribute="leading" secondItem="rtg-2p-iw1" secondAttribute="leading" constant="10" id="RzY-Ro-VhI"/>
+                                                                <constraint firstItem="cJe-oV-izF" firstAttribute="top" secondItem="rtg-2p-iw1" secondAttribute="top" constant="10" id="Sd7-jh-mpG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cJe-oV-izF" secondAttribute="trailing" constant="10" id="W5B-Yg-m2z"/>
+                                                                <constraint firstAttribute="bottom" secondItem="cJe-oV-izF" secondAttribute="bottom" constant="10" id="rlW-JC-haX"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2R-rt-yuw">
@@ -5604,6 +5607,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="msgTxtFld" destination="Fpt-D7-GCe" id="UIi-Jz-Fte"/>
                         <outlet property="tableViewOutlet" destination="VTz-tU-k9L" id="hd6-43-lwO"/>
                     </connections>
                 </viewController>

@@ -9,10 +9,12 @@ import UIKit
 
 class ChatAsistantVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
+    @IBOutlet weak var msgTxtFld: UITextField!
+    
     var viewModel = ChatAsistantVCTableViewModelClass()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        msgTxtFld.placeholder = "Type here..."
         
     }
     
@@ -20,6 +22,9 @@ class ChatAsistantVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func sendMsgBtnPressed(_ sender: UIButton) {
+        
+    }
     
 }
 
