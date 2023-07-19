@@ -30,7 +30,18 @@ extension ChatAsistantVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatAsistantVCTableViewCell", for: indexPath) as!ChatAsistantVCTableViewCell
-        cell.msgLbl.text = viewModel.modelArray[indexPath.row]
+        if indexPath.row == 0 || indexPath.row == 2 {
+            cell.msgLbl.text = viewModel.modelArray[indexPath.row]
+            cell.msgLbl.textColor = UIColor(named: "GlobalButtonColor")
+            cell.msgLbl.font.leading
+            cell.msgView.backgroundColor = .systemGray6
+        } else {
+            cell.msgLbl.text = viewModel.modelArray[indexPath.row]
+            cell.msgLbl.textColor = .white
+            cell.msgLbl.font.trailing
+            cell.msgView.backgroundColor = UIColor(named: "GlobalButtonColor")
+        }
+        
         return cell
     }
     
