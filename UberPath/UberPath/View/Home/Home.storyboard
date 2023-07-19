@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="34.5" width="280" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="34" width="280" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="59" width="280" height="112.5"/>
+                                                        <rect key="frame" x="0.0" y="58.5" width="280" height="113"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="112.5"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="113"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="112.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1883,13 +1883,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vrS-gg-ucA">
-                                                    <rect key="frame" x="5" y="5" width="290" height="66"/>
+                                                    <rect key="frame" x="5" y="10" width="290" height="56"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YI-uQ-mqu" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="66"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="56"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLg-k9-Cc8">
-                                                                    <rect key="frame" x="10" y="10" width="30" height="46"/>
+                                                                    <rect key="frame" x="10" y="10" width="30" height="36"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -1903,13 +1903,13 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL3-vC-p8p">
-                                                            <rect key="frame" x="70" y="0.0" width="180" height="66"/>
+                                                            <rect key="frame" x="70" y="0.0" width="180" height="56"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <color key="textColor" name="GlobalButtonColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czl-ck-KQB">
-                                                            <rect key="frame" x="270" y="0.0" width="20" height="66"/>
+                                                            <rect key="frame" x="270" y="0.0" width="20" height="56"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="uDA-69-APW"/>
                                                             </constraints>
@@ -1922,8 +1922,8 @@
                                             <constraints>
                                                 <constraint firstItem="vrS-gg-ucA" firstAttribute="leading" secondItem="tgg-Sa-vAD" secondAttribute="leading" constant="5" id="GAD-1f-era"/>
                                                 <constraint firstAttribute="trailing" secondItem="vrS-gg-ucA" secondAttribute="trailing" constant="5" id="a0j-dT-3zq"/>
-                                                <constraint firstAttribute="bottom" secondItem="vrS-gg-ucA" secondAttribute="bottom" constant="5" id="i2d-4c-OkH"/>
-                                                <constraint firstItem="vrS-gg-ucA" firstAttribute="top" secondItem="tgg-Sa-vAD" secondAttribute="top" constant="5" id="mfp-dF-hrk"/>
+                                                <constraint firstAttribute="bottom" secondItem="vrS-gg-ucA" secondAttribute="bottom" constant="10" id="i2d-4c-OkH"/>
+                                                <constraint firstItem="vrS-gg-ucA" firstAttribute="top" secondItem="tgg-Sa-vAD" secondAttribute="top" constant="10" id="mfp-dF-hrk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
