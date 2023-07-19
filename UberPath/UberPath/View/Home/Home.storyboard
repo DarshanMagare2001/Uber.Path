@@ -6718,14 +6718,35 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ATM Finder" translatesAutoresizingMaskIntoConstraints="NO" id="vyN-ov-z1n">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bad-9L-Nvq">
+                                        <rect key="frame" x="40" y="204" width="240" height="163"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Find Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xi-19-9Ka">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="81.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To do this process please click now to find the location your nearest ATM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anr-zF-T6d">
+                                                <rect key="frame" x="0.0" y="81.5" width="240" height="81.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Bad-9L-Nvq" firstAttribute="leading" secondItem="cX9-as-aOI" secondAttribute="leading" constant="40" id="03c-lz-yar"/>
                                     <constraint firstItem="vyN-ov-z1n" firstAttribute="top" secondItem="cX9-as-aOI" secondAttribute="top" id="0x8-g9-xxw"/>
                                     <constraint firstAttribute="trailing" secondItem="vyN-ov-z1n" secondAttribute="trailing" id="Bvx-Dg-gz1"/>
+                                    <constraint firstItem="Bad-9L-Nvq" firstAttribute="top" secondItem="vyN-ov-z1n" secondAttribute="bottom" id="Ufc-p9-R4c"/>
                                     <constraint firstItem="vyN-ov-z1n" firstAttribute="width" secondItem="cX9-as-aOI" secondAttribute="width" id="VFn-Sw-Aqk"/>
                                     <constraint firstItem="vyN-ov-z1n" firstAttribute="height" secondItem="cX9-as-aOI" secondAttribute="height" multiplier="0.5" id="X94-k5-YIA"/>
                                     <constraint firstItem="vyN-ov-z1n" firstAttribute="leading" secondItem="cX9-as-aOI" secondAttribute="leading" id="kfL-LB-HVg"/>
+                                    <constraint firstItem="Bad-9L-Nvq" firstAttribute="height" secondItem="cX9-as-aOI" secondAttribute="height" multiplier="0.4" id="mg1-iT-Jmg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bad-9L-Nvq" secondAttribute="trailing" constant="40" id="tFX-fN-bei"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -6746,6 +6767,10 @@
                             <constraint firstItem="cX9-as-aOI" firstAttribute="top" secondItem="BPH-gK-jHe" secondAttribute="bottom" constant="20" id="ysr-p4-bA2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbl1" destination="0Xi-19-9Ka" id="MXu-dl-djA"/>
+                        <outlet property="lbl2" destination="Anr-zF-T6d" id="LHI-rs-ChA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5a-lA-zwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
