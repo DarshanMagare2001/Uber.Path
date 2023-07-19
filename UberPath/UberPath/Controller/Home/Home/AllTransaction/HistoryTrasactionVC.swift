@@ -135,7 +135,6 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
         let dataFortableViewOne = viewModel.TableViewModelClassArray
         let dataFortableViewTwo = viewModel.TableViewModelClassArray.enumerated().filter { $0.offset > 2 }.map { $0.element }
         if tableView == tableViewOne {
@@ -155,7 +154,6 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
             cell.lbl3.text = dataFortableViewTwo[indexPath.row].lbl3
             return cell
         }
-        
         if tableView == tableViewThree {
             let cellForTableViewThree = tableViewThree.dequeueReusableCell(withIdentifier: "TableViewThreeCell", for: indexPath) as!TableViewThreeCell
             cellForTableViewThree.lbl1.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl1
