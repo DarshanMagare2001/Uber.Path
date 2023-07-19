@@ -38,7 +38,6 @@ extension MoreVC : UITableViewDelegate , UITableViewDataSource {
             }
             self?.navigationController?.pushViewController(destinationVC, animated: true)
         }
-        
         return cell
     }
 }
