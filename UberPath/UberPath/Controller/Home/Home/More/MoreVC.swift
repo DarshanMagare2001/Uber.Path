@@ -9,7 +9,7 @@ import UIKit
 
 class MoreVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
-    var cellModelArray = ["ATM Finder","Chat Assistant","TopUp"]
+    var cellModelArray = ["ATM Finder","Chat Asistant","TopUp"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
