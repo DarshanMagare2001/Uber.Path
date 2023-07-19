@@ -10,6 +10,8 @@ import UIKit
 class ChatAsistantVCTableViewCell: UITableViewCell {
     @IBOutlet weak var msgView: UIView!
     @IBOutlet weak var msgLbl: UILabel!
+    @IBOutlet weak var v1: UIView!
+    @IBOutlet weak var v2: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

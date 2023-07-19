@@ -5515,35 +5515,56 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-2p-iw1" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSD-fF-h6A">
                                                     <rect key="frame" x="16" y="11" width="288" height="67"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-oV-izF">
-                                                            <rect key="frame" x="5" y="5" width="278" height="57"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cla-hx-N3E">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="67"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="6WZ-xZ-pNO"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-2p-iw1" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <rect key="frame" x="50" y="0.0" width="188" height="67"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-oV-izF">
+                                                                    <rect key="frame" x="5" y="5" width="178" height="57"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="GlobalButtonColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="cJe-oV-izF" secondAttribute="trailing" constant="5" id="9Jw-BF-tkX"/>
+                                                                <constraint firstItem="cJe-oV-izF" firstAttribute="leading" secondItem="rtg-2p-iw1" secondAttribute="leading" constant="5" id="SMf-ii-MYa"/>
+                                                                <constraint firstAttribute="bottom" secondItem="cJe-oV-izF" secondAttribute="bottom" constant="5" id="mba-fx-rLi"/>
+                                                                <constraint firstItem="cJe-oV-izF" firstAttribute="top" secondItem="rtg-2p-iw1" secondAttribute="top" constant="5" id="xXH-DX-Ozu"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2R-rt-yuw">
+                                                            <rect key="frame" x="238" y="0.0" width="50" height="67"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="2f9-YH-l7f"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="GlobalButtonColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="cJe-oV-izF" firstAttribute="top" secondItem="rtg-2p-iw1" secondAttribute="top" constant="5" id="4Nq-V3-w5H"/>
-                                                        <constraint firstAttribute="bottom" secondItem="cJe-oV-izF" secondAttribute="bottom" constant="5" id="QOh-c9-Cn0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="cJe-oV-izF" secondAttribute="trailing" constant="5" id="exV-S8-kQn"/>
-                                                        <constraint firstItem="cJe-oV-izF" firstAttribute="leading" secondItem="rtg-2p-iw1" secondAttribute="leading" constant="5" id="jBF-rA-F27"/>
-                                                    </constraints>
-                                                </view>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rtg-2p-iw1" firstAttribute="top" secondItem="4C9-uz-VMc" secondAttribute="topMargin" id="27A-sj-cXb"/>
-                                                <constraint firstItem="rtg-2p-iw1" firstAttribute="leading" secondItem="4C9-uz-VMc" secondAttribute="leadingMargin" id="Bbr-lz-Tx7"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rtg-2p-iw1" secondAttribute="bottom" id="EVm-8p-NEi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rtg-2p-iw1" secondAttribute="trailing" id="GLO-2f-wa1"/>
+                                                <constraint firstItem="CSD-fF-h6A" firstAttribute="top" secondItem="4C9-uz-VMc" secondAttribute="topMargin" id="TpW-Mu-Vxo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CSD-fF-h6A" secondAttribute="trailing" id="XvP-Zi-YHT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CSD-fF-h6A" secondAttribute="bottom" id="abH-yo-M1b"/>
+                                                <constraint firstItem="CSD-fF-h6A" firstAttribute="leading" secondItem="4C9-uz-VMc" secondAttribute="leadingMargin" id="usg-9D-Rag"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="msgLbl" destination="cJe-oV-izF" id="OTE-qj-pK3"/>
                                             <outlet property="msgView" destination="rtg-2p-iw1" id="Y1K-s6-cNJ"/>
+                                            <outlet property="v1" destination="cla-hx-N3E" id="gk2-RL-OE6"/>
+                                            <outlet property="v2" destination="Q2R-rt-yuw" id="Ymb-0p-rFz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
