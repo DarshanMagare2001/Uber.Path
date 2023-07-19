@@ -3211,19 +3211,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCV-8R-vbx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUi-md-2gE" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                        <rect key="frame" x="260" y="15" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="28w-TX-tc1"/>
-                                            <constraint firstAttribute="width" constant="50" id="t5u-qQ-fRx"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system" title=" "/>
-                                        <connections>
-                                            <action selector="notificationBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="yw2-Ww-jTX"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-tU-Yg8">
                                         <rect key="frame" x="10" y="10" width="82" height="70"/>
                                         <subviews>
@@ -3241,13 +3228,40 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vg8-pU-vJU">
+                                        <rect key="frame" x="200" y="15" width="110" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-k8-d80" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HF4-Tl-yI2"/>
+                                                    <constraint firstAttribute="width" constant="50" id="QMz-Fh-cSa"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="power.circle" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="logOutBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="qOh-D2-3xt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUi-md-2gE" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="notificationBtnPressed:" destination="bPt-sb-lBs" eventType="touchUpInside" id="yw2-Ww-jTX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="LaunchscreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="wUi-md-2gE" secondAttribute="trailing" constant="10" id="BAs-n1-9nr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vg8-pU-vJU" secondAttribute="trailing" constant="10" id="5Mj-au-xcf"/>
                                     <constraint firstAttribute="height" constant="80" id="GYh-8x-lvK"/>
                                     <constraint firstAttribute="bottom" secondItem="bRi-tU-Yg8" secondAttribute="bottom" id="GlS-Uj-WCE"/>
-                                    <constraint firstItem="wUi-md-2gE" firstAttribute="centerY" secondItem="pCV-8R-vbx" secondAttribute="centerY" id="VRK-Nx-l6A"/>
+                                    <constraint firstItem="Vg8-pU-vJU" firstAttribute="centerY" secondItem="pCV-8R-vbx" secondAttribute="centerY" id="NQa-sr-fs0"/>
                                     <constraint firstItem="bRi-tU-Yg8" firstAttribute="leading" secondItem="pCV-8R-vbx" secondAttribute="leading" constant="10" id="Xi0-ao-8Q0"/>
                                     <constraint firstItem="bRi-tU-Yg8" firstAttribute="top" secondItem="pCV-8R-vbx" secondAttribute="top" constant="10" id="gAx-we-9eX"/>
                                 </constraints>
@@ -6978,6 +6992,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="personImage" width="80" height="80"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="power.circle" catalog="system" width="128" height="121"/>
         <namedColor name="GlobalButtonColor">
             <color red="0.11372549019607843" green="0.22745098039215686" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

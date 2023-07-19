@@ -11,18 +11,25 @@ class HomeVC: UIViewController {
     @IBOutlet weak var welcomeLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
+    var viewModel = AuthenticationModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
         updateCard()
     }
     
+    @IBAction func logOutBtnPressed(_ sender: UIButton) {
+        viewModel.logout()
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
+        navigationController?.pushViewController(destinationVC, animated: true)
+        
+    }
     
     @IBAction func depositBtnPressed(_ sender: Any) {
         print("Deposit")
     }
-    
-    
+   
     @IBAction func transfersBtnPressed(_ sender: UIButton) {
         print("Done")
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)

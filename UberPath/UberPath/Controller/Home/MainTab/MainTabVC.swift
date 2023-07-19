@@ -8,7 +8,7 @@
 import UIKit
 
 class MainTabVC: UIViewController {
-   
+    
     var viewModel = AuthenticationModel()
     @IBOutlet weak var mainContentView: UIView!
     @IBOutlet weak var homeBtn: UIButton!
@@ -36,8 +36,6 @@ class MainTabVC: UIViewController {
         updateUI(for: .home)
         showTab(.home)
         storeCardInUserDefaultArray()
-//        viewModel.logout()
-        
     }
     
     
@@ -108,7 +106,7 @@ class MainTabVC: UIViewController {
             pageViewController.didMove(toParent: self)
         }
     }
-   
+    
     func showHome() {
         showTab(.home)
         updateUI(for: .home)
