@@ -22,6 +22,8 @@
 		134864C72A67B22E00D8EB32 /* TopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864C62A67B22E00D8EB32 /* TopUpVC.swift */; };
 		134864C92A67C1D000D8EB32 /* ATMFinderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864C82A67C1D000D8EB32 /* ATMFinderDetailVC.swift */; };
 		134864CB2A67E70300D8EB32 /* ATMFinderResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864CA2A67E70300D8EB32 /* ATMFinderResultVC.swift */; };
+		134864CD2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864CC2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift */; };
+		134864CF2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134864CE2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift */; };
 		135134592A66664300DCCF19 /* HistoryTrasactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */; };
 		135134672A66B41A00DCCF19 /* TableViewThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */; };
 		135134692A66B4C500DCCF19 /* TableViewThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */; };
@@ -111,6 +113,8 @@
 		134864C62A67B22E00D8EB32 /* TopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpVC.swift; sourceTree = "<group>"; };
 		134864C82A67C1D000D8EB32 /* ATMFinderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMFinderDetailVC.swift; sourceTree = "<group>"; };
 		134864CA2A67E70300D8EB32 /* ATMFinderResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMFinderResultVC.swift; sourceTree = "<group>"; };
+		134864CC2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAsistantVCTableViewModel.swift; sourceTree = "<group>"; };
+		134864CE2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAsistantVCTableViewCell.swift; sourceTree = "<group>"; };
 		135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrasactionVC.swift; sourceTree = "<group>"; };
 		135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeCell.swift; sourceTree = "<group>"; };
 		135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeModel.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				134864C32A67B20600D8EB32 /* ChatAsistantVC.swift */,
+				134864CE2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift */,
 			);
 			path = ChatAsistant;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 			children = (
 				137288B12A654D6200187267 /* WithdrawVC.swift */,
 				137288B32A656C4600187267 /* SelectBankWithdrawVC.swift */,
+				134864CC2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift */,
 			);
 			path = Withdraw;
 			sourceTree = "<group>";
@@ -794,8 +800,10 @@
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
 				136A009D2A6122D700A5E74E /* CollectionViewOneCell.swift in Sources */,
 				136FE6902A5C315D006FDE26 /* AccountInfoVC.swift in Sources */,
+				134864CF2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
+				134864CD2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift in Sources */,
 				134864C72A67B22E00D8EB32 /* TopUpVC.swift in Sources */,
 				138924782A4D80100018BBEF /* NewCardVC.swift in Sources */,
 				136FF0232A57D99600907C9F /* TransfersVC.swift in Sources */,
