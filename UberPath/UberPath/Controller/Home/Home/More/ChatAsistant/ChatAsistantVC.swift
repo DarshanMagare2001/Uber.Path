@@ -14,7 +14,7 @@ class ChatAsistantVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         msgTxtFld.placeholder = "Type here..."
-        
+        scrollToLastMessage()
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -25,6 +25,7 @@ class ChatAsistantVC: UIViewController {
         if let message = msgTxtFld.text, !message.isEmpty {
             viewModel.modelArray.append(message)
             tableViewOutlet.reloadData()
+            scrollToLastMessage()
             msgTxtFld.text = "" // Clear the text field after sending the message
         } else {
             showAlert(message: "Please type a message first!")
@@ -37,6 +38,13 @@ class ChatAsistantVC: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    private func scrollToLastMessage() {
+        if !viewModel.modelArray.isEmpty {
+            let lastRowIndexPath = IndexPath(row: viewModel.modelArray.count - 1, section: 0)
+            tableViewOutlet.scrollToRow(at: lastRowIndexPath, at: .bottom, animated: false)
+        }
     }
     
 }
