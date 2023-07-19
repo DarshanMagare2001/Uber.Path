@@ -32,12 +32,10 @@ class HistoryTrasactionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         amountShowLblView.isHidden = false
-        let nib = UINib(nibName: "TableViewCellForOneAndTwo", bundle: nil)
-        tableViewOne.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
-        tableViewTwo.register(nib, forCellReuseIdentifier: "TableViewCellForOneAndTwo")
-        tableViewThree.register(TableViewThreeCell.self, forCellReuseIdentifier: "TableViewThreeCell")
+        let nib = UINib(nibName: "TableViewOneAndTwoCell", bundle: nil)
+        tableViewOne.register(nib, forCellReuseIdentifier: "TableViewOneAndTwoCell")
+        tableViewTwo.register(nib, forCellReuseIdentifier: "TableViewOneAndTwoCell")
         configureLbls()
-        
     }
     
     @IBAction func amountHideShowBtnPressed(_ sender: UIButton) {
@@ -137,10 +135,11 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellForOneAndTwo", for: indexPath) as! TableViewCellForOneAndTwo
+       
         let dataFortableViewOne = viewModel.TableViewModelClassArray
         let dataFortableViewTwo = viewModel.TableViewModelClassArray.enumerated().filter { $0.offset > 2 }.map { $0.element }
         if tableView == tableViewOne {
+            let cell = tableViewOne.dequeueReusableCell(withIdentifier: "TableViewOneAndTwoCell", for: indexPath) as! TableViewOneAndTwoCell
             cell.img.image = UIImage(named: dataFortableViewOne[indexPath.row].img)
             cell.lbl1.text = dataFortableViewOne[indexPath.row].lbl1
             cell.lbl2.text = dataFortableViewOne[indexPath.row].lbl2
@@ -149,6 +148,7 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
         }
         
         if tableView == tableViewTwo {
+            let cell = tableViewTwo.dequeueReusableCell(withIdentifier: "TableViewOneAndTwoCell", for: indexPath) as! TableViewOneAndTwoCell
             cell.img.image = UIImage(named: dataFortableViewTwo[indexPath.row].img)
             cell.lbl1.text = dataFortableViewTwo[indexPath.row].lbl1
             cell.lbl2.text = dataFortableViewTwo[indexPath.row].lbl2
@@ -157,10 +157,10 @@ extension HistoryTrasactionVC : UITableViewDelegate , UITableViewDataSource {
         }
         
         if tableView == tableViewThree {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewThreeCell", for: indexPath) as!TableViewThreeCell
-            cell.lbl1.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl1
-            cell.lbl2.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl2
-            return cell
+            let cellForTableViewThree = tableViewThree.dequeueReusableCell(withIdentifier: "TableViewThreeCell", for: indexPath) as!TableViewThreeCell
+            cellForTableViewThree.lbl1.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl1
+            cellForTableViewThree.lbl2.text = viewModelForTableViewThree.TableViewThreeModelClassArray[indexPath.row].lbl2
+            return cellForTableViewThree
         }
         
         return UITableViewCell()
