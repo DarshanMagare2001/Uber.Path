@@ -10,7 +10,6 @@ import UIKit
 class ChatAsistantVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var msgTxtFld: UITextField!
-    
     var viewModel = ChatAsistantVCTableViewModelClass()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,21 @@ class ChatAsistantVC: UIViewController {
     }
     
     @IBAction func sendMsgBtnPressed(_ sender: UIButton) {
-        
+        if let message = msgTxtFld.text, !message.isEmpty {
+            viewModel.modelArray.append(message)
+            tableViewOutlet.reloadData()
+            msgTxtFld.text = "" // Clear the text field after sending the message
+        } else {
+            showAlert(message: "Please type a message first!")
+        }
+    }
+    
+    // Function to show a simple alert with the given message
+    private func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Warning", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
 }

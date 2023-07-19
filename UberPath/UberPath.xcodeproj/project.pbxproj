@@ -243,6 +243,7 @@
 			children = (
 				134864C32A67B20600D8EB32 /* ChatAsistantVC.swift */,
 				134864CE2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift */,
+				134864CC2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift */,
 			);
 			path = ChatAsistant;
 			sourceTree = "<group>";
@@ -361,7 +362,6 @@
 			children = (
 				137288B12A654D6200187267 /* WithdrawVC.swift */,
 				137288B32A656C4600187267 /* SelectBankWithdrawVC.swift */,
-				134864CC2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift */,
 			);
 			path = Withdraw;
 			sourceTree = "<group>";
