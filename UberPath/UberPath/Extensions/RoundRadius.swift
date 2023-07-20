@@ -318,28 +318,6 @@ class RoundedLabelWithBorder: UILabel {
         }
     }
     
-    // Custom shadow properties
-    var shadowColor: UIColor = .black {
-        didSet {
-            setNeedsLayout()
-        }
-    }
-    var shadowOpacity: Float = 0.5 {
-        didSet {
-            setNeedsLayout()
-        }
-    }
-    var shadowOffset: CGSize = CGSize(width: 0, height: 2) {
-        didSet {
-            setNeedsLayout()
-        }
-    }
-    var shadowRadius: CGFloat = 4 {
-        didSet {
-            setNeedsLayout()
-        }
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -350,12 +328,5 @@ class RoundedLabelWithBorder: UILabel {
         // Set border
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
-        
-        // Set shadow
-        layer.shadowColor = shadowColor.cgColor
-        layer.shadowOpacity = shadowOpacity
-        layer.shadowOffset = shadowOffset
-        layer.shadowRadius = shadowRadius
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
     }
 }
