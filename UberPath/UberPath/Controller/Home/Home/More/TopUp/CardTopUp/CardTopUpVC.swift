@@ -115,6 +115,7 @@ class CardTopUpVC: UIViewController {
 }
 
 extension CardTopUpVC: UIPickerViewDataSource, UIPickerViewDelegate {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -123,14 +124,17 @@ extension CardTopUpVC: UIPickerViewDataSource, UIPickerViewDelegate {
         return viewModel.currencyDictionary.count
     }
     
+    // MARK: - UIPickerViewDelegate
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let currencySymbols = Array(viewModel.currencyDictionary.values)
-        return currencySymbols[row]
+        let currencyCodes = Array(viewModel.currencyDictionary.keys).sorted()
+        return currencyCodes[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let currencySymbols = Array(viewModel.currencyDictionary.values)
-        let selectedCurrencySymbol = currencySymbols[row]
-        currencyShowLbl.text = selectedCurrencySymbol
+        let currencyCodes = Array(viewModel.currencyDictionary.keys).sorted()
+        let selectedCurrency = currencyCodes[row]
+        let selectedCountry = viewModel.currencyDictionary[selectedCurrency]
+        currencyShowLbl.text = selectedCountry
     }
 }
