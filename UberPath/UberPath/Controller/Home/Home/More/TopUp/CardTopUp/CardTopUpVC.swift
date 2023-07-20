@@ -15,11 +15,16 @@ class CardTopUpVC: UIViewController {
     @IBOutlet weak var lbl1: RoundedLabelWithBorder!
     @IBOutlet weak var lbl2: RoundedLabelWithBorder!
     @IBOutlet weak var lbl3: RoundedLabelWithBorder!
+    
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addTapgesture()
-      
+        
+        addTapGesture()
+        
+        // Set lbl3 as selected by default
+        labelTappedForDefaultSelection(lbl3)
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -30,7 +35,7 @@ class CardTopUpVC: UIViewController {
         // Handle the button tap action here
     }
     
-    func addTapgesture(){
+    func addTapGesture() {
         // Add tap gestures to labels
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
         lbl1.addGestureRecognizer(tapGesture1)
@@ -88,5 +93,12 @@ class CardTopUpVC: UIViewController {
         lbl3.layer.shadowOpacity = 0
         lbl3.layer.shadowOffset = CGSize.zero
         lbl3.layer.shadowRadius = 0
+    }
+    
+    func labelTappedForDefaultSelection(_ label: RoundedLabelWithBorder) {
+        // Simulate tap on the provided label
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+        label.addGestureRecognizer(tapGesture)
+        labelTapped(tapGesture)
     }
 }
