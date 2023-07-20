@@ -132,8 +132,5 @@ extension CardTopUpVC: UIPickerViewDataSource, UIPickerViewDelegate {
         let currencySymbols = Array(viewModel.currencyDictionary.values)
         let selectedCurrencySymbol = currencySymbols[row]
         currencyShowLbl.text = selectedCurrencySymbol
-        
-        // Hide the picker view after a selection is made
-        currencySymbolPickerView.isHidden = true
     }
 }
