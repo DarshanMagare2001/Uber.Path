@@ -10,10 +10,13 @@ import UIKit
 class ConfirmTopUpVC: UIViewController, popToRootVC {
     @IBOutlet weak var topUpBalanceLbl: UILabel!
     @IBOutlet weak var totalLbl: UILabel!
+    @IBOutlet weak var feeLbl: UILabel!
     var topUpBalance : Int?
+    var currencySymbol : String?
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLbl()
+       
         
     }
     @IBAction func confirmTopUpBtnPressed(_ sender: UIButton) {
@@ -31,7 +34,7 @@ class ConfirmTopUpVC: UIViewController, popToRootVC {
     func updateLbl(){
         guard let data = topUpBalance else { return }
         topUpBalanceLbl.text = "\(data)"
-        totalLbl.text = "\(data + 3)" 
+        totalLbl.text = "\(data + 3)"
     }
     
     func popToRootVC(pop: Bool) {

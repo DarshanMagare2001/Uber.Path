@@ -45,6 +45,7 @@ class CardTopUpVC: UIViewController {
             let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
             let destinationVC = storyboard.instantiateViewController(withIdentifier: "ConfirmTopUpVC") as! ConfirmTopUpVC
             destinationVC.topUpBalance = topUpBalance
+            destinationVC.currencySymbol = currencyShowLbl.text
             navigationController?.pushViewController(destinationVC, animated: true)
         } else {
             let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid amount.", preferredStyle: .alert)
