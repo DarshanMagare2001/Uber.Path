@@ -26,6 +26,9 @@ class ChatAsistantVC: UIViewController {
             viewModel.modelArray.append(message)
             msgTxtFld.text = "" // Clear the text field after sending the message
             tableViewOutlet.reloadData()
+            // Scroll to the last row (newly added message)
+            let lastIndexPath = IndexPath(row: viewModel.modelArray.count - 1, section: 0)
+            tableViewOutlet.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
         } else {
             showAlert(message: "Please type a message first!")
         }
