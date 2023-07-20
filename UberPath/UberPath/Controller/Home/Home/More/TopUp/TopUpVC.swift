@@ -21,7 +21,9 @@ class TopUpVC: UIViewController {
     
     
     @IBAction func cardTopUpBtnPressed(_ sender: UIButton) {
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "CardTopUpVC") as! CardTopUpVC
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     @IBAction func mobileTopUpBtnPressed(_ sender: UIButton) {

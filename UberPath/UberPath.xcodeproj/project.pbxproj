@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01435BF6AD0AEE3CA6F79FA2 /* Pods_UberPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */; };
+		130137CC2A69095600EC8518 /* CardTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CB2A69095600EC8518 /* CardTopUpVC.swift */; };
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		130137CB2A69095600EC8518 /* CardTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTopUpVC.swift; sourceTree = "<group>"; };
 		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130137CA2A69093100EC8518 /* CardTopUp */ = {
+			isa = PBXGroup;
+			children = (
+				130137CB2A69095600EC8518 /* CardTopUpVC.swift */,
+			);
+			path = CardTopUp;
+			sourceTree = "<group>";
+		};
 		1326A74A2A4565CD00BB4E39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				134864C62A67B22E00D8EB32 /* TopUpVC.swift */,
+				130137CA2A69093100EC8518 /* CardTopUp */,
 			);
 			path = TopUp;
 			sourceTree = "<group>";
@@ -803,6 +814,7 @@
 				134864CF2A68056C00D8EB32 /* ChatAsistantVCTableViewCell.swift in Sources */,
 				1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */,
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
+				130137CC2A69095600EC8518 /* CardTopUpVC.swift in Sources */,
 				134864CD2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift in Sources */,
 				134864C72A67B22E00D8EB32 /* TopUpVC.swift in Sources */,
 				138924782A4D80100018BBEF /* NewCardVC.swift in Sources */,
