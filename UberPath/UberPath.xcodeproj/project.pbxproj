@@ -12,6 +12,9 @@
 		130137CE2A6936D700EC8518 /* ConfirmTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */; };
 		130137D02A693D2E00EC8518 /* TopupSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */; };
 		130137D22A694B6900EC8518 /* MobileTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137D12A694B6900EC8518 /* MobileTopUpVC.swift */; };
+		130137D62A6950BB00EC8518 /* MobileTopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137D42A6950BB00EC8518 /* MobileTopUpTableViewCell.swift */; };
+		130137D72A6950BB00EC8518 /* MobileTopUpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130137D52A6950BB00EC8518 /* MobileTopUpTableViewCell.xib */; };
+		130137D92A6951ED00EC8518 /* MobileTopUpTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137D82A6951ED00EC8518 /* MobileTopUpTableViewModel.swift */; };
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
@@ -106,6 +109,9 @@
 		130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTopUpVC.swift; sourceTree = "<group>"; };
 		130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupSuccessVC.swift; sourceTree = "<group>"; };
 		130137D12A694B6900EC8518 /* MobileTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTopUpVC.swift; sourceTree = "<group>"; };
+		130137D42A6950BB00EC8518 /* MobileTopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTopUpTableViewCell.swift; sourceTree = "<group>"; };
+		130137D52A6950BB00EC8518 /* MobileTopUpTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileTopUpTableViewCell.xib; sourceTree = "<group>"; };
+		130137D82A6951ED00EC8518 /* MobileTopUpTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTopUpTableViewModel.swift; sourceTree = "<group>"; };
 		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
@@ -227,6 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				130137D12A694B6900EC8518 /* MobileTopUpVC.swift */,
+				130137D42A6950BB00EC8518 /* MobileTopUpTableViewCell.swift */,
+				130137D52A6950BB00EC8518 /* MobileTopUpTableViewCell.xib */,
+				130137D82A6951ED00EC8518 /* MobileTopUpTableViewModel.swift */,
 			);
 			path = MobileTopUp;
 			sourceTree = "<group>";
@@ -691,6 +700,7 @@
 				13E69C4F2A5D7BD100313832 /* ContactsCell.xib in Resources */,
 				13A12AB42A445F1D00532BC6 /* LaunchScreen.storyboard in Resources */,
 				13A2A3AA2A4EFDBC00137315 /* Home.storyboard in Resources */,
+				130137D72A6950BB00EC8518 /* MobileTopUpTableViewCell.xib in Resources */,
 				136A00992A610F7500A5E74E /* NotificationVCCell.xib in Resources */,
 				1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */,
 				134864B72A67A25C00D8EB32 /* TableViewOneAndTwoCell.xib in Resources */,
@@ -827,6 +837,7 @@
 				139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */,
 				13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */,
 				130137D22A694B6900EC8518 /* MobileTopUpVC.swift in Sources */,
+				130137D92A6951ED00EC8518 /* MobileTopUpTableViewModel.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
 				136A009D2A6122D700A5E74E /* CollectionViewOneCell.swift in Sources */,
@@ -836,6 +847,7 @@
 				138924762A4D700E0018BBEF /* CardCell.swift in Sources */,
 				130137CC2A69095600EC8518 /* CardTopUpVC.swift in Sources */,
 				134864CD2A6803F000D8EB32 /* ChatAsistantVCTableViewModel.swift in Sources */,
+				130137D62A6950BB00EC8518 /* MobileTopUpTableViewCell.swift in Sources */,
 				134864C72A67B22E00D8EB32 /* TopUpVC.swift in Sources */,
 				138924782A4D80100018BBEF /* NewCardVC.swift in Sources */,
 				136FF0232A57D99600907C9F /* TransfersVC.swift in Sources */,

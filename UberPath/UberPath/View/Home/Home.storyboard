@@ -6267,16 +6267,88 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank Transfer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-QU-Vpr">
+                                <rect key="frame" x="20" y="70" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="GlobalButtonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-aN-6e4">
+                                <rect key="frame" x="20" y="114" width="280" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="K8J-6L-03x"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="24v-Pd-ccR" id="PJH-uD-gtL"/>
+                                    <outlet property="delegate" destination="24v-Pd-ccR" id="UUq-gj-A0N"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-4I-5uO">
+                                <rect key="frame" x="20" y="284" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="GlobalButtonColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wED-GJ-2By">
+                                <rect key="frame" x="20" y="328" width="280" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="24v-Pd-ccR" id="bU2-Xa-ppv"/>
+                                    <outlet property="delegate" destination="24v-Pd-ccR" id="joN-K1-ldX"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-9Q-bos" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
+                                <rect key="frame" x="20" y="498" width="280" height="50"/>
+                                <color key="backgroundColor" name="GlobalButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KP0-lN-Szh"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Confirm">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmBtnPressed:" destination="24v-Pd-ccR" eventType="touchUpInside" id="lcW-3r-3zi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="amX-eI-1ew"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="d5V-QU-Vpr" firstAttribute="top" secondItem="8Xr-0q-d1t" secondAttribute="bottom" constant="20" id="2hR-jJ-P9L"/>
+                            <constraint firstItem="amX-eI-1ew" firstAttribute="trailing" secondItem="bJx-4I-5uO" secondAttribute="trailing" constant="20" id="3m9-B1-Vue"/>
                             <constraint firstItem="8Xr-0q-d1t" firstAttribute="top" secondItem="amX-eI-1ew" secondAttribute="top" id="5g8-pC-3im"/>
+                            <constraint firstItem="wED-GJ-2By" firstAttribute="top" secondItem="bJx-4I-5uO" secondAttribute="bottom" constant="20" id="5pG-hW-FcX"/>
+                            <constraint firstItem="RbO-9Q-bos" firstAttribute="centerX" secondItem="JdB-Ts-mgp" secondAttribute="centerX" id="67h-VD-faq"/>
+                            <constraint firstItem="bkQ-aN-6e4" firstAttribute="leading" secondItem="amX-eI-1ew" secondAttribute="leading" constant="20" id="Cco-Bz-yK7"/>
                             <constraint firstItem="SDo-IB-Fky" firstAttribute="centerX" secondItem="JdB-Ts-mgp" secondAttribute="centerX" id="Ebd-Uc-aBQ"/>
+                            <constraint firstItem="amX-eI-1ew" firstAttribute="trailing" secondItem="bkQ-aN-6e4" secondAttribute="trailing" constant="20" id="FVk-P9-rZL"/>
+                            <constraint firstItem="bJx-4I-5uO" firstAttribute="leading" secondItem="amX-eI-1ew" secondAttribute="leading" constant="20" id="KSD-pp-lQf"/>
+                            <constraint firstItem="RbO-9Q-bos" firstAttribute="top" secondItem="wED-GJ-2By" secondAttribute="bottom" constant="20" id="OAL-Il-zgQ"/>
                             <constraint firstItem="SDo-IB-Fky" firstAttribute="top" secondItem="amX-eI-1ew" secondAttribute="top" constant="15" id="QEg-Q7-vX3"/>
+                            <constraint firstItem="bJx-4I-5uO" firstAttribute="top" secondItem="bkQ-aN-6e4" secondAttribute="bottom" constant="20" id="TGa-9N-6kq"/>
                             <constraint firstItem="8Xr-0q-d1t" firstAttribute="leading" secondItem="amX-eI-1ew" secondAttribute="leading" constant="5" id="TOi-Wg-sGv"/>
+                            <constraint firstItem="d5V-QU-Vpr" firstAttribute="leading" secondItem="amX-eI-1ew" secondAttribute="leading" constant="20" id="Tgz-Ua-50E"/>
+                            <constraint firstItem="amX-eI-1ew" firstAttribute="trailing" secondItem="d5V-QU-Vpr" secondAttribute="trailing" constant="20" id="YsO-JD-LPe"/>
+                            <constraint firstItem="amX-eI-1ew" firstAttribute="trailing" secondItem="wED-GJ-2By" secondAttribute="trailing" constant="20" id="dKU-ae-7Hp"/>
+                            <constraint firstItem="amX-eI-1ew" firstAttribute="bottom" secondItem="RbO-9Q-bos" secondAttribute="bottom" constant="20" id="gYh-Hj-G6R"/>
+                            <constraint firstItem="wED-GJ-2By" firstAttribute="leading" secondItem="amX-eI-1ew" secondAttribute="leading" constant="20" id="rnA-SE-q1j"/>
+                            <constraint firstItem="RbO-9Q-bos" firstAttribute="leading" secondItem="amX-eI-1ew" secondAttribute="leading" constant="20" id="tKr-iz-jMY"/>
+                            <constraint firstItem="amX-eI-1ew" firstAttribute="trailing" secondItem="RbO-9Q-bos" secondAttribute="trailing" constant="20" id="uHl-cM-Ks8"/>
+                            <constraint firstItem="bkQ-aN-6e4" firstAttribute="top" secondItem="d5V-QU-Vpr" secondAttribute="bottom" constant="20" id="zVU-UN-9lC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableViewOne" destination="bkQ-aN-6e4" id="Aek-Tj-mHd"/>
+                        <outlet property="tableViewTwo" destination="wED-GJ-2By" id="5QU-Gy-Eoq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3U8-My-8Qp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
