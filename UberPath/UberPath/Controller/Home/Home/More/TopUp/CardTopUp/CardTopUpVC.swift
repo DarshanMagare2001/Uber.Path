@@ -16,7 +16,7 @@ class CardTopUpVC: UIViewController {
     @IBOutlet weak var lbl2: RoundedLabelWithBorder!
     @IBOutlet weak var lbl3: RoundedLabelWithBorder!
     @IBOutlet weak var currencyPicker: RoundedButtonWithBorder!
-    
+   @IBOutlet weak var cardImg: UIImageView!
     var viewModel = CurrencyModel()
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
     
@@ -26,6 +26,7 @@ class CardTopUpVC: UIViewController {
         setupCurrencyPickerView()
         labelTappedForDefaultSelection(lbl3)
         currencyPicker.isHidden = true
+        updateCard()
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -111,6 +112,12 @@ class CardTopUpVC: UIViewController {
         
         // Hide the picker view initially
         currencySymbolPickerView.isHidden = true
+    }
+    
+    func updateCard(){
+        if let selectedImageName = UserDefaults.standard.string(forKey: "SelectedImageName") {
+            cardImg.image = UIImage(named:selectedImageName)
+        }
     }
 }
 
