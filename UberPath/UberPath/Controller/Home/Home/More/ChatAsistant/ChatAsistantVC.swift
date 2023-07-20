@@ -10,11 +10,15 @@ import UIKit
 class ChatAsistantVC: UIViewController {
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var msgTxtFld: UITextField!
+    @IBOutlet weak var optionsBtnsView: RoundedButtonWithBorder!
+    @IBOutlet weak var menuBtnView: RoundedButtonWithBorder!
+    @IBOutlet weak var menuBtn: UIButton!
     var viewModel = ChatAsistantVCTableViewModelClass()
+    var changeBackground = false
     override func viewDidLoad() {
         super.viewDidLoad()
         msgTxtFld.placeholder = "Type here..."
-        
+        optionsBtnsView.isHidden = true
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -33,6 +37,19 @@ class ChatAsistantVC: UIViewController {
             showAlert(message: "Please type a message first!")
         }
     }
+    
+    @IBAction func menuBtnPressed(_ sender: UIButton) {
+        optionsBtnsView.isHidden.toggle()
+        changeBackground.toggle()
+        if changeBackground {
+            menuBtnView.backgroundColor = UIColor(named: "LaunchscreenColor")
+            menuBtn.setImage(UIImage(named: "WhiteX"), for: .normal) 
+        } else {
+            menuBtnView.backgroundColor = .systemGray6
+            menuBtn.setImage(UIImage(named: "linkPin"), for: .normal)
+        }
+    }
+
     
     // Function to show a simple alert with the given message
     private func showAlert(message: String) {

@@ -1007,25 +1007,25 @@
                                                 <rect key="frame" x="20" y="20" width="280" height="171.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-t8-rlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" name="GlobalButtonColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfers are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-Vn-7ug">
-                                                        <rect key="frame" x="0.0" y="34" width="280" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="34.5" width="280" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-lO-kWb">
-                                                        <rect key="frame" x="0.0" y="58.5" width="280" height="113"/>
+                                                        <rect key="frame" x="0.0" y="59" width="280" height="112.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGu-28-U54" customClass="RoundedButton" customModule="UberPath" customModuleProvider="target">
-                                                                <rect key="frame" x="40" y="0.0" width="200" height="113"/>
+                                                                <rect key="frame" x="40" y="0.0" width="200" height="112.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpT-aP-eW0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="112.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -5526,13 +5526,52 @@
                                                             <outlet property="delegate" destination="Vkd-Gu-wIh" id="w33-LE-Cca"/>
                                                         </connections>
                                                     </tableView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOX-EK-Brd" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="270" width="150" height="50"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cJs-eZ-X4q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mla-gT-EUF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="DZp-Wn-iW9"/>
+                                                                            <constraint firstAttribute="width" constant="50" id="iNB-rO-eRo"/>
+                                                                        </constraints>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" image="File" title=" "/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-lI-Lqw">
+                                                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" image="ImageFolderIcon" title=" "/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-R6-IjQ">
+                                                                        <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" image="Mick" title=" "/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Hd8-ya-XLT"/>
+                                                            <constraint firstAttribute="bottom" secondItem="cJs-eZ-X4q" secondAttribute="bottom" id="LRB-AI-ggK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="cJs-eZ-X4q" secondAttribute="trailing" id="PIz-Ye-qTJ"/>
+                                                            <constraint firstItem="cJs-eZ-X4q" firstAttribute="top" secondItem="LOX-EK-Brd" secondAttribute="top" id="Zf1-EI-QwP"/>
+                                                            <constraint firstItem="cJs-eZ-X4q" firstAttribute="leading" secondItem="LOX-EK-Brd" secondAttribute="leading" id="pho-Fy-Nnf"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="VTz-tU-k9L" secondAttribute="bottom" id="629-EW-UAN"/>
                                                     <constraint firstItem="VTz-tU-k9L" firstAttribute="leading" secondItem="M2e-fX-f9B" secondAttribute="leading" id="6fg-JT-j5Q"/>
                                                     <constraint firstAttribute="trailing" secondItem="VTz-tU-k9L" secondAttribute="trailing" id="Xau-fn-wcZ"/>
+                                                    <constraint firstItem="LOX-EK-Brd" firstAttribute="leading" secondItem="M2e-fX-f9B" secondAttribute="leading" constant="20" id="hLh-Gy-6wZ"/>
                                                     <constraint firstItem="VTz-tU-k9L" firstAttribute="top" secondItem="M2e-fX-f9B" secondAttribute="top" id="kmk-sF-VIm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LOX-EK-Brd" secondAttribute="bottom" id="xpc-gh-xgL"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UQy-VO-SQg">
@@ -5545,6 +5584,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="linkPin" title=" "/>
+                                                                <connections>
+                                                                    <action selector="menuBtnPressed:" destination="Vkd-Gu-wIh" eventType="touchUpInside" id="kjz-J6-fda"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -5644,7 +5686,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="menuBtn" destination="n2G-Qf-ayh" id="xdg-J1-7uT"/>
+                        <outlet property="menuBtnView" destination="urC-po-Da4" id="Gs7-Wl-eaO"/>
                         <outlet property="msgTxtFld" destination="Fpt-D7-GCe" id="UIi-Jz-Fte"/>
+                        <outlet property="optionsBtnsView" destination="LOX-EK-Brd" id="PsM-Z7-eY5"/>
                         <outlet property="tableViewOutlet" destination="VTz-tU-k9L" id="hd6-43-lwO"/>
                     </connections>
                 </viewController>
@@ -7512,6 +7557,7 @@
         <image name="DownBigArrow" width="20" height="20"/>
         <image name="EditBtn" width="28" height="28"/>
         <image name="ExclamationMark" width="24" height="24"/>
+        <image name="File" width="24" height="24"/>
         <image name="FingerPrintIcon" width="132" height="132"/>
         <image name="Flash" width="40" height="40"/>
         <image name="ForwardArrow" width="20" height="20"/>
@@ -7522,8 +7568,10 @@
         <image name="GreenLock" width="12" height="14"/>
         <image name="GreenSettings" width="18" height="18"/>
         <image name="GreenTick" width="24" height="24"/>
+        <image name="ImageFolderIcon" width="24" height="24"/>
         <image name="Investments" width="24.5" height="24"/>
         <image name="Line premium" width="20" height="19.5"/>
+        <image name="Mick" width="24" height="24"/>
         <image name="More" width="24.5" height="24"/>
         <image name="PopUpTwo" width="327" height="464"/>
         <image name="Profile" width="24" height="24"/>
