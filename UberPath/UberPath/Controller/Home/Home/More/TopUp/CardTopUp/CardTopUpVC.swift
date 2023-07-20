@@ -16,12 +16,14 @@ class CardTopUpVC: UIViewController {
     @IBOutlet weak var lbl2: RoundedLabelWithBorder!
     @IBOutlet weak var lbl3: RoundedLabelWithBorder!
     
+    var viewModel = CurrencyModel()
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addTapGesture()
+        setupCurrencyPickerView()
         
         // Set lbl3 as selected by default
         labelTappedForDefaultSelection(lbl3)
@@ -32,7 +34,8 @@ class CardTopUpVC: UIViewController {
     }
     
     @IBAction func currencySymbolShowBtnPressed(_ sender: UIButton) {
-        // Handle the button tap action here
+        // Show the currencySymbolPickerView when the button is tapped
+        currencySymbolPickerView.isHidden = false
     }
     
     func addTapGesture() {
@@ -100,5 +103,37 @@ class CardTopUpVC: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
         label.addGestureRecognizer(tapGesture)
         labelTapped(tapGesture)
+    }
+    
+    func setupCurrencyPickerView() {
+        currencySymbolPickerView.delegate = self
+        currencySymbolPickerView.dataSource = self
+        
+        // Hide the picker view initially
+        currencySymbolPickerView.isHidden = true
+    }
+}
+
+extension CardTopUpVC: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return viewModel.currencyDictionary.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let currencySymbols = Array(viewModel.currencyDictionary.values)
+        return currencySymbols[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let currencySymbols = Array(viewModel.currencyDictionary.values)
+        let selectedCurrencySymbol = currencySymbols[row]
+        currencyShowLbl.text = selectedCurrencySymbol
+        
+        // Hide the picker view after a selection is made
+        currencySymbolPickerView.isHidden = true
     }
 }
