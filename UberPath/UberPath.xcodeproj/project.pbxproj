@@ -10,6 +10,7 @@
 		01435BF6AD0AEE3CA6F79FA2 /* Pods_UberPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */; };
 		130137CC2A69095600EC8518 /* CardTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CB2A69095600EC8518 /* CardTopUpVC.swift */; };
 		130137CE2A6936D700EC8518 /* ConfirmTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */; };
+		130137D02A693D2E00EC8518 /* TopupSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */; };
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
@@ -102,6 +103,7 @@
 /* Begin PBXFileReference section */
 		130137CB2A69095600EC8518 /* CardTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTopUpVC.swift; sourceTree = "<group>"; };
 		130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTopUpVC.swift; sourceTree = "<group>"; };
+		130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupSuccessVC.swift; sourceTree = "<group>"; };
 		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				130137CB2A69095600EC8518 /* CardTopUpVC.swift */,
 				130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */,
+				130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */,
 			);
 			path = CardTopUp;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 				1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */,
 				1396C8892A60279100FA4526 /* NotificationVC.swift in Sources */,
 				13D9D5752A55416A00E3AE75 /* ChooseCardsCell.swift in Sources */,
+				130137D02A693D2E00EC8518 /* TopupSuccessVC.swift in Sources */,
 				134864C42A67B20600D8EB32 /* ChatAsistantVC.swift in Sources */,
 				133DE36B2A499042003C2C60 /* CountryofResidenceVC.swift in Sources */,
 				13BB00B02A4C372A00524C82 /* VerifyIdentityVC.swift in Sources */,
