@@ -118,6 +118,7 @@ class CardTopUpVC: UIViewController {
         if let selectedImageName = UserDefaults.standard.string(forKey: "SelectedImageName") {
             cardImg.image = UIImage(named:selectedImageName)
         }
+        amountTxtFld.placeholder = "Enter Amount"
     }
 }
 
