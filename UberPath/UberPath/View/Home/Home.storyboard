@@ -6839,7 +6839,39 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-gb-y5g" customClass="RoundedViewWithBorderTwo" customModule="UberPath" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="142" width="320" height="426"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopUp" translatesAutoresizingMaskIntoConstraints="NO" id="tvd-Jv-xhG">
+                                        <rect key="frame" x="0.0" y="30" width="320" height="170.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H9P-Oh-dTv">
+                                        <rect key="frame" x="20" y="220.5" width="280" height="101"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Up Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWi-PR-c6T">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" name="GlobalButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top up are reviewed which may result in delays or funds being frozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf2-D4-TeQ">
+                                                <rect key="frame" x="0.0" y="40" width="280" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="tvd-Jv-xhG" firstAttribute="height" secondItem="ewL-gb-y5g" secondAttribute="height" multiplier="0.4" id="6Xh-CI-3ek"/>
+                                    <constraint firstItem="H9P-Oh-dTv" firstAttribute="leading" secondItem="ewL-gb-y5g" secondAttribute="leading" constant="20" id="8om-tz-9fU"/>
+                                    <constraint firstItem="H9P-Oh-dTv" firstAttribute="top" secondItem="tvd-Jv-xhG" secondAttribute="bottom" constant="20" id="Fng-bD-LZz"/>
+                                    <constraint firstItem="tvd-Jv-xhG" firstAttribute="leading" secondItem="ewL-gb-y5g" secondAttribute="leading" id="Le9-jH-JWZ"/>
+                                    <constraint firstItem="tvd-Jv-xhG" firstAttribute="width" secondItem="ewL-gb-y5g" secondAttribute="width" id="i2i-VB-i94"/>
+                                    <constraint firstAttribute="trailing" secondItem="tvd-Jv-xhG" secondAttribute="trailing" id="niO-SF-JIs"/>
+                                    <constraint firstItem="tvd-Jv-xhG" firstAttribute="top" secondItem="ewL-gb-y5g" secondAttribute="top" constant="30" id="u8B-Ap-OIR"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9P-Oh-dTv" secondAttribute="trailing" constant="20" id="w60-AP-Gnj"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btA-LN-bC5">
                                 <rect key="frame" x="0.0" y="478" width="320" height="90"/>
@@ -6860,6 +6892,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backToHomeBtnPressed:" destination="4cC-op-BB3" eventType="touchUpInside" id="eXR-Ds-egQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -8193,6 +8228,7 @@
         <image name="Sent" width="22" height="22"/>
         <image name="StarIcon" width="40" height="40"/>
         <image name="TimerIcon" width="40" height="40"/>
+        <image name="TopUp" width="259" height="209"/>
         <image name="Transfer Successful" width="291" height="211"/>
         <image name="Transfers" width="24.5" height="24"/>
         <image name="Tricolor" width="42" height="108"/>
