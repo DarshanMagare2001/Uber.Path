@@ -8,10 +8,10 @@
 import UIKit
 
 class TopUpVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
     
@@ -19,5 +19,14 @@ class TopUpVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-
+    
+    @IBAction func cardTopUpBtnPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func mobileTopUpBtnPressed(_ sender: UIButton) {
+        
+    }
+    
+    
 }
