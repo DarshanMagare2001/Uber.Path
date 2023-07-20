@@ -16,8 +16,6 @@ class ConfirmTopUpVC: UIViewController, popToRootVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLbl()
-       
-        
     }
     @IBAction func confirmTopUpBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
@@ -33,8 +31,10 @@ class ConfirmTopUpVC: UIViewController, popToRootVC {
     
     func updateLbl(){
         guard let data = topUpBalance else { return }
-        topUpBalanceLbl.text = "\(data)"
-        totalLbl.text = "\(data + 3)"
+        guard let currency = currencySymbol else { return }
+        topUpBalanceLbl.text = "\(currency)\(data)"
+        totalLbl.text = "\(currency)\(data + 3)"
+        feeLbl.text = "\(currency)3"
     }
     
     func popToRootVC(pop: Bool) {
