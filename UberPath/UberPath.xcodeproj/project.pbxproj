@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01435BF6AD0AEE3CA6F79FA2 /* Pods_UberPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D679975D5C7E94303A8549F2 /* Pods_UberPath.framework */; };
 		130137CC2A69095600EC8518 /* CardTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CB2A69095600EC8518 /* CardTopUpVC.swift */; };
+		130137CE2A6936D700EC8518 /* ConfirmTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */; };
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
@@ -100,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		130137CB2A69095600EC8518 /* CardTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTopUpVC.swift; sourceTree = "<group>"; };
+		130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTopUpVC.swift; sourceTree = "<group>"; };
 		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				130137CB2A69095600EC8518 /* CardTopUpVC.swift */,
+				130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */,
 			);
 			path = CardTopUp;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				13E69C312A5D1B5200313832 /* EditAccountVC.swift in Sources */,
 				137288AD2A653C4800187267 /* CollectionViewTwoCell.swift in Sources */,
 				13CD190D2A5E82EC0014C3D0 /* CountryModel.swift in Sources */,
+				130137CE2A6936D700EC8518 /* ConfirmTopUpVC.swift in Sources */,
 				137288B22A654D6200187267 /* WithdrawVC.swift in Sources */,
 				136FE6882A5BD8E3006FDE26 /* AddNewCardVC.swift in Sources */,
 				139314D62A528DC100248D92 /* ActivityVC.swift in Sources */,

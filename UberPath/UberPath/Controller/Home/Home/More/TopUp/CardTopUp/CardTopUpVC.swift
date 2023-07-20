@@ -16,7 +16,7 @@ class CardTopUpVC: UIViewController {
     @IBOutlet weak var lbl2: RoundedLabelWithBorder!
     @IBOutlet weak var lbl3: RoundedLabelWithBorder!
     @IBOutlet weak var currencyPicker: RoundedButtonWithBorder!
-   @IBOutlet weak var cardImg: UIImageView!
+    @IBOutlet weak var cardImg: UIImageView!
     var viewModel = CurrencyModel()
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
     
@@ -37,6 +37,21 @@ class CardTopUpVC: UIViewController {
         // Show the currencySymbolPickerView when the button is tapped
         currencySymbolPickerView.isHidden = false
         currencyPicker.isHidden.toggle()
+    }
+    
+    
+    @IBAction func continueBtnPressed(_ sender: UIButton) {
+        if let amountText = amountTxtFld.text, !amountText.isEmpty {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "ConfirmTopUpVC") as! ConfirmTopUpVC
+            navigationController?.pushViewController(destinationVC, animated: true)
+        }else {
+            let alert = UIAlertController(title: "Amount Empty", message: "Please enter the amount first!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
     }
     
     func addTapGesture() {
