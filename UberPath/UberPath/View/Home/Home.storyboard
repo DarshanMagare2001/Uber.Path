@@ -6516,6 +6516,9 @@
                                                                         </constraints>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="DownArrow" title=" "/>
+                                                                        <connections>
+                                                                            <action selector="currencySymbolShowBtnPressed:" destination="dw1-oh-osW" eventType="touchUpInside" id="e4b-rm-tUQ"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -6613,9 +6616,18 @@
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-oR-Hge" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                 <rect key="frame" x="20" y="368" width="280" height="100"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtO-mr-BU6">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                    </pickerView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstItem="JtO-mr-BU6" firstAttribute="leading" secondItem="ZJK-oR-Hge" secondAttribute="leading" id="CB1-89-RrY"/>
                                     <constraint firstAttribute="height" constant="100" id="eDb-RN-r5l"/>
+                                    <constraint firstAttribute="trailing" secondItem="JtO-mr-BU6" secondAttribute="trailing" id="omB-DY-C9X"/>
+                                    <constraint firstItem="JtO-mr-BU6" firstAttribute="top" secondItem="ZJK-oR-Hge" secondAttribute="top" id="rYg-mt-LvC"/>
+                                    <constraint firstAttribute="bottom" secondItem="JtO-mr-BU6" secondAttribute="bottom" id="uWI-DF-1BQ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -6644,6 +6656,12 @@
                             <constraint firstItem="h99-Ok-mmL" firstAttribute="top" secondItem="bW0-0H-548" secondAttribute="bottom" constant="30" id="wIT-7N-oe2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountTxtFld" destination="lw1-GS-O5w" id="WKb-EO-5ST"/>
+                        <outlet property="currencyShowLbl" destination="V0m-Pm-OZE" id="iJA-jb-Z0M"/>
+                        <outlet property="currencySymbolBtn" destination="Mxw-5V-Gam" id="d0W-0T-Tf9"/>
+                        <outlet property="currencySymbolPickerView" destination="JtO-mr-BU6" id="gME-C1-T7B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vex-0q-cwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
