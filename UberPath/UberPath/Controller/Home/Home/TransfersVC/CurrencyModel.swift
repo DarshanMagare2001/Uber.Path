@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Model {
+class CurrencyModel {
     let currencyDictionary: [String: String] = [
         "AED": "د.إ",
         "AFN": "؋",

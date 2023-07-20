@@ -22,7 +22,7 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var toLbl: UILabel!
     @IBOutlet weak var totalAmountLbl: UILabel!
     @IBOutlet weak var amountTxtFld: UITextField!
-    var viewModel = Model()
+    var viewModel = CurrencyModel()
     var isShow = false
     var userImageName : String?
     var userName : String?
