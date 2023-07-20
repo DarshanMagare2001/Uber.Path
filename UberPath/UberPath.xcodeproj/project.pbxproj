@@ -11,6 +11,7 @@
 		130137CC2A69095600EC8518 /* CardTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CB2A69095600EC8518 /* CardTopUpVC.swift */; };
 		130137CE2A6936D700EC8518 /* ConfirmTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */; };
 		130137D02A693D2E00EC8518 /* TopupSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */; };
+		130137D22A694B6900EC8518 /* MobileTopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130137D12A694B6900EC8518 /* MobileTopUpVC.swift */; };
 		1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A74B2A4565DF00BB4E39 /* Fonts.swift */; };
 		1326A7512A459A2300BB4E39 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */; };
 		1326A7532A45A76200BB4E39 /* RoundRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326A7522A45A76200BB4E39 /* RoundRadius.swift */; };
@@ -104,6 +105,7 @@
 		130137CB2A69095600EC8518 /* CardTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTopUpVC.swift; sourceTree = "<group>"; };
 		130137CD2A6936D700EC8518 /* ConfirmTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTopUpVC.swift; sourceTree = "<group>"; };
 		130137CF2A693D2E00EC8518 /* TopupSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupSuccessVC.swift; sourceTree = "<group>"; };
+		130137D12A694B6900EC8518 /* MobileTopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTopUpVC.swift; sourceTree = "<group>"; };
 		1326A74B2A4565DF00BB4E39 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		1326A7502A459A2300BB4E39 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		1326A7522A45A76200BB4E39 /* RoundRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRadius.swift; sourceTree = "<group>"; };
@@ -221,6 +223,14 @@
 			path = CardTopUp;
 			sourceTree = "<group>";
 		};
+		130137D32A694D1700EC8518 /* MobileTopUp */ = {
+			isa = PBXGroup;
+			children = (
+				130137D12A694B6900EC8518 /* MobileTopUpVC.swift */,
+			);
+			path = MobileTopUp;
+			sourceTree = "<group>";
+		};
 		1326A74A2A4565CD00BB4E39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				134864C62A67B22E00D8EB32 /* TopUpVC.swift */,
+				130137D32A694D1700EC8518 /* MobileTopUp */,
 				130137CA2A69093100EC8518 /* CardTopUp */,
 			);
 			path = TopUp;
@@ -815,6 +826,7 @@
 				139314D22A528D8A00248D92 /* HomeVC.swift in Sources */,
 				139314D42A528DAC00248D92 /* MyCardVC.swift in Sources */,
 				13E61B8D2A568C910047F43B /* TransferDetailVC.swift in Sources */,
+				130137D22A694B6900EC8518 /* MobileTopUpVC.swift in Sources */,
 				13BB00B42A4C517700524C82 /* ProofOfResidencyVC.swift in Sources */,
 				137CE6792A4AF66100B40F2D /* ResetYourPasswordVC.swift in Sources */,
 				136A009D2A6122D700A5E74E /* CollectionViewOneCell.swift in Sources */,

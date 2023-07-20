@@ -27,7 +27,9 @@ class TopUpVC: UIViewController {
     }
     
     @IBAction func mobileTopUpBtnPressed(_ sender: UIButton) {
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MobileTopUpVC") as! MobileTopUpVC
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     
