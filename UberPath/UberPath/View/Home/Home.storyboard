@@ -6555,63 +6555,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h99-Ok-mmL">
                                 <rect key="frame" x="20" y="308" width="280" height="50"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-cr-8Ze" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1500.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV3-6C-uLb">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1500.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV3-6C-uLb">
-                                                <rect key="frame" x="5" y="5" width="76.5" height="40"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" name="GlobalButtonColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="VV3-6C-uLb" secondAttribute="trailing" constant="5" id="5Wc-7K-G6n"/>
-                                            <constraint firstAttribute="height" constant="50" id="Oj6-p2-ALS"/>
-                                            <constraint firstItem="VV3-6C-uLb" firstAttribute="leading" secondItem="g2C-cr-8Ze" secondAttribute="leading" constant="5" id="c46-lu-gsZ"/>
-                                            <constraint firstItem="VV3-6C-uLb" firstAttribute="top" secondItem="g2C-cr-8Ze" secondAttribute="top" constant="5" id="dNm-zk-H2W"/>
-                                            <constraint firstAttribute="bottom" secondItem="VV3-6C-uLb" secondAttribute="bottom" constant="5" id="r26-tr-7oU"/>
+                                            <constraint firstAttribute="height" constant="50" id="fYN-MC-xpG"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-cg-jce" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="GlobalButtonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-Uz-mA2">
                                         <rect key="frame" x="96.5" y="0.0" width="87" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-Uz-mA2">
-                                                <rect key="frame" x="5" y="5" width="77" height="40"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" name="GlobalButtonColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="fPO-Uz-mA2" secondAttribute="trailing" constant="5" id="6sd-kq-EwY"/>
-                                            <constraint firstItem="fPO-Uz-mA2" firstAttribute="leading" secondItem="9s9-cg-jce" secondAttribute="leading" constant="5" id="b9D-ol-LZu"/>
-                                            <constraint firstAttribute="height" constant="50" id="eCL-pg-tBz"/>
-                                            <constraint firstAttribute="bottom" secondItem="fPO-Uz-mA2" secondAttribute="bottom" constant="5" id="ocS-IC-DQt"/>
-                                            <constraint firstItem="fPO-Uz-mA2" firstAttribute="top" secondItem="9s9-cg-jce" secondAttribute="top" constant="5" id="wK6-vP-rUv"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tct-dL-IoA" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="GlobalButtonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$6000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-qe-WOK">
                                         <rect key="frame" x="193.5" y="0.0" width="86.5" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$6000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-qe-WOK">
-                                                <rect key="frame" x="5" y="5" width="76.5" height="40"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <color key="textColor" name="GlobalButtonColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <constraints>
-                                            <constraint firstItem="z9a-qe-WOK" firstAttribute="top" secondItem="tct-dL-IoA" secondAttribute="top" constant="5" id="7uC-Pw-Qlk"/>
-                                            <constraint firstItem="z9a-qe-WOK" firstAttribute="leading" secondItem="tct-dL-IoA" secondAttribute="leading" constant="5" id="Bq9-PU-xmw"/>
-                                            <constraint firstAttribute="height" constant="50" id="LhG-lg-U1x"/>
-                                            <constraint firstAttribute="bottom" secondItem="z9a-qe-WOK" secondAttribute="bottom" constant="5" id="Rc1-Y2-1k4"/>
-                                            <constraint firstAttribute="trailing" secondItem="z9a-qe-WOK" secondAttribute="trailing" constant="5" id="yeQ-9M-7sD"/>
-                                        </constraints>
-                                    </view>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="GlobalButtonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-oR-Hge" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
