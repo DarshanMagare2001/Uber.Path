@@ -14,13 +14,12 @@ class ChatAsistantVCTableViewCell: UITableViewCell {
     @IBOutlet weak var v2: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        v1.isHidden = false
+        v2.isHidden = false
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }

@@ -24,8 +24,8 @@ class ChatAsistantVC: UIViewController {
     @IBAction func sendMsgBtnPressed(_ sender: UIButton) {
         if let message = msgTxtFld.text, !message.isEmpty {
             viewModel.modelArray.append(message)
-            tableViewOutlet.reloadData()
             msgTxtFld.text = "" // Clear the text field after sending the message
+            tableViewOutlet.reloadData()
         } else {
             showAlert(message: "Please type a message first!")
         }
@@ -38,8 +38,6 @@ class ChatAsistantVC: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-    
     
 }
 
@@ -55,11 +53,13 @@ extension ChatAsistantVC : UITableViewDelegate , UITableViewDataSource {
             cell.msgLbl.textColor = UIColor(named: "GlobalButtonColor")
             cell.msgView.backgroundColor = .systemGray6
             cell.v1.isHidden = true
+            cell.v2.isHidden = false
         } else {
             cell.msgLbl.text = viewModel.modelArray[indexPath.row]
             cell.msgLbl.textColor = .white
             cell.msgView.backgroundColor = UIColor(named: "GlobalButtonColor")
             cell.v2.isHidden = true
+            cell.v1.isHidden = false
         }
         return cell
     }
