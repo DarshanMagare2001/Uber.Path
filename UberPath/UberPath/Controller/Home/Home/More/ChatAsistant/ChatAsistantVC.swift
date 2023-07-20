@@ -43,7 +43,7 @@ class ChatAsistantVC: UIViewController {
         changeBackground.toggle()
         if changeBackground {
             menuBtnView.backgroundColor = UIColor(named: "LaunchscreenColor")
-            menuBtn.setImage(UIImage(named: "WhiteX"), for: .normal) 
+            menuBtn.setImage(UIImage(named: "WhiteX"), for: .normal)
         } else {
             menuBtnView.backgroundColor = .systemGray6
             menuBtn.setImage(UIImage(named: "linkPin"), for: .normal)
