@@ -8,9 +8,12 @@
 import UIKit
 
 class ConfirmTopUpVC: UIViewController, popToRootVC {
+    @IBOutlet weak var topUpBalanceLbl: UILabel!
+    @IBOutlet weak var totalLbl: UILabel!
+    var topUpBalance : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLbl()
         
     }
     @IBAction func confirmTopUpBtnPressed(_ sender: UIButton) {
@@ -23,6 +26,12 @@ class ConfirmTopUpVC: UIViewController, popToRootVC {
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func updateLbl(){
+        guard let data = topUpBalance else { return }
+        topUpBalanceLbl.text = "\(data)"
+        totalLbl.text = "\(data + 3)" 
     }
     
     func popToRootVC(pop: Bool) {

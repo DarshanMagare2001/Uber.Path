@@ -41,17 +41,16 @@ class CardTopUpVC: UIViewController {
     
     
     @IBAction func continueBtnPressed(_ sender: UIButton) {
-        if let amountText = amountTxtFld.text, !amountText.isEmpty {
+        if let amountText = amountTxtFld.text, let topUpBalance = Int(amountText) {
             let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
             let destinationVC = storyboard.instantiateViewController(withIdentifier: "ConfirmTopUpVC") as! ConfirmTopUpVC
+            destinationVC.topUpBalance = topUpBalance
             navigationController?.pushViewController(destinationVC, animated: true)
-        }else {
-            let alert = UIAlertController(title: "Amount Empty", message: "Please enter the amount first!", preferredStyle: .alert)
+        } else {
+            let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid amount.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
-            return
         }
-        
     }
     
     func addTapGesture() {

@@ -6808,6 +6808,10 @@
                             <constraint firstItem="myi-aA-Wef" firstAttribute="trailing" secondItem="ns0-m7-WFQ" secondAttribute="trailing" id="ywN-gd-v1P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="topUpBalanceLbl" destination="0fV-3V-REr" id="vem-Oh-vrD"/>
+                        <outlet property="totalLbl" destination="cWW-8J-UcP" id="QEO-fU-7Xh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYR-ff-jSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
