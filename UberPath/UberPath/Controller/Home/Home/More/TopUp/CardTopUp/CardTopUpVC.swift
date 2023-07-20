@@ -19,7 +19,7 @@ class CardTopUpVC: UIViewController {
     @IBOutlet weak var cardImg: UIImageView!
     var viewModel = CurrencyModel()
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
-    
+    var isShow = false
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapGesture()
@@ -37,6 +37,12 @@ class CardTopUpVC: UIViewController {
         // Show the currencySymbolPickerView when the button is tapped
         currencySymbolPickerView.isHidden = false
         currencyPicker.isHidden.toggle()
+        isShow.toggle()
+        if isShow {
+            currencySymbolBtn.setImage(UIImage(named: "DownArrow"), for: .normal)
+        }else {
+            currencySymbolBtn.setImage(UIImage(named: "ForwardArrow"), for: .normal)
+        }
     }
     
     
