@@ -18,7 +18,19 @@ class CardTopUpVC: UIViewController {
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addTapgesture()
+      
+    }
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func currencySymbolShowBtnPressed(_ sender: UIButton) {
+        // Handle the button tap action here
+    }
+    
+    func addTapgesture(){
         // Add tap gestures to labels
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
         lbl1.addGestureRecognizer(tapGesture1)
@@ -33,14 +45,6 @@ class CardTopUpVC: UIViewController {
         lbl1.isUserInteractionEnabled = true
         lbl2.isUserInteractionEnabled = true
         lbl3.isUserInteractionEnabled = true
-    }
-    
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func currencySymbolShowBtnPressed(_ sender: UIButton) {
-        // Handle the button tap action here
     }
     
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
