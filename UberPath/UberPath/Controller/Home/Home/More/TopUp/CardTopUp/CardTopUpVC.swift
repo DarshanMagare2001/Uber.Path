@@ -15,18 +15,17 @@ class CardTopUpVC: UIViewController {
     @IBOutlet weak var lbl1: RoundedLabelWithBorder!
     @IBOutlet weak var lbl2: RoundedLabelWithBorder!
     @IBOutlet weak var lbl3: RoundedLabelWithBorder!
+    @IBOutlet weak var currencyPicker: RoundedButtonWithBorder!
     
     var viewModel = CurrencyModel()
     var tappedLabel: RoundedLabelWithBorder? // Keep track of the tapped label
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addTapGesture()
         setupCurrencyPickerView()
-        
-        // Set lbl3 as selected by default
         labelTappedForDefaultSelection(lbl3)
+        currencyPicker.isHidden = true
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -36,6 +35,7 @@ class CardTopUpVC: UIViewController {
     @IBAction func currencySymbolShowBtnPressed(_ sender: UIButton) {
         // Show the currencySymbolPickerView when the button is tapped
         currencySymbolPickerView.isHidden = false
+        currencyPicker.isHidden.toggle()
     }
     
     func addTapGesture() {
