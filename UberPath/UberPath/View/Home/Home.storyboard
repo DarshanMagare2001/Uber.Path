@@ -6821,8 +6821,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ame-jz-QgC" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                <rect key="frame" x="110" y="122" width="100" height="10"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7bd-zG-fZ9"/>
+                                    <constraint firstAttribute="height" constant="10" id="TlU-4I-IrC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-gb-y5g" customClass="RoundedViewWithBorderTwo" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="113.5" width="320" height="454.5"/>
+                                <rect key="frame" x="0.0" y="142" width="320" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btA-LN-bC5">
@@ -6854,32 +6870,16 @@
                                     <constraint firstItem="7sD-Vy-PkM" firstAttribute="leading" secondItem="btA-LN-bC5" secondAttribute="leading" constant="20" id="rst-Do-p0j"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ame-jz-QgC" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                <rect key="frame" x="110" y="93.5" width="100" height="10"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="7bd-zG-fZ9"/>
-                                    <constraint firstAttribute="height" constant="10" id="TlU-4I-IrC"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Uc-AK-NOm"/>
                         <color key="backgroundColor" systemColor="separatorColor"/>
                         <constraints>
                             <constraint firstItem="3Uc-AK-NOm" firstAttribute="bottom" secondItem="btA-LN-bC5" secondAttribute="bottom" id="6YJ-rS-42p"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ewL-gb-y5g" secondAttribute="bottom" id="7eJ-4J-kaz"/>
                             <constraint firstAttribute="trailing" secondItem="btA-LN-bC5" secondAttribute="trailing" id="OlA-ro-1m7"/>
                             <constraint firstItem="ewL-gb-y5g" firstAttribute="leading" secondItem="3Uc-AK-NOm" secondAttribute="leading" id="P6P-wU-MCv"/>
+                            <constraint firstAttribute="bottom" secondItem="ewL-gb-y5g" secondAttribute="bottom" id="SBc-Pv-aWd"/>
                             <constraint firstItem="3Uc-AK-NOm" firstAttribute="trailing" secondItem="ewL-gb-y5g" secondAttribute="trailing" id="YSW-AO-DMO"/>
-                            <constraint firstItem="ewL-gb-y5g" firstAttribute="height" secondItem="LuC-L9-eHg" secondAttribute="height" multiplier="0.8" id="ZgS-XY-d49"/>
+                            <constraint firstItem="ewL-gb-y5g" firstAttribute="height" secondItem="LuC-L9-eHg" secondAttribute="height" multiplier="0.75" id="ZgS-XY-d49"/>
                             <constraint firstItem="btA-LN-bC5" firstAttribute="leading" secondItem="3Uc-AK-NOm" secondAttribute="leading" id="gMJ-qj-0rl"/>
                             <constraint firstItem="Ame-jz-QgC" firstAttribute="centerX" secondItem="LuC-L9-eHg" secondAttribute="centerX" id="p6C-Em-ae7"/>
                             <constraint firstItem="ewL-gb-y5g" firstAttribute="top" secondItem="Ame-jz-QgC" secondAttribute="bottom" constant="10" id="rY6-Jq-2dC"/>
