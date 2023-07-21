@@ -11,11 +11,22 @@ class BottomSheetVC: UIViewController {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
+    @IBOutlet weak var amountTxtFld: UITextField!
+    
     var model : MobileTopUpTableViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
     }
+    
+    @IBAction func minusBtnPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func plusBtnPressed(_ sender: UIButton) {
+    }
+    
+    
     
     func update(){
         guard let data = model else {return}
