@@ -6727,6 +6727,14 @@
                         <outlet property="lbl1" destination="QId-n5-EP2" id="sjY-2I-Nxe"/>
                         <outlet property="lbl2" destination="G1Q-Gd-WZD" id="lLV-Pu-Kr8"/>
                         <outlet property="slide" destination="F66-2G-HfH" id="OHC-X4-WY2"/>
+                        <outletCollection property="moneyButtons" destination="ZBP-B1-9s4" collectionClass="NSMutableArray" id="7y5-dK-C4J"/>
+                        <outletCollection property="moneyButtons" destination="289-XH-bXw" collectionClass="NSMutableArray" id="HzJ-YP-1Fu"/>
+                        <outletCollection property="moneyButtons" destination="o1v-hF-SZg" collectionClass="NSMutableArray" id="XrB-YR-rUD"/>
+                        <outletCollection property="moneyButtons" destination="Dua-Xa-5ie" collectionClass="NSMutableArray" id="pAv-fo-T1h"/>
+                        <outletCollection property="moneyButtons" destination="gjy-He-9ds" collectionClass="NSMutableArray" id="slR-7V-em8"/>
+                        <outletCollection property="moneyButtons" destination="3kE-1a-YaO" collectionClass="NSMutableArray" id="42J-LV-gFI"/>
+                        <outletCollection property="moneyButtons" destination="QAC-Va-p71" collectionClass="NSMutableArray" id="Ddh-W5-Bv9"/>
+                        <outletCollection property="moneyButtons" destination="2ag-f8-NMd" collectionClass="NSMutableArray" id="jaF-D8-fQB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udJ-RJ-2gD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
