@@ -107,6 +107,7 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
             cell.lbl2.text = dataFortableViewOne[indexPath.row].lbl2
             cell.btn.isSelected = (indexPath == selectedIndexPathTableViewOne)
             cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
+            cell.selectionStyle = .none // Clear selection color
             return cell
         }
         
@@ -116,6 +117,7 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
             cell.lbl2.text = dataFortableViewTwo[indexPath.row].lbl2
             cell.btn.isSelected = (indexPath == selectedIndexPathTableViewTwo)
             cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
+            cell.selectionStyle = .none // Clear selection color
             return cell
         }
         
