@@ -34,6 +34,7 @@
 		135134592A66664300DCCF19 /* HistoryTrasactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */; };
 		135134672A66B41A00DCCF19 /* TableViewThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */; };
 		135134692A66B4C500DCCF19 /* TableViewThreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */; };
+		1355D33A2A6A651B0057C0A8 /* BottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1355D3392A6A651B0057C0A8 /* BottomSheetVC.swift */; };
 		1360B5FD2A494A11001FD948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */; };
 		1360B6072A496A7F001FD948 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360B6062A496A7F001FD948 /* AuthenticationModel.swift */; };
 		136A00982A610F7500A5E74E /* NotificationVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A00962A610F7500A5E74E /* NotificationVCCell.swift */; };
@@ -132,6 +133,7 @@
 		135134582A66664300DCCF19 /* HistoryTrasactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrasactionVC.swift; sourceTree = "<group>"; };
 		135134662A66B41A00DCCF19 /* TableViewThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeCell.swift; sourceTree = "<group>"; };
 		135134682A66B4C500DCCF19 /* TableViewThreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewThreeModel.swift; sourceTree = "<group>"; };
+		1355D3392A6A651B0057C0A8 /* BottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetVC.swift; sourceTree = "<group>"; };
 		1360B5FC2A494A11001FD948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1360B6062A496A7F001FD948 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		136A00962A610F7500A5E74E /* NotificationVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVCCell.swift; sourceTree = "<group>"; };
@@ -234,8 +236,9 @@
 			children = (
 				130137D12A694B6900EC8518 /* MobileTopUpVC.swift */,
 				130137D42A6950BB00EC8518 /* MobileTopUpTableViewCell.swift */,
-				130137D52A6950BB00EC8518 /* MobileTopUpTableViewCell.xib */,
 				130137D82A6951ED00EC8518 /* MobileTopUpTableViewModel.swift */,
+				1355D3392A6A651B0057C0A8 /* BottomSheetVC.swift */,
+				130137D52A6950BB00EC8518 /* MobileTopUpTableViewCell.xib */,
 			);
 			path = MobileTopUp;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 				137288AB2A650BF800187267 /* TableViewModel.swift in Sources */,
 				13FAAB0D2A5FB5F300FD49AD /* AddFingerPrintVC.swift in Sources */,
 				1326A74C2A4565DF00BB4E39 /* Fonts.swift in Sources */,
+				1355D33A2A6A651B0057C0A8 /* BottomSheetVC.swift in Sources */,
 				135134692A66B4C500DCCF19 /* TableViewThreeModel.swift in Sources */,
 				13BB00B22A4C4B6000524C82 /* CameraVC.swift in Sources */,
 				137288AF2A653D6D00187267 /* CollectionViewTwoModel.swift in Sources */,

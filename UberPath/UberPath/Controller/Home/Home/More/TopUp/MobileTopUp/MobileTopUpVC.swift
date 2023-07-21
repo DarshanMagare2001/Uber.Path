@@ -23,7 +23,11 @@ class MobileTopUpVC: UIViewController {
     
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
         guard let data = selectedCellData else { return }
-        print(data)
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "BottomSheetVC") as! BottomSheetVC
+        destinationVC.model = selectedCellData
+        destinationVC.modalPresentationStyle = .overFullScreen
+        present(destinationVC, animated: true, completion: nil)
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
