@@ -24,11 +24,19 @@ class BottomSheetVC: UIViewController {
     }
     
     @IBAction func minusBtnPressed(_ sender: UIButton) {
-        // Handle the minus button press here if needed
+        if let currentAmount = Int(amountTxtFld.text ?? "0") {
+            // Subtract 1 from the current amount and ensure it's not negative
+            let newAmount = max(0, currentAmount - 1)
+            amountTxtFld.text = String(newAmount)
+        }
     }
     
     @IBAction func plusBtnPressed(_ sender: UIButton) {
-        // Handle the plus button press here if needed
+        if let currentAmount = Int(amountTxtFld.text ?? "0") {
+            // Add 1 to the current amount
+            let newAmount = currentAmount + 1
+            amountTxtFld.text = String(newAmount)
+        }
     }
     
     @IBAction func moneyBtnPressed(_ sender: UIButton) {
