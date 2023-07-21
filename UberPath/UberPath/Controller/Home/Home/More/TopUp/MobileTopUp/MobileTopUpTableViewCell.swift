@@ -12,9 +12,14 @@ class MobileTopUpTableViewCell: UITableViewCell {
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
     @IBOutlet weak var btn: UIButton!
+    var buttonTapAction: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        // Set initial button image
+        btn.setImage(UIImage(systemName: "circle"), for: .normal)
+        btn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .selected)
+        // Add button action
+        btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,4 +28,8 @@ class MobileTopUpTableViewCell: UITableViewCell {
         
     }
     
+    @objc private func buttonTapped() {
+        btn.isSelected.toggle()
+        buttonTapAction?()
+    }
 }
