@@ -54,9 +54,7 @@ class MobileTopUpVC: UIViewController {
             
             // Save the selected cell data in the variable
             let dataFortableViewOne = viewModel.modelArray
-            selectedCellData = MobileTopUpTableViewModel(img: dataFortableViewOne[indexPath.row].img,
-                                                         lbl1:dataFortableViewOne[indexPath.row].lbl1,
-                                                         lbl2: dataFortableViewOne[indexPath.row].lbl2)
+            selectedCellData = MobileTopUpTableViewModel(img: dataFortableViewOne[indexPath.row].img,lbl1:dataFortableViewOne[indexPath.row].lbl1 , lbl2: dataFortableViewOne[indexPath.row].lbl2)
         } else if tableView == tableViewTwo {
             // Deselect the previously selected cell in tableViewTwo
             if let selectedIndexPathTableViewTwo = selectedIndexPathTableViewTwo {
@@ -80,9 +78,7 @@ class MobileTopUpVC: UIViewController {
             
             // Save the selected cell data in the variable
             let dataFortableViewTwo = viewModel.modelArray.enumerated().filter { $0.offset > 1 }.map { $0.element }
-            selectedCellData = MobileTopUpTableViewModel(img: dataFortableViewTwo[indexPath.row].img,
-                                                         lbl1:dataFortableViewTwo[indexPath.row].lbl1,
-                                                         lbl2: dataFortableViewTwo[indexPath.row].lbl2)
+            selectedCellData = MobileTopUpTableViewModel(img: dataFortableViewTwo[indexPath.row].img,lbl1:dataFortableViewTwo[indexPath.row].lbl1 , lbl2: dataFortableViewTwo[indexPath.row].lbl2)
         }
         
     }
