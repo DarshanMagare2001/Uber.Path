@@ -31,9 +31,9 @@ class MobileTopUpVC: UIViewController {
     
     private func handleCellSelection(tableView: UITableView, at indexPath: IndexPath) {
         if tableView == tableViewOne {
-            // Deselect the previously selected cell in tableViewTwo
-            if let selectedIndexPathTableViewTwo = selectedIndexPathTableViewTwo {
-                if let cell = tableViewTwo.cellForRow(at: selectedIndexPathTableViewTwo) as? MobileTopUpTableViewCell {
+            // Deselect the previously selected cell in tableViewOne
+            if let selectedIndexPathTableViewOne = selectedIndexPathTableViewOne {
+                if let cell = tableView.cellForRow(at: selectedIndexPathTableViewOne) as? MobileTopUpTableViewCell {
                     cell.btn.isSelected = false
                     cell.btn.setImage(UIImage(systemName: "circle"), for: .normal)
                 }
@@ -48,14 +48,12 @@ class MobileTopUpVC: UIViewController {
             // Update the selectedIndexPathTableViewOne
             selectedIndexPathTableViewOne = indexPath
             
-            // Deselect all cells in tableViewTwo except the selected one
-            if let selectedIndexPathTableViewTwo = selectedIndexPathTableViewTwo, selectedIndexPathTableViewTwo != indexPath {
-                deselectAllCells(tableView: tableViewTwo)
-            }
+            // Deselect all cells in tableViewTwo
+            deselectAllCells(tableView: tableViewTwo)
         } else if tableView == tableViewTwo {
-            // Deselect the previously selected cell in tableViewOne
-            if let selectedIndexPathTableViewOne = selectedIndexPathTableViewOne {
-                if let cell = tableViewOne.cellForRow(at: selectedIndexPathTableViewOne) as? MobileTopUpTableViewCell {
+            // Deselect the previously selected cell in tableViewTwo
+            if let selectedIndexPathTableViewTwo = selectedIndexPathTableViewTwo {
+                if let cell = tableView.cellForRow(at: selectedIndexPathTableViewTwo) as? MobileTopUpTableViewCell {
                     cell.btn.isSelected = false
                     cell.btn.setImage(UIImage(systemName: "circle"), for: .normal)
                 }
@@ -70,10 +68,8 @@ class MobileTopUpVC: UIViewController {
             // Update the selectedIndexPathTableViewTwo
             selectedIndexPathTableViewTwo = indexPath
             
-            // Deselect all cells in tableViewOne except the selected one
-            if let selectedIndexPathTableViewOne = selectedIndexPathTableViewOne, selectedIndexPathTableViewOne != indexPath {
-                deselectAllCells(tableView: tableViewOne)
-            }
+            // Deselect all cells in tableViewOne
+            deselectAllCells(tableView: tableViewOne)
         }
         
         // Do something with the selected cell data (if needed)
