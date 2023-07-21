@@ -101,6 +101,7 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MobileTopUpTableViewCell", for: indexPath) as! MobileTopUpTableViewCell
         let dataFortableViewOne = viewModel.modelArray
         let dataFortableViewTwo = viewModel.modelArray.enumerated().filter { $0.offset > 1 }.map { $0.element }
+        
         if tableView == tableViewOne {
             cell.img.image = UIImage(named: dataFortableViewOne[indexPath.row].img)
             cell.lbl1.text = dataFortableViewOne[indexPath.row].lbl1
@@ -109,7 +110,7 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
             cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
             cell.selectionStyle = .none // Clear selection color
             if let image = UIImage(systemName: "checkmark.circle.fill") {
-                let greenColor = UIColor.green
+                let greenColor = UIColor(named: "LaunchscreenColor") ?? .green // Fallback to green if LaunchscreenColor is not found
                 let coloredImage = image.colored(greenColor)
                 cell.btn.setImage(coloredImage, for: .selected) // Set green-colored image for selected state
             }
@@ -124,7 +125,7 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
             cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
             cell.selectionStyle = .none // Clear selection color
             if let image = UIImage(systemName: "checkmark.circle.fill") {
-                let greenColor = UIColor.green
+                let greenColor = UIColor(named: "LaunchscreenColor") ?? .green // Fallback to green if LaunchscreenColor is not found
                 let coloredImage = image.colored(greenColor)
                 cell.btn.setImage(coloredImage, for: .selected) // Set green-colored image for selected state
             }
