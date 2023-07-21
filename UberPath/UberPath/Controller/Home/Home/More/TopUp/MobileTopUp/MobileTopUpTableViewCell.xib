@@ -55,9 +55,11 @@
                                             <constraint firstAttribute="height" constant="50" id="7B9-Lo-TQ3"/>
                                             <constraint firstAttribute="width" constant="30" id="ryZ-QB-GIw"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" title=" "/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" title=" ">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                             </stackView>
