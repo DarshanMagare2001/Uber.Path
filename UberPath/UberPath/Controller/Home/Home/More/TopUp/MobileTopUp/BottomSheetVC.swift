@@ -69,6 +69,40 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
         amountTxtFld.text = String(newAmount)
     }
     
+    
+    @IBAction func topUpBtnPressed(_ sender: UIButton) {
+        if amountTxtFld.text?.isEmpty ?? true {
+            let alert = UIAlertController(title: "Amount Required", message: "Please select an amount first.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            return
+        } else {
+            if let amount = Int(amountTxtFld.text!) {
+                let alert = UIAlertController(title: "TopUp Successful", message: "Your top-up worth $\(amount) was successful!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                    alert.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true)
+                }
+                alert.addAction(okAction)
+                present(alert, animated: true, completion: nil)
+            } else {
+                // Show an alert if the entered amount cannot be converted to an integer
+                let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid amount.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                    alert.dismiss(animated: true, completion: nil)
+                }
+                alert.addAction(okAction)
+                present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
+    
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let currentAmount = Int(amountTxtFld.text ?? "0") {
             slide.value = 0
@@ -84,8 +118,6 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
         img.image = UIImage(named: data.img)
         lbl1.text = data.lbl1
         lbl2.text = data.lbl2
-        // Set the default amount value in the text field
-        amountTxtFld.text = "0"
     }
     
     func updateMoneyButtonsAppearance(selectedButton: UIButton) {
