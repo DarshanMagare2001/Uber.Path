@@ -75,9 +75,11 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
             amountForProcess = currentAmount
         }
     }
-
+    
     
     func update() {
+        let thumbImage = UIImage(named: "ThumbImage")
+        slide.setThumbImage(thumbImage, for: .normal)
         guard let data = model else { return }
         img.image = UIImage(named: data.img)
         lbl1.text = data.lbl1
