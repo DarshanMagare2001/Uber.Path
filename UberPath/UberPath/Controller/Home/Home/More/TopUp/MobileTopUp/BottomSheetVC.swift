@@ -30,20 +30,36 @@ class BottomSheetVC: UIViewController {
     @IBAction func moneyBtnPressed(_ sender: UIButton) {
         if sender.tag == 1 {
             amountTxtFld.text = String(5)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 2 {
             amountTxtFld.text = String(10)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 3 {
             amountTxtFld.text = String(15)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 4 {
             amountTxtFld.text = String(20)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 5 {
             amountTxtFld.text = String(50)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 6 {
             amountTxtFld.text = String(100)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 7 {
             amountTxtFld.text = String(200)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         } else if sender.tag == 8 {
             amountTxtFld.text = String(500)
+            sender.backgroundColor = UIColor(named: "LaunchscreenColor")
+            sender.tintColor = .white
         }
     }
   
