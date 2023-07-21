@@ -6422,10 +6422,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-EJ-42m">
-                                        <rect key="frame" x="0.0" y="140.5" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="140.5" width="320" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzW-3g-APL" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="30" width="40" height="40"/>
+                                                <rect key="frame" x="20" y="20" width="40" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFO-vJ-5us">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -6447,7 +6447,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Io7-ID-fsm" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
-                                                <rect key="frame" x="260" y="30" width="40" height="40"/>
+                                                <rect key="frame" x="260" y="20" width="40" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAD-zf-ffA">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -6469,7 +6469,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hbc-pd-xTf">
-                                                <rect key="frame" x="110" y="25" width="100" height="50"/>
+                                                <rect key="frame" x="110" y="15" width="100" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVL-Ty-xpC">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
@@ -6497,16 +6497,22 @@
                                             <constraint firstItem="Io7-ID-fsm" firstAttribute="leading" secondItem="Hbc-pd-xTf" secondAttribute="trailing" constant="50" id="Rb9-bf-Fed"/>
                                             <constraint firstItem="Hbc-pd-xTf" firstAttribute="leading" secondItem="RzW-3g-APL" secondAttribute="trailing" constant="50" id="TBn-Hf-4lu"/>
                                             <constraint firstItem="Io7-ID-fsm" firstAttribute="centerY" secondItem="ZDa-EJ-42m" secondAttribute="centerY" id="Zbn-Ca-qna"/>
-                                            <constraint firstAttribute="height" constant="100" id="iS6-Vi-2DG"/>
+                                            <constraint firstAttribute="height" constant="80" id="iS6-Vi-2DG"/>
                                             <constraint firstAttribute="trailing" secondItem="Io7-ID-fsm" secondAttribute="trailing" constant="20" id="pim-52-VI8"/>
                                             <constraint firstItem="Hbc-pd-xTf" firstAttribute="centerY" secondItem="ZDa-EJ-42m" secondAttribute="centerY" id="uw0-PL-Zeq"/>
                                         </constraints>
                                     </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="F66-2G-HfH">
+                                        <rect key="frame" x="18" y="220.5" width="284" height="31"/>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="PVC-ed-guV" firstAttribute="leading" secondItem="Nte-FY-tPy" secondAttribute="leading" constant="20" id="BHg-3T-8vb"/>
+                                    <constraint firstAttribute="trailing" secondItem="F66-2G-HfH" secondAttribute="trailing" constant="20" id="EVp-vm-ZTn"/>
                                     <constraint firstAttribute="trailing" secondItem="ZDa-EJ-42m" secondAttribute="trailing" id="Jda-2k-Dxi"/>
+                                    <constraint firstItem="F66-2G-HfH" firstAttribute="leading" secondItem="Nte-FY-tPy" secondAttribute="leading" constant="20" id="RMP-iZ-JGJ"/>
+                                    <constraint firstItem="F66-2G-HfH" firstAttribute="top" secondItem="ZDa-EJ-42m" secondAttribute="bottom" id="Rg9-wa-Pcb"/>
                                     <constraint firstAttribute="trailing" secondItem="AMB-ik-A47" secondAttribute="trailing" constant="20" id="Rp7-oj-tUf"/>
                                     <constraint firstItem="ZDa-EJ-42m" firstAttribute="leading" secondItem="Nte-FY-tPy" secondAttribute="leading" id="XjN-oV-r6H"/>
                                     <constraint firstItem="ZDa-EJ-42m" firstAttribute="top" secondItem="AMB-ik-A47" secondAttribute="bottom" id="ZLr-lG-hpQ"/>
