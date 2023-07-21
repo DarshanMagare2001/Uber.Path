@@ -22,7 +22,7 @@ class BottomSheetVC: UIViewController {
         super.viewDidLoad()
         update()
         
-        // Set the slider's maximum value to 100 (percentage)
+        // Set the slider's maximum value to 100 (representing 100% or 10x)
         slide.maximumValue = 100
     }
     
@@ -61,10 +61,11 @@ class BottomSheetVC: UIViewController {
         let currentValue = sender.value
         
         // Convert the text field value to an integer
-        guard let currentAmount = Int(amountTxtFld.text ?? "0") else { return }
+        let currentAmount = Int(amountTxtFld.text ?? "0") ?? 0
         
-        // Calculate the new amount based on the percentage of the current value
-        let newAmount = Int(Float(currentAmount) * currentValue / 100)
+        // Calculate the new amount based on the percentage of the slider value
+        let maxAmount: Float = 500 // Maximum amount to be shown (10x of 50, as the slider ranges from 0 to 100)
+        let newAmount = Int(maxAmount * currentValue / 100)
         
         // Update the text field with the new amount
         amountTxtFld.text = String(newAmount)
