@@ -13,7 +13,7 @@ class MobileTopUpVC: UIViewController {
     var viewModel = MobileTopUpTableViewModelClass()
     var selectedIndexPathTableViewOne: IndexPath?
     var selectedIndexPathTableViewTwo: IndexPath?
-    
+    var selectedCellData: MobileTopUpTableViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "MobileTopUpTableViewCell", bundle: nil)
@@ -22,7 +22,8 @@ class MobileTopUpVC: UIViewController {
     }
     
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
-        // Handle the confirmation button press here if needed
+        guard let data = selectedCellData else { return }
+        print(data)
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -50,6 +51,12 @@ class MobileTopUpVC: UIViewController {
             
             // Deselect all cells in tableViewTwo
             deselectAllCells(tableView: tableViewTwo)
+            
+            // Save the selected cell data in the variable
+            let dataFortableViewOne = viewModel.modelArray
+            selectedCellData = MobileTopUpTableViewModel(img: dataFortableViewOne[indexPath.row].img,
+                                                         lbl1:dataFortableViewOne[indexPath.row].lbl1,
+                                                         lbl2: dataFortableViewOne[indexPath.row].lbl2)
         } else if tableView == tableViewTwo {
             // Deselect the previously selected cell in tableViewTwo
             if let selectedIndexPathTableViewTwo = selectedIndexPathTableViewTwo {
@@ -70,10 +77,14 @@ class MobileTopUpVC: UIViewController {
             
             // Deselect all cells in tableViewOne
             deselectAllCells(tableView: tableViewOne)
+            
+            // Save the selected cell data in the variable
+            let dataFortableViewTwo = viewModel.modelArray.enumerated().filter { $0.offset > 1 }.map { $0.element }
+            selectedCellData = MobileTopUpTableViewModel(img: dataFortableViewTwo[indexPath.row].img,
+                                                         lbl1:dataFortableViewTwo[indexPath.row].lbl1,
+                                                         lbl2: dataFortableViewTwo[indexPath.row].lbl2)
         }
         
-        // Do something with the selected cell data (if needed)
-        // ...
     }
     
     private func deselectAllCells(tableView: UITableView) {
@@ -85,6 +96,8 @@ class MobileTopUpVC: UIViewController {
         }
     }
 }
+
+
 
 extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
