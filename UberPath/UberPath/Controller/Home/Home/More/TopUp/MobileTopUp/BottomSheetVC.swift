@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomSheetVC: UIViewController {
+class BottomSheetVC: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
@@ -21,6 +21,7 @@ class BottomSheetVC: UIViewController {
         update()
         slide.minimumValue = 1 // Set the slider's minimum value to 1 (representing 1x)
         slide.maximumValue = 10
+        amountTxtFld.delegate = self
     }
     
     @IBAction func minusBtnPressed(_ sender: UIButton) {
@@ -65,6 +66,12 @@ class BottomSheetVC: UIViewController {
         amountTxtFld.text = String(newAmount)
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let currentAmount = Int(amountTxtFld.text ?? "0") {
+            amountForProcess = currentAmount
+        }
+    }
+
     
     func update() {
         guard let data = model else { return }
