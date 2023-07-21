@@ -12,6 +12,14 @@ class BottomSheetVC: UIViewController {
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
     @IBOutlet weak var amountTxtFld: UITextField!
+    @IBOutlet weak var slide: UISlider!
+  
+    
+    
+    
+    
+    
+    
     
     var model : MobileTopUpTableViewModel?
     override func viewDidLoad() {
