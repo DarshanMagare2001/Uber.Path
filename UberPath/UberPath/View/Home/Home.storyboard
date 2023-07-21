@@ -6524,82 +6524,106 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gkQ-e4-eFU">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="52.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-B1-9s4" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-B1-9s4" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$5">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="SAh-gE-tv3"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="289-XH-bXw" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="289-XH-bXw" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="77.5" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$10">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="Zqx-fK-Alf"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-hF-SZg" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-hF-SZg" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="155" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$15">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="YlZ-hn-MBG"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-Xa-5ie" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-Xa-5ie" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="232.5" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$20">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="T3c-Rc-W2W"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-sp-k9N">
                                                         <rect key="frame" x="0.0" y="62.5" width="300" height="52.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjy-He-9ds" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjy-He-9ds" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$50">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="LmV-Lg-YNV"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-1a-YaO" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-1a-YaO" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="77.5" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$100">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="XIF-SU-g9X"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAC-Va-p71" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAC-Va-p71" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="155" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$200">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="Vdi-qV-hQg"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-f8-NMd" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-f8-NMd" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
                                                                 <rect key="frame" x="232.5" y="0.0" width="67.5" height="52.5"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="tintColor" name="GlobalButtonColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="$500">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="moneyBtnPressed:" destination="xrh-tJ-jsB" eventType="touchUpInside" id="OE7-Hz-PBN"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
