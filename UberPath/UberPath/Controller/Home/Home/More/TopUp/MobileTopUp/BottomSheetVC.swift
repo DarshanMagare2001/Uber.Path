@@ -13,17 +13,14 @@ class BottomSheetVC: UIViewController {
     @IBOutlet weak var lbl2: UILabel!
     @IBOutlet weak var amountTxtFld: UITextField!
     @IBOutlet weak var slide: UISlider!
-    
     @IBOutlet var moneyButtons: [UIButton]! // Outlet collection for the money buttons
-    
     var model: MobileTopUpTableViewModel?
-    
+    var amountForProcess : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
-        
-        // Set the slider's maximum value to 100 (representing 100% or 10x)
-        slide.maximumValue = 100
+        slide.minimumValue = 1 // Set the slider's minimum value to 1 (representing 1x)
+        slide.maximumValue = 10
     }
     
     @IBAction func minusBtnPressed(_ sender: UIButton) {
@@ -49,6 +46,7 @@ class BottomSheetVC: UIViewController {
             if index < amounts.count {
                 let amount = amounts[index]
                 amountTxtFld.text = String(amount)
+                amountForProcess = amount
             }
             
             // Update the appearance of the money buttons
@@ -58,18 +56,13 @@ class BottomSheetVC: UIViewController {
     
     @IBAction func slideValueChanged(_ sender: UISlider) {
         // Get the current value of the slider (ranging from 0 to 100)
-        let currentValue = sender.value
-        
-        // Convert the text field value to an integer
-        let currentAmount = Int(amountTxtFld.text ?? "0") ?? 0
-        
+        let currentValue = Int(sender.value)
         // Calculate the new amount based on the percentage of the slider value
-        let maxAmount: Float = 500 // Maximum amount to be shown (10x of 50, as the slider ranges from 0 to 100)
-        let newAmount = Int(maxAmount * currentValue / 100)
-        
-        // Update the text field with the new amount
+        let newAmount = Int(amountForProcess * currentValue)
+        print(newAmount)
         amountTxtFld.text = String(newAmount)
     }
+    
     
     func update() {
         guard let data = model else { return }
