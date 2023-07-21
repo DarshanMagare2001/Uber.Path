@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="331" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFu-hi-4G3" customClass="RoundedButtonWithBorder" customModule="UberPath" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFu-hi-4G3" customClass="RoundedViewWithBorder" customModule="UberPath" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="311" height="95"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AAN-WM-WjJ">
@@ -79,6 +79,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="btn" destination="Dk3-Vj-q7R" id="GBR-dW-Xhs"/>
                 <outlet property="img" destination="3HF-2P-NbI" id="aiO-Lt-ZWw"/>

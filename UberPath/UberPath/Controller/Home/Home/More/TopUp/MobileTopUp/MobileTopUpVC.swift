@@ -44,7 +44,7 @@ extension MobileTopUpVC : UITableViewDelegate , UITableViewDataSource {
         let dataFortableViewOne = viewModel.modelArray
         let dataFortableViewTwo = viewModel.modelArray.enumerated().filter { $0.offset > 1 }.map { $0.element }
         if tableView == tableViewOne {
-          cell.img.image = UIImage(named: dataFortableViewOne[indexPath.row].img)
+            cell.img.image = UIImage(named: dataFortableViewOne[indexPath.row].img)
             cell.lbl1.text = dataFortableViewOne[indexPath.row].lbl1
             cell.lbl2.text = dataFortableViewOne[indexPath.row].lbl2
             return cell
@@ -58,6 +58,46 @@ extension MobileTopUpVC : UITableViewDelegate , UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == tableViewOne {
+            // Get the cell at the selected index path
+            if let cell = tableView.cellForRow(at: indexPath) as? MobileTopUpTableViewCell {
+                // Toggle the button selection
+                cell.btn.isSelected.toggle()
+                
+                // Update the button images based on the selection state
+                if cell.btn.isSelected {
+                    cell.btn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+                } else {
+                    cell.btn.setImage(UIImage(systemName: "circle"), for: .normal)
+                }
+                
+                // Do something with the selected cell data (if needed)
+                let dataFortableViewOne = viewModel.modelArray
+                let selectedData = dataFortableViewOne[indexPath.row]
+                // Use selectedData as needed...
+            }
+        } else if tableView == tableViewTwo {
+            // Get the cell at the selected index path
+            if let cell = tableView.cellForRow(at: indexPath) as? MobileTopUpTableViewCell {
+                // Toggle the button selection
+                cell.btn.isSelected.toggle()
+                
+                // Update the button images based on the selection state
+                if cell.btn.isSelected {
+                    cell.btn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+                } else {
+                    cell.btn.setImage(UIImage(systemName: "circle"), for: .normal)
+                }
+                
+                // Do something with the selected cell data (if needed)
+                let dataFortableViewTwo = viewModel.modelArray.enumerated().filter { $0.offset > 1 }.map { $0.element }
+                let selectedData = dataFortableViewTwo[indexPath.row]
+                // Use selectedData as needed...
+            }
+        }
     }
     
 }
