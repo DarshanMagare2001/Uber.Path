@@ -30,7 +30,7 @@ class MobileTopUpVC: UIViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "BottomSheetVC") as! BottomSheetVC
         destinationVC.model = data
-        destinationVC.modalPresentationStyle = .overFullScreen
+//        destinationVC.modalPresentationStyle = .overFullScreen
         present(destinationVC, animated: true, completion: nil)
     }
     

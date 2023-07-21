@@ -8,11 +8,19 @@
 import UIKit
 
 class BottomSheetVC: UIViewController {
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var lbl1: UILabel!
+    @IBOutlet weak var lbl2: UILabel!
     var model : MobileTopUpTableViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let data = model else { return }
-        print(data)
+        update()
     }
-     
+    
+    func update(){
+        guard let data = model else {return}
+        img.image = UIImage(named: data.img)
+        lbl1.text = data.lbl1
+        lbl2.text = data.lbl2
+    }
 }
