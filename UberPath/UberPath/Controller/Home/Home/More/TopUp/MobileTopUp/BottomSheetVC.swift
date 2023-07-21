@@ -28,6 +28,7 @@ class BottomSheetVC: UIViewController {
             // Subtract 1 from the current amount and ensure it's not negative
             let newAmount = max(0, currentAmount - 1)
             amountTxtFld.text = String(newAmount)
+            amountForProcess = newAmount
         }
     }
     
@@ -36,6 +37,7 @@ class BottomSheetVC: UIViewController {
             // Add 1 to the current amount
             let newAmount = currentAmount + 1
             amountTxtFld.text = String(newAmount)
+            amountForProcess = newAmount
         }
     }
     
@@ -69,7 +71,6 @@ class BottomSheetVC: UIViewController {
         img.image = UIImage(named: data.img)
         lbl1.text = data.lbl1
         lbl2.text = data.lbl2
-        
         // Set the default amount value in the text field
         amountTxtFld.text = "0"
     }
