@@ -30,6 +30,7 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
             let newAmount = max(0, currentAmount - 1)
             amountTxtFld.text = String(newAmount)
             amountForProcess = newAmount
+            slide.value = 0
         }
     }
     
@@ -39,6 +40,7 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
             let newAmount = currentAmount + 1
             amountTxtFld.text = String(newAmount)
             amountForProcess = newAmount
+            slide.value = 0
         }
     }
     
@@ -50,6 +52,7 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
                 let amount = amounts[index]
                 amountTxtFld.text = String(amount)
                 amountForProcess = amount
+                slide.value = 0
             }
             
             // Update the appearance of the money buttons
@@ -68,6 +71,7 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let currentAmount = Int(amountTxtFld.text ?? "0") {
+            slide.value = 0
             amountForProcess = currentAmount
         }
     }
