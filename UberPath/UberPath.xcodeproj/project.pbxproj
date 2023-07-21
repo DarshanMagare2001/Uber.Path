@@ -235,9 +235,9 @@
 			isa = PBXGroup;
 			children = (
 				130137D12A694B6900EC8518 /* MobileTopUpVC.swift */,
+				1355D3392A6A651B0057C0A8 /* BottomSheetVC.swift */,
 				130137D42A6950BB00EC8518 /* MobileTopUpTableViewCell.swift */,
 				130137D82A6951ED00EC8518 /* MobileTopUpTableViewModel.swift */,
-				1355D3392A6A651B0057C0A8 /* BottomSheetVC.swift */,
 				130137D52A6950BB00EC8518 /* MobileTopUpTableViewCell.xib */,
 			);
 			path = MobileTopUp;

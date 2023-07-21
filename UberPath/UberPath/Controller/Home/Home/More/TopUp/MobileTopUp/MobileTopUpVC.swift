@@ -22,12 +22,24 @@ class MobileTopUpVC: UIViewController {
     }
     
     @IBAction func confirmBtnPressed(_ sender: UIButton) {
-        guard let data = selectedCellData else { return }
+        // Check if selectedCellData is empty
+        guard let data = selectedCellData else {
+            displayAlert(message: "Please select a payment method first.")
+            return
+        }
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "BottomSheetVC") as! BottomSheetVC
-        destinationVC.model = selectedCellData
+        destinationVC.model = data
         destinationVC.modalPresentationStyle = .overFullScreen
         present(destinationVC, animated: true, completion: nil)
+    }
+    
+    // Helper function to display an alert
+    private func displayAlert(message: String) {
+        let alertController = UIAlertController(title: "Warning!", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
