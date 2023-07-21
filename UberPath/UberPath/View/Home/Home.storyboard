@@ -6510,6 +6510,7 @@
                                     </view>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="F66-2G-HfH">
                                         <rect key="frame" x="18" y="220.5" width="284" height="6"/>
+                                        <color key="tintColor" name="LaunchscreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="5" id="Wql-QC-uuF"/>
                                         </constraints>
