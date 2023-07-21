@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class BottomSheetVC: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl1: UILabel!
@@ -16,6 +17,7 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
     @IBOutlet var moneyButtons: [UIButton]! // Outlet collection for the money buttons
     var model: MobileTopUpTableViewModel?
     var amountForProcess : Int = 0
+    var delegate : popToRootVC?
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
@@ -85,9 +87,13 @@ class BottomSheetVC: UIViewController ,UITextFieldDelegate {
                 let okAction = UIAlertAction(title: "OK", style: .default) { _ in
                     alert.dismiss(animated: true, completion: nil)
                     self.dismiss(animated: true)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.delegate?.popToRootVC(pop: true)
+                    }
                 }
                 alert.addAction(okAction)
                 present(alert, animated: true, completion: nil)
+                
             } else {
                 // Show an alert if the entered amount cannot be converted to an integer
                 let alert = UIAlertController(title: "Invalid Amount", message: "Please enter a valid amount.", preferredStyle: .alert)

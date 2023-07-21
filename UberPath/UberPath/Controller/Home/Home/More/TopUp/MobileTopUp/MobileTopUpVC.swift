@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MobileTopUpVC: UIViewController {
+class MobileTopUpVC: UIViewController, popToRootVC {
+    
+    
     @IBOutlet weak var tableViewOne: UITableView!
     @IBOutlet weak var tableViewTwo: UITableView!
     var viewModel = MobileTopUpTableViewModelClass()
@@ -30,8 +32,14 @@ class MobileTopUpVC: UIViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "BottomSheetVC") as! BottomSheetVC
         destinationVC.model = data
-//        destinationVC.modalPresentationStyle = .overFullScreen
+        destinationVC.delegate = self
         present(destinationVC, animated: true, completion: nil)
+    }
+    
+    func popToRootVC(pop: Bool) {
+        if let presentingNavController = self.presentingViewController as? UINavigationController {
+            presentingNavController.popToRootViewController(animated: true)
+        }
     }
     
     // Helper function to display an alert
