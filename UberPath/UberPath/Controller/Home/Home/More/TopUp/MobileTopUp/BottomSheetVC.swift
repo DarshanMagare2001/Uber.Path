@@ -21,6 +21,9 @@ class BottomSheetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
+        
+        // Set the slider's maximum value to 100 (percentage)
+        slide.maximumValue = 100
     }
     
     @IBAction func minusBtnPressed(_ sender: UIButton) {
@@ -51,6 +54,20 @@ class BottomSheetVC: UIViewController {
             // Update the appearance of the money buttons
             updateMoneyButtonsAppearance(selectedButton: sender)
         }
+    }
+    
+    @IBAction func slideValueChanged(_ sender: UISlider) {
+        // Get the current value of the slider (ranging from 0 to 100)
+        let currentValue = sender.value
+        
+        // Convert the text field value to an integer
+        guard let currentAmount = Int(amountTxtFld.text ?? "0") else { return }
+        
+        // Calculate the new amount based on the percentage of the current value
+        let newAmount = Int(Float(currentAmount) * currentValue / 100)
+        
+        // Update the text field with the new amount
+        amountTxtFld.text = String(newAmount)
     }
     
     func update() {
