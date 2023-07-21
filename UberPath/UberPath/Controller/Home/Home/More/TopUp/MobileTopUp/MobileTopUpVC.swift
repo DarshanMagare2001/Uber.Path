@@ -108,6 +108,11 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
             cell.btn.isSelected = (indexPath == selectedIndexPathTableViewOne)
             cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
             cell.selectionStyle = .none // Clear selection color
+            if let image = UIImage(systemName: "checkmark.circle.fill") {
+                let greenColor = UIColor.green
+                let coloredImage = image.colored(greenColor)
+                cell.btn.setImage(coloredImage, for: .selected) // Set green-colored image for selected state
+            }
             return cell
         }
         
@@ -118,6 +123,11 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
             cell.btn.isSelected = (indexPath == selectedIndexPathTableViewTwo)
             cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
             cell.selectionStyle = .none // Clear selection color
+            if let image = UIImage(systemName: "checkmark.circle.fill") {
+                let greenColor = UIColor.green
+                let coloredImage = image.colored(greenColor)
+                cell.btn.setImage(coloredImage, for: .selected) // Set green-colored image for selected state
+            }
             return cell
         }
         
@@ -126,5 +136,22 @@ extension MobileTopUpVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         handleCellSelection(tableView: tableView, at: indexPath)
+    }
+}
+
+extension UIImage {
+    func colored(_ color: UIColor) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        guard let context = UIGraphicsGetCurrentContext(), let cgImage = cgImage else { return nil }
+        context.translateBy(x: 0, y: size.height)
+        context.scaleBy(x: 1.0, y: -1.0)
+        context.setBlendMode(.normal)
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        context.clip(to: rect, mask: cgImage)
+        color.setFill()
+        context.fill(rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        return newImage
     }
 }
