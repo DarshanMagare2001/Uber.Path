@@ -11,6 +11,8 @@ class MobileTopUpVC: UIViewController {
     @IBOutlet weak var tableViewOne: UITableView!
     @IBOutlet weak var tableViewTwo: UITableView!
     var viewModel = MobileTopUpTableViewModelClass()
+    var selectedIndexPathTableViewOne: IndexPath?
+    var selectedIndexPathTableViewTwo: IndexPath?
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "MobileTopUpTableViewCell", bundle: nil)
@@ -62,13 +64,14 @@ extension MobileTopUpVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tableViewOne {
-            // Deselect all cells in tableViewOne except the selected one
-            for row in 0..<tableViewOne.numberOfRows(inSection: indexPath.section) {
-                if let cell = tableViewOne.cellForRow(at: IndexPath(row: row, section: indexPath.section)) as? MobileTopUpTableViewCell {
-                    cell.btn.isSelected = (indexPath.row == row)
-                    cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
-                }
-            }
+            // Deselect all cells in tableViewTwo
+            deselectAllCells(tableView: tableViewTwo)
+            
+            // Update the selectedIndexPathTableViewOne
+            selectedIndexPathTableViewOne = indexPath
+            
+            // Toggle the button selection of the selected cell
+            toggleButtonSelection(for: tableViewOne, at: indexPath)
             
             // Do something with the selected cell data (if needed)
             let dataFortableViewOne = viewModel.modelArray
@@ -76,18 +79,41 @@ extension MobileTopUpVC : UITableViewDelegate , UITableViewDataSource {
             // Use selectedData as needed...
             
         } else if tableView == tableViewTwo {
-            // Deselect all cells in tableViewTwo except the selected one
-            for row in 0..<tableViewTwo.numberOfRows(inSection: indexPath.section) {
-                if let cell = tableViewTwo.cellForRow(at: IndexPath(row: row, section: indexPath.section)) as? MobileTopUpTableViewCell {
-                    cell.btn.isSelected = (indexPath.row == row)
-                    cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
-                }
-            }
+            // Deselect all cells in tableViewOne
+            deselectAllCells(tableView: tableViewOne)
+            
+            // Update the selectedIndexPathTableViewTwo
+            selectedIndexPathTableViewTwo = indexPath
+            
+            // Toggle the button selection of the selected cell
+            toggleButtonSelection(for: tableViewTwo, at: indexPath)
             
             // Do something with the selected cell data (if needed)
             let dataFortableViewTwo = viewModel.modelArray.enumerated().filter { $0.offset > 1 }.map { $0.element }
             let selectedData = dataFortableViewTwo[indexPath.row]
             // Use selectedData as needed...
+        }
+    }
+    
+    // Function to deselect all cells in the given tableView
+    private func deselectAllCells(tableView: UITableView) {
+        for row in 0..<tableView.numberOfRows(inSection: 0) {
+            if let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? MobileTopUpTableViewCell {
+                cell.btn.isSelected = false
+                cell.btn.setImage(UIImage(systemName: "circle"), for: .normal)
+            }
+        }
+        
+        // Reset the selectedIndexPaths
+        selectedIndexPathTableViewOne = nil
+        selectedIndexPathTableViewTwo = nil
+    }
+    
+    // Function to toggle the button selection state at the provided indexPath in the given tableView
+    private func toggleButtonSelection(for tableView: UITableView, at indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? MobileTopUpTableViewCell {
+            cell.btn.isSelected.toggle()
+            cell.btn.setImage(UIImage(systemName: cell.btn.isSelected ? "checkmark.circle.fill" : "circle"), for: .normal)
         }
     }
     
