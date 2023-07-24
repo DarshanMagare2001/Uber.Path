@@ -20,6 +20,7 @@ class ResetYourPasswordVC: UIViewController , UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateFont()
+        update()
         newPasswordTxtFld.delegate = self
         confirmNewPasswordTxtFld.delegate = self
         
@@ -76,5 +77,9 @@ class ResetYourPasswordVC: UIViewController , UITextFieldDelegate {
         return true
     }
     
+    func update(){
+        newPasswordTxtFld.placeholder = "Enter new password"
+        confirmNewPasswordTxtFld.placeholder = "Confirm new password"
+    }
     
 }
