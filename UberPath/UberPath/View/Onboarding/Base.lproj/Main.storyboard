@@ -1935,9 +1935,6 @@ and most trusted</string>
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="continueBtnPressed:" destination="CIl-wN-Dgp" eventType="touchUpInside" id="W8A-ZP-riy"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mht-S9-Q6X"/>
