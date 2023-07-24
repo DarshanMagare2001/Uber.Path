@@ -1961,11 +1961,11 @@ and most trusted</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pinTxtFld1" destination="OKD-Zp-N7F" id="A6l-vJ-Wno"/>
-                        <outlet property="pinTxtFld2" destination="gGJ-24-bpA" id="lN5-uQ-ZNx"/>
-                        <outlet property="pinTxtFld3" destination="cRI-NR-bNT" id="mEA-AO-5BK"/>
-                        <outlet property="pinTxtFld4" destination="hXa-K6-WzJ" id="bUd-WB-rDc"/>
-                        <outlet property="pinTxtFld5" destination="wLg-Vz-mWp" id="DN0-Iv-Noa"/>
+                        <outlet property="otpTextField1" destination="OKD-Zp-N7F" id="aZy-dR-3ER"/>
+                        <outlet property="otpTextField2" destination="gGJ-24-bpA" id="Sy3-8y-Mh8"/>
+                        <outlet property="otpTextField3" destination="cRI-NR-bNT" id="BXD-JD-llo"/>
+                        <outlet property="otpTextField4" destination="hXa-K6-WzJ" id="MaJ-nz-pHz"/>
+                        <outlet property="otpTextField5" destination="wLg-Vz-mWp" id="AMK-oV-nBP"/>
                         <outlet property="setPinLbl" destination="BwL-Iz-iQ4" id="jYL-7l-bOH"/>
                         <outlet property="weUseLbl" destination="D89-8S-Dem" id="eqA-P4-Uau"/>
                     </connections>
