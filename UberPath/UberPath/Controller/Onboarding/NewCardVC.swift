@@ -100,13 +100,16 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
         UIView.animate(withDuration: 0.3, animations: {
             self.popUpView.alpha = 0.0
         }) { (_) in
-            // Animation completion
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-            let destinationVC = storyBoard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
-            // Store selectedImageName in UserDefaults
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+            let navigationController = UINavigationController(rootViewController: mainTabVC)
             let selectedImageName = self.selectedImageName
             UserDefaults.standard.set(selectedImageName, forKey: "SelectedImageName")
-            self.navigationController?.pushViewController(destinationVC, animated: true)
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+               let window = sceneDelegate.window {
+                window.rootViewController = navigationController
+                window.makeKeyAndVisible()
+            }
         }
         popUpView.isHidden = true
     }
@@ -115,6 +118,12 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    func showMainTabVC() {
+        
+    }
+    
     
     func countryPicker(_ picker: ADCountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String) {
         let flagImage = picker.getFlag(countryCode: code)

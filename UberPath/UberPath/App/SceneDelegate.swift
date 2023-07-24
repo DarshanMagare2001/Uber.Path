@@ -14,8 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         
         window = UIWindow(windowScene: windowScene)
-        
-        
+       
         if let currentUser = Auth.auth().currentUser {
             print("User logged in")
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
