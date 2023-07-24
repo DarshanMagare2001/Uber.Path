@@ -83,8 +83,16 @@ class TransferDetailVC: UIViewController , UIPickerViewDelegate, UIPickerViewDat
         }
         let totalAmountText = "\(selectedCurrency) \(amountText)"
         totalAmountLbl.text = totalAmountText
-        popUpView.isHidden = false
+        
+        // Handle animation to show the popUpView
+        UIView.animate(withDuration: 0.3, animations: {
+            self.popUpView.alpha = 1.0
+        }) { (_) in
+            // Animation completion
+            self.popUpView.isHidden = false
+        }
     }
+
     
     
     
