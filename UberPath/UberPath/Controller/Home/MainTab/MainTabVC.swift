@@ -36,6 +36,7 @@ class MainTabVC: UIViewController {
         updateUI(for: .home)
         showTab(.home)
         storeCardInUserDefaultArray()
+        UserDefaults.standard.set(true, forKey: "SomeBooleanKey")
     }
     
     

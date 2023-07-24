@@ -118,10 +118,27 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
                 self.activityView.isHidden = true
             }else{
                 print("SignIn Successfuly")
+                // Check if the boolean value is stored as true
+                if UserDefaults.standard.bool(forKey: "SomeBooleanKey") {
+                    print("The boolean value is true")
+                    
+                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                    let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+                    let navigationController = UINavigationController(rootViewController: mainTabVC)
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                       let window = sceneDelegate.window {
+                        window.rootViewController = navigationController
+                        window.makeKeyAndVisible()
+                    }
+                    
+                } else {
+                    // The boolean value is false or not set, handle the case accordingly
+                    print("The boolean value is false or not set")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
+                }
                 self.activityView.isHidden = true
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
-                self.navigationController?.pushViewController(destinationVC, animated: true)
             }
         }
     }
@@ -140,9 +157,25 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             }else{
                 print("SignUp Successfuly")
                 self.activityView.isHidden = true
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
-                self.navigationController?.pushViewController(destinationVC, animated: true)
+                if UserDefaults.standard.bool(forKey: "SomeBooleanKey") {
+                    print("The boolean value is true")
+                    
+                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                    let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+                    let navigationController = UINavigationController(rootViewController: mainTabVC)
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                       let window = sceneDelegate.window {
+                        window.rootViewController = navigationController
+                        window.makeKeyAndVisible()
+                    }
+                    
+                } else {
+                    // The boolean value is false or not set, handle the case accordingly
+                    print("The boolean value is false or not set")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
+                }
             }
         }
     }
@@ -195,9 +228,25 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
                 }else{
                     print("Login Successfuly")
                     self.activityView.isHidden = true
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
-                    self.navigationController?.pushViewController(destinationVC, animated: true)
+                    if UserDefaults.standard.bool(forKey: "SomeBooleanKey") {
+                        print("The boolean value is true")
+                        
+                        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                        let mainTabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+                        let navigationController = UINavigationController(rootViewController: mainTabVC)
+                        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                           let window = sceneDelegate.window {
+                            window.rootViewController = navigationController
+                            window.makeKeyAndVisible()
+                        }
+                        
+                    } else {
+                        // The boolean value is false or not set, handle the case accordingly
+                        print("The boolean value is false or not set")
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "CountryofResidenceVC") as! CountryofResidenceVC
+                        self.navigationController?.pushViewController(destinationVC, animated: true)
+                    }
                 }
             }
         }
