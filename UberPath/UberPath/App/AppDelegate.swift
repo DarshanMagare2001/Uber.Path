@@ -5,6 +5,7 @@
 //  Created by IPS-161 on 22/06/23.
 //
 
+
 import UIKit
 import Firebase
 import GoogleSignIn
@@ -13,11 +14,19 @@ import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var orientationLock = UIInterfaceOrientationMask.portrait
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return orientationLock
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         IQKeyboardManager.shared.enable = true
+        
+        orientationLock = .portrait // Set the initial orientation lock to portrait mode
+        
         return true
     }
     
@@ -38,6 +47,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
     }
-     
 }
-

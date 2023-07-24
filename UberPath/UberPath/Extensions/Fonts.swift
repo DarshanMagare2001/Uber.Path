@@ -83,7 +83,7 @@ class FontManager {
         var adjustedSize = baseSize // Default size
 //        modelName for real device and name for simulator 
         
-        switch device.modelName {
+        switch device.name {
         case "iPhone 1G", "iPhone 3G", "iPhone 3GS":
             adjustedSize *= 0.8
         case "iPhone 4", "iPhone 4S":
