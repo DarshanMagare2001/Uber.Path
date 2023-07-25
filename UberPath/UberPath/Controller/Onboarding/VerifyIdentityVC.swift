@@ -43,23 +43,7 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
-    func checkPhotoLibraryPermission(completion: @escaping (Bool) -> Void) {
-        let status = PHPhotoLibrary.authorizationStatus()
-        switch status {
-        case .authorized:
-            completion(true)
-        case .denied, .restricted:
-            completion(false)
-        case .notDetermined:
-            PHPhotoLibrary.requestAuthorization { status in
-                completion(status == .authorized)
-            }
-        @unknown default:
-            completion(false)
-        }
-    }
-    
+     
     func showPhotoLibraryPermissionDeniedAlert() {
         let alertController = UIAlertController(title: "Permission Denied", message: "Please grant permission to access the photo library in the Settings app.", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
@@ -84,14 +68,35 @@ class VerifyIdentityVC: UIViewController, UIImagePickerControllerDelegate, UINav
         present(alertController, animated: true, completion: nil)
     }
     
+    func checkPhotoLibraryPermission(completion: @escaping (Bool) -> Void) {
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            completion(true)
+        case .denied, .restricted:
+            completion(false)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { status in
+                DispatchQueue.main.async { // Perform UI-related updates on the main thread
+                    completion(status == .authorized)
+                }
+            }
+        @unknown default:
+            completion(false)
+        }
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { // Perform UI-related updates on the main thread
                 self.faceIDImageView.image = pickedImage
             }
         }
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
