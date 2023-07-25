@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//This is IBinspectable class 
+
 @IBDesignable
 class CustomView: UIView {
     @IBInspectable var cornerRadius: Double {

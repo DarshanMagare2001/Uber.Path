@@ -7,6 +7,8 @@
 
 import UIKit
 
+//This is onboarding class which handle all onboarding
+
 class OnboardingVC: UIViewController {
     
     @IBOutlet weak var onboardingOneView: UIView!
@@ -47,7 +49,7 @@ class OnboardingVC: UIViewController {
         
     }
     
-    
+//    This function set fonts acccording to device display size and used across app
     
     func updateFont(){
         onboardOneViewLbl1.font = UIFont.systemFont(ofSize: FontManager.adjustedFontSize(forBaseSize: 17.0))

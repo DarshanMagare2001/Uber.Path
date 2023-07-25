@@ -3,6 +3,8 @@ import UIKit
 import FirebaseAuth
 import ADCountryPicker
 
+//This is otp authentication class
+
 class OTPAuthenticationVC: UIViewController, ADCountryPickerDelegate, UITextFieldDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var verifyLbl: UILabel!

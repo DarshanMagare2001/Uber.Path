@@ -1,6 +1,8 @@
 import Foundation
 import FirebaseAuth
 
+//This is authentication model class for all authentication
+
 class AuthenticationModel {
     var isLoggedIn: Bool {
         return Auth.auth().currentUser != nil

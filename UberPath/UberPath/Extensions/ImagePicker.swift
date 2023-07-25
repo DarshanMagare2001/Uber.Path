@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//This is imagepicker class
+
 class ImagePickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker: UIImagePickerController!
     

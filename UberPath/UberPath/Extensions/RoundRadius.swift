@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-//import MapKit
+
+//These are customs for various button and view
 
 
 class RoundedButton: UIButton {

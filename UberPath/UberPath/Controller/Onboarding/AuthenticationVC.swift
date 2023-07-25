@@ -10,6 +10,7 @@ import Firebase
 import GoogleSignIn
 import AuthenticationServices
 
+//This class handle all authentication input
 
 class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     @IBOutlet weak var hiThereLbl: UILabel!
@@ -106,6 +107,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
     }
     
     
+//    This is signIn button responsible for signIn
+    
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         guard let email = signInEmailTxtFld.text, let password = signInPasswordTxtFld.text, !email.isEmpty, !password.isEmpty else {
             showToast(message: "Please fill all information.")
@@ -142,6 +145,8 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
             }
         }
     }
+    
+    //    This is signUp button responsible for signUp
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         guard let name = signUpNameTxtFld.text, let email = signUpEmailTxtFld.text, let password = signUpPasswordTxtFld.text,
@@ -206,6 +211,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         })
     }
     
+//    This is signIn with google
     
     @IBAction func signInWithGoogleBtnPressed(_ sender: UIButton) {
         activityView.isHidden = false
@@ -253,6 +259,7 @@ class AuthenticationVC: UIViewController,UITextFieldDelegate,GIDSignInDelegate,A
         
     }
     
+//    This is signIn with apple
     
     @IBAction func signInWithAppleBtnPressed(_ sender: UIButton) {
         activityView.isHidden = false

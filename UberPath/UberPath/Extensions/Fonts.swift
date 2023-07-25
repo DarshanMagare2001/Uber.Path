@@ -1,6 +1,11 @@
 import UIKit
 
+//This is font class for operate fonting based on devices
+
 extension UIDevice {
+    
+//    modelname return model for set fonts according to it
+    
     var modelName: String {
         if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] {
             return simulatorModelIdentifier
@@ -77,6 +82,9 @@ extension UIDevice {
 }
 
 class FontManager {
+    
+//    FontManager class actually set fonts 
+    
     static func adjustedFontSize(forBaseSize baseSize: CGFloat) -> CGFloat {
         let device = UIDevice.current
         

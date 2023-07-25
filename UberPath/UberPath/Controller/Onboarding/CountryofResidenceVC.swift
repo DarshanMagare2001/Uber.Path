@@ -7,6 +7,8 @@ struct MyCustomCountry {
     let dialCode: String
 }
 
+//This is CountryofResidenceVC class which allows us to choose countries
+
 class CountryofResidenceVC: UIViewController, ADCountryPickerDelegate {
     
     @IBOutlet weak var countryImgView: UIImageView!
