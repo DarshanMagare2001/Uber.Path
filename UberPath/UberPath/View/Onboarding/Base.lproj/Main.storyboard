@@ -2767,7 +2767,7 @@ and most trusted</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-1A-uGd">
                                                                 <rect key="frame" x="225" y="5" width="50" height="40"/>
@@ -2817,7 +2817,7 @@ and most trusted</string>
                                                                         <rect key="frame" x="0.0" y="0.0" width="135" height="50"/>
                                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>

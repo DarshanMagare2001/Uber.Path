@@ -87,15 +87,40 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
     }
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
-        // Handle save button action
-        UIView.animate(withDuration: 0.3, animations: {
-            self.popUpView.alpha = 1.0
-        }) { (_) in
-            // Animation completion
-            self.popUpView.isHidden = false
+        // Check if all fields are filled
+        if areAllFieldsFilled() {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.popUpView.alpha = 1.0
+            }) { (_) in
+                // Animation completion
+                self.popUpView.isHidden = false
+            }
+        } else {
+            // Show UIAlertController with an error message
+            let alertController = UIAlertController(title: "Incomplete Information", message: "Please fill in all the required fields before proceeding.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
     }
-
+    
+    func areAllFieldsFilled() -> Bool {
+        guard let cardNumber = cardNumberTxtFld.text,
+              let expiryDate = expiryDateTxtFld.text,
+              let vcc = vccTxtFld.text,
+              let cardHolder = cardHolderTxtFld.text else {
+                  return false
+              }
+        
+        // Check if any of the fields are empty
+        if cardNumber.isEmpty || expiryDate.isEmpty || vcc.isEmpty || cardHolder.isEmpty {
+            return false
+        }
+        
+        return true
+    }
+    
+    
     @IBAction func okBtnPressed(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3, animations: {
             self.popUpView.alpha = 0.0
@@ -113,8 +138,8 @@ class NewCardVC: UIViewController, UITextFieldDelegate ,ADCountryPickerDelegate{
             }
         }
     }
-
-
+    
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
